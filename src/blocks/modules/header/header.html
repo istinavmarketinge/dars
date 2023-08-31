@@ -1,117 +1,89 @@
-<header class="header">
-    <div class="header__in center">
-        <div class="header__left">
-            <a href="/index.html" class="header__logo">
-                <img src="img/logo.svg" width="100%" alt="">
-            </a>
-            <div class="header__region">
-                <div class="header__region-left">Регион:</div>
-                <div class="header__region-dropdown">
-                    <div class="active"><span>Центр</span></div>
-                    <div class="dropdown">
-                        <a href="#">Центр</a>
-                        <a href="#">Федеральный</a>
-                        <a href="#">Красноярск</a>
-                        <a href="#">Сибирь</a>
-                        <a href="#">Урал</a>
-                    </div>
-                </div>
+<div class="header-top">
+    <div class="header-top__in">
+         <div class="header-top__item">
+            <div class="header-top__adress">
+                 <div class="header-top__city">Тула</div>
+                 <div class="header-top__street">ул. Пролетарская д 44, к 3</div>
             </div>
-            <div class="header__burger_opener hide_on_desktop">
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="header-top__work-time">
+                 <div class="work-time__icon">
+                     <img src="/img/time.svg" alt="icon">
+                 </div>
+                 <div class="work-time__info">
+                     Пн-Вс  9.00-18.00 <span>/ сб-вс вых.</span> 
+                 </div>
             </div>
-        </div>
-        <nav class="header__middle hide_on_tablet">
-            <ul class="header__menu">
-                <li><a href="#">Проекты</a></li>
-                <li><a href="#">Мероприятия</a></li>
-                <li><a href="#">Номер журнала</a></li>
-            </ul>
-        </nav>
-        <div class="header__right hide_on_tablet">
-            <form class="header__search">
-                <input type="text" placeholder="Поиск по сайту">
-                <button type="submit">
-                    <img src="img/search_white.svg" alt="">
-                </button>
-                <div class="header__search-line-active"></div>
-                <div class="header__search-line-to-active"></div>
-            </form>
-            <div class="header__socials">
-                <a href="#" class="header__social header__social--vk"><img src="img/vk.svg" alt=""></a>
-                <a href="#" class="header__social header__social--ok"><img src="img/ok.svg" alt=""></a>
-                <a href="#" class="header__social header__social--tg"><img src="img/tg.svg" alt=""></a>
+         </div>
+         <div class="header-top__item">
+            <div class="header-top__menu">
+                 <ul class="header-top__menu-list">
+                     <li><a href="#" class="header-top__menu-link">О нас</a></li>
+                     <li><a href="#" class="header-top__menu-link">Акции</a></li>
+                     <li><a href="#" class="header-top__menu-link">Новости</a></li>
+                     <li><a href="#" class="header-top__menu-link">Контакты</a></li>
+                     <li><a href="#" class="header-top__menu-link">Покупателям</a></li>
+
+                 </ul>
             </div>
-        </div>
+         </div>
+         <div class="header-top__item">
+            <div class="header-top__button">
+             <div class="header-top__button-icon">
+                 <img src="/img/call-back.svg" alt="icon">
+             </div>
+             <span>Обратный звонок</span>
+            </div>
+            <div class="header-top__contacts">
+                 <a href="#" class="header-top__contacts-phone">8 (800) 440-30-25</a>
+                 <a href="#" class="header-top__contacts-mail">info@dars.com</a>
+             </div>
+         </div>
     </div>
-    <div class="header__burger hide_on_desktop">
-        <div class="header__burger_in">
-            <form class="header__search">
-                <input type="text" placeholder="Поиск по сайту">
-                <button type="submit">
-                    <img src="img/search_white.svg" alt="">
-                </button>
-                <div class="header__search-line-active"></div>
-                <div class="header__search-line-to-active"></div>
-            </form>
-            <div class="header__burger_menus">
-                <nav class="header__burger_menu">
-                    <ul>
-                        <li><a href="#">Проекты</a></li>
-                        <li><a href="#">Мероприятия</a></li>
-                        <li><a href="#">Номер журнала</a></li>
-                    </ul>
-                </nav>
-                <nav class="header__burger_menu">
-                    <ul>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Авторские материалы</a></li>
-                        <li><a href="#">Финансовые показатели</a></li>
-                        <li><a href="#">Курсы</a></li>
-                        <li><a href="#">Эмитенты</a></li>
-                        <li><a href="#">Мнения экспертов</a></li>
-                        <li><a href="#">Последние заголовки</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__contact">
-                <div class="icon">
-                    <img src="img/footer_phone.svg" width="100%" alt="">
-                </div>
-                <div class="title">Телефон редакции: </div>
-                <a href="tel:+7 495 727-01-67" class="value">+7 495 727-01-67</a>
-            </div>
-            <div class="footer__contact">
-                <div class="icon">
-                    <img src="img/footer_mail.svg" width="100%" alt="">
-                </div>
-                <div class="title">Электронные почты редакции: </div>
-            </div>
-            <div class="footer__list">
-                <div class="footer__list_item">
-                    <div class="title">Информационный отдел</div>
-                    <a href="#" class="value">info@business-magazine.online</a>
-                </div>
-                <div class="footer__list_item">
-                    <div class="title">Отдел рекламы</div>
-                    <a href="#" class="value">reklama@business-magazine.online</a>
-                </div>
-                <div class="footer__list_item">
-                    <div class="title">Отдел распространения/редакционная подписка</div>
-                    <a href="#" class="value">podpiska@business-magazine.online</a>
-                </div>
-                <div class="footer__list_item">
-                    <div class="title">Отдел по работе с партнерами</div>
-                    <a href="#" class="value">partner@business-magazine.online </a>
-                </div>
-            </div>
-            <div class="header__socials">
-                <a href="#" class="header__social header__social--vk"><img src="img/vk.svg" alt=""></a>
-                <a href="#" class="header__social header__social--ok"><img src="img/ok.svg" alt=""></a>
-                <a href="#" class="header__social header__social--tg"><img src="img/tg.svg" alt=""></a>
-            </div>
-        </div>
-    </div>
-</header>
+ </div>
+
+ <div class="header-bottom">
+     <div class="header-bottom__in">
+         <div class="header-bottom__logo">
+             <img src="/img/logo.svg" alt="logo">
+         </div>
+         <div class="header-bottom__catalog-button">
+             <div class="header-bottom__catalog-icon">
+                 <img src="/img/icon-catalog.svg" alt="icon">
+             </div>
+             <span>Каталог</span>
+         </div>
+         <div class="header-bottom__search">
+             <form action="" method="get">
+                 <input name="s" placeholder="Искать товары" type="search">
+                 <button type="submit">П </button>
+               </form>
+         </div>
+         <div class="header-bottom__right-icons">
+              <div class="right-icons__item">
+                 <div class="right-icons__image">
+                     <img src="/img/favourites.svg" alt="icon">
+                 </div>
+                 <span>Избранное</span>
+              </div>
+              <div class="right-icons__item">
+                 <div class="right-icons__image">
+                     <img src="/img/compare.svg" alt="icon">
+                 </div>
+                 <span>Сравнить</span>
+              </div>
+              <div class="right-icons__item">
+                 <div class="right-icons__image">
+                     <img src="/img/basket.svg" alt="icon ">
+                 </div>
+                 <span>Корзина</span>
+              </div>
+              <div class="right-icons__item">
+                 <div class="right-icons__image">
+                     <img src="/img/enter.svg" alt="icon">
+                 </div>
+                 <span>Войти</span>
+              </div>
+         </div>
+     </div>
+ </div>
+

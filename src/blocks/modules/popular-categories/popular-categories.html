@@ -1,0 +1,25 @@
+<div class="popular-categories">
+    <div class="popular-categories__in">
+        <h2 class="title">Популярные категории</h2>
+
+        <div class="popular-categories__slider glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                @@for ($i = 0; $i < 7; $i++) {
+                <li class="popular-categories__item glide__slide">
+                    <div class="popular-categories__image">
+                        <img src="/img/plitka.png" alt="image">
+                    </div>
+                    <div class="popular-categories__name">Плитка</div>
+                </li>
+                }
+              </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+              </div>
+          </div>
+    </div>
+</div>

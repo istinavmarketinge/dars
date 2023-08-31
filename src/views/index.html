@@ -24,11 +24,28 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        @@include("../blocks/modules/header/header.html")
+        <header>
+            <div class="container">
+                @@include("../blocks/modules/header/header.html")
+                @@include("../blocks/modules/top-menu/top-menu.html")
+                @@include("../blocks/modules/banners/banners.html")
+
+            </div>
+                
+            </header>
+            <section>
+                <div class="container">
+                    @@include("../blocks/modules/popular-categories/popular-categories.html")
+
+                </div>
+            </section>
         
-        @@include("../blocks/modules/footer/footer.html")
+        <!-- @@include("../blocks/modules/footer/footer.html") -->
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>
     </body>
