@@ -1,4 +1,5 @@
 .popular-categories {
+    margin-bottom: 43px;
     &__item {
         border-radius: 9px;
         background: radial-gradient(56.02% 50.16% at 80.75% 37.15%, #F1F1F1 0%, #F5F5F5 100%);
@@ -9,5 +10,57 @@
         padding: 53px 0 25px 0;
         grid-gap: 40px;
 
+    }
+    &__image img {
+        width: 100%;
+        object-fit: contain;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__button-all {
+        display: block;
+        padding-right: 60px;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            right: 36px;
+            width: 7px;
+            height: 15px;
+            background: url("/img/arrow-grey.svg") 0 0/contain no-repeat;
+        }
+    }
+    &__arrows .glide__arrow {
+        width: 36px;
+        height: 72px;
+        border-radius: 5px;
+        background: #fff;
+        border: none;
+        outline: none;
+    }
+    &__slider {
+        position: relative;
+    }
+    &__arrows {
+        .glide__arrow--left {
+            position: absolute;
+            left: -18px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+        .glide__arrow--right {
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
     }
 }

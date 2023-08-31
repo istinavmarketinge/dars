@@ -59,7 +59,7 @@
             left: 0;
             width: 9px;
             height: 25px;
-            background: url("./img/menu-line.svg") 0 0/contain no-repeat;
+            background: url("/img/menu-line.svg") 0 0/contain no-repeat;
         }
     }
     &__city {
@@ -73,7 +73,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            background: url("./img/geo.svg") 0 0/contain no-repeat;
+            background: url("/img/geo.svg") 0 0/contain no-repeat;
         }
         &::after {
             content: "";
@@ -82,7 +82,7 @@
             position: absolute;
             top: 5px;
             right: -2px;
-            background: url("./img/city-arrow.svg") 0 0/contain no-repeat;
+            background: url("/img/city-arrow.svg") 0 0/contain no-repeat;
         }
     }
     &__button {
