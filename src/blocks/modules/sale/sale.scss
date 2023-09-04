@@ -16,7 +16,7 @@
         text-decoration: none;
         display: flex;
         align-items: flex-end;
-        background: linear-gradient(0deg, #7A7671 0%, rgba(122, 118, 113, 0.00) 44.03%), url("/img/sale-min.png") 0 0/contain no-repeat;
+        background: linear-gradient(0deg, #7A7671 0%, rgba(122, 118, 113, 0.00) 44.03%), url("../img/sale-min.png") 0 0/contain no-repeat;
         
 
     }
@@ -47,7 +47,7 @@
         justify-content: space-between;
         padding: 31px 69px;
         align-items: flex-start;
-        background: url("/img/sale.png") 0 0/contain no-repeat;
+        background: url("../img/sale.png") 0 0/contain no-repeat;
         .sale__title {
             color: #000;
             font-size: 59px;

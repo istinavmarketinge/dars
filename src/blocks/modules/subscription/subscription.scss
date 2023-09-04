@@ -1,0 +1,50 @@
+.subscription {
+    &__in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: url("../img/form-bg.png") 0 0/cover no-repeat;
+        padding: 26px 70px 29px;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        grid-gap: 20px;
+        font-size: 26.848px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.805px;
+    }
+    &__right form {
+        display: flex;
+        align-items: center;
+        grid-gap: 18px;
+        input {
+            border-radius: 3px;
+            border: 1px solid rgba(240, 130, 15, 0.60);
+            background: #FFFEFB;
+            outline: none;
+            max-width: 258px;
+            width: 100%;
+            padding: 15px 0 15px 19px;
+        }
+        button {
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            background:#F0820F;
+            max-width: 258px;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            color: #fff;
+        }
+    }
+    &__left div:last-child {
+        border-radius: 9px;
+        border: 3px solid rgba(0, 0, 0, 0.7);
+        transform: rotate(359deg);
+        padding: 8px 3px 15px 5px;
+    }
+}

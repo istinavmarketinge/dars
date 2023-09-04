@@ -33,6 +33,9 @@ var PopularBrands = /*#__PURE__*/function () {
         perView: 7,
         gap: 25,
         bound: true,
+        swipeThreshold: false,
+        perTouch: false,
+        touchRatio: 1,
         peek: {
           before: 0,
           after: 80
