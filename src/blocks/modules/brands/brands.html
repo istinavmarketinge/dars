@@ -1,0 +1,30 @@
+<div class="brands">
+    <div class="brands__in">
+        <div class="popular-categories__title">
+            <h2 class="title">Популярные бренды</h2>
+            <a href="#" class="popular-categories__button-all">
+                Все бренды
+            </a>
+        </div>
+
+        <div class="brands__slider glide">
+            <div class="glide__track" data-glide-el="track">
+              <div class="glide__slides">
+                @@for ($i = 0; $i < 10; $i++) {
+                <a href="#" class="brands__item glide__slide">
+                    <div class="brands__image">
+                        <img src="./img/brand.png" alt="image">
+                    </div>
+                </a>
+                }
+              </div>
+            </div>
+
+            <div class="brands__arrows glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="./img/arrow-slider.svg" alt="arrow"></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="./img/arrow-slider.svg" alt="arrow"></button>
+              </div>
+          </div>
+
+    </div>
+</div>

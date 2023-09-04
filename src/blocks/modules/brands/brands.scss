@@ -1,0 +1,50 @@
+.brands {
+    padding-bottom: 50px; 
+    &__item {
+        border-radius: 20px;
+        border: 1px solid #FFF;
+        background: #F8F8F8;
+        padding: 28px;
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item:hover {
+        border: 1px solid #F0820F;
+        background: #FFF;
+    }
+    &__arrows .glide__arrow {
+        width: 36px;
+        height: 72px;
+        border-radius: 5px;
+        background: #fff;
+        border: none;
+        outline: none;
+    }
+    &__arrows .glide__arrow:hover {
+        background: #FEF3E7;
+    }
+    &__slider {
+        position: relative;
+    }
+    &__arrows {
+        .glide__arrow--left {
+            position: absolute;
+            left: -18px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+            img {
+                transform: rotate(180deg);
+            }
+        }
+        .glide__arrow--right {
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+    }
+}

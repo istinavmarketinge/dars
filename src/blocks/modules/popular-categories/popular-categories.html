@@ -5,26 +5,25 @@
             <a href="" class="popular-categories__button-all">
                 Смотреть все
             </a>
-
         </div>
 
         <div class="popular-categories__slider glide">
             <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
+              <div class="glide__slides">
                 @@for ($i = 0; $i < 7; $i++) {
-                <li class="popular-categories__item glide__slide">
+                <a href="" class="popular-categories__item glide__slide">
                     <div class="popular-categories__image">
                         <img src="./img/plitka.png" alt="image">
                     </div>
                     <div class="popular-categories__name">Плитка</div>
-                </li>
+                </a>
                 }
-              </ul>
+            </div>
             </div>
 
             <div class="popular-categories__arrows glide__arrows" data-glide-el="controls">
-                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><img src="./img/arrow-slider.svg" alt="arrow"></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><img src="./img/arrow-slider.svg" alt="arrow"></button>
               </div>
           </div>
     </div>

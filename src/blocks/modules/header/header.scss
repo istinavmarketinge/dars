@@ -159,13 +159,17 @@
                 outline: none;
             }
             button {
-                border-radius: 5px;
+                border-radius: 6px;
                 background: #F0820F;
                 border: none;
                 outline: none;
                 width: 84px;
                 height: 45px;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: -3px;
             }
         }
     }
