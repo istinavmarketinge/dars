@@ -1,14 +1,13 @@
-
-const PopularBrands = class PopularBrands {
+const Banner = class Banner {
     constructor() {
         this.slider = null;
     }
     initSlider() {
-        if (!document.querySelector('.brands__slider.swiper')) return;
-        this.slider = new Swiper('.brands__slider.swiper', {
+        if (!document.querySelector('.banner__big.swiper')) return;
+        this.slider = new Swiper('.banner__big.swiper', {
             loop: true,
-            slidesPerView: 7.5,
-            spaceBetween: 25,
+            slidesPerView: 1,
+            spaceBetween: 0,
             zoom: {
                 maxRatio: 0,
               },
@@ -24,10 +23,6 @@ const PopularBrands = class PopularBrands {
               prevEl: '.swiper-button-prev',
             },
           
-            // And if we need scrollbar
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
           }).mount();
     }
     init() {
@@ -35,4 +30,4 @@ const PopularBrands = class PopularBrands {
     }
 }
 
-export default PopularBrands;
+export default Banner;

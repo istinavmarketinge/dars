@@ -1,14 +1,13 @@
-
-const PopularBrands = class PopularBrands {
+const BannerProduct = class BannerProduct {
     constructor() {
         this.slider = null;
     }
     initSlider() {
-        if (!document.querySelector('.brands__slider.swiper')) return;
-        this.slider = new Swiper('.brands__slider.swiper', {
+        if (!document.querySelector('.banner__small-slider.swiper')) return;
+        this.slider = new Swiper('.banner__small-slider.swiper', {
             loop: true,
-            slidesPerView: 7.5,
-            spaceBetween: 25,
+            slidesPerView: 1,
+            spaceBetween: 0,
             zoom: {
                 maxRatio: 0,
               },
@@ -35,4 +34,6 @@ const PopularBrands = class PopularBrands {
     }
 }
 
-export default PopularBrands;
+export default BannerProduct;
+
+

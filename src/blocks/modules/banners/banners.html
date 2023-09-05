@@ -1,10 +1,51 @@
 <div class="banner">
     <div class="banner__in">
-        <div class="banner__big">
-            <div class="banner__image">
-                <img src="./img/big-banner.jpg" alt="banner">
+        <div class="banner__big swiper">
+            <div class="swiper-wrapper">
+                @@for ($i = 0; $i < 10; $i++) {
+                <div class="banner__image swiper-slide">
+                    <img src="./img/big-banner.jpg" alt="banner">
+                </div>
+                }
             </div>
+            <div class="swiper-pagination banner__big-pagination"></div>
+
         </div>
-        <div class="banner__small"> </div>
+        <div class="banner__small">
+
+            <div class="banner__small-slider swiper">
+                <div class="swiper-wrapper">
+
+                    @@for ($i = 0; $i < 10; $i++) {
+                        <a href="#" class="banner__small-item swiper-slide">
+                            <div class="banner__small-title">
+                                <h2>Товар дня</h2>
+                                <div class="timer">12:43:32</div>
+                            </div>
+                            <div class="banner__small-image">
+                                <img src="./img/product.png" alt="image">
+                            </div>
+                            <div class="banner__small-price">
+                                <div class="new-price">5 980 ₽/шт</div>
+                                <div class="old-price">7 990 ₽/м²</div>
+                                <div class="discount-amount">-20%</div>
+                            </div>
+                            <div class="banner__small-preview-text">
+                                Люстра в стиле Loft, черный металлический каркас и яркие квадратные плафоны напол
+                            </div>
+                        </a>
+                        }
+
+                </div>
+                <div class="banner__small-slider-arrows">
+                    <div class="swiper-button-prev"><img src="./img/arrow-slider.svg" alt="arrow"></div>
+                     <div class="swiper-button-next"><img src="./img/arrow-slider.svg" alt="arrow"></div>
+
+                </div>
+
+                <div class="swiper-pagination banner__small-pagination"></div>
+            </div>
+
+        </div>
     </div>
 </div>

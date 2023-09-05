@@ -5,10 +5,12 @@
         border: 1px solid #FFF;
         background: #F8F8F8;
         padding: 28px;
+        max-height: 200px;
         min-height: 200px;
         display: flex !important;
         align-items: center;
         justify-content: center;
+        box-sizing: border-box;
     }
     &__item:hover {
         border: 1px solid #F0820F;
@@ -52,5 +54,10 @@
                 content: none;
             }
         }
+    }
+    &__image img {
+        width: 100%;
+        max-width: 156px;
+        object-fit: contain;
     }
 }
