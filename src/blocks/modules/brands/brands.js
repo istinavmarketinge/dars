@@ -1,34 +1,34 @@
-import Glide from '@glidejs/glide';
 
 const PopularBrands = class PopularBrands {
     constructor() {
         this.slider = null;
     }
     initSlider() {
-        if (!document.querySelector('.brands__slider.glide')) return;
-        this.slider = new Glide('.brands__slider.glide', {
-            perView: 7,
-            gap: 25,
-            bound: true,
-            swipeThreshold: false,
-            perTouch: false,
-            touchRatio: 1,
-            peek: {
-                before: 0,
-                after: 80
+        if (!document.querySelector('.brands__slider.swiper')) return;
+        this.slider = new Swiper('.brands__slider.swiper', {
+            loop: true,
+            slidesPerView: 7,
+            spaceBetween: 25,
+            zoom: {
+                maxRatio: 0,
+              },
+          
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
             },
-            breakpoints: {
-                980: {
-                    perView: 4,
-                    gap: 6,
-                    peek: {
-                        before: 41,
-                        after: 41
-                    },
-                    
-                }
-            }
-        }).mount();
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          }).mount();
     }
     init() {
         this.initSlider();

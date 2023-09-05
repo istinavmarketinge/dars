@@ -3,7 +3,7 @@
     &__item {
         border-radius: 9px;
         background: radial-gradient(56.02% 50.16% at 80.75% 37.15%, #F1F1F1 0%, #F5F5F5 100%);
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -11,6 +11,10 @@
         grid-gap: 40px;
         text-decoration: none;
         color: #000;
+        &:hover {
+            border: 1px solid #F0820F;
+            background: #FFF;
+        }
 
     }
     &__image img {
@@ -38,7 +42,7 @@
             background: url("/img/arrow-grey.svg") 0 0/contain no-repeat;
         }
     }
-    &__arrows .glide__arrow {
+    &__arrows div {
         width: 36px;
         height: 72px;
         border-radius: 5px;
@@ -46,14 +50,14 @@
         border: none;
         outline: none;
     }
-    &__arrows .glide__arrow:hover {
+    &__arrows div:hover {
         background: #FEF3E7; 
     }
     &__slider {
         position: relative;
     }
     &__arrows {
-        .glide__arrow--left {
+        .swiper-button-prev {
             position: absolute;
             left: -18px;
             top: 50%;
@@ -62,13 +66,23 @@
             img {
                 transform: rotate(180deg);
             }
+            &::after {
+                content: none;
+            }
         }
-        .glide__arrow--right {
+        .swiper-button-next {
             position: absolute;
             right: -18px;
             top: 50%;
             transform: translate(0, -50%);
             cursor: pointer;
+            &::after {
+                content: none;
+            }
         }
+    }
+    &__scrollbar {
+        margin-top: 40px;
+        position: relative!important;
     }
 }
