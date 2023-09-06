@@ -37,12 +37,13 @@ var Banner = /*#__PURE__*/function () {
         // If we need pagination
         pagination: {
           el: '.swiper-pagination'
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
         }
+
+        // Navigation arrows
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
       }).mount();
     }
   }, {

@@ -1099,6 +1099,42 @@ html {
   object-fit: contain;
 }
 
+.brands__title-left {
+  display: flex;
+  align-items: center;
+  grid-gap: 45px;
+}
+
+.brands__title-left .title {
+  white-space: nowrap;
+}
+
+.brands__button-categories {
+  border-radius: 31px;
+  border: 2px solid #000;
+  padding: 15px 40px 15px 27px;
+  max-width: 191px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  position: relative;
+  cursor: pointer;
+}
+
+.brands__button-categories:after {
+  content: "";
+  width: 10px;
+  height: 7px;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  background: url("/img/arrow-down.svg") 0 0/contain no-repeat;
+}
+
 .articles {
   padding-bottom: 50px;
 }
