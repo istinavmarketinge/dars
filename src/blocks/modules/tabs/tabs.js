@@ -12,6 +12,23 @@ const Tabs = class Tabs {
             zoom: {
                 maxRatio: 0,
               },
+
+              breakpoints: {
+                1700: {
+                  slidesPerView: 4.5,
+                },
+                1200: {
+                  slidesPerView: 3,
+                },
+                900: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 25,
+                },
+                0: {
+                  slidesPerView: 2.5,
+                  spaceBetween: 15,
+                },
+              },
           
             // If we need pagination
             pagination: {

@@ -5,11 +5,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media all and (max-width:900px) {
+            grid-gap: 30px;
+        }
+    }
+    &__logo {
+        display: none;
+        @media all and (max-width:900px) {
+            display: block;
+        }
     }
     &__item {
         display: flex;
         align-items: center;
-        &:first-child {
+        &.--top-adress {
             grid-gap: 52px;
             color: #595959;
             font-family: Inter;
@@ -17,9 +26,23 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            @media all and (max-width:1700px) {
+                flex-direction: column;
+                grid-gap: 10px;
+                align-items: flex-start;
+            }
+            @media all and (max-width:1100px) {
+                display: none;
+            }
         }
-        &:last-child {
+        &.--top-contacts {
             grid-gap: 18px; 
+            
+        }
+        &.--top-menu {
+            @media all and (max-width:900px) {
+                display: none;
+            }
         }
     }
     &__adress {
@@ -45,6 +68,10 @@
         font-weight: 400;
         line-height: normal;
         position: relative;
+        @media all and (max-width:1700px) {
+            padding-left: 15px;
+            grid-gap: 20px;
+        }
         li {
             list-style: none;
         }
@@ -97,6 +124,9 @@
         justify-content: center;
         grid-gap: 5px;
         cursor: pointer;
+        @media all and (max-width:640px) {
+            display: none;
+        }
         span {
             color: #141414;
             font-size: 13px;
@@ -132,12 +162,20 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media all and (max-width:1700px) {
+            grid-gap: 20px;
+        }
+    }
+    &__logo {
+        @media all and (max-width:900px) {
+            display: none;
+        }
     }
     &__catalog-button {
         border-radius: 6px;
         background: #F0820F;
         display: flex;
-        padding: 16px 30px;
+        padding: 13px 30px;
         justify-content: center;
         align-items: center;
         gap: 16px;
@@ -152,8 +190,8 @@
             align-items: center;
             input {
                 border-radius: 5px 0 0 5px;
-                border: 1px solid #F0820F;
-                padding: 9px 19px;
+                border: 2px solid #F0820F;
+                padding: 11px 19px;
                 width: 100%;
                 max-width: 854px;
                 outline: none;
@@ -177,6 +215,9 @@
         display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 16px;
+            @media all and (max-width:1100px) {
+                display: none;
+            }
         .right-icons__item {
             display: flex;
             flex-direction: column;

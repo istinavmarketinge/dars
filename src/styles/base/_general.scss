@@ -17,4 +17,22 @@ margin: 0 auto;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1.08px;
+    @media all and (max-width:900px) {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.6px;
+    }
+}
+@media all and (max-width:1700px) {
+    .container {
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+}
+@media all and (max-width:900px) {
+    .container {
+        padding: 0 20px;
+    }
 }

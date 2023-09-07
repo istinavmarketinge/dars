@@ -11,6 +11,9 @@
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+        @media all and (max-width:900px) {
+            min-height: 124px;
+        }
     }
     &__item:hover {
         border: 1px solid #F0820F;
@@ -64,8 +67,17 @@
         display: flex;
         align-items: center;
         grid-gap: 45px;
+        @media all and (max-width:900px) {
+            flex-direction: column;
+            grid-gap: 18px;
+            align-items: flex-start;
+            margin-bottom: 55px;
+        }
         .title {
             white-space: nowrap;
+            @media all and (max-width:900px) {
+                margin-bottom: 0px;
+            }
         }
     }
     &__button-categories {
@@ -82,6 +94,9 @@
         letter-spacing: 0.48px;
         position: relative;
         cursor: pointer;
+        @media all and (max-width:900px) {
+            font-size: 16px;
+        }
     }
     &__button-categories:after {
         content: "";

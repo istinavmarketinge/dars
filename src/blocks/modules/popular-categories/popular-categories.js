@@ -13,6 +13,27 @@ const PopularCategories = class PopularCategories {
             zoom: {
                 maxRatio: 0,
               },
+
+              breakpoints: {
+                1700: {
+                  slidesPerView: 5.5,
+                },
+                1200: {
+                  slidesPerView: 4,
+                },
+                900: {
+                  slidesPerView: 3,
+                  spaceBetween: 25,
+                },
+                600: {
+                  slidesPerView: 2,
+                },
+                0: {
+                  slidesPerView: 2,
+                  spaceBetween: 15,
+                },
+              },
+                
           
             // If we need pagination
             pagination: {

@@ -6,6 +6,13 @@
         justify-content: space-between;
         background: url("../img/form-bg.png") 0 0/cover no-repeat;
         padding: 26px 70px 29px;
+        @media all and (max-width:1100px) {
+            flex-direction: column;
+            grid-gap: 40px;
+        }
+        @media all and (max-width:700px) {
+            padding: 52px 25px;
+        }
     }
     &__left {
         display: flex;
@@ -17,14 +24,40 @@
         line-height: 130%;
         letter-spacing: 0.805px;
         width: 60%;
+        @media all and (max-width:1100px) {
+            width: 100%;
+        }
+        @media all and (max-width:700px) {
+            flex-direction: column;
+        }
+        div:first-child {
+            @media all and (max-width:700px) {
+                font-size: 35px;
+                text-align: center;
+            }
+        }
+        div:last-child {
+            @media all and (max-width:700px) {
+                font-size: 20px;
+            }
+        }
     }
     &__right {
         width: 36%;
+        @media all and (max-width:1100px) {
+            width: 100%;
+        }
     }
     &__right form {
         display: flex;
         align-items: center;
         grid-gap: 18px;
+        @media all and (max-width:1100px) {
+            justify-content: space-between;
+        }
+        @media all and (max-width:700px) {
+            flex-direction: column;
+        }
         input {
             border-radius: 3px;
             border: 1px solid rgba(240, 130, 15, 0.60);
@@ -33,6 +66,13 @@
             max-width: 258px;
             width: 100%;
             padding: 15px 0 15px 19px;
+            box-sizing: border-box;
+            @media all and (max-width:1100px) {
+                max-width: 50%;
+            }
+            @media all and (max-width:700px) {
+                max-width: 100%;
+            }
         }
         button {
             border: none;
@@ -45,6 +85,13 @@
             text-align: center;
             color: #fff;
             cursor: pointer;
+            box-sizing: border-box;
+            @media all and (max-width:1100px) {
+                max-width: 50%;
+            }
+            @media all and (max-width:700px) {
+                max-width: 100%;
+            }
         }
     }
     &__left div:last-child {

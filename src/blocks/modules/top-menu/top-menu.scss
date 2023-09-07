@@ -5,8 +5,23 @@
         align-items: center;
         justify-content: space-between;
         padding: 0;
+        overflow: auto;
+        grid-gap: 30px;
+        @media all and (max-width:900px) {
+            display: none;
+        }
         li {
             list-style: none;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #f9f9fd;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #f2bf93;
         }
     }
     &__item {
@@ -15,5 +30,6 @@
         display: flex;
         align-items: center;
         grid-gap: 7px;
+        white-space: nowrap;
     }
  }
