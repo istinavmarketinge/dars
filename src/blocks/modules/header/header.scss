@@ -13,6 +13,11 @@
         display: none;
         @media all and (max-width:900px) {
             display: block;
+            max-width: 163px;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
         }
     }
     &__item {
@@ -167,8 +172,13 @@
         }
     }
     &__logo {
+        max-width: 163px;
         @media all and (max-width:900px) {
             display: none;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
         }
     }
     &__catalog-button {

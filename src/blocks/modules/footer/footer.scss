@@ -6,6 +6,9 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        @media all and (max-width:1600px) {
+            flex-direction: column;
+        }
     }
     &__left {
         background: #F8F8F8;
@@ -13,6 +16,9 @@
         max-width: 1074px;
         width: 100%;
         box-sizing: border-box;
+        @media all and (max-width:1600px) {
+            max-width: 100%;
+        }
     }
     &__info,
     &__menus {
@@ -156,5 +162,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        @media all and (max-width:1600px) {
+            max-height: 300px;
+        }
     }
 }

@@ -26,6 +26,9 @@
         background: #fff;
         border: none;
         outline: none;
+        @media all and (max-width:900px) {
+            display: none;
+        }
     }
     &__arrows div:hover {
         background: #FEF3E7;
