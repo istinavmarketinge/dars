@@ -20,8 +20,8 @@ const PopularBrands = class PopularBrands {
           
             // Navigation arrows
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '.brands__arrow.swiper-button-next',
+              prevEl: '.brands__arrow.swiper-button-prev',
             },
           
             // And if we need scrollbar

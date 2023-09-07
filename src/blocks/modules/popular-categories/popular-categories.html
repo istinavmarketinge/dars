@@ -7,24 +7,28 @@
             </a>
         </div>
 
-        <div class="popular-categories__slider swiper">
-              <div class="swiper-wrapper">
-                @@for ($i = 0; $i < 7; $i++) {
-                <a href="" class="popular-categories__item swiper-slide">
-                    <div class="popular-categories__image">
-                        <img src="./img/plitka.png" alt="image">
-                    </div>
-                    <div class="popular-categories__name">Плитка</div>
-                </a>
-                }
-            </div>
-                <div class="popular-categories__arrows">
-                    <div class="swiper-button-prev"><img src="./img/arrow-slider.svg" alt="arrow"></div>
-                     <div class="swiper-button-next"><img src="./img/arrow-slider.svg" alt="arrow"></div>
-
+        <div class="popular-categories__slider-container">
+            <div class="popular-categories__slider swiper">
+                <div class="swiper-wrapper">
+                    @@for ($i = 0; $i < 7; $i++) {
+                    <a href="" class="popular-categories__item swiper-slide">
+                        <div class="popular-categories__image">
+                            <img src="./img/plitka.png" alt="image">
+                        </div>
+                        <div class="popular-categories__name">Плитка</div>
+                    </a>
+                    }
                 </div>
+                    
+                    
+    
+                    <div class="swiper-scrollbar popular-categories__scrollbar"></div>
+            </div>
+            <div class="popular-categories__arrows">
+                <div class="popular-categories__arrow swiper-button-prev"><img src="./img/arrow-slider.svg" alt="arrow"></div>
+                 <div class="popular-categories__arrow swiper-button-next"><img src="./img/arrow-slider.svg" alt="arrow"></div>
+            </div>
 
-                <div class="swiper-scrollbar popular-categories__scrollbar"></div>
-          </div>
+        </div>
     </div>
 </div>

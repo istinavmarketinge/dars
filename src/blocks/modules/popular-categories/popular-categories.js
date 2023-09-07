@@ -21,8 +21,8 @@ const PopularCategories = class PopularCategories {
           
             // Navigation arrows
             navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              nextEl: '.popular-categories__arrow.swiper-button-next',
+              prevEl: '.popular-categories__arrow.swiper-button-prev',
             },
           
             // And if we need scrollbar
