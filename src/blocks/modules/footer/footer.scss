@@ -209,7 +209,11 @@
             align-items: flex-start;
             color: #595959;
         }
+        .work-time__info span {
+            color: #A9A9A9;
+        }
     }
+
     &__mail {
         display: flex;
         align-items: center;
@@ -276,6 +280,8 @@
         line-height: normal;
         @media all and (max-width:700px) {
             order: 3;
+            padding-top: 30px;
+            border-top: 1px solid #E0E0E0;
         }
     }
     &__map img {
