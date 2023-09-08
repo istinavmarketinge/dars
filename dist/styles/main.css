@@ -1491,6 +1491,10 @@ html {
   width: 60%;
 }
 
+.subscription__left div:last-child {
+  box-sizing: border-box;
+}
+
 .subscription__right {
   width: 36%;
 }
@@ -1587,6 +1591,28 @@ html {
   display: block;
 }
 
+.footer__feedback-button {
+  border-radius: 4px;
+  border: 1.5px solid #F0820F;
+  max-width: 161px;
+  width: 100%;
+  padding: 7.5px 15px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
+  cursor: pointer;
+}
+
+.footer__feedback-button span {
+  color: #141414;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .footer__coopy,
 .footer__contacts {
   width: 100%;
@@ -1677,6 +1703,10 @@ html {
   color: #595959;
 }
 
+.footer__work-time-mobile {
+  display: none;
+}
+
 .footer__mail {
   display: flex;
   align-items: center;
@@ -1702,6 +1732,10 @@ html {
   width: 31px;
   height: 31px;
   object-fit: contain;
+}
+
+.footer__phone-mobile {
+  display: none;
 }
 
 .footer__coopy {
@@ -1754,6 +1788,61 @@ html {
   }
 }
 
+@media all and (max-width: 1360px) {
+  .sale__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sale__item {
+    width: 31%;
+    min-height: 300px;
+  }
+
+  .sale__item:nth-child(2) {
+    width: 48%;
+  }
+
+  .sale__item:first-child {
+    width: 48%;
+    padding: 19px 15px 10px 15px;
+  }
+
+  .articles__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+  }
+
+  .articles__item {
+    width: 32%;
+  }
+
+  .articles__item-first {
+    padding: 10px 20px;
+  }
+
+  .articles__item-last {
+    padding: 10px 20px;
+  }
+
+  .articles__item:first-child .articles__info,
+  .articles__item:last-child .articles__info {
+    padding: 10px 15px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .footer__contacts {
+    flex-wrap: wrap;
+    grid-gap: 15px;
+  }
+}
+
 @media all and (max-width: 1100px) {
   .header-top__item.--top-adress {
     display: none;
@@ -1763,21 +1852,7 @@ html {
     display: none;
   }
 
-  .sale__list {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
   .sale__item {
-    padding: 19px 15px 10px 15px;
-  }
-
-  .sale__button {
-    color: #fff;
-  }
-
-  .sale__item:first-child {
-    grid-area: auto;
     padding: 19px 15px 10px 15px;
   }
 
@@ -1799,6 +1874,10 @@ html {
     grid-gap: 8px;
   }
 
+  .articles__item {
+    width: 48%;
+  }
+
   .subscription__in {
     flex-direction: column;
     grid-gap: 40px;
@@ -1806,6 +1885,18 @@ html {
 
   .subscription__left {
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscription__left div:first-child {
+    width: 100%;
+    text-align: center;
+  }
+
+  .subscription__left div:last-child {
+    width: 70%;
+    text-align: center;
   }
 
   .subscription__right {
@@ -1822,6 +1913,27 @@ html {
 
   .subscription__right form button {
     max-width: 50%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .footer__menus {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__first {
+    margin-bottom: 15px;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .footer__phone {
+    margin-bottom: 10px;
+  }
+
+  .footer__feedback-button {
+    margin: 0 auto;
   }
 }
 
@@ -1946,7 +2058,55 @@ html {
   }
 }
 
+@media all and (max-width: 800px) {
+  .sale__item {
+    width: 100%;
+  }
+
+  .sale__item {
+    min-height: 240px;
+  }
+
+  .sale__item:nth-child(2) {
+    width: 100%;
+  }
+
+  .sale__item:first-child {
+    width: 100%;
+  }
+}
+
 @media all and (max-width: 700px) {
+  .sale__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .sale__button {
+    color: #fff;
+  }
+
+  .articles__item {
+    padding: 10px 13px;
+  }
+
+  .articles__item-first {
+    padding: 10px 13px;
+  }
+
+  .articles__item-last {
+    padding: 10px 13px;
+  }
+
+  .articles__title {
+    font-size: 16px;
+  }
+
+  .articles__date {
+    font-size: 12px;
+    padding-right: 20px;
+  }
+
   .subscription__in {
     padding: 52px 25px;
   }
@@ -1957,11 +2117,11 @@ html {
 
   .subscription__left div:first-child {
     font-size: 35px;
-    text-align: center;
   }
 
   .subscription__left div:last-child {
     font-size: 20px;
+    width: 100%;
   }
 
   .subscription__right form {
@@ -1974,6 +2134,93 @@ html {
 
   .subscription__right form button {
     max-width: 100%;
+  }
+
+  .footer__left {
+    padding: 40px 20px;
+  }
+
+  .footer__menus {
+    order: 2;
+    margin-bottom: 30px;
+    grid-gap: 30px;
+  }
+
+  .footer__first {
+    margin-bottom: 0;
+  }
+
+  .footer__logo img {
+    max-width: 130px;
+  }
+
+  .footer__phones {
+    display: none;
+  }
+
+  .footer__contacts {
+    justify-content: flex-start;
+    grid-gap: unset;
+    margin-top: 30px;
+  }
+
+  .footer__menu-list {
+    max-height: 100%;
+  }
+
+  .footer__adress {
+    margin-bottom: 30px;
+  }
+
+  .footer__work-time {
+    display: none;
+  }
+
+  .footer__work-time-mobile {
+    display: flex;
+    align-items: flex-start;
+    color: #595959;
+  }
+
+  .footer__mail {
+    border-radius: 8px;
+    border: 1px solid #DCDCDC;
+    padding: 20px 39px;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer__socials .social-item img {
+    width: 49px;
+    height: 49px;
+  }
+
+  .footer__socials {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .footer__phone-mobile {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+    padding: 20px 39px;
+    border-radius: 8px;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer__coopy {
+    order: 3;
   }
 }
 
@@ -2000,6 +2247,22 @@ html {
 
   .popular-categories__scrollbar {
     margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .articles__item {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .subscription__left div:first-child {
+    font-size: 30px;
+  }
+
+  .subscription__left div:last-child {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */
