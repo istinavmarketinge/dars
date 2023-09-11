@@ -243,6 +243,25 @@ jQuery(document).ready(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/header-fixed/header-fixed.js":
+/*!*********************************************************!*\
+  !*** ./src/blocks/modules/header-fixed/header-fixed.js ***!
+  \*********************************************************/
+/***/ (() => {
+
+$(function () {
+  var header = $('.header-fixed');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      header.addClass('display-block');
+    } else {
+      header.removeClass('display-block');
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/header/header.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
@@ -538,6 +557,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_articles_articles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/articles/articles */ "./src/blocks/modules/articles/articles.js");
 /* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/sale/sale */ "./src/blocks/modules/sale/sale.js");
 /* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/header-fixed/header-fixed */ "./src/blocks/modules/header-fixed/header-fixed.js");
+/* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__);
+
 
 
 

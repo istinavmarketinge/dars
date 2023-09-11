@@ -7,6 +7,7 @@ import Banner from "%modules%/banners/banner-big";
 import Tabs from "%modules%/tabs/tabs";
 import Articles from "%modules%/articles/articles";
 import Sale from "%modules%/sale/sale";
+import HeaderFixed from "%modules%/header-fixed/header-fixed";
 
 
 

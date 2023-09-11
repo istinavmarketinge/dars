@@ -1964,6 +1964,14 @@ html {
   text-decoration: none;
 }
 
+.bottom-menu__item:active span {
+  color: #F0820F;
+}
+
+.bottom-menu__item:active .bottom-menu__image svg path {
+  stroke: #F0820F;
+}
+
 @media all and (max-width: 1700px) {
   .container {
     padding: 0 50px;
@@ -2284,6 +2292,77 @@ html {
 
   .bottom-menu__in {
     display: flex;
+  }
+
+  .header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 11;
+    display: none;
+  }
+
+  .header-fixed.display-block {
+    display: block;
+  }
+
+  .header-fixed__in {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    grid-gap: 10px;
+  }
+
+  .header-fixed__search {
+    width: 100%;
+    max-width: 940px;
+  }
+
+  .header-fixed__search form {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-fixed__search form input {
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #F0820F;
+    width: 100%;
+    max-width: 854px;
+    outline: none;
+    padding: 8px 0px 8px 14px;
+    font-size: 14px;
+  }
+
+  .header-fixed__search form button {
+    border-radius: 6px;
+    background: #F0820F;
+    border: none;
+    outline: none;
+    width: 55px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -3px;
+  }
+
+  .header-fixed__logo img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .header-fixed__callback {
+    border-radius: 6px;
+    background: #F0820F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    max-width: 36px;
   }
 }
 

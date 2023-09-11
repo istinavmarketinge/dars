@@ -27,4 +27,10 @@
         color: #000;
         text-decoration: none;
     }
+    &__item:active span {
+        color: #F0820F;
+    }
+    &__item:active .bottom-menu__image svg path {
+        stroke: #F0820F;
+    }
 }
