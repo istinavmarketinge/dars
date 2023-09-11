@@ -1972,6 +1972,10 @@ html {
   stroke: #F0820F;
 }
 
+.header-fixed {
+  display: none;
+}
+
 @media all and (max-width: 1700px) {
   .container {
     padding: 0 50px;
