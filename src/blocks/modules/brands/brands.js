@@ -56,3 +56,14 @@ const PopularBrands = class PopularBrands {
 }
 
 export default PopularBrands;
+
+jQuery(document).ready(function() {
+	
+	$('.brands__button-categories').on('click',function(){
+		$('.brands__categories-list').toggleClass('open');
+	});
+  //   $('.header-top__modal-close').on('click',function(){
+	// 	$('.header-top__modal-city').removeClass('open');
+	// });
+	
+});

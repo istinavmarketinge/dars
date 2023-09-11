@@ -1,6 +1,43 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/modules/articles/articles.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/articles/articles.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var Articles = /*#__PURE__*/function () {
+  function Articles() {
+    _classCallCheck(this, Articles);
+  }
+  _createClass(Articles, [{
+    key: "init",
+    value: function init() {}
+  }]);
+  return Articles;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Articles);
+if (document.querySelector('.articles__button')) {
+  document.querySelector('.articles__button').addEventListener('click', function (event) {
+    event.target.classList.toggle("isOpened");
+    event.target.closest(".articles__in").querySelector('.articles__list').classList.toggle('isOpened');
+    console.log(event);
+  });
+}
+
+/***/ }),
 
 /***/ "./src/blocks/modules/banners/banner-big.js":
 /*!**************************************************!*\
@@ -8,6 +45,7 @@
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -64,6 +102,7 @@ var Banner = /*#__PURE__*/function () {
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -123,6 +162,7 @@ var BannerProduct = /*#__PURE__*/function () {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -192,6 +232,14 @@ var PopularBrands = /*#__PURE__*/function () {
   return PopularBrands;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PopularBrands);
+jQuery(document).ready(function () {
+  $('.brands__button-categories').on('click', function () {
+    $('.brands__categories-list').toggleClass('open');
+  });
+  //   $('.header-top__modal-close').on('click',function(){
+  // 	$('.header-top__modal-city').removeClass('open');
+  // });
+});
 
 /***/ }),
 
@@ -201,6 +249,7 @@ var PopularBrands = /*#__PURE__*/function () {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -222,6 +271,14 @@ var Header = /*#__PURE__*/function () {
   return Header;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
+jQuery(document).ready(function () {
+  $('.header-top__city').on('click', function () {
+    $('.header-top__modal-city').addClass('open');
+  });
+  $('.header-top__modal-close').on('click', function () {
+    $('.header-top__modal-city').removeClass('open');
+  });
+});
 
 /***/ }),
 
@@ -231,6 +288,7 @@ var Header = /*#__PURE__*/function () {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -303,12 +361,29 @@ var PopularCategories = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/sale/sale.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/modules/sale/sale.js ***!
+  \*****************************************/
+/***/ (() => {
+
+if (document.querySelector('.sale__button-all')) {
+  document.querySelector('.sale__button-all').addEventListener('click', function (event) {
+    event.target.classList.toggle("isOpened");
+    event.target.closest(".sale__in").querySelector('.sale__list').classList.toggle('isOpened');
+    console.log(event);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/blocks/modules/tabs/tabs.js":
 /*!*****************************************!*\
   !*** ./src/blocks/modules/tabs/tabs.js ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -405,6 +480,18 @@ var Tabs = /*#__PURE__*/function () {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -435,8 +522,9 @@ var Tabs = /*#__PURE__*/function () {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
@@ -447,6 +535,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_banners_banners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/banners/banners */ "./src/blocks/modules/banners/banners.js");
 /* harmony import */ var _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/banners/banner-big */ "./src/blocks/modules/banners/banner-big.js");
 /* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
+/* harmony import */ var _modules_articles_articles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/articles/articles */ "./src/blocks/modules/articles/articles.js");
+/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/sale/sale */ "./src/blocks/modules/sale/sale.js");
+/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__);
+
+
 
 
 

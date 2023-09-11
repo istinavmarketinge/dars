@@ -113,7 +113,39 @@
     &__slider-container {
         position: relative;
     }
-
+    &__categories-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 10;
+        border-radius: 6px;
+        border: 2px solid #000;
+    }
+    &__categories-list.open {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+        min-width: 317px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+    &__categories-list li {
+        list-style: none;
+        padding: 15px 27px;
+    }
+    &__categories-list li a {
+        text-decoration: none;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #000;
+    }
+    &__categories-list li:hover {
+        background: rgba(240, 130, 15, 0.20);
+    }
 
     
 }

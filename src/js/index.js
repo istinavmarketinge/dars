@@ -5,6 +5,9 @@ import PopularBrands from "%modules%/brands/brands";
 import BannerProduct from "%modules%/banners/banners";
 import Banner from "%modules%/banners/banner-big";
 import Tabs from "%modules%/tabs/tabs";
+import Articles from "%modules%/articles/articles";
+import Sale from "%modules%/sale/sale";
+
 
 
 
@@ -28,4 +31,6 @@ window.app.banner.init();
 
 window.app.tabs = new Tabs();
 window.app.tabs.init();
+
+
 

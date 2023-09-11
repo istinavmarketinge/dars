@@ -132,4 +132,25 @@
             grid-gap: 8px;
         }
     }
+    &__button-all {
+        display: none;
+        @media all and (max-width:560px) {
+            display: block;
+            background: #F1F1F1;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            text-align: center;
+            width: 100%;
+            padding: 14px 0;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+    }
+    &__list:not(.isOpened) .sale__item:nth-of-type(n+4) {
+        @media all and (max-width:560px) {
+            display: none;
+        }
+    }
 }
