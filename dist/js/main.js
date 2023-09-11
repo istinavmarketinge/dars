@@ -153,6 +153,13 @@ var BannerProduct = /*#__PURE__*/function () {
   return BannerProduct;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BannerProduct);
+(function ($) {
+  $(function () {
+    $('div.banner__tabs').on('click', 'div:not(.active)', function () {
+      $(this).addClass('active').siblings().removeClass('active').closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+  });
+})(jQuery);
 
 /***/ }),
 
@@ -434,7 +441,7 @@ var Tabs = /*#__PURE__*/function () {
             slidesPerView: 4.5
           },
           1200: {
-            slidesPerView: 3
+            slidesPerView: 2.5
           },
           900: {
             slidesPerView: 2.5,

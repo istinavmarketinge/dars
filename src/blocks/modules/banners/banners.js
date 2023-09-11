@@ -37,3 +37,14 @@ const BannerProduct = class BannerProduct {
 export default BannerProduct;
 
 
+(function($) {
+  $(function() {
+    
+    $('div.banner__tabs').on('click', 'div:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
+    
+  });
+  })(jQuery);

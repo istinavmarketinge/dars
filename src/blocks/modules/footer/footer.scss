@@ -176,7 +176,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            background: url("/img/geo-black.svg") 0 0/contain no-repeat;
+            background: url("../img/geo-black.svg") 0 0/contain no-repeat;
         }
         &::after {
             content: "";
@@ -185,7 +185,7 @@
             position: absolute;
             top: 5px;
             right: -2px;
-            background: url("/img/city-arrow-black.svg") 0 0/contain no-repeat;
+            background: url("../img/city-arrow-black.svg") 0 0/contain no-repeat;
         }
     }
     &__street {

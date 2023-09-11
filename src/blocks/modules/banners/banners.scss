@@ -4,26 +4,59 @@
         align-items: center;
         justify-content: space-between;
     }
+    
     &__big {
         max-width: 1212px;
         width: 100%;
         margin: 0 !important;
+        @media all and (max-width:900px) {
+            display: none;
+        }
+    }
+    &__content.active {
+        display: block;
     }
     &__big-pagination {
+        display: none;
+        @media all and (max-width:900px) {
+            display: flex;
+        }
+    }
+    &__image-mobile {
         display: none;
         @media all and (max-width:900px) {
             display: block;
         }
     }
+    &__image-big {
+        @media all and (max-width:900px) {
+            display: none;
+        }
+    }
+    &__image img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        min-height: 100%;
+        object-position: top left;
+        @media all and (max-width:900px) {
+            width: 100%;
+        }
+    }
     &__small {
         max-width: 394px;
         width: 100%;
+        @media all and (max-width:900px) {
+            max-width: 100%;
+            display: none;
+        }
         &-item {
             padding: 14px 22px 22px;
             text-decoration: none;
             color: #000;
             box-sizing: border-box;
             max-height: 420px;
+            border: 1px solid #E9E9E9;
         }
         &-title {
             display: flex;
@@ -37,6 +70,9 @@
                 font-weight: 400;
                 line-height: 114.367%;
                 margin: 0;
+                @media all and (max-width:900px) {
+                    font-size: 34px;
+                }
             }
         }
         &-image img {
@@ -45,6 +81,10 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+            @media all and (max-width:900px) {
+                max-width: 194px;
+                max-height: 194px;
+            }
         }
         &-image {
             margin-bottom: 20px;
@@ -61,6 +101,9 @@
                 font-weight: 700;
                 line-height: normal;
                 letter-spacing: 0.57px;
+                @media all and (max-width:900px) {
+                    font-size: 16px;
+                }
             }
             .old-price {
                 color: #949494;
@@ -70,6 +113,9 @@
                 line-height: normal;
                 letter-spacing: 0.42px;
                 text-decoration-line: strikethrough;
+                @media all and (max-width:900px) {
+                    font-size: 12px;
+                }
             }
             .discount-amount {
                 border-radius: 21px;
@@ -81,6 +127,10 @@
                 line-height: normal;
                 letter-spacing: 0.42px;
                 color: #fff;
+                @media all and (max-width:900px) {
+                    font-size: 12px;
+                }
+                
             }
         }
         &-preview-text {
@@ -89,6 +139,9 @@
             font-style: normal;
             font-weight: 400;
             line-height: 130%; 
+            @media all and (max-width:900px) {
+                font-size: 12px;
+            }
         }
     }
     &__small-slider-arrows {
@@ -105,5 +158,60 @@
     &__small-pagination {
         margin-top: 10px;
         position: relative !important;
+        display: flex;
+        bottom: 2px !important;
+        .swiper-pagination-bullet {
+            height: 2px;
+            background: #E3E3E3 !important;
+            flex: 1 1 auto;
+            border-radius: 2px;
+        }
+        .swiper-pagination-bullet-active {
+            background: #F0820F !important;
+            color: #000;
+        }
+    }
+    &__big-pagination {
+        margin-top: 10px;
+        position: relative !important;
+        display: flex;
+        bottom: 2px !important;
+        .swiper-pagination-bullet {
+            height: 2px;
+            background: #E3E3E3 !important;
+            flex: 1 1 auto;
+            border-radius: 2px;
+        }
+        .swiper-pagination-bullet-active {
+            background: #F0820F !important;
+            color: #000;
+        }
+    }
+    &__tabs {
+        display: none;
+        @media all and (max-width:900px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            grid-gap: 10px;
+            margin-top: 15px;
+        }
+    }
+    &__tabs-item {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.48px;
+        border-radius: 31px;
+        border: 2px solid #E3E3E3;
+        color: #E3E3E3;
+        padding: 6px 0;
+        text-align: center;
+        width: 48%;
+    }
+    &__tabs-item.active {
+        border: 2px solid #F0820F;
+        color: #000;
     }
 }

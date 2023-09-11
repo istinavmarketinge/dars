@@ -1,22 +1,23 @@
 <div class="banner">
     <div class="banner__in">
-        <div class="banner__big swiper">
+        <div class="banner__big banner__content swiper">
             <div class="swiper-wrapper">
                 @@for ($i = 0; $i < 10; $i++) {
                 <div class="banner__image swiper-slide">
-                    <img src="./img/big-banner.jpg" alt="banner">
+                    <img class="banner__image-big" src="./img/big-banner.jpg" alt="banner">
+                    <img class="banner__image-mobile" src="./img/banner-mobile.png" alt="banner">
                 </div>
                 }
             </div>
             <div class="swiper-pagination banner__big-pagination"></div>
 
         </div>
-        <div class="banner__small">
+        <div class="banner__small banner__content">
 
             <div class="banner__small-slider swiper">
                 <div class="swiper-wrapper">
 
-                    @@for ($i = 0; $i < 10; $i++) {
+                    @@for ($i = 0; $i < 5; $i++) {
                         <a href="#" class="banner__small-item swiper-slide">
                             <div class="banner__small-title">
                                 <h2>Товар дня</h2>
@@ -47,5 +48,10 @@
             </div>
 
         </div>
+
+    </div>
+    <div class="banner__tabs">
+        <div class="banner__tabs-item">Баннер</div>
+        <div class="banner__tabs-item">Товар дня</div>
     </div>
 </div>
