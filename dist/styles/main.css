@@ -2312,11 +2312,6 @@ html {
   display: none;
 }
 
-.catalog-menu__right-container--mobile.open {
-  display: block;
-  padding: 25px;
-}
-
 .bottom-menu {
   position: fixed;
   bottom: 0;
@@ -3047,6 +3042,11 @@ html {
 
   .catalog-menu__right-container {
     display: none;
+  }
+
+  .catalog-menu__right-container--mobile.open {
+    display: block;
+    padding: 25px;
   }
 }
 
