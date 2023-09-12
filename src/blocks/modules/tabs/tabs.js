@@ -18,7 +18,7 @@ const Tabs = class Tabs {
                   slidesPerView: 4.5,
                 },
                 1200: {
-                  slidesPerView: 2.5,
+                  slidesPerView: 3.5,
                 },
                 900: {
                   slidesPerView: 2.5,
@@ -47,9 +47,28 @@ const Tabs = class Tabs {
             },
           }).mount();
     }
+    imageShowHendler() {
+      if(!document.querySelector(".tabs__slider-item-image")) return;
+       document.querySelectorAll(".tabs__hidden-item").forEach((hiddenItem) => {
+        hiddenItem.addEventListener("mouseover", (event) => {
+         let imageId = event.target.dataset.imageToShow;
+
+         event.target.closest(".tabs__slider-item-image").querySelector('.tabs__image--active').classList.remove("tabs__image--active");
+
+         event.target.closest(".tabs__slider-item-image").querySelector('.tabs__hidden-item.isActive').classList.remove("isActive");
+
+         event.target.closest(".tabs__slider-item-image").querySelector(`[data-image_id="${imageId}"]`).classList.add("tabs__image--active");
+
+         event.target.classList.add("isActive");
+        })
+       })
+    }
+    
     init() {
         this.initSlider();
+        this.imageShowHendler();
     }
 }
 
 export default Tabs;
+

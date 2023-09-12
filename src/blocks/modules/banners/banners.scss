@@ -57,6 +57,20 @@
             box-sizing: border-box;
             max-height: 420px;
             border: 1px solid #E9E9E9;
+            position: relative;
+        }
+        &-rating {
+            position: absolute;
+            top: 70px;
+            right: 21px;
+            display: flex;
+            align-items: center;
+            grid-gap: 5px;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.45px;
         }
         &-title {
             display: flex;

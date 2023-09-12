@@ -15,9 +15,14 @@
                     @@for ($i = 0; $i < 10; $i++) {
                         <div class="tabs__slider-item swiper-slide">
                             <div class="tabs__slider-item-image">
-                                <img class="tabs__image tabs__image-active" src="./img/articles.png" alt="image">
-                                <img class="tabs__image tabs__image-hidden" src="./img/articles.png" alt="image">
-                                <img class="tabs__image tabs__image-hidden" src="./img/articles.png" alt="image">
+                                <div class="tabs__hidden-block">
+                                    <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                                    <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                                    <div class="tabs__hidden-item" data-image-to-show="3"></div>
+                                </div>
+                                <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+                                <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+                                <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
                             </div>
                             <div class="tabs__slider-item-price">
                                 <div class="new-price">3 680 ₽/шт</div>

@@ -8,6 +8,7 @@ import Tabs from "%modules%/tabs/tabs";
 import Articles from "%modules%/articles/articles";
 import Sale from "%modules%/sale/sale";
 import HeaderFixed from "%modules%/header-fixed/header-fixed";
+import CatalogMenu from "%modules%/catalog-menu/catalog-menu";
 
 
 
@@ -32,6 +33,9 @@ window.app.banner.init();
 
 window.app.tabs = new Tabs();
 window.app.tabs.init();
+
+window.app.catalogMenu = new CatalogMenu();
+window.app.catalogMenu.init();
 
 
 

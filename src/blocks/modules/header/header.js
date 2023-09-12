@@ -17,5 +17,9 @@ jQuery(document).ready(function() {
     $('.header-top__modal-close').on('click',function(){
 		$('.header-top__modal-city').removeClass('open');
 	});
+    $('.header-bottom__catalog-button').on('click',function(){
+		$('.catalog-menu').toggleClass('open');
+	});
+
 	
 });
