@@ -1404,6 +1404,7 @@ html {
 
 .tabs__slider-item-stickers {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   grid-gap: 11px;
   margin-bottom: 17px;
@@ -1959,6 +1960,10 @@ html {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+.footer__menu-list li a:hover {
+  color: #F0820F;
 }
 
 .footer__menu-title {
