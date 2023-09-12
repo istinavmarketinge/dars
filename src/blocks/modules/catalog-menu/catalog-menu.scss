@@ -75,18 +75,18 @@
             padding: 8px 4px;
             position: relative;
         }
-        li:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 4px;
-            height: 8px;
-            background: url("../img/arrow-grey.svg") 0 0/contain no-repeat;
-        }
         li:hover {
             border-radius: 7px;
             background: #F4F4F4;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 20px;
+                right: 18px;
+                width: 4px;
+                height: 8px;
+                background: url("../img/arrow-grey.svg") 0 0/contain no-repeat;
+            }
         }
         li a {
             display: flex;
@@ -120,6 +120,19 @@
         font-weight: 400;
         line-height: normal;
         color: #000;
+        position: relative;
+        &-sale {
+            padding-left: 18px;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 13px;
+                height: 13px;
+                top: 2px;
+                left: 0;
+                background: url("../img/sale-black.svg") 0 0/contain no-repeat;
+            }
+        }
     }
     &__best-categiries {
         padding: 40px 35px;

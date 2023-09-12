@@ -2125,19 +2125,19 @@ html {
   position: relative;
 }
 
-.catalog-menu__left-list li:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 8px;
-  background: url("../img/arrow-grey.svg") 0 0/contain no-repeat;
-}
-
 .catalog-menu__left-list li:hover {
   border-radius: 7px;
   background: #F4F4F4;
+}
+
+.catalog-menu__left-list li:hover:after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 4px;
+  height: 8px;
+  background: url("../img/arrow-grey.svg") 0 0/contain no-repeat;
 }
 
 .catalog-menu__left-list li a {
@@ -2170,6 +2170,21 @@ html {
   font-weight: 400;
   line-height: normal;
   color: #000;
+  position: relative;
+}
+
+.catalog-menu__left-second-item-sale {
+  padding-left: 18px;
+}
+
+.catalog-menu__left-second-item-sale:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 2px;
+  left: 0;
+  background: url("../img/sale-black.svg") 0 0/contain no-repeat;
 }
 
 .catalog-menu__best-categiries {

@@ -317,9 +317,10 @@ var CatalogMenu = /*#__PURE__*/function () {
   }, {
     key: "openMenu",
     value: function openMenu() {
-      jQuery(document).ready(function () {
-        $('.catalog-menu__left-list li').on('click', function () {
-          $('.catalog-menu__right-container--mobile').toggleClass('open');
+      document.querySelectorAll(".catalog-menu__left-list li").forEach(function (menuItem) {
+        menuItem.addEventListener("click", function (event) {
+          console.log(menuItem);
+          event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
         });
       });
     }
