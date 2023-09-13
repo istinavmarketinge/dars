@@ -9,6 +9,9 @@
         @media all and (max-width:1600px) {
             flex-direction: column;
         }
+        @media all and (max-width:900px) {
+            padding-bottom: 62px;
+        }
     }
     &__left {
         background: #F8F8F8;
@@ -54,6 +57,8 @@
         }
         @media all and (max-width:700px) {
             margin-bottom: 0;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #DEDEDE;
         }
         
     }
@@ -124,7 +129,7 @@
         @media all and (max-width:700px) {
             justify-content: flex-start;
             grid-gap: unset;
-            margin-top: 30px;
+            margin-top: 20px;
         }
     }
     &__menu-list {
@@ -223,7 +228,15 @@
         grid-gap: 7px;
         .mail {
             text-decoration: none;
-            color: #595959;
+            color: #000;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        .mail-icon {
+            display: flex;
+            align-items: center;
         }
         @media all and (max-width:700px) {
             border-radius: 8px;
@@ -293,6 +306,18 @@
         object-fit: cover;
         @media all and (max-width:1600px) {
             max-height: 300px;
+        }
+    }
+    &__map {
+        @media all and (max-width:700px) {
+            display: none;
+        }
+    }
+    &__map--mobile {
+        display: none;
+        @media all and (max-width:700px) {
+            display: block;
+            margin-bottom: 30px;
         }
     }
 }
