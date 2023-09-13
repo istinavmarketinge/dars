@@ -228,15 +228,7 @@
         grid-gap: 7px;
         .mail {
             text-decoration: none;
-            color: #000;
-            font-size: 17px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-        .mail-icon {
-            display: flex;
-            align-items: center;
+            color: #595959;
         }
         @media all and (max-width:700px) {
             border-radius: 8px;
