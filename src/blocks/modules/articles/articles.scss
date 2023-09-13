@@ -1,5 +1,10 @@
 .articles {
     padding-bottom: 50px;
+    &__in {
+        @media all and (max-width:900px) {
+            padding-top: 20px;
+        }
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -17,7 +22,7 @@
         }
     }
     &__item {
-         min-height: 255px;
+         min-height: 250px;
          background: url("../img/articles.png") 0 0/cover no-repeat;
          padding: 10px 20px;
          text-decoration: none;
@@ -31,6 +36,7 @@
          }
          @media all and (max-width:700px) {
             padding: 10px 13px;
+            min-height: 220px;
         }
         @media all and (max-width:560px) {
             width: 100%;
@@ -49,6 +55,9 @@
     &__item-last {
         grid-area: last;
         padding: 25px 30px;
+        .articles__info {
+            padding: 21px 30px;
+        }
         @media all and (max-width:1360px) {
             padding: 10px 20px;
         }
@@ -132,7 +141,6 @@
             width: 100%;
             padding: 14px 0;
             box-sizing: border-box;
-            margin-top: 20px;
         }
     }
     &__list:not(.isOpened) .articles__item:nth-of-type(n+4) {

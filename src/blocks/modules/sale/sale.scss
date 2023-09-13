@@ -1,5 +1,8 @@
 .sale {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
+    @media all and (max-width:900px) {
+        padding-bottom: 50px;
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -145,7 +148,7 @@
             width: 100%;
             padding: 14px 0;
             box-sizing: border-box;
-            margin-top: 20px;
+            margin-top: 0;
         }
     }
     &__list:not(.isOpened) .sale__item:nth-of-type(n+4) {

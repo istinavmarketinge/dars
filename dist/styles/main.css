@@ -469,6 +469,7 @@ html {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 1.08px;
+  margin-top: 10px;
 }
 
 .header-top {
@@ -1196,7 +1197,7 @@ html {
 }
 
 .sale {
-  padding-bottom: 50px;
+  padding-bottom: 80px;
 }
 
 .sale__list {
@@ -1290,6 +1291,7 @@ html {
 
 .tabs {
   padding: 70px 0 50px 0;
+  margin-bottom: 55px;
   background: #F8F8F8;
 }
 
@@ -1306,12 +1308,13 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  grid-gap: 20px;
+  grid-gap: 10px;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.6px;
+  margin-top: 20px;
 }
 
 .tabs__left-item {
@@ -1342,7 +1345,7 @@ html {
 }
 
 .tabs__slider .swiper-wrapper {
-  padding-bottom: 25px;
+  padding-bottom: 40px;
 }
 
 .tabs__slider-item-text {
@@ -1354,7 +1357,7 @@ html {
 }
 
 .tabs__slider-item-image {
-  margin-bottom: 15px;
+  margin-bottom: 27px;
   position: relative;
   width: 100%;
   background: silver;
@@ -1613,12 +1616,18 @@ html {
 
 .brands__title-left .title {
   white-space: nowrap;
+  margin: 0;
+}
+
+.brands__scrollbar {
+  margin-top: 40px;
+  position: relative !important;
 }
 
 .brands__button-categories {
   border-radius: 31px;
   border: 2px solid #000;
-  padding: 15px 40px 15px 27px;
+  padding: 10px 40px 10px 27px;
   max-width: 191px;
   width: 100%;
   box-sizing: border-box;
@@ -1636,13 +1645,14 @@ html {
   width: 10px;
   height: 7px;
   position: absolute;
-  top: 23px;
+  top: 17px;
   right: 20px;
   background: url("../img/arrow-down.svg") 0 0/contain no-repeat;
 }
 
 .brands__slider-container {
   position: relative;
+  margin-top: 50px;
 }
 
 .brands__categories-list {
@@ -1696,7 +1706,7 @@ html {
 }
 
 .articles__item {
-  min-height: 255px;
+  min-height: 250px;
   background: url("../img/articles.png") 0 0/cover no-repeat;
   padding: 10px 20px;
   text-decoration: none;
@@ -1712,6 +1722,10 @@ html {
 .articles__item-last {
   grid-area: last;
   padding: 25px 30px;
+}
+
+.articles__item-last .articles__info {
+  padding: 21px 30px;
 }
 
 .articles__item-two {
@@ -1898,7 +1912,7 @@ html {
   font-weight: 700;
   line-height: normal;
   text-decoration: none;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   color: #000;
   display: block;
 }
@@ -1934,7 +1948,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 47px;
+  margin-top: 34px;
   margin-bottom: 23px;
 }
 
@@ -1942,7 +1956,7 @@ html {
   padding: 0;
   display: flex;
   flex-direction: column;
-  grid-gap: 18px 30px;
+  grid-gap: 13px 30px;
   flex-wrap: wrap;
   max-height: 165px;
   margin-top: 18px;
@@ -2557,11 +2571,11 @@ html {
 
 @media all and (max-width: 900px) {
   .title {
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.75px;
   }
 
   .container {
@@ -2583,7 +2597,7 @@ html {
 
   .header-top__item.--top-menu.--top-menu-mobile {
     display: block;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .header-bottom {
@@ -2660,8 +2674,16 @@ html {
     margin-top: 15px;
   }
 
+  .popular-categories {
+    margin-top: 35px;
+  }
+
   .popular-categories__button-all {
     display: none;
+  }
+
+  .sale {
+    padding-bottom: 50px;
   }
 
   .tabs {
@@ -2670,6 +2692,8 @@ html {
 
   .tabs__in {
     flex-direction: column;
+    padding-left: 20px;
+    grid-gap: 75px;
   }
 
   .tabs__left {
@@ -2677,6 +2701,7 @@ html {
     max-width: 100%;
     font-size: 16px;
     grid-gap: 25px;
+    margin-top: 0;
   }
 
   .tabs__left-item {
@@ -2695,6 +2720,10 @@ html {
 
   .tabs__slider-item-text {
     font-size: 14px;
+  }
+
+  .tabs__slider-item-image {
+    margin-bottom: 18px;
   }
 
   .tabs__slider-item-price {
@@ -2723,8 +2752,18 @@ html {
     display: none;
   }
 
+  .brands {
+    padding-bottom: 65px;
+  }
+
+  .brands__in {
+    padding: 40px 19px 90px;
+    background: #F8F8F8;
+  }
+
   .brands__item {
     min-height: 124px;
+    background: #fff;
   }
 
   .brands__arrows div {
@@ -2735,15 +2774,23 @@ html {
     flex-direction: column;
     grid-gap: 18px;
     align-items: flex-start;
-    margin-bottom: 55px;
+    margin-bottom: 0;
   }
 
   .brands__title-left .title {
     margin-bottom: 0px;
   }
 
+  .brands__scrollbar {
+    margin-top: 70px;
+  }
+
   .brands__button-categories {
     font-size: 16px;
+  }
+
+  .articles__in {
+    padding-top: 20px;
   }
 
   .catalog-menu__left {
@@ -2867,6 +2914,7 @@ html {
 
   .articles__item {
     padding: 10px 13px;
+    min-height: 220px;
   }
 
   .articles__item-first {
@@ -3058,7 +3106,7 @@ html {
 @media all and (max-width: 640px) {
   .header-top {
     margin-bottom: 0;
-    padding: 20px 0 18px 0;
+    padding: 20px 0 14px 0;
   }
 
   .header-top__button {
@@ -3137,7 +3185,7 @@ html {
     width: 100%;
     padding: 14px 0;
     box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .sale__list:not(.isOpened) .sale__item:nth-of-type(n+4) {
@@ -3159,7 +3207,6 @@ html {
     width: 100%;
     padding: 14px 0;
     box-sizing: border-box;
-    margin-top: 20px;
   }
 
   .articles__list:not(.isOpened) .articles__item:nth-of-type(n+4) {

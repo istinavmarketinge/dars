@@ -1,5 +1,14 @@
 .brands {
     padding-bottom: 50px; 
+    @media all and (max-width:900px) {
+        padding-bottom: 65px;
+    }
+    &__in {
+        @media all and (max-width:900px) {
+            padding: 40px 19px 90px;
+            background: #F8F8F8;
+        }
+    }
     &__item {
         border-radius: 20px;
         border: 1px solid #FFF;
@@ -13,6 +22,7 @@
         box-sizing: border-box;
         @media all and (max-width:900px) {
             min-height: 124px;
+            background: #fff;
         }
     }
     &__item:hover {
@@ -74,19 +84,27 @@
             flex-direction: column;
             grid-gap: 18px;
             align-items: flex-start;
-            margin-bottom: 55px;
+            margin-bottom: 0;
         }
         .title {
             white-space: nowrap;
+            margin: 0;
             @media all and (max-width:900px) {
                 margin-bottom: 0px;
             }
         }
     }
+    &__scrollbar {
+        margin-top: 40px;
+        position: relative !important;
+        @media all and (max-width:900px) {
+            margin-top: 70px;
+        }
+    }
     &__button-categories {
         border-radius: 31px;
         border: 2px solid #000;
-        padding: 15px 40px 15px 27px;
+        padding: 10px 40px 10px 27px;
         max-width: 191px;
         width: 100%;
         box-sizing: border-box;
@@ -106,12 +124,13 @@
         width: 10px;
         height: 7px;
         position: absolute;
-        top: 23px;
+        top: 17px;
         right: 20px;
         background: url('../img/arrow-down.svg') 0 0/contain no-repeat;
     }
     &__slider-container {
         position: relative;
+        margin-top: 50px;
     }
     &__categories-list {
         display: none;
