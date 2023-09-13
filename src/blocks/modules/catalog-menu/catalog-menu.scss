@@ -16,6 +16,7 @@
     }
     @media all and (max-width:700px) {
         padding: 13px 0 20px 13px;
+        top: 105px;
     }
     &.open {
         display: block;
@@ -52,7 +53,7 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        min-height: 894px;
+        min-height: 800px;
         @media all and (max-width:900px) {
             padding-left: 30px;
             width: 50%;
@@ -66,10 +67,10 @@
     &__left-list {
         display: flex;
         flex-direction: column;
-        grid-gap: 9px;
+        grid-gap: 4px;
         padding: 0;
         margin: 0;
-        margin-bottom: 50px;
+        margin-bottom: 37px;
         li {
             list-style: none;
             padding: 8px 4px;
@@ -83,8 +84,8 @@
                 position: absolute;
                 top: 20px;
                 right: 18px;
-                width: 4px;
-                height: 8px;
+                width: 8px;
+                height: 12px;
                 background: url("../img/arrow-grey.svg") 0 0/contain no-repeat;
             }
         }
@@ -271,5 +272,12 @@
             display: block;
             padding: 25px;
         }
+    }
+    &__title {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 55px;
     }
 }
