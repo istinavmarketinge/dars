@@ -9,6 +9,9 @@ import Articles from "%modules%/articles/articles";
 import Sale from "%modules%/sale/sale";
 import HeaderFixed from "%modules%/header-fixed/header-fixed";
 import CatalogMenu from "%modules%/catalog-menu/catalog-menu";
+import Counter from "%modules%/countdown/countdown";
+
+
 
 
 
@@ -37,5 +40,6 @@ window.app.tabs.init();
 window.app.catalogMenu = new CatalogMenu();
 window.app.catalogMenu.init();
 
-
+window.app.counter = new Counter();
+window.app.counter.init();
 
