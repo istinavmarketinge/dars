@@ -337,6 +337,37 @@ var CatalogMenu = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/catalog-sections/catalog-sections.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/modules/catalog-sections/catalog-sections.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var CatalogSections = /*#__PURE__*/_createClass(function CatalogSections() {
+  _classCallCheck(this, CatalogSections);
+});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CatalogSections);
+(function ($) {
+  $(function () {
+    $('.catalog-sections-list-item__more-title').on('click', function () {
+      $(this).toggleClass('active').closest('.catalog-sections__list-item').find('.catalog-sections-list-item__list').toggleClass('visible');
+    });
+  });
+})(jQuery);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/header-fixed/header-fixed.js":
 /*!*********************************************************!*\
   !*** ./src/blocks/modules/header-fixed/header-fixed.js ***!
@@ -672,6 +703,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/header-fixed/header-fixed */ "./src/blocks/modules/header-fixed/header-fixed.js");
 /* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
+/* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
+
 
 
 
@@ -697,6 +730,8 @@ window.app.tabs = new _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__["default"]
 window.app.tabs.init();
 window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_9__["default"]();
 window.app.catalogMenu.init();
+window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__["default"]();
+window.app.catalogSections.init();
 })();
 
 /******/ })()
