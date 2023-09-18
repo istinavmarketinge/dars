@@ -1,16 +1,23 @@
+import Swiper from 'swiper/bundle';
+
 const BannerProduct = class BannerProduct {
-    constructor() {
-        this.slider = null;
-    }
+    constructor() {}
     initSlider() {
         if (!document.querySelector('.banner__small-slider.swiper')) return;
-        this.slider = new Swiper('.banner__small-slider.swiper', {
+
+        new Swiper('.banner__small-slider.swiper', {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 0,
+            observer: true, 
+            observeParents: true,
+            navigation: {
+              nextEl: '.banner__small-slider .swiper-button-next',
+              prevEl: '.banner__small-slider .swiper-button-prev',
+            },
             zoom: {
                 maxRatio: 0,
-              },
+            },
           
             // If we need pagination
             pagination: {
@@ -18,33 +25,23 @@ const BannerProduct = class BannerProduct {
             },
           
             // Navigation arrows
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-          
-            // And if we need scrollbar
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
+            
           }).mount();
+    }
+    setMobileTabsSwitcher() {
+
+        $('div.banner__tabs').on('click', 'div:not(.active)', function() {
+          $(this)
+            .addClass('active').siblings().removeClass('active')
+            .closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
+        });
     }
     init() {
         this.initSlider();
+        this.setMobileTabsSwitcher();
+        
     }
 }
 
 export default BannerProduct;
 
-
-(function($) {
-  $(function() {
-    
-    $('div.banner__tabs').on('click', 'div:not(.active)', function() {
-      $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-    
-  });
-  })(jQuery);

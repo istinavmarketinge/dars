@@ -1,33 +1,51 @@
 .catalog-menu {
     position: absolute;
-    width: 100%;
-    max-width: 1500px;
     height: auto;
     top: 125px;
     left: 0;
     background: #fff;
     z-index: 11;
-    padding: 39px 103px 62px 147px;
+    padding: 39px 30px 62px 0px;
     box-sizing: border-box;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 29px 0px 63px 0px rgba(0, 0, 0, 0.05), 115px 0px 115px 0px rgba(0, 0, 0, 0.04), 258px 0px 155px 0px rgba(0, 0, 0, 0.03), 458px 0px 183px 0px rgba(0, 0, 0, 0.01), 716px 0px 200px 0px rgba(0, 0, 0, 0.00);
     display: none;
+    
+    align-items: flex-start;
+    &__overlay {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(34, 34, 34, .3);
+        z-index: 10;
+        backdrop-filter: blur(5px);
+
+    }
+    &.open + &__overlay {
+        opacity: 1;
+        visibility: visible;
+    }
     @media all and (max-width:1300px) {
         padding: 20px 50px 30px 50px;
+        width: 100%;
+        &__plate {
+            display: none;
+        }
+        &__overlay {
+            display: none;
+        }
     }
     @media all and (max-width:700px) {
         padding: 13px 0 20px 13px;
-        top: 105px;
+        flex-direction: column;
+        
     }
     &.open {
-        display: block;
-    }
-
-    &__in {
         display: flex;
-        align-items: flex-start;
-         @media all and (max-width:700px) {
-            flex-direction: column;
-         }
     }
     &__left {
         width: 100%;
@@ -35,6 +53,8 @@
         border-right: 1px solid #E2E2E2;
         padding-right: 40px;
         box-sizing: border-box;
+        max-height: 100%;
+        overflow: auto;
         @media all and (max-width:900px) {
             padding-right: 20px;
             width: 45%;
@@ -46,14 +66,15 @@
         }
     }
     &__right {
-        width: 70%;
-        padding-left: 65px;
+        flex: 1 1 auto;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        min-height: 800px;
+        overflow: auto;
+        padding-right: 70px;
+        padding-left: 66px;
         @media all and (max-width:900px) {
             padding-left: 30px;
             width: 50%;
@@ -76,7 +97,7 @@
             padding: 8px 4px;
             position: relative;
         }
-        li:hover {
+        & > li:hover {
             border-radius: 7px;
             background: #F4F4F4;
             &:after {
@@ -223,6 +244,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 30px;
     }
     &__right-products-item {
         width: 31%;

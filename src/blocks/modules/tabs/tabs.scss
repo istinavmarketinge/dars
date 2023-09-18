@@ -46,6 +46,10 @@
         letter-spacing: 0.6px;
         position: relative;
         cursor: pointer;
+        opacity: 0.3;
+        &--active {
+            opacity: 1;
+        }
         @media all and (max-width:900px) {
             padding: 0 15px 0 0;
             font-size: 16px;
@@ -79,6 +83,11 @@
     &__slider {
         .swiper-wrapper {
             padding-bottom: 40px;
+        }
+    }
+    &__slider-item {
+        &:not([data-slide-type="stock"]) {
+            display: none;
         }
     }
     &__slider-item-text {
@@ -178,6 +187,10 @@
             &.sticker-new {
                 border-radius: 23.766px;
                 background: #0F7DF0;
+            }
+            &.sticker-hit {
+                border-radius: 23.766px;
+                background: #1BC39B;
             }
         }
         

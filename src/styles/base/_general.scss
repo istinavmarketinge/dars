@@ -5,6 +5,9 @@ body,
 html {
     scroll-behavior: smooth;
 }
+body.isScrollPrevented {
+    overflow: hidden;
+}
 .container {
 max-width: 1626px;
 width: 100%;

@@ -1,4 +1,4 @@
-
+import Swiper from 'swiper/bundle';
 
 const CatalogMenu = class CatalogMenu {
     constructor() {

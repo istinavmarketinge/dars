@@ -1,3 +1,4 @@
+import Swiper from 'swiper/bundle';
 
 const PopularBrands = class PopularBrands {
     constructor() {
@@ -6,7 +7,7 @@ const PopularBrands = class PopularBrands {
     initSlider() {
         if (!document.querySelector('.brands__slider.swiper')) return;
         this.slider = new Swiper('.brands__slider.swiper', {
-            loop: true,
+            loop: false,
             slidesPerView: 7.5,
             spaceBetween: 25,
             zoom: {

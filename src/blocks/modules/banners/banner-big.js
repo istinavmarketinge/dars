@@ -1,3 +1,5 @@
+import Swiper from 'swiper/bundle';
+
 const Banner = class Banner {
     constructor() {
         this.slider = null;

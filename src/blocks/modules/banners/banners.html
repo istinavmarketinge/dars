@@ -1,12 +1,12 @@
 <div class="banner">
     <div class="banner__in">
-        <div class="banner__big banner__content swiper">
+        <div class="banner__big banner__content swiper active">
             <div class="swiper-wrapper">
                 @@for ($i = 0; $i < 10; $i++) {
-                <div class="banner__image swiper-slide">
+                <a href="#`+ $i +`" class="banner__image swiper-slide">
                     <img class="banner__image-big" src="./img/big-banner.jpg" alt="banner">
                     <img class="banner__image-mobile" src="./img/banner-mobile.png" alt="banner">
-                </div>
+                </a>
                 }
             </div>
             <div class="swiper-pagination banner__big-pagination"></div>
@@ -18,11 +18,11 @@
                 <div class="swiper-wrapper">
 
                     @@for ($i = 0; $i < 5; $i++) {
-                        <a href="#" class="banner__small-item swiper-slide">
+                        <a href="#`+ $i +`" class="banner__small-item swiper-slide">
                             <div class="banner__small-title">
                                 <h2>Товар дня</h2>
                                 @@include('../countdown/countdown.html', {
-                                    "target_date": "09/15/2023 23:59",
+                                    "target_date": "09/22/2023 23:59",
                                     "time_format": "HMS"
                                 })
                             </div>
@@ -58,7 +58,7 @@
 
     </div>
     <div class="banner__tabs">
-        <div class="banner__tabs-item">Баннер</div>
+        <div class="banner__tabs-item active">Баннер</div>
         <div class="banner__tabs-item">Товар дня</div>
     </div>
 </div>

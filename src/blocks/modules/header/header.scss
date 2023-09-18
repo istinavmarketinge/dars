@@ -286,9 +286,11 @@
 }
 
 .header-bottom {
-    margin-bottom: 37px;
+    padding-bottom: 10px;
+    margin-bottom: 27px;
     @media all and (max-width:900px) {
         margin-bottom: 30px;
+        padding-bottom: 0;
     }
     &__in {
         display: flex;

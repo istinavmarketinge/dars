@@ -1,43 +1,6 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./src/blocks/modules/articles/articles.js":
-/*!*************************************************!*\
-  !*** ./src/blocks/modules/articles/articles.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var Articles = /*#__PURE__*/function () {
-  function Articles() {
-    _classCallCheck(this, Articles);
-  }
-  _createClass(Articles, [{
-    key: "init",
-    value: function init() {}
-  }]);
-  return Articles;
-}();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Articles);
-if (document.querySelector('.articles__button')) {
-  document.querySelector('.articles__button').addEventListener('click', function (event) {
-    event.target.classList.toggle("isOpened");
-    event.target.closest(".articles__in").querySelector('.articles__list').classList.toggle('isOpened');
-    console.log(event);
-  });
-}
-
-/***/ }),
 
 /***/ "./src/blocks/modules/banners/banner-big.js":
 /*!**************************************************!*\
@@ -45,17 +8,18 @@ if (document.querySelector('.articles__button')) {
   \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var Banner = /*#__PURE__*/function () {
   function Banner() {
     _classCallCheck(this, Banner);
@@ -65,7 +29,7 @@ var Banner = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__big.swiper')) return;
-      this.slider = new Swiper('.banner__big.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__big.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -102,64 +66,64 @@ var Banner = /*#__PURE__*/function () {
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var BannerProduct = /*#__PURE__*/function () {
   function BannerProduct() {
     _classCallCheck(this, BannerProduct);
-    this.slider = null;
   }
   _createClass(BannerProduct, [{
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__small-slider.swiper')) return;
-      this.slider = new Swiper('.banner__small-slider.swiper', {
+      new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__small-slider.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: '.banner__small-slider .swiper-button-next',
+          prevEl: '.banner__small-slider .swiper-button-prev'
+        },
         zoom: {
           maxRatio: 0
         },
         // If we need pagination
         pagination: {
           el: '.swiper-pagination'
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar'
         }
+
+        // Navigation arrows
       }).mount();
+    }
+  }, {
+    key: "setMobileTabsSwitcher",
+    value: function setMobileTabsSwitcher() {
+      $('div.banner__tabs').on('click', 'div:not(.active)', function () {
+        $(this).addClass('active').siblings().removeClass('active').closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
+      });
     }
   }, {
     key: "init",
     value: function init() {
       this.initSlider();
+      this.setMobileTabsSwitcher();
     }
   }]);
   return BannerProduct;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BannerProduct);
-(function ($) {
-  $(function () {
-    $('div.banner__tabs').on('click', 'div:not(.active)', function () {
-      $(this).addClass('active').siblings().removeClass('active').closest('.banner').find('.banner__content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-  });
-})(jQuery);
 
 /***/ }),
 
@@ -169,17 +133,18 @@ var BannerProduct = /*#__PURE__*/function () {
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var PopularBrands = /*#__PURE__*/function () {
   function PopularBrands() {
     _classCallCheck(this, PopularBrands);
@@ -189,8 +154,8 @@ var PopularBrands = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.brands__slider.swiper')) return;
-      this.slider = new Swiper('.brands__slider.swiper', {
-        loop: true,
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.brands__slider.swiper', {
+        loop: false,
         slidesPerView: 7.5,
         spaceBetween: 25,
         zoom: {
@@ -256,17 +221,18 @@ jQuery(document).ready(function () {
   \*********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var CatalogMenu = /*#__PURE__*/function () {
   function CatalogMenu() {
     _classCallCheck(this, CatalogMenu);
@@ -276,7 +242,7 @@ var CatalogMenu = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.catalog-menu__right-products-slider.swiper')) return;
-      this.slider = new Swiper('.catalog-menu__right-products-slider.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-menu__right-products-slider.swiper', {
         loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
@@ -337,44 +303,12 @@ var CatalogMenu = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/catalog-sections/catalog-sections.js":
-/*!*****************************************************************!*\
-  !*** ./src/blocks/modules/catalog-sections/catalog-sections.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-var CatalogSections = /*#__PURE__*/_createClass(function CatalogSections() {
-  _classCallCheck(this, CatalogSections);
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CatalogSections);
-(function ($) {
-  $(function () {
-    $('.catalog-sections-list-item__more-title').on('click', function () {
-      $(this).toggleClass('active').closest('.catalog-sections__list-item').find('.catalog-sections-list-item__list').toggleClass('visible');
-    });
-  });
-})(jQuery);
-
-/***/ }),
-
 /***/ "./src/blocks/modules/countdown/countdown.js":
 /*!***************************************************!*\
   !*** ./src/blocks/modules/countdown/countdown.js ***!
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -420,32 +354,12 @@ var Counter = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/header-fixed/header-fixed.js":
-/*!*********************************************************!*\
-  !*** ./src/blocks/modules/header-fixed/header-fixed.js ***!
-  \*********************************************************/
-/***/ (() => {
-
-$(function () {
-  var header = $('.header-fixed');
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      header.addClass('display-block');
-    } else {
-      header.removeClass('display-block');
-    }
-  });
-});
-
-/***/ }),
-
 /***/ "./src/blocks/modules/header/header.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -461,23 +375,72 @@ var Header = /*#__PURE__*/function () {
     _classCallCheck(this, Header);
   }
   _createClass(Header, [{
+    key: "openMenuHandler",
+    value: function openMenuHandler() {
+      var _this = this;
+      $('.header-top__city').on('click', function () {
+        $('.header-top__modal-city').addClass('open');
+      });
+      $('.header-top__modal-close').on('click', function () {
+        $('.header-top__modal-city').removeClass('open');
+      });
+      document.querySelector('.header-bottom__catalog-button').addEventListener('click', function () {
+        document.querySelector('.catalog-menu').classList.toggle('open');
+        _this.setCatalogBounds();
+        if (window.innerWidth > 1300) {
+          document.querySelector('body').classList.add('isScrollPrevented');
+        }
+      });
+    }
+  }, {
+    key: "closeMenuHandler",
+    value: function closeMenuHandler() {
+      document.querySelector('.catalog-menu__overlay').addEventListener('click', function () {
+        document.querySelector('.catalog-menu').classList.remove('open');
+        document.querySelector('body').classList.remove('isScrollPrevented');
+      });
+    }
+  }, {
+    key: "calculateCatalogBounds",
+    value: function calculateCatalogBounds() {
+      var windowHeight = window.innerHeight;
+      var windowWidth = window.innerWidth;
+      var headerTopHeight = document.querySelector('.header-top').clientHeight;
+      var headerBottomHeight = document.querySelector('.header-bottom').clientHeight;
+      var headerBottomBounds = document.querySelector('.header-bottom').getBoundingClientRect();
+      console.log("".concat(windowHeight, " - ").concat(headerTopHeight, " - ").concat(headerBottomHeight, " = ").concat(windowHeight - headerTopHeight - headerBottomHeight));
+      console.log(headerBottomBounds);
+      return {
+        top: headerTopHeight + headerBottomHeight,
+        left: headerBottomBounds.x,
+        height: windowHeight - headerTopHeight - headerBottomHeight,
+        right: headerBottomBounds.y + 273
+      };
+    }
+  }, {
+    key: "setCatalogBounds",
+    value: function setCatalogBounds() {
+      if (window.innerWidth > 1300) {
+        document.querySelector('.catalog-menu').style.height = "".concat(this.calculateCatalogBounds().height, "px");
+        document.querySelector('.catalog-menu').style.top = "".concat(this.calculateCatalogBounds().top, "px");
+        document.querySelector('.catalog-menu__plate').style.width = "".concat(this.calculateCatalogBounds().left + 30, "px");
+        document.querySelector('.catalog-menu').style.right = "".concat(this.calculateCatalogBounds().right, "px");
+      }
+    }
+  }, {
     key: "init",
-    value: function init() {}
+    value: function init() {
+      var _this2 = this;
+      this.openMenuHandler();
+      this.closeMenuHandler();
+      window.addEventListener('resize', function () {
+        _this2.setCatalogBounds();
+      });
+    }
   }]);
   return Header;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
-jQuery(document).ready(function () {
-  $('.header-top__city').on('click', function () {
-    $('.header-top__modal-city').addClass('open');
-  });
-  $('.header-top__modal-close').on('click', function () {
-    $('.header-top__modal-city').removeClass('open');
-  });
-  $('.header-bottom__catalog-button').on('click', function () {
-    $('.catalog-menu').toggleClass('open');
-  });
-});
 
 /***/ }),
 
@@ -487,17 +450,18 @@ jQuery(document).ready(function () {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var PopularCategories = /*#__PURE__*/function () {
   function PopularCategories() {
     _classCallCheck(this, PopularCategories);
@@ -507,8 +471,8 @@ var PopularCategories = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.popular-categories__slider.swiper')) return;
-      this.slider = new Swiper('.popular-categories__slider.swiper', {
-        loop: true,
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.popular-categories__slider.swiper', {
+        loop: false,
         slidesPerView: 5.5,
         spaceBetween: 25,
         zoom: {
@@ -560,39 +524,24 @@ var PopularCategories = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/blocks/modules/sale/sale.js":
-/*!*****************************************!*\
-  !*** ./src/blocks/modules/sale/sale.js ***!
-  \*****************************************/
-/***/ (() => {
-
-if (document.querySelector('.sale__button-all')) {
-  document.querySelector('.sale__button-all').addEventListener('click', function (event) {
-    event.target.classList.toggle("isOpened");
-    event.target.closest(".sale__in").querySelector('.sale__list').classList.toggle('isOpened');
-    console.log(event);
-  });
-}
-
-/***/ }),
-
 /***/ "./src/blocks/modules/tabs/tabs.js":
 /*!*****************************************!*\
   !*** ./src/blocks/modules/tabs/tabs.js ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 var Tabs = /*#__PURE__*/function () {
   function Tabs() {
     _classCallCheck(this, Tabs);
@@ -602,8 +551,8 @@ var Tabs = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.tabs__slider.swiper')) return;
-      this.slider = new Swiper('.tabs__slider.swiper', {
-        loop: true,
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.tabs__slider.swiper', {
+        loop: false,
         slidesPerView: 4.5,
         spaceBetween: 25,
         zoom: {
@@ -638,7 +587,29 @@ var Tabs = /*#__PURE__*/function () {
         scrollbar: {
           el: '.swiper-scrollbar'
         }
-      }).mount();
+      }).init();
+    }
+  }, {
+    key: "addtabChangeHandler",
+    value: function addtabChangeHandler() {
+      var _this = this;
+      if (!document.querySelector('[data-slide-show]')) return;
+      document.querySelectorAll('[data-slide-show]').forEach(function (tabButton) {
+        tabButton.addEventListener('click', function (e) {
+          if (e.target.classList.contains('tabs__left-item--active')) return;
+          document.querySelector('.tabs__left-item--active').classList.remove('tabs__left-item--active');
+          console.log(tabButton.dataset.slideShow);
+          document.querySelectorAll(".tabs__slider-item").forEach(function (slide) {
+            if (slide.dataset.slideType == tabButton.dataset.slideShow) {
+              slide.style.display = 'block';
+            } else {
+              slide.style.display = 'none';
+            }
+          });
+          _this.slider.update();
+          tabButton.classList.add('tabs__left-item--active');
+        });
+      });
     }
   }, {
     key: "imageShowHendler",
@@ -659,6 +630,7 @@ var Tabs = /*#__PURE__*/function () {
     value: function init() {
       this.initSlider();
       this.imageShowHendler();
+      this.addtabChangeHandler();
     }
   }]);
   return Tabs;
@@ -673,7 +645,6 @@ var Tabs = /*#__PURE__*/function () {
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
 /* harmony import */ var _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/popular-categories/popular-categories */ "./src/blocks/modules/popular-categories/popular-categories.js");
@@ -681,18 +652,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_banners_banners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/banners/banners */ "./src/blocks/modules/banners/banners.js");
 /* harmony import */ var _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/banners/banner-big */ "./src/blocks/modules/banners/banner-big.js");
 /* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
-/* harmony import */ var _modules_articles_articles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/articles/articles */ "./src/blocks/modules/articles/articles.js");
-/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/sale/sale */ "./src/blocks/modules/sale/sale.js");
-/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_sale_sale__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/header-fixed/header-fixed */ "./src/blocks/modules/header-fixed/header-fixed.js");
-/* harmony import */ var _modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_header_fixed_header_fixed__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
-/* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
-/* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
-
-
-
-
+/* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
+/* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
 
 
 
@@ -703,24 +664,20 @@ __webpack_require__.r(__webpack_exports__);
 
 window.app = {};
 window.app.header = new _modules_header_header__WEBPACK_IMPORTED_MODULE_0__["default"]();
-window.app.header.init();
 window.app.popularCategories = new _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_1__["default"]();
-window.app.popularCategories.init();
 window.app.popularBrands = new _modules_brands_brands__WEBPACK_IMPORTED_MODULE_2__["default"]();
-window.app.popularBrands.init();
 window.app.bannerProduct = new _modules_banners_banners__WEBPACK_IMPORTED_MODULE_3__["default"]();
-window.app.bannerProduct.init();
 window.app.banner = new _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__["default"]();
-window.app.banner.init();
 window.app.tabs = new _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__["default"]();
+window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__["default"]();
+window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__["default"]();
+window.app.header.init();
+window.app.popularCategories.init();
+window.app.popularBrands.init();
+window.app.bannerProduct.init();
+window.app.banner.init();
 window.app.tabs.init();
-window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_9__["default"]();
 window.app.catalogMenu.init();
-window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__["default"]();
-window.app.catalogSections.init();
-window.app.catalogSection = new CatalogSection();
-window.app.catalogSection.init();
-window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_11__["default"]();
 window.app.counter.init();
 
 /***/ })
@@ -784,18 +741,6 @@ window.app.counter.init();
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	
