@@ -41,7 +41,6 @@ window.app.tabs.init();
 window.app.catalogMenu = new CatalogMenu();
 window.app.catalogMenu.init();
 
-<<<<<<< HEAD
 window.app.catalogSections = new CatalogSections();
 window.app.catalogSections.init();
 
@@ -49,8 +48,6 @@ window.app.catalogSection = new CatalogSection();
 window.app.catalogSection.init();
 
 
-=======
 window.app.counter = new Counter();
-window.app.counter.init();
->>>>>>> db26b271ff643663d043d5d5af3eb518accbf5df
+window.app.counter.init(); 
 

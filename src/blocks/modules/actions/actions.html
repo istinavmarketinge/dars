@@ -1,0 +1,39 @@
+<section class="actions">
+    <div class="actions__into">
+        <aside class="actions__title">
+            <h1>Акции</h1>
+        </aside>
+        <main class="actions__content">
+            <div class="actions__content-items">
+                
+                @@for(var i = 1; i <= 5; i++){
+                <div class="actions__content-item">
+                    <a href="/action.html" class="actions__content-item-image">
+                        <img src="../img/actions/action_banner_preview.png" alt="" />
+                    </a>
+                    <div class="actions__content-item-info">
+                        <a href="/action.html" class="actions__content-item-title">Большая летняя распродажа</a>
+                        <div class="actions__content-item-dates">Действует с 29.05.2023 по 30.06.2023. </div>
+                        <div class="actions__content-item-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Condimentum cras id tellus id magnis lectus leo. 
+                                Viverra ut ut consectetur nisl. In tincidunt metus blandit dolor sit eu ut varius maecenas. 
+                                Et convallis felis sed morbi amet quam mattis aliquam lectus. Ornare tincidunt viverra diam diam elit.
+                            </p>
+                            <p>
+                                In elementum leo egestas lacus. Vitae in lectus lacus vel felis velit enim purus. 
+                                Commodo at nulla tortor laoreet eget augue. Mauris bibendum tellus tellus vel luctus ultricies scelerisque posuere laoreet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                }
+
+            </div>
+            <!-- show_more_btn -->
+            @@include("../pagination/pagination.html",{
+                "show_more_btn" : true
+            })
+        </main>
+    </div>
+</section>

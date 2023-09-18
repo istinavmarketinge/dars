@@ -1,1 +1,25 @@
-1 2 3 4 5
+@@if(show_more_btn){
+    <div class="show_more_block">
+        <div class="show_more_block__btn">Показать ещё</div>
+    </div>
+}
+<div class="pagination">
+    <div class="pagination__nums">
+    <div class="pagination__num pagination__num--active"><a href="?PAGEN_1=1">1</a></div>
+    @@for (var i = 2; i <= 5; i++) {
+        <div class="pagination__num"><a href="?PAGEN_1=`+i+`">`+i+`</a></div>
+    }
+    
+    <div class="pagination__num">...</div>
+    <div class="pagination__num pagination__num--gray"><a href="?PAGEN_1=10">10</a></div>
+    </div>
+    <form class="pagination__gotopage" action="" method="GET">
+        <span class="pagination__gotopage-text">Перейти на страницу</span> 
+        <input type="number" name="PAGEN_1" value="" />
+        <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+                <path d="M1.41504 0.950806L6.32413 5.45081L1.41504 9.95081" stroke="black" stroke-width="1.50593" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </form>
+</div>
