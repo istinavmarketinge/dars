@@ -75,6 +75,7 @@
     },
     "dependencies": {
         "@glidejs/glide": "^3.6.0",
+        "dynamic-countdown": "^1.4.2",
         "jquery": "^3.7.0",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"
