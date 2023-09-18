@@ -41,5 +41,8 @@ window.app.catalogMenu.init();
 window.app.catalogSections = new CatalogSections();
 window.app.catalogSections.init();
 
+window.app.catalogSection = new CatalogSection();
+window.app.catalogSection.init();
+
 
 

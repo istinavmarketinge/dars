@@ -732,6 +732,8 @@ window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTE
 window.app.catalogMenu.init();
 window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__["default"]();
 window.app.catalogSections.init();
+window.app.catalogSection = new CatalogSection();
+window.app.catalogSection.init();
 })();
 
 /******/ })()
