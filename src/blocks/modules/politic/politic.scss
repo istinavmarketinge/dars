@@ -1,0 +1,99 @@
+.article {
+    margin-bottom: 80px;
+    &__into {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        
+        @media(max-width:1400px){
+            flex-wrap: wrap;
+        }
+        @media(max-width:560px){
+            display:block;
+        }
+    }
+
+    &__title {
+        width: 30%;
+        
+        @media(max-width:1400px){
+            width: 35%;
+        }
+        @media (max-width:1200px) {
+            width:100%;
+        }
+    }
+
+    &__name {
+        color: #000;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.08px;
+    }
+
+    &__backlink {
+        color: #0F7DF0;
+        /*leading-trim: both;
+        text-edge: cap;*/
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        @media (max-width:1200px) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    &__backlink:before{
+        content:"";
+        display: inline-block;
+        margin-right: 5px;
+        width: 5px;
+        height: 7px;
+        flex-shrink: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M4 6.5L1 3.5L4 0.5" stroke="%230F7DF0" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    &__content {
+        width: 50%;
+        padding: 0 0 0 10px;
+        @media(max-width:1400px){
+            width: 45%;
+        }
+        @media (max-width:1200px) {
+            width: 60%;
+        }
+        @media (max-width:900px) {
+            width: 100%;
+        }
+    }
+
+    &__image img {
+        width: 100%;
+    }
+
+    &__text {
+        color: #8C8C8C;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+    }
+
+    &__other {
+        width: 20%;
+        @media (max-width:1200px) {  
+            width:30%; 
+        }  
+        @media (max-width:900px) {  
+            width:100%;
+        }
+    }
+}

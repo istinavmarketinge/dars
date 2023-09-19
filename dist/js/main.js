@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -29,7 +29,7 @@ var Banner = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__big.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__big.swiper', {
+      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.banner__big.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -70,7 +70,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -86,7 +86,7 @@ var BannerProduct = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__small-slider.swiper')) return;
-      new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__small-slider.swiper', {
+      new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.banner__small-slider.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -137,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -154,7 +154,7 @@ var PopularBrands = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.brands__slider.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.brands__slider.swiper', {
+      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.brands__slider.swiper', {
         loop: false,
         slidesPerView: 7.5,
         spaceBetween: 25,
@@ -225,7 +225,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -242,7 +242,7 @@ var CatalogMenu = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.catalog-menu__right-products-slider.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-menu__right-products-slider.swiper', {
+      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.catalog-menu__right-products-slider.swiper', {
         loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
@@ -454,7 +454,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -471,7 +471,7 @@ var PopularCategories = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.popular-categories__slider.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.popular-categories__slider.swiper', {
+      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.popular-categories__slider.swiper', {
         loop: false,
         slidesPerView: 5.5,
         spaceBetween: 25,
@@ -534,7 +534,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -551,7 +551,7 @@ var Tabs = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.tabs__slider.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.tabs__slider.swiper', {
+      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.tabs__slider.swiper', {
         loop: false,
         slidesPerView: 4.5,
         spaceBetween: 25,

@@ -29,6 +29,40 @@
         line-height: normal;
         letter-spacing: 1.08px;
     }
+    &__dates{
+        display: flex;
+        padding: 15px 35px;
+        margin: 30px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 6px;
+        background: rgba(240, 130, 15, 0.10);
+        color: #3F3F3F;
+        gap: 12px;
+    }
+    &__dates-title{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.48px;
+    }
+    
+    &__dates-title:before{
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 13px;
+        margin-right: 10px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none"><path d="M8.77771 7.05561H5.99993V4.27783M2.11118 1.77779L3.22229 0.944458M9.88912 1.77779L8.77801 0.944458M6 12.0555C8.76144 12.0555 11 9.81698 11 7.05554C11 4.29412 8.76144 2.05554 6 2.05554C3.23858 2.05554 1 4.29412 1 7.05554C1 9.81698 3.23858 12.0555 6 12.0555Z" stroke="%233F3F3F" stroke-width="1.0178" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    &__dates-date{
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 
     &__backlink {
         color: #0F7DF0;
@@ -63,7 +97,7 @@
         @media (max-width:1200px) {
             width:60%;
         }
-        @media (max-width:900px) {
+        @media (max-width:960px) {
             width:100%;
         }
     }
@@ -82,24 +116,41 @@
         line-height: 130%; /* 20.8px */
     }
 
+    &__text-viewfull-link{
+        color: var(--unnamed, #0F7DF0);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+    }
+
+    &__text-viewfull-link:after{
+        content:"";
+        display: inline-block;
+        width: 8px;
+        height: 5px;
+        margin-left: 5px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M7 1L4 4L1 1" stroke="%230F7DF0" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+
     &__other {
         width:25%;
         @media (max-width:1200px) {  
             width:30%; 
         }  
-        @media (max-width:900px) {  
+        @media (max-width:960px) {  
             width:100%;
         }
     }
 
     &__other-title {
-        color: #000;
-        font-family: Inter;
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.72px;
+        margin-bottom: 30px;
     }
 
     &__other-items {
@@ -107,53 +158,64 @@
     }
 
     &__other-item {
-        position: relative;
-        margin-top: 30px;
+        margin-bottom: 40px;
     }
-
-    &__other-item-image {
-        padding-top: 66.5%;
-        position: relative;
-        img{
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    &__other-item-title {
-        position: absolute;
-        background-color: #FFF;
-        color: #000;
-        z-index: 1;
-        top: 15px;
-        left: 15px;
-        right: 15px;
-        display: block;
-        padding: 10px 15px;
+    &__other-item a{
         text-decoration: none;
     }
 
-    &__other-item-name {
-        display: block;
+    &__other-item-image img{
+        width: 100%;
     }
 
-    &__other-item-date {
+    &__other-item-title {
+        position: relative;
+    }
+
+    &__other-item-bottom{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__other-item-name {
+        display: inline-block;
+        color: #000;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.57px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+    &__other-item-link {
+        color: #1D1D1D;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
         display: flex;
         align-items: center;
-        color:#8C8C8C;        
-        margin-top: 5px;
+    } 
+    
+    &__other-item-date {
+        color: #8C8C8C;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
-    &__other-item-date:after{
+    &__other-item-link:after{
         content:"";
         display: inline-block;
-        width: 9px;
-        height: 14px;
+        width: 7px;
+        height: 11px;
         margin-left: 25px;
-        background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none"><path d="M1.66797 1.21228L7.19508 6.73939L1.66797 12.2665" stroke="%231D1D1D" stroke-width="1.84237" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="%231D1D1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     }
 }
