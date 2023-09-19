@@ -3353,6 +3353,7 @@ body.isScrollPrevented {
   font-size: 24px;
   font-weight: 400;
   text-decoration: none;
+  height: 391px;
 }
 
 .catalog-sections__list-item-header-image {
@@ -3414,6 +3415,10 @@ body.isScrollPrevented {
   color: #A9A9A9;
   font-size: 12px;
   font-weight: 300;
+}
+
+.catalog-sections-list-item__more {
+  display: none;
 }
 
 .catalog-sections-list-item__more-title {
@@ -4128,6 +4133,10 @@ body.isScrollPrevented {
   /* 20.8px */
 }
 
+.action__text-block {
+  transition: height 0.5s linear;
+}
+
 .action__text-viewfull-link {
   color: var(--unnamed, #0F7DF0);
   font-size: 14px;
@@ -4135,6 +4144,7 @@ body.isScrollPrevented {
   font-weight: 400;
   line-height: normal;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .action__text-viewfull-link:after {
@@ -4658,6 +4668,13 @@ body.isScrollPrevented {
   }
 }
 
+@media (max-width: 961px) {
+  .action__text-block.close {
+    height: 140px;
+    overflow: hidden;
+  }
+}
+
 @media all and (max-width: 960px) {
   .hide_on_mobile {
     display: none !important;
@@ -5007,6 +5024,12 @@ body.isScrollPrevented {
     padding: 0px 13px 16px 13px;
     font-size: 13px;
     gap: 0;
+    height: auto;
+  }
+
+  .catalog-sections__list-item-header:hover {
+    background: #F0820F;
+    color: #FFF;
   }
 
   .catalog-sections-list-item__body {
@@ -5014,7 +5037,7 @@ body.isScrollPrevented {
   }
 
   .catalog-sections-list-item__more {
-    display: none;
+    display: none !important;
   }
 
   .news__in {

@@ -1,0 +1,23 @@
+<li class="catalog-sections__list-item">
+    <a href="/catalog-section-page.html" class="catalog-sections__list-item-header">
+        <div class="catalog-sections__list-item-header-image">
+            <img src="@@img" alt="">
+        </div>
+        <div class="catalog-sections__list-item-header-title">@@name</div>
+    </a>
+    <div class="catalog-sections-list-item__body">
+        <ul class="catalog-sections-list-item__list">
+            @@for (var i = 0; i < list.length; i++) {
+                <li class="catalog-sections-list-item__list-item">
+                    <a href="/catalog-section-page.html" class="catalog-sections-list-item__list-item-link">
+                        <span class="catalog-sections-list-item__list-item-title">`+list[i]+`</span>
+                        <span class="catalog-sections-list-item__list-item-count">903</span>
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="catalog-sections-list-item__more">
+        <button type="button" class="catalog-sections-list-item__more-title">Ещё</button>
+    </div>
+</li>

@@ -7,6 +7,8 @@ import Banner from "%modules%/banners/banner-big";
 import Tabs from "%modules%/tabs/tabs";
 import CatalogMenu from "%modules%/catalog-menu/catalog-menu";
 import Counter from "%modules%/countdown/countdown";
+import Action from "%modules%/action/action";
+import CatalogSections from "%modules%/catalog-sections/catalog-sections";
 
 
 
@@ -24,7 +26,8 @@ window.app.banner = new Banner();
 window.app.tabs = new Tabs();
 window.app.catalogMenu = new CatalogMenu();
 window.app.counter = new Counter();
-
+window.app.action = new Action();
+window.app.catalogSections = new CatalogSections();
 
 
 
@@ -37,4 +40,6 @@ window.app.banner.init();
 window.app.tabs.init();
 window.app.catalogMenu.init();
 window.app.counter.init();
+window.app.action.init();
+window.app.catalogSections.init();
 

@@ -115,7 +115,15 @@
         font-weight: 400;
         line-height: 130%; /* 20.8px */
     }
-
+    &__text-block{
+        transition: height 0.5s linear;
+    }
+    @media(max-width:961px){
+        &__text-block.close {
+            height: 140px;
+            overflow: hidden;
+        }
+    }
     &__text-viewfull-link{
         color: var(--unnamed, #0F7DF0);
         font-size: 14px;
@@ -123,6 +131,7 @@
         font-weight: 400;
         line-height: normal;
         cursor: pointer;
+        margin-top: 10px;
     }
 
     &__text-viewfull-link:after{

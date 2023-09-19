@@ -2,6 +2,59 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/modules/action/action.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/action/action.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var Action = /*#__PURE__*/function () {
+  function Action() {
+    _classCallCheck(this, Action);
+    this.action_find_height = 0;
+    this.jquery_obj = ".action .js_click_closest .js_click_find";
+    this.class_close = "close";
+  }
+  _createClass(Action, [{
+    key: "addClickHandler",
+    value: function addClickHandler(action_find_heigh) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.action .js_click_link').on('click', function () {
+        var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+        obj.closest('.js_click_closest').find('.js_click_find').css('height', action_find_heigh + 'px');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.jquery_obj).removeClass(this.class_close);
+        obj.hide();
+        console.log(this.action_find_height, action_find_heigh);
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.jquery_obj)) {
+        this.action_find_height = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.jquery_obj).height();
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this.jquery_obj).addClass(this.class_close);
+      }
+      this.addClickHandler(this.action_find_height);
+    }
+  }]);
+  return Action;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Action);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/banners/banner-big.js":
 /*!**************************************************!*\
   !*** ./src/blocks/modules/banners/banner-big.js ***!
@@ -12,7 +65,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -29,7 +82,7 @@ var Banner = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__big.swiper')) return;
-      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.banner__big.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__big.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -70,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -86,7 +139,7 @@ var BannerProduct = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.banner__small-slider.swiper')) return;
-      new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.banner__small-slider.swiper', {
+      new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.banner__small-slider.swiper', {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 0,
@@ -137,7 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -154,7 +207,7 @@ var PopularBrands = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.brands__slider.swiper')) return;
-      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.brands__slider.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.brands__slider.swiper', {
         loop: false,
         slidesPerView: 7.5,
         spaceBetween: 25,
@@ -225,7 +278,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -242,7 +295,7 @@ var CatalogMenu = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.catalog-menu__right-products-slider.swiper')) return;
-      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.catalog-menu__right-products-slider.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-menu__right-products-slider.swiper', {
         loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
@@ -273,11 +326,12 @@ var CatalogMenu = /*#__PURE__*/function () {
         navigation: {
           nextEl: '.popular-categories__arrow.swiper-button-next',
           prevEl: '.popular-categories__arrow.swiper-button-prev'
-        },
-        // And if we need scrollbar
-        scrollbar: {
-          el: '.swiper-scrollbar'
         }
+
+        // // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
       }).mount();
     }
   }, {
@@ -300,6 +354,62 @@ var CatalogMenu = /*#__PURE__*/function () {
   return CatalogMenu;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CatalogMenu);
+
+/***/ }),
+
+/***/ "./src/blocks/modules/catalog-sections/catalog-sections.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/modules/catalog-sections/catalog-sections.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var CatalogSections = /*#__PURE__*/function () {
+  function CatalogSections() {
+    _classCallCheck(this, CatalogSections);
+    this.list_count = 5;
+  }
+  _createClass(CatalogSections, [{
+    key: "addClickHandler",
+    value: function addClickHandler() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-sections-list-item__more-title').on('click', function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active').closest('.catalog-sections__list-item').find('.catalog-sections-list-item__list').toggleClass('visible');
+      });
+    }
+  }, {
+    key: "showButtonMore",
+    value: function showButtonMore(list_count) {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-sections__list-item')) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-sections__list-item').each(function () {
+          var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-sections-list-item__more') && obj.find('.catalog-sections-list-item__list-item').length > list_count) {
+            obj.find('.catalog-sections-list-item__more').show();
+          }
+        });
+      }
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.showButtonMore(this.list_count);
+      this.addClickHandler();
+    }
+  }]);
+  return CatalogSections;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CatalogSections);
 
 /***/ }),
 
@@ -454,7 +564,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -471,7 +581,7 @@ var PopularCategories = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.popular-categories__slider.swiper')) return;
-      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.popular-categories__slider.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.popular-categories__slider.swiper', {
         loop: false,
         slidesPerView: 5.5,
         spaceBetween: 25,
@@ -534,7 +644,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -551,7 +661,7 @@ var Tabs = /*#__PURE__*/function () {
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.tabs__slider.swiper')) return;
-      this.slider = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'swiper/bundle'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('.tabs__slider.swiper', {
+      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.tabs__slider.swiper', {
         loop: false,
         slidesPerView: 4.5,
         spaceBetween: 25,
@@ -654,6 +764,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
 /* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
 /* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
+/* harmony import */ var _modules_action_action__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/action/action */ "./src/blocks/modules/action/action.js");
+/* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
+
+
 
 
 
@@ -671,6 +785,8 @@ window.app.banner = new _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__
 window.app.tabs = new _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__["default"]();
 window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__["default"]();
 window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__["default"]();
+window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_8__["default"]();
+window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__["default"]();
 window.app.header.init();
 window.app.popularCategories.init();
 window.app.popularBrands.init();
@@ -679,6 +795,8 @@ window.app.banner.init();
 window.app.tabs.init();
 window.app.catalogMenu.init();
 window.app.counter.init();
+window.app.action.init();
+window.app.catalogSections.init();
 
 /***/ })
 
@@ -702,7 +820,7 @@ window.app.counter.init();
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -741,6 +859,18 @@ window.app.counter.init();
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

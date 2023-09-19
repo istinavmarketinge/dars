@@ -43,10 +43,10 @@ const CatalogMenu = class CatalogMenu {
               prevEl: '.popular-categories__arrow.swiper-button-prev',
             },
           
-            // And if we need scrollbar
-            scrollbar: {
-              el: '.swiper-scrollbar',
-            },
+            // // And if we need scrollbar
+            // scrollbar: {
+            //   el: '.swiper-scrollbar',
+            // },
           }).mount();
     }
     openMenu() {
