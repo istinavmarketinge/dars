@@ -4509,6 +4509,11 @@ body.isScrollPrevented {
   margin-bottom: 40px;
 }
 
+.elements a {
+  text-decoration: none;
+  color: #000;
+}
+
 @media all and (min-width: 961px) {
   .hide_on_desktop {
     display: none !important;
