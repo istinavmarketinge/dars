@@ -1,0 +1,11 @@
+.elements{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-item{
+        width: 24%;
+        margin-bottom: 40px;
+    }
+}

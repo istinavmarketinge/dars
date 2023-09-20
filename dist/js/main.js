@@ -464,6 +464,56 @@ var Counter = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/elements_list/elements_list.js":
+/*!***********************************************************!*\
+  !*** ./src/blocks/modules/elements_list/elements_list.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var ElementsList = /*#__PURE__*/function () {
+  function ElementsList() {
+    _classCallCheck(this, ElementsList);
+  }
+  _createClass(ElementsList, [{
+    key: "addClickHandler",
+    value: function addClickHandler() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_closest .js_click').on('click', function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('open').closest('.js_closest').find('.js_find').toggle();
+      });
+    }
+  }, {
+    key: "trimElementName",
+    value: function trimElementName() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_element_item').each(function () {
+        var name = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.js_element_name');
+        console.log(name.length);
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.addClickHandler();
+    }
+  }]);
+  return ElementsList;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ElementsList);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/header/header.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
@@ -766,6 +816,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
 /* harmony import */ var _modules_action_action__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/action/action */ "./src/blocks/modules/action/action.js");
 /* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
+/* harmony import */ var _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/elements_list/elements_list */ "./src/blocks/modules/elements_list/elements_list.js");
+
 
 
 
@@ -787,6 +839,7 @@ window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTE
 window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__["default"]();
 window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_8__["default"]();
 window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__["default"]();
+window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__["default"]();
 window.app.header.init();
 window.app.popularCategories.init();
 window.app.popularBrands.init();
@@ -797,6 +850,7 @@ window.app.catalogMenu.init();
 window.app.counter.init();
 window.app.action.init();
 window.app.catalogSections.init();
+window.app.elementsList.init();
 
 /***/ })
 

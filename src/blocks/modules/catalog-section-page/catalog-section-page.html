@@ -1,38 +1,55 @@
-<div class="catalog-section">
-    <div class="catalog-filter catalog-section__filter">
-
-    </div>
-    <div class="catalog-section__main">
-        <div class="catalog-section__title">Керамогранит <span class="catalog-section__title-count">3452 товара</span></div>
-        <div class="catalog-section__tags">
-            <div class="tags-block">
-                <ul class="tags-block__list">
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Kerama Marazzi</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Cersanit</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Italon</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Gracia Ceramica</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Estima</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                    <li class="tags-block__item">
-                        <span class="tags-block__item-title">Atlas  Concorde</span>
-                        <button type="button" class="tags-block__btn-close">Закрыть</button>
-                    </li>
-                </ul>
+<section class="section">
+    <div class="section__into">
+        <div class="section__filter">@@include("../catalog-filter/catalog-filter.html")</div>
+        <div class="section__content">
+            <h1>Керамогранит</h1>
+            <div class="section__filter_tags">
+                @@loop('./catalog-section-page-tags.html', [
+                    {  
+                        arr: [
+                        'Kerama Marazzi', 'Cersanit', 'Italon', 'Gracia Ceramica', 'Estima', 'Atlas  Concorde', 
+                        'Vitra', 'Creto', 'APE', 'Meissen', 'Marazzi Italy', 'Villeroy&Boch', 'Ragno', 'Carmen', 
+                        'Tau Ceramica', 'Serenissima Cir', 'Ametis', 'Mosplitka', 'Interbau&Blink'
+                        ],
+                    },
+                ])
             </div>
+            <div class="section__sort-block">
+                <div class="section__sort-select">
+                    <div class="section__sort-select-into js_closest">
+                        <div class="section__sort-button js_click">
+                            <span class="section__sort-selected">Популярные</span>
+                        </div>
+                        <div class="section__sort-div-select-block js_find">
+                            <div class="section__sort-div-select">
+                                <div class="section__sort-div-select-option selected"><a href="">Популярные</a></div>
+                                <div class="section__sort-div-select-option"><a href="">По названию <i>“А-Я”</i></a></div>
+                                <div class="section__sort-div-select-option"><a href="">По названию <i>“Я-А”</i></a></div>
+                                <div class="section__sort-div-select-option"><a href="">Сначала дешёвые</a></div>
+                                <div class="section__sort-div-select-option"><a href="">Сначала дорогие</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__sort-filter">
+                    <div class="section__sort-filter-title">Отображать только:</div>
+                    <div class="section__sort-filter-item">
+                        <div class="section__sort-filter-item-name">Товары со скидками</div>
+                        <a href="" class="section__sort-filter-item-check chcecked"></a>
+                    </div>
+                    <div class="section__sort-filter-item">
+                        <div class="section__sort-filter-item-name">Новинки</div>
+                        <a href="" class="section__sort-filter-item-check"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="section__elements_list">
+                @@include("../elements_list/elements_list.html")                         
+                <!-- show_more_btn -->
+                @@include("../pagination/pagination.html",{
+                    "show_more_btn" : true
+                })
+            </div>   
         </div>
     </div>
-</div>
+</section>

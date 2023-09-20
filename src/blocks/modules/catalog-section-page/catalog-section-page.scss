@@ -1,71 +1,210 @@
-.catalog-section {
+.section {
+    h1{
+        margin-top: 0;
+    }
+    &__into {
+        display: flex;
+    }
 
     &__filter {
-
+        width: 20%;
     }
 
-    &__main {
+    &__content {
+        width: 80%;
     }
 
-    &__title {
-    }
-
-    &__title-count {
-    }
-
-    &__tags {
-    }
-}
-.catalog-filter {
-}
-.tags-block {
-
-    &__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    &__filter_tags {
         display: flex;
-        width: max-content;
-    }
-
-    &__list:hover &__item {
-        color: #111214;
-    }
-
-    &__item {
-        cursor: context-menu;
-        margin: 0 10px 10px 0;
-        padding: 5px 14px;
-        color: #F5F5F5;
-        font-size: 12px;
-        font-weight: 300;
-        background-color: #F5F5F5;
-        display: flex;
-        align-items: center;
-        border-radius: 4px;
-
-        &:hover,
-        &.active {
-            color: #fff;
-            background-color: #F0820F;
+        margin-bottom: 5px;
+        ul{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-self: stretch;
+            justify-content: flex-start;
+            padding: 0;
+            li{
+                display: flex;
+                padding: 5px 10px 5px 14px;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                border-radius: 4px;
+                opacity: 0.5;
+                background: #F5F5F5;
+                cursor: pointer;
+            }
+            li:after{
+                content: "";
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none"><path opacity="0.9" d="M1 6L3.50001 3.50001M3.50001 3.50001L6 1M3.50001 3.50001L1 1M3.50001 3.50001L6 6" stroke="white" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            }
+            li:hover{
+                opacity: 1;
+                background-color: #F5F5F5;
+            }
+            li.active{
+                background: #F0820F;
+                color: #FFFFFF;
+                opacity: 1;
+            }
         }
     }
-
-    &__item-title {
-
+    &__sort-block{
+        display: flex;
+        align-items: center;
+        margin-bottom: 28px;
     }
 
-    &__btn-close {
-        display: none;
+    &__sort-select {
+        width: 50%;
+    }
+    &__sort-select-into {
+        position: relative;
+    }
+    &__sort-button {
+        display: inline-block;
+        padding: 5px 8px 6px 18px;
+        border-radius: 31px;
+        border: 2px solid #2B2B2B;
         cursor: pointer;
-        font-size: 0;
-        padding: 0;
-        margin: 0;
-        border: 0;
-        margin-left: 5px;
-        width: 5px;
+    }
+    &__sort-button:after{
+        content: "";
+        display: inline-block;
+        width: 8px;
         height: 5px;
-        background: 50% / contain no-repeat;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='7' viewBox='0 0 7 7' fill='none'%3E%3Cpath opacity='0.9' d='M1 6L3.50001 3.50001M3.50001 3.50001L6 1M3.50001 3.50001L1 1M3.50001 3.50001L6 6' stroke='white' stroke-width='0.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        margin: 0 7px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="5" viewBox="0 0 8 5" fill="none"><path d="M7 1L4 4L1 1" stroke="%232B2B2B" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    &__sort-button.open:after{
+        transform: rotate(180deg);
+    }
+    &__sort-selected {
+        color: #2B2B2B;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__sort-div-select-block {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 12px;
+        z-index: 12;
+    }
+    &__sort-div-select {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 5px;
+        border: 1px solid #000;
+        background: #FFF;
+    }
+    &__sort-div-select-option {
+        display: flex;
+        padding: 9px 12px 9px 12px;
+        align-items: center;
+        border-bottom: 1px solid #F2F2F2;
+        background: #FFF;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &__sort-div-select-option a{
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.36px;
+        text-decoration: none;
+    }
+    &__sort-div-select-option i{
+        color: #C8C8C8;
+        display: inline-block;
+        margin-left: 5px;
+        font-style: normal;
+    }
+    &__sort-div-select-option:hover{
+        background: rgba(240, 130, 15, 0.20);
+    }
+    &__sort-div-select-option.selected{
+        opacity: 0.2;
+    }
+    &__sort-div-select-option:last-child{
+        border-bottom: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &__sort-filter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 24px;
+        width: 50%;
+    }
+
+    &__sort-filter-title {
+        color: #959595;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.42px;
+    }
+
+    &__sort-filter-item {
+        display: flex;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 11px;
+    }
+    &__sort-filter-item:hover{
+        background: #F6F6F6        
+    }
+
+    &__sort-filter-item-name {
+        color: #000;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.42px;
+    }   
+    &__sort-filter-item-check {
+        cursor: pointer;
+        width: 30px;
+        height: 17px;
+        background-repeat: no-repeat;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="17" viewBox="0 0 30 17" fill="none"><path d="M7.99985 9.89998C8.77305 9.89998 9.39985 9.2732 9.39985 8.49998C9.39985 7.72676 8.77305 7.09998 7.99985 7.09998C7.22666 7.09998 6.59985 7.72676 6.59985 8.49998C6.59985 9.2732 7.22666 9.89998 7.99985 9.89998Z" fill="black" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 15.5H8C4.13401 15.5 1 12.366 1 8.5C1 4.63401 4.13401 1.5 8 1.5H22C25.866 1.5 29 4.63401 29 8.5C29 12.366 25.866 15.5 22 15.5Z" stroke="black" stroke-width="1.75"/></svg>');
+    }
+    &__sort-filter-item-check.chcecked  {
+        width: 30px;
+        height: 17px;
+        background-repeat: no-repeat;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="17" viewBox="0 0 30 17" fill="none"><path d="M22 15.5H8C4.13401 15.5 1 12.366 1 8.5C1 4.63401 4.13401 1.5 8 1.5H22C25.866 1.5 29 4.63401 29 8.5C29 12.366 25.866 15.5 22 15.5Z" stroke="%23F0820F" stroke-width="1.75"/><path d="M22.6 9.89998C23.3732 9.89998 24 9.2732 24 8.49998C24 7.72676 23.3732 7.09998 22.6 7.09998C21.8268 7.09998 21.2 7.72676 21.2 8.49998C21.2 9.2732 21.8268 9.89998 22.6 9.89998Z" fill="%23F0820F" stroke="%23F0820F" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+    &__sort-filter-item.chcecked:hover{
+        background: #F3F8FF;        
     }
 }
