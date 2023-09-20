@@ -394,10 +394,12 @@
             justify-content: center;
             grid-gap: 11px;
             cursor: pointer;
+            text-decoration: none;
             span {
                 font-size: 10px;
                 font-style: normal;
                 font-weight: 400;
+                color: #000;
             }
         }
     }

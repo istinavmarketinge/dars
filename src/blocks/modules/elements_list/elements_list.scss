@@ -1,15 +1,60 @@
-.elements{
+.elements {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
-    &-item{
+    &-item {
         width: 24%;
         margin-bottom: 40px;
+        user-select: none;
+    }
+    &--favorites &-item {
+        width: calc(100% / 5 - 20px * 4 / 5);
     }
     a{
         text-decoration: none;
         color: #000;        
+    }
+    &-item__buttons {
+        position: absolute;
+        top: 11px;
+        right: 15px;
+        border-radius: 3px;
+        overflow: hidden;
+        z-index: 12;
+        font-size: 0;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    &-item__button {
+        width: 35px;
+        padding: 10px 7px 7px 8px;
+        box-sizing: border-box;
+        opacity: 0.5;
+        background: transparent;        
+        cursor: pointer;
+        text-decoration: none;
+        display: block;
+        transition: all .3s ease;
+        border-radius: 3px;
+        svg {
+            fill: none;
+        }
+        svg path {
+            stroke: #000;
+            transition: all .3s ease;
+        }
+        &:hover {
+            opacity: 1;
+            background: #FFF;
+        }
+        &:active,
+        &.isActive {
+            background: #F0380F;
+            opacity: 1;
+            svg path {
+                stroke: #fff;
+            }
+        }
     }
 }

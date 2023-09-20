@@ -13,6 +13,22 @@ max-width: 1626px;
 width: 100%;
 margin: 0 auto;
 }
+.general {
+    &__page-title {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+    }
+    &__page-count {
+        color: #A9A9A9;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 12px;
+        padding-top: 12px;
+    }
+}
 .title {
     font-size: 36px;
     font-style: normal;

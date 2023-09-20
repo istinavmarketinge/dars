@@ -1322,6 +1322,22 @@ body.isScrollPrevented {
   margin: 0 auto;
 }
 
+.general__page-title {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.general__page-count {
+  color: #A9A9A9;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 12px;
+  padding-top: 12px;
+}
+
 .title {
   font-size: 36px;
   font-style: normal;
@@ -1694,12 +1710,14 @@ body.isScrollPrevented {
   justify-content: center;
   grid-gap: 11px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .header-bottom__right-icons .right-icons__item span {
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
+  color: #000;
 }
 
 .top-menu {
@@ -4535,11 +4553,65 @@ body.isScrollPrevented {
 .elements-item {
   width: 24%;
   margin-bottom: 40px;
+  user-select: none;
+}
+
+.elements--favorites .elements-item {
+  width: calc(20% - 16px);
 }
 
 .elements a {
   text-decoration: none;
   color: #000;
+}
+
+.elements-item__buttons {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 12;
+  font-size: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.elements-item__button {
+  width: 35px;
+  padding: 10px 7px 7px 8px;
+  box-sizing: border-box;
+  opacity: 0.5;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.elements-item__button svg {
+  fill: none;
+}
+
+.elements-item__button svg path {
+  stroke: #000;
+  transition: all 0.3s ease;
+}
+
+.elements-item__button:hover {
+  opacity: 1;
+  background: #FFF;
+}
+
+.elements-item__button:active,
+.elements-item__button.isActive {
+  background: #F0380F;
+  opacity: 1;
+}
+
+.elements-item__button:active svg path,
+.elements-item__button.isActive svg path {
+  stroke: #fff;
 }
 
 @media all and (min-width: 961px) {
