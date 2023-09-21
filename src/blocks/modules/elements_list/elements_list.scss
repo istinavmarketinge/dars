@@ -11,6 +11,9 @@
     }
     &--favorites &-item {
         width: calc(100% / 5 - 20px * 4 / 5);
+        @media(max-width:1230px){            
+            width: 45%;
+        }
     }
     a{
         text-decoration: none;

@@ -1,3 +1,6 @@
+.articles_ex .popular-categories__button-all{
+    display: none;
+}
 .articles {
     padding-bottom: 50px;
     &__in {
@@ -23,7 +26,7 @@
     }
     &__item {
          min-height: 250px;
-         background: url("../img/articles.png") 0 0/cover no-repeat;
+         background: url("./img/articles.png") 0 0/cover no-repeat;
          padding: 10px 20px;
          text-decoration: none;
          color: #000;
@@ -126,7 +129,7 @@
         height: 11px;
         top: 4px;
         right: 0;
-        background: url("../img/arrow-black.svg") 0 0/contain no-repeat;
+        background: url("./img/arrow-black.svg") 0 0/contain no-repeat;
     }
     &__button {
         display: none;

@@ -2587,6 +2587,10 @@ body.isScrollPrevented {
   background: rgba(240, 130, 15, 0.2);
 }
 
+.articles_ex .popular-categories__button-all {
+  display: none;
+}
+
 .articles {
   padding-bottom: 50px;
 }
@@ -2601,7 +2605,7 @@ body.isScrollPrevented {
 
 .articles__item {
   min-height: 250px;
-  background: url("../img/articles.png") 0 0/cover no-repeat;
+  background: url("./img/articles.png") 0 0/cover no-repeat;
   padding: 10px 20px;
   text-decoration: none;
   color: #000;
@@ -2680,7 +2684,7 @@ body.isScrollPrevented {
   height: 11px;
   top: 4px;
   right: 0;
-  background: url("../img/arrow-black.svg") 0 0/contain no-repeat;
+  background: url("./img/arrow-black.svg") 0 0/contain no-repeat;
 }
 
 .articles__button {
@@ -3808,10 +3812,11 @@ body.isScrollPrevented {
 .article__into {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 10px;
 }
 
-.article__title {
+.article__title-block {
   width: 25%;
 }
 
@@ -3852,6 +3857,7 @@ body.isScrollPrevented {
 .article__content {
   width: 50%;
   padding: 0 40px 0 10px;
+  border-right: 1px solid #F2F2F2;
 }
 
 .article__image img {
@@ -3871,6 +3877,7 @@ body.isScrollPrevented {
 
 .article__other {
   width: 25%;
+  padding-left: 30px;
 }
 
 .article__other-title {
@@ -4471,21 +4478,21 @@ body.isScrollPrevented {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11" fill="none"><path d="M1.5 1.5L5.5 5.5L1.5 9.5" stroke="%231D1D1D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 
-.article {
+.politic {
   margin-bottom: 80px;
 }
 
-.article__into {
+.politic__into {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 }
 
-.article__title {
+.politic__title {
   width: 30%;
 }
 
-.article__name {
+.politic__name {
   color: #000;
   font-size: 36px;
   font-style: normal;
@@ -4494,7 +4501,7 @@ body.isScrollPrevented {
   letter-spacing: 1.08px;
 }
 
-.article__backlink {
+.politic__backlink {
   color: #0F7DF0;
   /*leading-trim: both;
   text-edge: cap;*/
@@ -4509,7 +4516,7 @@ body.isScrollPrevented {
   text-decoration: none;
 }
 
-.article__backlink:before {
+.politic__backlink:before {
   content: "";
   display: inline-block;
   margin-right: 5px;
@@ -4519,16 +4526,16 @@ body.isScrollPrevented {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M4 6.5L1 3.5L4 0.5" stroke="%230F7DF0" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 }
 
-.article__content {
+.politic__content {
   width: 50%;
   padding: 0 0 0 10px;
 }
 
-.article__image img {
+.politic__image img {
   width: 100%;
 }
 
-.article__text {
+.politic__text {
   color: #8C8C8C;
   font-family: Inter;
   font-size: 16px;
@@ -4538,7 +4545,7 @@ body.isScrollPrevented {
   /* 20.8px */
 }
 
-.article__other {
+.politic__other {
   width: 20%;
 }
 
@@ -4662,15 +4669,15 @@ body.isScrollPrevented {
 }
 
 @media (max-width: 1400px) {
-  .article__into {
+  .politic__into {
     flex-wrap: wrap;
   }
 
-  .article__title {
+  .politic__title {
     width: 35%;
   }
 
-  .article__content {
+  .politic__content {
     width: 45%;
   }
 }
@@ -4769,6 +4776,12 @@ body.isScrollPrevented {
   }
 }
 
+@media (max-width: 1230px) {
+  .elements-item {
+    width: 45%;
+  }
+}
+
 @media all and (max-width: 1200px) {
   .footer__contacts {
     flex-wrap: wrap;
@@ -4781,7 +4794,7 @@ body.isScrollPrevented {
     flex-wrap: wrap;
   }
 
-  .article__title {
+  .article__title-block {
     width: 100%;
   }
 
@@ -4852,20 +4865,20 @@ body.isScrollPrevented {
     width: 30%;
   }
 
-  .article__title {
+  .politic__title {
     width: 100%;
   }
 
-  .article__backlink {
+  .politic__backlink {
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  .article__content {
+  .politic__content {
     width: 60%;
   }
 
-  .article__other {
+  .politic__other {
     width: 30%;
   }
 }
@@ -5380,11 +5393,11 @@ body.isScrollPrevented {
     width: 100%;
   }
 
-  .article__content {
+  .politic__content {
     width: 100%;
   }
 
-  .article__other {
+  .politic__other {
     width: 100%;
   }
 }
@@ -5815,7 +5828,7 @@ body.isScrollPrevented {
     display: block;
   }
 
-  .article__into {
+  .politic__into {
     display: block;
   }
 }
