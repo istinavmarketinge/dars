@@ -18,7 +18,17 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-            letter-spacing: 1.08px; 
+            letter-spacing: 1.08px;
+            @media (max-width: 900px) {
+                color: #000;
+                leading-trim: both;
+                text-edge: cap;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.96px;
+            }
         }
     }
 
@@ -37,6 +47,7 @@
 
     &__content-items {
         position: relative;
+        margin-bottom: 40px;
     }
 
     &__content-item {
@@ -45,6 +56,11 @@
         border-bottom: 1px solid #F2F2F2;
         a{
             text-decoration: none;
+        }
+        @media (max-width:900px) {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin: 10px 0;
         }
     }
     &__content-item-into {
@@ -56,11 +72,15 @@
         box-sizing: border-box;
         @media (max-width:900px) {
             flex-wrap: wrap;
-            padding-bottom: 20px;
+            padding: 10px;
+            gap: 10px;
         }
     }
     &__content-item:first-child {
         margin-top: 0;
+    }
+    &__content-item:last-child {
+        border-bottom: none;
     }
     &__content-item-into:hover{
         background: #F1F1F1;        
@@ -86,24 +106,22 @@
     &__content-item-title{
         display: inline-block;
         color: #000;
-        font-family: Inter;
-        font-size: 26px;
+        font-size: 19px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         line-height: normal;
-        letter-spacing: 0.78px;
+        letter-spacing: 0.57px;
         text-decoration: none;
         margin-bottom: 10px;
     }
 
     &__content-item-dates {
         color: #3F3F3F;
-        font-family: Inter;
-        font-size: 14px;
+        font-size: 13px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        letter-spacing: 0.42px;
+        letter-spacing: 0.39px;
         color:#3F3F3F;
         display: flex;
         align-items: center;
