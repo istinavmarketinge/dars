@@ -1,10 +1,13 @@
 .action {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #F2F2F2;
     &__into {
         display: flex;
         align-items: flex-start;
+        justify-content: space-between;
         gap: 10px;
-        
+        box-sizing: border-box;
         @media(max-width:1200px){
             flex-wrap: wrap;
         }
@@ -14,10 +17,13 @@
     }
 
     &__title {
-        width:25%;
+        width:20%;
         
         @media (max-width:1200px) {
             width:100%;
+        }
+        @media (max-width:900px) {
+            margin-top: 30px;
         }
     }
 
@@ -73,7 +79,7 @@
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        margin-top: 30px;
+        margin-top: 55px;
         display: flex;
         align-items: center;
         text-decoration: none;
@@ -93,12 +99,15 @@
     }
     &__content {
         width:50%;
-        padding: 0 40px 0 10px;
+        padding: 0 40px 0 60px;
+        border-right: 1px solid #F2F2F2;
         @media (max-width:1200px) {
             width:60%;
         }
         @media (max-width:960px) {
             width:100%;
+            padding: 0;
+            border-right: none;
         }
     }
 
@@ -145,11 +154,13 @@
 
     &__other {
         width:25%;
+        padding-left: 25px;
         @media (max-width:1200px) {  
             width:30%; 
         }  
         @media (max-width:960px) {  
             width:100%;
+            padding-left: 0;
         }
     }
 
@@ -191,9 +202,9 @@
     &__other-item-name {
         display: inline-block;
         color: #000;
-        font-size: 19px;
+        font-size: 18px;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         line-height: normal;
         letter-spacing: 0.57px;
         text-decoration: none;

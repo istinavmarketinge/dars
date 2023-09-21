@@ -1,15 +1,18 @@
 <section class="action">
-    <div class="action__into">
+    <div class="action__into">        
+        <div class="action__image hide_on_desktop          ">
+            <img src="./img/actions/action_banner_preview.png" alt="" />
+        </div>
         <aside class="action__title">
             <div class="action__name">Большая летняя распродажа</div>
             <div class="action__dates">
                 <div class="action__dates-title">Сроки проведения акции:</div>
                 <div class="action__dates-date">с 29.05.2023 по 30.06.2023 </div>
             </div>
-            <a href="actions.html" class="action__backlink">Назад</a>
+            <a href="actions.html" class="action__backlink hide_on_mobile">Назад</a>
         </aside>
         <main class="action__content">
-            <div class="action__image">
+            <div class="action__image hide_on_mobile">
                 <img src="./img/actions/action_banner_preview.png" alt="" />
             </div>
             <div class="action__text js_click_closest">
@@ -28,7 +31,7 @@
         <aside class="action__other hide_on_mobile">
             <div class="action__other-title">Другие акции</div>
             <div class="action__other-items">
-                @@for(var i = 1; i <= 2; i++){
+                @@for(var i = 1; i <= 3; i++){
                 <div class="action__other-item">
                     <div class="action__other-item-image">
                         <a href="action.html">
@@ -45,7 +48,7 @@
                 </div>
                 }
             </div>            
-            <a href="actions.html" class="action__backlink">Назад</a>
+            <a href="actions.html" class="action__backlink hide_on_desktop">Назад</a>
         </aside>
     </div>
 </section>
@@ -74,6 +77,5 @@
             </a>
         </div>
         }
-    </div>            
-    <a href="actions.html" class="action__backlink">Назад</a>
+    </div>
 </aside>

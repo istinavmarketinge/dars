@@ -4304,17 +4304,21 @@ body.isScrollPrevented {
 }
 
 .action {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #F2F2F2;
 }
 
 .action__into {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 10px;
+  box-sizing: border-box;
 }
 
 .action__title {
-  width: 25%;
+  width: 20%;
 }
 
 .action__name {
@@ -4372,7 +4376,7 @@ body.isScrollPrevented {
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  margin-top: 30px;
+  margin-top: 55px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -4390,7 +4394,8 @@ body.isScrollPrevented {
 
 .action__content {
   width: 50%;
-  padding: 0 40px 0 10px;
+  padding: 0 40px 0 60px;
+  border-right: 1px solid #F2F2F2;
 }
 
 .action__image img {
@@ -4433,6 +4438,7 @@ body.isScrollPrevented {
 
 .action__other {
   width: 25%;
+  padding-left: 25px;
 }
 
 .action__other-title {
@@ -4474,9 +4480,9 @@ body.isScrollPrevented {
 .action__other-item-name {
   display: inline-block;
   color: #000;
-  font-size: 19px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   letter-spacing: 0.57px;
   text-decoration: none;
@@ -5043,10 +5049,13 @@ body.isScrollPrevented {
 @media (max-width: 960px) {
   .action__content {
     width: 100%;
+    padding: 0;
+    border-right: none;
   }
 
   .action__other {
     width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -5455,8 +5464,24 @@ body.isScrollPrevented {
     width: 100%;
   }
 
+  .action__title {
+    margin-top: 30px;
+  }
+
+  .politic__name {
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.84px;
+  }
+
   .politic__content {
     width: 100%;
+    padding: 0;
   }
 
   .politic__other {
@@ -5908,6 +5933,12 @@ body.isScrollPrevented {
 
   .subscription__left div:last-child {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 340px) {
+  .politic__name {
+    font-size: 7vw;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

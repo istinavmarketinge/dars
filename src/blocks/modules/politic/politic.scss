@@ -31,6 +31,19 @@
         font-weight: 400;
         line-height: normal;
         letter-spacing: 1.08px;
+        @media (max-width: 900px) {
+            color: #000;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.84px;
+        }
+        @media (max-width: 340px) {            
+            font-size: 7vw;
+        }
     }
 
     &__backlink {
@@ -71,6 +84,7 @@
         }
         @media (max-width:900px) {
             width: 100%;
+            padding: 0;
         }
     }
 
