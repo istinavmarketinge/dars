@@ -3882,7 +3882,6 @@ body.isScrollPrevented {
 
 .article__other-title {
   color: #000;
-  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -3924,6 +3923,7 @@ body.isScrollPrevented {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
+  border-radius: 6px;
 }
 
 .article__other-item-name {
@@ -4809,6 +4809,7 @@ body.isScrollPrevented {
 
   .article__other {
     width: 30%;
+    padding-left: 0;
   }
 
   .news_detail__into {
@@ -5367,10 +5368,13 @@ body.isScrollPrevented {
 @media (max-width: 900px) {
   .article__content {
     width: 100%;
+    border-right: none;
+    padding: 0 10px 0 10px;
   }
 
   .article__other {
     width: 100%;
+    margin-top: 40px;
   }
 
   .news_detail__content {
