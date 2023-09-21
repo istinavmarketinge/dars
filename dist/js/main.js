@@ -496,19 +496,8 @@ var ElementsList = /*#__PURE__*/function () {
       });
     }
   }, {
-    key: "sliceElementName",
-    value: function sliceElementName(name_slice_length) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_element_item').each(function () {
-        var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.js_element_name');
-        if (obj.text().length >= name_slice_length) {
-          obj.text(obj.text().slice(0, name_slice_length) + '...');
-        }
-      });
-    }
-  }, {
     key: "init",
     value: function init() {
-      this.sliceElementName(this.name_slice_length);
       this.addClickHandler();
     }
   }]);

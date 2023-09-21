@@ -8,6 +8,12 @@
         width: 24%;
         margin-bottom: 40px;
         user-select: none;
+        @media(max-width:1300px){
+            width: 30%;
+        }
+        @media(max-width:1250px){
+            width: 47%;
+        }
     }
     &--favorites &-item {
         width: calc(100% / 5 - 20px * 4 / 5);
@@ -18,6 +24,12 @@
     a{
         text-decoration: none;
         color: #000;        
+    }
+    .line_camp_2{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
     }
     &-item__buttons {
         position: absolute;

@@ -1,9 +1,9 @@
 <section class="section">
     <div class="section__into">
-        <div class="section__filter">@@include("../catalog-filter/catalog-filter.html")</div>
+        <div class="section__filter hide_on_mobile">@@include("../catalog-filter/catalog-filter.html")</div>
         <div class="section__content">
             <h1>Керамогранит</h1>
-            <div class="section__filter_tags">
+            <div class="section__filter_tags hide_on_mobile">
                 @@loop('./catalog-section-page-tags.html', [
                     {  
                         arr: [
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="section__sort-filter">
+                <div class="section__sort-filter hide_on_mobile">
                     <div class="section__sort-filter-title">Отображать только:</div>
                     <div class="section__sort-filter-item">
                         <div class="section__sort-filter-item-name">Товары со скидками</div>
@@ -40,6 +40,13 @@
                     <div class="section__sort-filter-item">
                         <div class="section__sort-filter-item-name">Новинки</div>
                         <a href="" class="section__sort-filter-item-check"></a>
+                    </div>
+                </div>
+                <div class="section__sort-filter-mobile hide_on_desktop">
+                    <div class="section__sort-filter-mobile-button">
+                        <div class="section__sort-filter-mobile-button-into">
+                            Фильтры
+                        </div>
                     </div>
                 </div>
             </div>

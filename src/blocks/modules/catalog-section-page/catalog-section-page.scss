@@ -12,6 +12,9 @@
 
     &__content {
         width: 80%;
+        @media(max-width: 900px){            
+            width: 100%
+        }
     }
 
     &__filter_tags {
@@ -58,10 +61,14 @@
         display: flex;
         align-items: center;
         margin-bottom: 28px;
+        justify-content: space-between;
     }
 
     &__sort-select {
-        width: 50%;
+        width: 20%;
+        @media(max-width: 900px){            
+            width: auto;
+        }
     }
     &__sort-select-into {
         position: relative;
@@ -156,7 +163,7 @@
         align-items: center;
         justify-content: flex-end;
         gap: 24px;
-        width: 50%;
+        width: 80%;
     }
 
     &__sort-filter-title {
@@ -206,5 +213,25 @@
     }
     &__sort-filter-item.chcecked:hover{
         background: #F3F8FF;        
+    }
+    &__sort-filter-mobile{
+        width: auto;
+    }
+    &__sort-filter-mobile-button-into{
+        display: inline-block;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 8px 6px 18px;
+        border-radius: 31px;
+        border: 2px solid #2B2B2B;
+        cursor: pointer;
+    }
+    &__sort-filter-mobile-button-into:after{
+        content: '';
+        width: 16.799px;
+        height: 11.968px;
+        display: inline-block;
+        margin-left: 20px;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M1.20117 3.17554H17.9997" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="12.295" cy="3.17564" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/><path d="M1.20166 9.82434H18.0002" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="6.97618" cy="9.82432" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/></svg>');
     }
 }

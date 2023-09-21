@@ -3660,10 +3660,11 @@ body.isScrollPrevented {
   display: flex;
   align-items: center;
   margin-bottom: 28px;
+  justify-content: space-between;
 }
 
 .section__sort-select {
-  width: 50%;
+  width: 20%;
 }
 
 .section__sort-select-into {
@@ -3771,7 +3772,7 @@ body.isScrollPrevented {
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
-  width: 50%;
+  width: 80%;
 }
 
 .section__sort-filter-title {
@@ -3825,6 +3826,29 @@ body.isScrollPrevented {
 
 .section__sort-filter-item.chcecked:hover {
   background: #F3F8FF;
+}
+
+.section__sort-filter-mobile {
+  width: auto;
+}
+
+.section__sort-filter-mobile-button-into {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px 6px 18px;
+  border-radius: 31px;
+  border: 2px solid #2B2B2B;
+  cursor: pointer;
+}
+
+.section__sort-filter-mobile-button-into:after {
+  content: "";
+  width: 16.799px;
+  height: 11.968px;
+  display: inline-block;
+  margin-left: 20px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M1.20117 3.17554H17.9997" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="12.295" cy="3.17564" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/><path d="M1.20166 9.82434H18.0002" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="6.97618" cy="9.82432" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/></svg>');
 }
 
 .article {
@@ -4634,6 +4658,13 @@ body.isScrollPrevented {
   color: #000;
 }
 
+.elements .line_camp_2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .elements-item__buttons {
   position: absolute;
   top: 11px;
@@ -4832,9 +4863,21 @@ body.isScrollPrevented {
   }
 }
 
+@media (max-width: 1300px) {
+  .elements-item {
+    width: 30%;
+  }
+}
+
 @media all and (max-width: 1280px) {
   .catalog-sections__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1250px) {
+  .elements-item {
+    width: 47%;
   }
 }
 
@@ -5431,6 +5474,14 @@ body.isScrollPrevented {
 }
 
 @media (max-width: 900px) {
+  .section__content {
+    width: 100%;
+  }
+
+  .section__sort-select {
+    width: auto;
+  }
+
   .article__content {
     width: 100%;
     border-right: none;
