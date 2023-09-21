@@ -2605,7 +2605,7 @@ body.isScrollPrevented {
 
 .articles__item {
   min-height: 250px;
-  background: url("./img/articles.png") 0 0/cover no-repeat;
+  background: url("../img/articles.png") 0 0/cover no-repeat;
   padding: 10px 20px;
   text-decoration: none;
   color: #000;
@@ -2684,7 +2684,7 @@ body.isScrollPrevented {
   height: 11px;
   top: 4px;
   right: 0;
-  background: url("./img/arrow-black.svg") 0 0/contain no-repeat;
+  background: url("../img/arrow-black.svg") 0 0/contain no-repeat;
 }
 
 .articles__button {
@@ -4777,7 +4777,7 @@ body.isScrollPrevented {
 }
 
 @media (max-width: 1230px) {
-  .elements-item {
+  .elements--favorites .elements-item {
     width: 45%;
   }
 }
