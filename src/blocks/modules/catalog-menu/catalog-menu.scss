@@ -53,6 +53,9 @@
     &.open {
         display: flex;
     }
+    &__right-products-slider {
+        width: 100%;
+    }
     &__left {
         width: 340px;
         border-right: 1px solid #E2E2E2;

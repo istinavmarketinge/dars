@@ -3052,6 +3052,10 @@ body.isScrollPrevented {
   display: flex;
 }
 
+.catalog-menu__right-products-slider {
+  width: 100%;
+}
+
 .catalog-menu__left {
   width: 340px;
   border-right: 1px solid #E2E2E2;
