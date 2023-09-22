@@ -57,7 +57,8 @@
         width: 100%;
     }
     &__left {
-        width: 340px;
+        min-width: 340px;
+        max-width: 340px;
         border-right: 1px solid #E2E2E2;
         padding-right: 40px;
         box-sizing: border-box;
