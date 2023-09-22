@@ -552,6 +552,10 @@ var Header = /*#__PURE__*/function () {
         document.querySelector('.catalog-menu').classList.remove('open');
         document.querySelector('body').classList.remove('isScrollPrevented');
       });
+      document.querySelector('.catalog-menu__closer').addEventListener('click', function () {
+        document.querySelector('.catalog-menu').classList.remove('open');
+        document.querySelector('body').classList.remove('isScrollPrevented');
+      });
     }
   }, {
     key: "calculateCatalogBounds",

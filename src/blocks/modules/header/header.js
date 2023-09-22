@@ -20,6 +20,11 @@ const Header = class Header {
 			document.querySelector('.catalog-menu').classList.remove('open');
 			document.querySelector('body').classList.remove('isScrollPrevented')
 		});
+
+		document.querySelector('.catalog-menu__closer').addEventListener('click',() => {
+			document.querySelector('.catalog-menu').classList.remove('open');
+			document.querySelector('body').classList.remove('isScrollPrevented')
+		});
 	}
 	calculateCatalogBounds() {
 		let windowHeight = window.innerHeight;

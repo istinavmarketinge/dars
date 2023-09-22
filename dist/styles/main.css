@@ -3021,7 +3021,7 @@ body.isScrollPrevented {
   position: absolute;
   right: 20px;
   top: 20px;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .catalog-menu__overlay {
