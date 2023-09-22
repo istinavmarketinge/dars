@@ -837,17 +837,19 @@ window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7
 window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_8__["default"]();
 window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__["default"]();
 window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__["default"]();
-window.app.header.init();
-window.app.popularCategories.init();
-window.app.popularBrands.init();
-window.app.bannerProduct.init();
-window.app.banner.init();
-window.app.tabs.init();
-window.app.catalogMenu.init();
-window.app.counter.init();
-window.app.action.init();
-window.app.catalogSections.init();
-window.app.elementsList.init();
+document.addEventListener('DOMContentLoaded', function () {
+  window.app.header.init();
+  window.app.popularCategories.init();
+  window.app.popularBrands.init();
+  window.app.bannerProduct.init();
+  window.app.banner.init();
+  window.app.tabs.init();
+  window.app.catalogMenu.init();
+  window.app.counter.init();
+  window.app.action.init();
+  window.app.catalogSections.init();
+  window.app.elementsList.init();
+});
 
 /***/ })
 

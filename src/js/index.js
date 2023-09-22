@@ -33,16 +33,17 @@ window.app.elementsList = new ElementsList();
 
 
 
-
-window.app.header.init();
-window.app.popularCategories.init();
-window.app.popularBrands.init();
-window.app.bannerProduct.init();
-window.app.banner.init();
-window.app.tabs.init();
-window.app.catalogMenu.init();
-window.app.counter.init();
-window.app.action.init();
-window.app.catalogSections.init();
-window.app.elementsList.init();
+document.addEventListener('DOMContentLoaded', () => {
+    window.app.header.init();
+    window.app.popularCategories.init();
+    window.app.popularBrands.init();
+    window.app.bannerProduct.init();
+    window.app.banner.init();
+    window.app.tabs.init();
+    window.app.catalogMenu.init();
+    window.app.counter.init();
+    window.app.action.init();
+    window.app.catalogSections.init();
+    window.app.elementsList.init();
+})
 
