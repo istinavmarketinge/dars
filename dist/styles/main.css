@@ -4547,10 +4547,10 @@ body.isScrollPrevented {
 
 .section__sort-filter-mobile-button-into:after {
   content: "";
-  width: 16.799px;
-  height: 11.968px;
+  width: 20px;
+  height: 13px;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 10px;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M1.20117 3.17554H17.9997" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="12.295" cy="3.17564" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/><path d="M1.20166 9.82434H18.0002" stroke="black" stroke-width="1.42318" stroke-linecap="round"/><circle cx="6.97618" cy="9.82432" r="1.94818" fill="white" stroke="black" stroke-width="1.42318"/></svg>');
 }
 
