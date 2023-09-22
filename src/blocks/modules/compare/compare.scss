@@ -1,3 +1,12 @@
 .compare {
-    &__item {}
+    &__page-items {
+        display: flex;
+        gap: 33px;
+        overflow: auto;
+        margin-bottom: 90px;
+    }
+    &__page-items .elements-item,
+    &__page-item--placeholder {
+        min-width: 255px;
+    }
 }
