@@ -1,12 +1,32 @@
 .compare {
+    &__page {
+        margin-bottom: 90px;
+        display: flex;
+    }
+    &__page-left {
+        width: 325px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__page-top {
+        flex: 1 1 auto;
+    }
+    &__page-right {
+        width: calc(100% - 325px);
+        overflow: auto;
+    }
     &__page-items {
         display: flex;
-        gap: 33px;
-        overflow: auto;
-        margin-bottom: 90px;
     }
     &__page-items .elements-item,
     &__page-item--placeholder {
-        min-width: 255px;
+        min-width: 324px;
+        padding: 0 35px;
+        box-sizing: border-box;
+    }
+    &__page-items .elements-item {
+        &:not(:last-child) {
+            border-right: 1px solid #EEEEEE;
+        }
     }
 }

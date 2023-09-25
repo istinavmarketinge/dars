@@ -4723,16 +4723,39 @@ body.isScrollPrevented {
   stroke: #fff;
 }
 
+.compare__page {
+  margin-bottom: 90px;
+  display: flex;
+}
+
+.compare__page-left {
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+}
+
+.compare__page-top {
+  flex: 1 1 auto;
+}
+
+.compare__page-right {
+  width: calc(100% - 325px);
+  overflow: auto;
+}
+
 .compare__page-items {
   display: flex;
-  gap: 33px;
-  overflow: auto;
-  margin-bottom: 90px;
 }
 
 .compare__page-items .elements-item,
 .compare__page-item--placeholder {
-  min-width: 255px;
+  min-width: 324px;
+  padding: 0 35px;
+  box-sizing: border-box;
+}
+
+.compare__page-items .elements-item:not(:last-child) {
+  border-right: 1px solid #EEEEEE;
 }
 
 @media all and (min-width: 961px) {
