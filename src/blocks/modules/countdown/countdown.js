@@ -15,6 +15,7 @@ const Counter = class Counter {
         counter()
     }
     init() {
+        if (!document.querySelector('.counter__wrapper')) return;
         this.setCounter();
         window.onload = () => {
             this.counterStart()

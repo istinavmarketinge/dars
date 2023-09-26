@@ -10,6 +10,7 @@ import Counter from "%modules%/countdown/countdown";
 import Action from "%modules%/action/action";
 import CatalogSections from "%modules%/catalog-sections/catalog-sections";
 import ElementsList from "%modules%/elements_list/elements_list";
+import Compare from "%modules%/compare/compare";
 
 
 
@@ -30,6 +31,7 @@ window.app.counter = new Counter();
 window.app.action = new Action();
 window.app.catalogSections = new CatalogSections();
 window.app.elementsList = new ElementsList();
+window.app.compare = new Compare();
 
 
 
@@ -45,5 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.action.init();
     window.app.catalogSections.init();
     window.app.elementsList.init();
+    window.app.compare.init();
 })
 
