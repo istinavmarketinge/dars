@@ -268,6 +268,103 @@ jQuery(document).ready(function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/catalog-detail-page/catalog-detail-page.js":
+/*!***********************************************************************!*\
+  !*** ./src/blocks/modules/catalog-detail-page/catalog-detail-page.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.mjs");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+var DetailCatalogSlider = /*#__PURE__*/function () {
+  function DetailCatalogSlider() {
+    _classCallCheck(this, DetailCatalogSlider);
+    this.slider = null;
+  }
+  _createClass(DetailCatalogSlider, [{
+    key: "initSlider",
+    value: function initSlider() {
+      if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav')) return;
+      var navSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-detail-slider-nav', {
+        loop: true,
+        spaceBetween: 3,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true
+      });
+      var mainSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-detail-slider-main', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        thumbs: {
+          swiper: navSlider
+        }
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.initSlider();
+    }
+  }]);
+  return DetailCatalogSlider;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DetailCatalogSlider);
+jQuery(document).ready(function () {
+  $('.box-to-favourites').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).find('.controls-bar__item-title').text('В избранном');
+    } else {
+      $(this).find('.controls-bar__item-title').text('В избранное');
+    }
+  });
+  $('.box-to-compare').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).find('.controls-bar__item-title').text('В сравнении');
+    } else {
+      $(this).find('.controls-bar__item-title').text('К сравнению');
+    }
+  });
+  $('.catalog-detail-page-header__specifications-more').on('click', function () {
+    var link = $(this).data('link');
+    var tabsBlockPosition = $('.catalog-detail-page-header__in-right-block').offset().top;
+    window.scrollTo({
+      top: tabsBlockPosition
+    });
+    var index = $('.catalog-detail-page-tabs-list').find("#".concat(link)).index();
+    $('.catalog-detail-page-tabs-list').find('li').removeClass('active').eq(index).addClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(index).addClass('active');
+  });
+  $('.btn-to-basket').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).attr('href', '/basket/').html('Товар в корзине <span>Перейти</span>');
+    }
+  });
+  $('.btn-fast-buy').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).html('Спасибо за покупку! <span>Перейти в каталог</span>');
+    }
+  });
+  $('.catalog-detail-page-tabs-list').on('click', 'li:not(.active)', function () {
+    $(this).addClass('active').siblings().removeClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq($(this).index()).addClass('active');
+  });
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/catalog-menu/catalog-menu.js":
 /*!*********************************************************!*\
   !*** ./src/blocks/modules/catalog-menu/catalog-menu.js ***!
@@ -814,6 +911,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_action_action__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/action/action */ "./src/blocks/modules/action/action.js");
 /* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
 /* harmony import */ var _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/elements_list/elements_list */ "./src/blocks/modules/elements_list/elements_list.js");
+/* harmony import */ var _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/catalog-detail-page/catalog-detail-page */ "./src/blocks/modules/catalog-detail-page/catalog-detail-page.js");
+
 
 
 
@@ -837,6 +936,7 @@ window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7
 window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_8__["default"]();
 window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__["default"]();
 window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__["default"]();
+window.app.catalogDetailPage = new _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();
@@ -849,6 +949,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.app.action.init();
   window.app.catalogSections.init();
   window.app.elementsList.init();
+  window.app.catalogDetailPage.init();
 });
 
 /***/ })
