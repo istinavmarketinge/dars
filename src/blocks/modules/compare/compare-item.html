@@ -1,26 +1,61 @@
-<div class="elements-item js_element_item" data-slide-type="stock">
-    <div class="tabs__slider-item-image">
-        <a href="element_detail.html" title="@@name">
-        <div class="tabs__hidden-block">
-            <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
-            <div class="tabs__hidden-item" data-image-to-show="2"></div>
-            <div class="tabs__hidden-item" data-image-to-show="3"></div>
+
+
+
+
+
+
+
+
+<div class="compare__page-item">
+    <div class="compare__page-top">
+        <div class="elements-item js_element_item" data-slide-type="stock">
+            <div class="tabs__slider-item-image">
+                <a href="element_detail.html" title="@@name">
+                <div class="tabs__hidden-block">
+                    <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                    <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                    <div class="tabs__hidden-item" data-image-to-show="3"></div>
+                </div>
+                <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+                <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+                <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+                </a>
+            </div>
+            <div class="tabs__slider-item-price">
+                <div class="new-price">@@price ₽/шт</div>
+                <div class="old-price">@@price_old ₽/м²</div>
+            </div>
+            <div class="tabs__slider-item-stickers">
+                <div class="sticker sticker-discount">@@discount</div>
+            </div>
+            <div class="tabs__slider-item-text">
+                <a href="element_detail.html" class="js_element_name line_camp_2" title="@@name">
+                    @@name
+                </a>         
+            </div>
+        
+            
+            
         </div>
-        <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
-        <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
-        <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
-        </a>
     </div>
-    <div class="tabs__slider-item-price">
-        <div class="new-price">3 680 ₽/шт</div>
-        <div class="old-price">5 990 ₽/м²</div>
-    </div>
-    <div class="tabs__slider-item-stickers">
-        <div class="sticker sticker-discount">-20%</div>
-    </div>
-    <div class="tabs__slider-item-text">
-        <a href="element_detail.html" class="js_element_name line_camp_2" title="@@name">
-            @@name
-        </a>         
+    <div class="compare__page-bottom">
+        <div class="compare__page-bottom-items">
+            <div class="compare__page-bottom-item-table">
+                <div class="compare__page-bottom-item-tr">
+                    <h3 class="compare__page-bottom-item-title"></h3>
+                    @@for (var i = 0; i < options.general.length; i++) {
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+i+`"><span>`+options.general[i]+`</span></div>
+                    }
+                    <h3 class="compare__page-bottom-item-title"></h3>
+                    @@for (var i = 0; i < options.view.length; i++) {
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length) +`"><span>`+options.view[i]+`</span></div>
+                    }
+                    <h3 class="compare__page-bottom-item-title"></h3>
+                    @@for (var i = 0; i < options.gabarites.length; i++) {
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length + options.view.length) +`"><span>`+options.view[i]+`</span></div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
 </div>

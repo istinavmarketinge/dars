@@ -12,7 +12,8 @@ const requireDir = require("require-dir"),
             dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.html",
-                "./src/views/**/*.html"
+                "./src/views/**/*.html" ,
+                "./src/views/**/*.json"
             ]
         },
         styles: {
@@ -21,6 +22,14 @@ const requireDir = require("require-dir"),
             watch: [
                 "./src/blocks/**/*.{scss,sass}",
                 "./src/styles/**/*.{scss,sass}"
+            ]
+        },
+        files: {
+            src: "./src/files/*.*",
+            dist: "./dist/files/",
+            watch: [
+                "./src/files/**/*.*",
+                "./src/files/**/*.*"
             ]
         },
         scripts: {
@@ -64,10 +73,10 @@ requireDir("./gulp-tasks/");
 export { paths };
 
 export const development = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel(["views", "styles", "files", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
 
 export const prod = gulp.series("clean",
-    gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.parallel(["views", "styles", "files", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
 
 export default development;

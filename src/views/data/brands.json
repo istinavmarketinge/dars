@@ -1,0 +1,117 @@
+[
+    {
+        "letter": "A",
+        "logos": [
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    },
+    {
+        "letter": "Б",
+        "logos": [
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    },
+    {
+        "letter": "В",
+        "logos": [
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "#",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    }
+]
