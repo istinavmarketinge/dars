@@ -520,7 +520,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'overlayscrollbars'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var overlayscrollbars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/overlayscrollbars.mjs");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -535,7 +535,7 @@ var Compare = /*#__PURE__*/function () {
   _createClass(Compare, [{
     key: "initScrollbar",
     value: function initScrollbar() {
-      Object(function webpackMissingModule() { var e = new Error("Cannot find module 'overlayscrollbars'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(document.querySelector('.compare__page-right'), {}, {
+      (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_0__.OverlayScrollbars)(document.querySelector('.compare__page-right'), {}, {
         initialized: function initialized(osInstance) {
           console.log(osInstance);
         }
