@@ -3,6 +3,7 @@ import { OverlayScrollbars } from 'overlayscrollbars';
 const Compare = class Compare {
     constructor() {}
     initScrollbar() {
+        if (!document.querySelector('.compare__page-right')) return;
         OverlayScrollbars(document.querySelector('.compare__page-right'), {}, {
             initialized(osInstance) {
                 console.log(osInstance)

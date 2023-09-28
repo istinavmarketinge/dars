@@ -46,12 +46,16 @@
 
 
             <section>
-                <div class="container articles_ex"> 
+                <div class="container"> 
                     @@include("../blocks/modules/breadcrumbs/breadcrumbs.html")
                     @@include("../blocks/modules/brands-detail-top/brands-detail-top.html")
-                    <div class="brands-items">
+                    @@include("../blocks/modules/brands-detail-filter/brands-detail-filter.html")
+                    @@include("../blocks/modules/brands-detail-catalog/brands-detail-catalog.html")
+                    @@include("../blocks/modules/brands-detail-catalog/brands-detail-catalog.html")
+                    @@include("../blocks/modules/brands-detail-catalog/brands-detail-catalog.html")
+                    <!-- <div class="brands-items">
                         @@loop("../blocks/modules/brands-items/brands-items.html", "/data/brands.json")
-                    </div>
+                    </div> -->
                      
 
                     @@include("../blocks/modules/subscription/subscription.html")

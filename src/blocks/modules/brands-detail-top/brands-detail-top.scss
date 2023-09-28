@@ -1,17 +1,109 @@
 .brands-detail {
     &__top {
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 30px;
     }
     &__logo {
-        width: 148px;
+        min-width: 148px;
+        max-width: 148px;
         aspect-ratio: 1;
         font-size: 0;
+        &::after {
+            content: "";
+            display: block;
+        }
+        img {
+            width: 100%;
+            position: sticky;
+            top: 50px;
+        }
+    }
+    &__text {
+        padding: 27px 0px;
+        flex: 1 1 auto;
+        .text {
+            color: #171717;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%; /* 20.8px */
+            height: var(--height);
+            overflow: hidden;
+            margin-bottom: 15px;
+            transition: height .3s ease;
+            width: 100%;
+            max-width: 750px;
+        }
+       
+    }
+    &__line {
+        align-self: stretch;
+        width: 1px;
+        background: #DDD;
+    }
+    &__city {
+        min-width: 215px;
+        max-width: 215px;
+    }
+    &__city-in {
+        position: sticky;
+        top: 50px;
+        padding: 30px 0;
+    }
+    &__city-title {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 10px;
+    }
+    &__city-city {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__city-name {
+        color: #000;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__text-more {
+        background: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        img {
-            width: 100%;
+        gap: 5px;
+        cursor: pointer;
+        &::before {
+            content: "Подробнее";
+            color: #0F7DF0;
+            font-size: 14px;
         }
+        &::after {
+            content: '';
+            height: 3px;
+            width: 6px;
+            background: 50% / contain no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 8 5' fill='none'%3E%3Cpath d='M7 1L4 4L1 1' stroke='%230F7DF0' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+        &.isOpened {
+            &::before {
+                content: "Скрыть подробности";
+            }
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        
     }
 }

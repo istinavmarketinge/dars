@@ -12,6 +12,7 @@ import CatalogSections from "%modules%/catalog-sections/catalog-sections";
 import ElementsList from "%modules%/elements_list/elements_list";
 import CatalogDetailPage from "%modules%/catalog-detail-page/catalog-detail-page";
 import Compare from "%modules%/compare/compare";
+import BrandsDetaiTop from "%modules%/brands-detail-top/brands-detail-top";
 
 
 
@@ -34,6 +35,7 @@ window.app.catalogSections = new CatalogSections();
 window.app.elementsList = new ElementsList();
 window.app.catalogDetailPage = new CatalogDetailPage();
 window.app.compare = new Compare();
+window.app.brandsDetaiTop = new BrandsDetaiTop();
 
 
 
@@ -51,5 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.elementsList.init();
     window.app.catalogDetailPage.init();
     window.app.compare.init();
+    window.app.brandsDetaiTop.init();
 })
 
