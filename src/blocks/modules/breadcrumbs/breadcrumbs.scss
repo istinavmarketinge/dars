@@ -1,6 +1,9 @@
 .breadcrumbs {
     &__in {
         padding: 30px 0;
+        @media (max-width:900px) {
+            padding: 0;
+        }
     }
     &__list {
         display: flex;
