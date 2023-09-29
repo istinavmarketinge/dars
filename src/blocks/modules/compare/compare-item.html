@@ -1,25 +1,29 @@
-
-
-
-
-
-
-
-
-<div class="compare__page-item">
+<div class="compare__page-item@@if (pinned) { isPinned}">
     <div class="compare__page-top">
         <div class="elements-item js_element_item" data-slide-type="stock">
             <div class="tabs__slider-item-image">
                 <a href="element_detail.html" title="@@name">
-                <div class="tabs__hidden-block">
-                    <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
-                    <div class="tabs__hidden-item" data-image-to-show="2"></div>
-                    <div class="tabs__hidden-item" data-image-to-show="3"></div>
-                </div>
-                <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
-                <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
-                <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+                    <div class="tabs__hidden-block">
+                        <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                        <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                        <div class="tabs__hidden-item" data-image-to-show="3"></div>
+                    </div>
+                    <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+                    <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+                    <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
                 </a>
+                <div class="elements-item__buttons">
+                    <div class="elements-item__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                            <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="elements-item__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                            <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
             <div class="tabs__slider-item-price">
                 <div class="new-price">@@price ₽/шт</div>
@@ -32,27 +36,40 @@
                 <a href="element_detail.html" class="js_element_name line_camp_2" title="@@name">
                     @@name
                 </a>         
+            </div> 
+            <div class="tabs__slider-item-buttons compare__page-buttons">
+                @@include('../../components/button/button.html', {
+                    "link": "#",
+                    "text": "В корзину",
+                    "type": "primary",
+                    "outlined": false,
+                    "class_name": "compare__page-button compare__page-add-to-cart"
+                })
+                @@include('../../components/button/button.html', {
+                    "link": false,
+                    "text": "Купить в 1 клик",
+                    "type": "primary",
+                    "outlined": true,
+                    "class_name": "compare__page-button compare__page-buy-one-click"
+                })
             </div>
-        
-            
-            
         </div>
     </div>
     <div class="compare__page-bottom">
         <div class="compare__page-bottom-items">
             <div class="compare__page-bottom-item-table">
                 <div class="compare__page-bottom-item-tr">
-                    <h3 class="compare__page-bottom-item-title"></h3>
+                    <h3 class="compare__page-bottom-item-title">Основные</h3>
                     @@for (var i = 0; i < options.general.length; i++) {
-                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+i+`"><span>`+options.general[i]+`</span></div>
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+i+`"><strong class="hide_on_desktop">Название</strong><span>`+options.general[i]+`</span></div>
                     }
-                    <h3 class="compare__page-bottom-item-title"></h3>
+                    <h3 class="compare__page-bottom-item-title">Внешний</h3>
                     @@for (var i = 0; i < options.view.length; i++) {
-                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length) +`"><span>`+options.view[i]+`</span></div>
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length) +`"><strong class="hide_on_desktop">Название</strong><span>`+options.view[i]+`</span></div>
                     }
-                    <h3 class="compare__page-bottom-item-title"></h3>
+                    <h3 class="compare__page-bottom-item-title">Габариты</h3>
                     @@for (var i = 0; i < options.gabarites.length; i++) {
-                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length + options.view.length) +`"><span>`+options.view[i]+`</span></div>
+                        <div class="compare__page-bottom-item-td" data-compare-item-key="`+ (i + options.general.length + options.view.length) +`"><strong class="hide_on_desktop">Название</strong><span>`+options.gabarites[i]+`</span></div>
                     }
                 </div>
             </div>

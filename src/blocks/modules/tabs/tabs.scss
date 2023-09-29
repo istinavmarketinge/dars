@@ -199,6 +199,12 @@
         }
         
     }
+    &__slider-item-buttons {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        margin-top: 22px;
+    }
     &__arrows .swiper-button-prev::after,
     &__arrows .swiper-button-next::after {
         content: none;

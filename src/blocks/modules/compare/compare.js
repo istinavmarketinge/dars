@@ -33,6 +33,25 @@ const Compare = class Compare {
         console.log(itemIds);
 
     }
+    checkUniqueParams() {
+        const itemIds = Array.from(document.querySelectorAll('.compare__page-left .compare__page-bottom-item-td')).map(rowItem => {
+            return {
+                id: rowItem.dataset.compareItemKey,
+                items: Array.from(document.querySelectorAll(`.compare__page-right [data-compare-item-key="${rowItem.dataset.compareItemKey}"] span`)).map(rowElement => rowElement.innerHTML)
+            };
+        });
+        itemIds.forEach(item => {
+            document.querySelectorAll(`.compare__page-right [data-compare-item-key="${item.id}"] span`).forEach(td => {
+                let count = item.items.filter(elem => elem == td.innerHTML).length;
+                if (count <= 1) {
+                    td.classList.add('isUnique');
+                }
+            });
+        });
+        console.group('checkUniqueParams')
+        console.table(itemIds);
+        console.groupEnd();
+    }
     linePositionSetter() {
         document.querySelectorAll('[data-compare-item-key]').forEach(item => {
             item.addEventListener('mouseenter', (event) => {
@@ -51,7 +70,7 @@ const Compare = class Compare {
         this.initScrollbar();
         this.calculateTdHeights();
         this.linePositionSetter();
-        
+        this.checkUniqueParams();
         if (window.innerWidth <= 960) {
             this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'))
         }

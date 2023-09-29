@@ -3027,6 +3027,13 @@ body.isScrollPrevented {
   background: #1BC39B;
 }
 
+.tabs__slider-item-buttons {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  margin-top: 22px;
+}
+
 .tabs__arrows .swiper-button-prev::after,
 .tabs__arrows .swiper-button-next::after {
   content: none;
@@ -5442,6 +5449,8 @@ body.isScrollPrevented {
 
 .compare__page-top {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .compare__page-right {
@@ -5449,6 +5458,15 @@ body.isScrollPrevented {
   padding-bottom: 70px;
   padding-left: 324px;
   box-sizing: border-box;
+}
+
+.compare__page-buttons {
+  flex: 1 1 auto;
+}
+
+.compare__page-add-to-cart {
+  flex: 1 1 auto;
+  text-align: center;
 }
 
 .compare__page-items,
@@ -5472,6 +5490,9 @@ body.isScrollPrevented {
 .compare__page .elements-item {
   margin-bottom: 0;
   box-sizing: border-box;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .compare__page-bottom,
@@ -5514,23 +5535,18 @@ body.isScrollPrevented {
   width: 100%;
 }
 
-.compare__page-bottom-item-td {
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.compare__page-bottom-item-td:before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -24px;
-  right: -24px;
-  top: 12px;
-  border-bottom: 1px dashed #ccc;
-}
-
 .compare__page-left .compare__page-bottom-item-td:before {
   left: 0;
+}
+
+.compare__page-bottom-item-td strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #484848;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .compare__page-bottom-item-td span {
@@ -5549,6 +5565,10 @@ body.isScrollPrevented {
 .compare__page-bottom-item-td span::before,
 .compare__page-bottom-item-td span::after {
   content: "  ";
+}
+
+.compare__page-bottom-item-td span.isUnique {
+  color: #F0820F;
 }
 
 .compare__page-right-line {
@@ -5595,6 +5615,15 @@ body.isScrollPrevented {
 .compare__page-item:hover::before {
   opacity: 1;
   visibility: visible;
+}
+
+.compare__page-left .compare__page-item::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compare__page-left .compare__page-item .compare__page-bottom-item-td span {
+  background-color: #FAFAFA;
 }
 
 .compare__page-item:hover .compare__page-bottom-item-td span {
@@ -6693,6 +6722,33 @@ dl.open .specifications-block__row {
 
 .contacts__feedback-mobile {
   display: none;
+}
+
+.button {
+  padding: 11px 9px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 18.2px */
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+}
+
+.button--primary {
+  border: 1px solid #F0820F;
+  color: #FFF;
+}
+
+.button--primary:not(.button--outlined) {
+  background: #F0820F;
+}
+
+.button--outlined {
+  background: #fff;
+  color: #000;
 }
 
 @media all and (min-width: 961px) {
@@ -8119,11 +8175,28 @@ dl.open .specifications-block__row {
     padding-left: calc(50vw - 20px);
   }
 
+  .compare__page-buttons {
+    flex-direction: column;
+  }
+
+  .compare__page-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .compare__page-items .elements-item,
   .compare__page-bottom-item-table {
     min-width: calc(50vw - 20px);
     max-width: calc(50vw - 20px);
     padding: 0 8px;
+  }
+
+  .compare__page-bottom-item-title {
+    margin-top: 40px;
+  }
+
+  .compare__page-bottom-item-td {
+    margin-bottom: 20px;
   }
 
   .compare__page-item {
@@ -8132,6 +8205,15 @@ dl.open .specifications-block__row {
 
   .compare__page-right .compare__page-item.isPinned {
     display: none;
+  }
+
+  .compare__page-top .tabs__slider-item-text {
+    order: -1;
+    margin-bottom: 11px;
+  }
+
+  .compare__page-top .tabs__slider-item-image {
+    order: -2;
   }
 
   .brands-top {
@@ -8160,8 +8242,28 @@ dl.open .specifications-block__row {
 }
 
 @media (width >= 961px) {
+  .compare__page-right .compare__page-bottom-item-title {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .compare__page-left .compare__page-bottom-item-table {
     padding-left: 24px;
+  }
+
+  .compare__page-bottom-item-td {
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .compare__page-bottom-item-td:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -24px;
+    right: -24px;
+    top: 12px;
+    border-bottom: 1px dashed #ccc;
   }
 
   .lang-switch {
