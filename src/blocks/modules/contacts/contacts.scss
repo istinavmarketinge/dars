@@ -1,5 +1,8 @@
 .contacts {
     margin-bottom: 80px;
+    @media all and (max-width:700px) {
+         margin-bottom: 50px;
+    }
     &__info {
         justify-content: flex-start;
         grid-gap: 95px;

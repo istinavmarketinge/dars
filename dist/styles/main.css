@@ -7824,6 +7824,10 @@ dl.open .specifications-block__row {
     padding-right: 20px;
   }
 
+  .contacts {
+    margin-bottom: 50px;
+  }
+
   .contacts__feedback {
     display: none;
   }
