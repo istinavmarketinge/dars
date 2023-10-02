@@ -251,4 +251,35 @@
             order: -2;
         }
     }
+    &__page-conpare-with-it {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        background: #F8F8F8;
+        .icon {
+            width: 20px;
+            font-size: 0;
+        }
+        .text {
+            width: calc(100% - 20px - 10px);
+            color: #000;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &__page-left &__page-conpare-with-it {
+        background: #FFD748;
+        pointer-events: none;
+        .text {
+            color: #000;
+        }
+    }
 }

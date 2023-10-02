@@ -30,8 +30,11 @@
         aspect-ratio: 1;
         border-radius: 6px;
         padding: 8px;
-        border: 1px solid var(--Main-color, #F0820F);
+        border: 1px solid transparent;
         box-sizing: border-box;
+        &:hover {
+            border-color: #F0820F;
+        }
         @media (width >= 1367px) {
             width: calc(100% / 11 - 20px * 10 / 11);
         }

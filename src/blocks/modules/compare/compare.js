@@ -1,4 +1,5 @@
 import { OverlayScrollbars } from 'overlayscrollbars';
+import $ from 'jquery';
 
 const Compare = class Compare {
     constructor() {}
@@ -32,6 +33,13 @@ const Compare = class Compare {
 
         console.log(itemIds);
 
+    }
+    changeCompareItem() {
+        if (!document.querySelector('.compare__page-right .compare__page-item')) return;
+        $('.compare__page-right').on('click', '.compare__page-conpare-with-it', function() {
+            $('.compare__page-left .compare__page-item').removeClass('isPinned').appendTo('.compare__page-right .compare__page-items')
+            $(this).closest('.compare__page-item').addClass('isPinned').appendTo('.compare__page-left');
+        })
     }
     checkUniqueParams() {
         const itemIds = Array.from(document.querySelectorAll('.compare__page-left .compare__page-bottom-item-td')).map(rowItem => {
@@ -73,6 +81,7 @@ const Compare = class Compare {
         this.checkUniqueParams();
         if (window.innerWidth <= 960) {
             this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'))
+            this.changeCompareItem();
         }
     }
 }

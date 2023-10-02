@@ -578,13 +578,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var overlayscrollbars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/overlayscrollbars.mjs");
+/* harmony import */ var overlayscrollbars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! overlayscrollbars */ "./node_modules/overlayscrollbars/overlayscrollbars.mjs");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 
 var Compare = /*#__PURE__*/function () {
   function Compare() {
@@ -594,7 +597,7 @@ var Compare = /*#__PURE__*/function () {
     key: "initScrollbar",
     value: function initScrollbar() {
       if (!document.querySelector('.compare__page-right')) return;
-      (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_0__.OverlayScrollbars)(document.querySelector('.compare__page-right'), {}, {
+      (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_1__.OverlayScrollbars)(document.querySelector('.compare__page-right'), {}, {
         initialized: function initialized(osInstance) {
           console.log(osInstance);
         }
@@ -620,6 +623,15 @@ var Compare = /*#__PURE__*/function () {
         });
       });
       console.log(itemIds);
+    }
+  }, {
+    key: "changeCompareItem",
+    value: function changeCompareItem() {
+      if (!document.querySelector('.compare__page-right .compare__page-item')) return;
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__page-right').on('click', '.compare__page-conpare-with-it', function () {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__page-left .compare__page-item').removeClass('isPinned').appendTo('.compare__page-right .compare__page-items');
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.compare__page-item').addClass('isPinned').appendTo('.compare__page-left');
+      });
     }
   }, {
     key: "checkUniqueParams",
@@ -673,6 +685,7 @@ var Compare = /*#__PURE__*/function () {
       this.checkUniqueParams();
       if (window.innerWidth <= 960) {
         this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'));
+        this.changeCompareItem();
       }
     }
   }]);

@@ -22,6 +22,11 @@
         }
     }
     .section__sort-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .section__sort-button {
         padding-top: 9px;
         padding-bottom: 10px;
     }
@@ -51,6 +56,9 @@
         &:not(.lang-switch__item--active) {
             border-color: #ECECEC;
             color: #676767;
+        }
+        @media (width <= 960px) {
+            padding: 9px 20px;
         }
         &:before {
             @media (width >= 961px) {

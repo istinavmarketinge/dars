@@ -45,7 +45,7 @@
             width: 100%;
         }
     }
-    &__item-first {
+    &__item-1 {
         grid-area: first;
         padding: 25px 30px;
         @media all and (max-width:1360px) {
@@ -55,7 +55,7 @@
             padding: 10px 13px;
         }
     }
-    &__item-last {
+    &__item-6 {
         grid-area: last;
         padding: 25px 30px;
         .articles__info {
@@ -68,16 +68,16 @@
             padding: 10px 13px;
         }
     }
-    &__item-two {
+    &__item-2 {
         grid-area: two;
     }
-    &__item-three {
+    &__item-3 {
         grid-area: three;
     }
-    &__item-four {
+    &__item-4 {
         grid-area: four;
     }
-    &__item-five {
+    &__item-5 {
         grid-area: five;
     }
     &__info {
