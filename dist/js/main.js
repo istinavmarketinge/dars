@@ -672,6 +672,7 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "mobileCompareMoveProduct",
     value: function mobileCompareMoveProduct(node) {
+      if (!node) return;
       var left = document.querySelector('.compare__page-left');
       left.replaceChildren(node);
       this.calculateTdHeights();

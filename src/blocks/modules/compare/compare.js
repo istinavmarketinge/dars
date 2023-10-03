@@ -70,6 +70,7 @@ const Compare = class Compare {
         })
     }
     mobileCompareMoveProduct(node) {
+        if (!node) return;
         let left = document.querySelector('.compare__page-left');
         left.replaceChildren(node);
         this.calculateTdHeights();

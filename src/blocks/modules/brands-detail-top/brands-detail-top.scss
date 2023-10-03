@@ -4,12 +4,21 @@
         justify-content: space-between;
         gap: 60px;
         margin-bottom: 30px;
+        flex-wrap: wrap;
+        @media (width <= 960px) {
+            gap: 10px 20px;
+            justify-content: flex-start;
+        }
     }
     &__logo {
         min-width: 148px;
         max-width: 148px;
         aspect-ratio: 1;
         font-size: 0;
+        @media (width <= 960px) {
+            min-width: 114px;
+            max-width: 114px;
+        }
         &::after {
             content: "";
             display: block;
@@ -22,7 +31,12 @@
     }
     &__text {
         padding: 27px 0px;
-        flex: 1 1 auto;
+        width: calc(100% - 148px - 215px - 1px - 60px * 3);
+        @media (width <= 960px) {
+            width: 100%;
+            order: 5;
+            padding: 0;
+        }
         .text {
             color: #171717;
             font-size: 16px;

@@ -4,14 +4,21 @@
     }
     &__title {
         margin-bottom: 30px;
+        @media (width <= 960px) {
+            margin-bottom: 25px;
+        }
     }
     &__categories {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         padding: 20px 40px;
         gap: 15px;
         border-radius: 6px;
         background: #F6F6F6;
+        @media (width <= 960px) {
+            padding: 20px;
+        }
     }
     &__category {
         display: flex;

@@ -2030,6 +2030,7 @@ body.isScrollPrevented {
   line-height: normal;
   margin-left: 12px;
   padding-top: 12px;
+  white-space: nowrap;
 }
 
 .title {
@@ -4209,7 +4210,7 @@ body.isScrollPrevented {
 .show_more_block__btn {
   cursor: pointer;
   display: flex;
-  padding: 14px 87px;
+  padding: 14px 20px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -4217,6 +4218,7 @@ body.isScrollPrevented {
   background: #F1F1F1;
   color: #000000;
   text-decoration: none;
+  text-align: center;
 }
 
 .pagination {
@@ -6356,6 +6358,7 @@ dl.open .specifications-block__row {
   justify-content: space-between;
   gap: 60px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 .brands-detail__logo {
@@ -6378,7 +6381,7 @@ dl.open .specifications-block__row {
 
 .brands-detail__text {
   padding: 27px 0px;
-  flex: 1 1 auto;
+  width: calc(100% - 148px - 215px - 1px - 180px);
 }
 
 .brands-detail__text .text {
@@ -6481,6 +6484,7 @@ dl.open .specifications-block__row {
 
 .brands-detail__categories {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 20px 40px;
   gap: 15px;
@@ -8188,6 +8192,12 @@ dl.open .specifications-block__row {
   }
 }
 
+@media all and (min-width: 961px) and (max-width: 1280px) {
+  .brands-details__catalog-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media all and (max-width: 1366px) and (min-width: 1025px) {
   .brands-items__logo {
     width: calc(12.5% - 17.5px);
@@ -8286,6 +8296,35 @@ dl.open .specifications-block__row {
     content: var(--text-mobile);
   }
 
+  .brands-detail__top {
+    gap: 10px 20px;
+    justify-content: flex-start;
+  }
+
+  .brands-detail__logo {
+    min-width: 114px;
+    max-width: 114px;
+  }
+
+  .brands-detail__text {
+    width: 100%;
+    order: 5;
+    padding: 0;
+  }
+
+  .brands-detail__title {
+    margin-bottom: 25px;
+  }
+
+  .brands-detail__categories {
+    padding: 20px;
+  }
+
+  .brands-details__catalog-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
   .brands-items__logos {
     gap: 15px;
   }
@@ -8322,6 +8361,12 @@ dl.open .specifications-block__row {
 
   .lang-switch__item:before {
     content: var(--text-desktop);
+  }
+}
+
+@media (width <= 640px) {
+  .brands-details__catalog-items {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
