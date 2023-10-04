@@ -7002,6 +7002,10 @@ dl.open .specifications-block__row {
   background: url("../img/delete.svg") 0 0/contain no-repeat;
 }
 
+.password-change__password-ok.--password-no-ok {
+  background: rgba(229, 69, 69, 0.1);
+}
+
 @media all and (min-width: 961px) {
   .hide_on_desktop {
     display: none !important;
