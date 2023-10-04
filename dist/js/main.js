@@ -55,6 +55,51 @@ var Action = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/affiliate-program/affiliate-program.js":
+/*!*******************************************************************!*\
+  !*** ./src/blocks/modules/affiliate-program/affiliate-program.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var AffiliateProgram = /*#__PURE__*/function () {
+  function AffiliateProgram() {
+    _classCallCheck(this, AffiliateProgram);
+  }
+  _createClass(AffiliateProgram, [{
+    key: "openAffiliateProgram",
+    value: function openAffiliateProgram() {}
+  }, {
+    key: "init",
+    value: function init() {
+      this.openAffiliateProgram();
+    }
+  }]);
+  return AffiliateProgram;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AffiliateProgram);
+if (document.querySelector(".affiliate-program__more ")) {
+  jQuery(document).ready(function () {
+    $('.affiliate-program__more ').on('click', function () {
+      $('.affiliate-program__right').addClass('open');
+    });
+    $('.affiliate-program__hide-details').on('click', function () {
+      $('.affiliate-program__right').removeClass('open');
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./src/blocks/modules/banners/banner-big.js":
 /*!**************************************************!*\
   !*** ./src/blocks/modules/banners/banner-big.js ***!
@@ -1101,6 +1146,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/catalog-detail-page/catalog-detail-page */ "./src/blocks/modules/catalog-detail-page/catalog-detail-page.js");
 /* harmony import */ var _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/compare/compare */ "./src/blocks/modules/compare/compare.js");
 /* harmony import */ var _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/brands-detail-top/brands-detail-top */ "./src/blocks/modules/brands-detail-top/brands-detail-top.js");
+/* harmony import */ var _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/affiliate-program/affiliate-program */ "./src/blocks/modules/affiliate-program/affiliate-program.js");
+
 
 
 
@@ -1130,6 +1177,7 @@ window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPO
 window.app.catalogDetailPage = new _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__["default"]();
 window.app.compare = new _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__["default"]();
 window.app.brandsDetaiTop = new _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__["default"]();
+window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_14__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();

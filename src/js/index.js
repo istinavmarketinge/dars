@@ -13,6 +13,7 @@ import ElementsList from "%modules%/elements_list/elements_list";
 import CatalogDetailPage from "%modules%/catalog-detail-page/catalog-detail-page";
 import Compare from "%modules%/compare/compare";
 import BrandsDetaiTop from "%modules%/brands-detail-top/brands-detail-top";
+import AffiliateProgram from "%modules%/affiliate-program/affiliate-program";
 
 
 
@@ -36,6 +37,7 @@ window.app.elementsList = new ElementsList();
 window.app.catalogDetailPage = new CatalogDetailPage();
 window.app.compare = new Compare();
 window.app.brandsDetaiTop = new BrandsDetaiTop();
+window.app.affiliateProgram = new AffiliateProgram();
 
 
 

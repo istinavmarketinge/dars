@@ -6974,6 +6974,7 @@ dl.open .specifications-block__row {
   border: none;
   outline: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .password-change__password-ok {
@@ -6989,7 +6990,6 @@ dl.open .specifications-block__row {
   letter-spacing: 0.48px;
   position: relative;
   margin-bottom: 40px;
-  cursor: pointer;
 }
 
 .password-change__password-ok:after {
@@ -7000,10 +7000,106 @@ dl.open .specifications-block__row {
   width: 8px;
   height: 8px;
   background: url("../img/delete.svg") 0 0/contain no-repeat;
+  cursor: pointer;
 }
 
 .password-change__password-ok.--password-no-ok {
   background: rgba(229, 69, 69, 0.1);
+}
+
+.affiliate-program {
+  display: flex;
+}
+
+.affiliate-program__left {
+  width: 35%;
+  padding-right: 47px;
+  border-radius: 1px solid #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 40px;
+}
+
+.affiliate-program__right {
+  width: 62%;
+  padding-left: 47px;
+  display: none;
+}
+
+.affiliate-program__right.open {
+  display: block;
+}
+
+.affiliate-program__title {
+  margin: 0;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.96px;
+}
+
+.affiliate-program__text {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 15px;
+  color: #111214;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.affiliate-program__text-application span {
+  color: #F0820F;
+  cursor: pointer;
+}
+
+.affiliate-program__button {
+  border-radius: 4px;
+  background: #F0820F;
+  padding: 15px;
+  max-width: 232px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.affiliate-program__hide-details {
+  padding: 10px;
+  color: #0F7DF0;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.affiliate-program__hide-details:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(100%, -50%);
+  left: 0;
+  width: 3px;
+  height: 6px;
+  background: url("../img/arrow-blue.svg") 0 0/contain no-repeat;
+}
+
+.affiliate-program__text-abot-program {
+  color: #8C8C8C;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
 }
 
 @media all and (min-width: 961px) {
