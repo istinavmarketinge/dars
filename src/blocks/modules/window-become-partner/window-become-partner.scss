@@ -23,6 +23,16 @@
         z-index: 6;
         opacity: 1;	
         padding: 70px 75px 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            top: 25px;
+            right: 25px;
+            background: url("../img/close-form.svg") 0 0/contain no-repeat;
+            cursor: pointer;
+        }
     }
     &__form {
         display: flex;
@@ -46,7 +56,7 @@
             outline: none;
             border: none;
             border-bottom: 1px solid #CED0D6;
-            padding: 18px 20px;
+            padding: 15px 20px;
             color: #B4B4B4;
             font-size: 16px;
             font-style: normal;

@@ -7129,6 +7129,17 @@ dl.open .specifications-block__row {
   padding: 70px 75px 40px;
 }
 
+.window-become-partner__in::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 25px;
+  right: 25px;
+  background: url("../img/close-form.svg") 0 0/contain no-repeat;
+  cursor: pointer;
+}
+
 .window-become-partner__form {
   display: flex;
   flex-direction: column;
@@ -7155,7 +7166,7 @@ dl.open .specifications-block__row {
   outline: none;
   border: none;
   border-bottom: 1px solid #CED0D6;
-  padding: 18px 20px;
+  padding: 15px 20px;
   color: #B4B4B4;
   font-size: 16px;
   font-style: normal;
@@ -7253,6 +7264,86 @@ dl.open .specifications-block__row {
 
 .window-become-partner__activity-list::-webkit-scrollbar-thumb {
   background: #D9D9D9;
+}
+
+.thanks-you {
+  display: none;
+}
+
+.thanks-you.open {
+  display: block;
+}
+
+.thanks-you:before {
+  content: "";
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: 5;
+}
+
+.thanks-you__in {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 530px;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 4px;
+  z-index: 6;
+  opacity: 1;
+  padding: 80px 75px 50px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 40px;
+}
+
+.thanks-you__in h2 {
+  margin: 0;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.84px;
+}
+
+.thanks-you__close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 25px;
+  right: 25px;
+  background: url("../img/close-form.svg") 0 0/contain no-repeat;
+  cursor: pointer;
+}
+
+.thanks-you__text {
+  color: #3F3F3F;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0.48px;
+}
+
+.thanks-you__button {
+  border-radius: 4px;
+  background: #F0820F;
+  padding: 12px 50px;
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  max-width: 130px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 @media all and (min-width: 961px) {
