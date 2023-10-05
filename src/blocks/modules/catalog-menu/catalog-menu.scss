@@ -31,6 +31,9 @@
         backdrop-filter: blur(5px);
 
     }
+    &__plate {
+        width: var(--plateWidth);
+    }
     &.open + &__overlay {
         opacity: 1;
         visibility: visible;
@@ -75,7 +78,7 @@
         }
     }
     &__right {
-        flex: 1 1 auto;
+        width: calc(100% - var(--plateWidth) - 340px);
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -84,6 +87,9 @@
         overflow: auto;
         padding-right: 70px;
         padding-left: 66px;
+        &:not(.isOpened) {
+            display: none;
+        }
         @media all and (max-width:900px) {
             padding-left: 30px;
             width: 50%;
@@ -106,7 +112,8 @@
             padding: 8px 4px;
             position: relative;
         }
-        & > li:hover {
+        & > li:hover,
+        & > li.isActive {
             border-radius: 7px;
             background: #F4F4F4;
             &:after {
@@ -254,6 +261,7 @@
         align-items: center;
         justify-content: space-between;
         margin-top: 30px;
+        width: 100%;
     }
     &__right-products-item {
         width: 31%;

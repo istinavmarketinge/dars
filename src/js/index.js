@@ -14,6 +14,7 @@ import CatalogDetailPage from "%modules%/catalog-detail-page/catalog-detail-page
 import Compare from "%modules%/compare/compare";
 import BrandsDetaiTop from "%modules%/brands-detail-top/brands-detail-top";
 import AffiliateProgram from "%modules%/affiliate-program/affiliate-program";
+import Modal from "%components%/modal/modal";
 
 
 
@@ -38,6 +39,7 @@ window.app.catalogDetailPage = new CatalogDetailPage();
 window.app.compare = new Compare();
 window.app.brandsDetaiTop = new BrandsDetaiTop();
 window.app.affiliateProgram = new AffiliateProgram();
+window.app.modal = new Modal();
 
 
 
@@ -56,5 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.catalogDetailPage.init();
     window.app.compare.init();
     window.app.brandsDetaiTop.init();
+    window.app.affiliateProgram.init();
+    window.app.modal.init();
 })
 

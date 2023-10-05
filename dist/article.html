@@ -80,7 +80,7 @@
             </div>
          </div>
          <div class="header-top__item --top-contacts">
-            <div class="header-top__button">
+            <div class="header-top__button" data-modal-toggle="callback">
              <div class="header-top__button-icon">
                  <img src="./img/call-back.svg" alt="icon">
              </div>
@@ -89,7 +89,7 @@
             <div class="header-top__contacts">
                  <a href="#" class="header-top__contacts-phone">8 (800) 440-30-25</a>
                  <a href="#" class="header-top__contacts-mail">info@dars.com</a>
-                 <a href="#" class="header-top__contacts-mail-mobile">
+                 <a href="#" class="header-top__contacts-mail-mobile" data-modal-toggle="callback">
                     <img src="./img/e-mail.svg" alt="icon">
                  </a>
              </div>
@@ -115,25 +115,28 @@
                </form>
          </div>
          <div class="header-bottom__right-icons">
-            <a href="favorites.html" class="right-icons__item">
-                 <div class="right-icons__image">
+            <a href="favorites.html" class="right-icons__item right-icons__item--favorites">
+                <div class="right-icons__image">
+                     <div class="right-icons__item-counter">14</div>
                      <img src="./img/favourites.svg" alt="icon">
                  </div>
                  <span>Избранное</span>
             </a>
-            <a href="compare.html" class="right-icons__item">
-                 <div class="right-icons__image">
-                     <img src="./img/compare.svg" alt="icon">
-                 </div>
+            <a href="compare.html" class="right-icons__item right-icons__item--compare">
+                <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
+                    <img src="./img/compare.svg" alt="icon">
+                </div>
                  <span>Сравнить</span>
             </a>
-              <div class="right-icons__item">
+              <div class="right-icons__item right-icons__item--cart right-icons__item--filled">
                  <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
                      <img src="./img/basket.svg" alt="icon ">
                  </div>
                  <span>Корзина</span>
               </div>
-              <div class="right-icons__item">
+              <div class="right-icons__item right-icons__item--login">
                  <div class="right-icons__image">
                      <img src="./img/enter.svg" alt="icon">
                  </div>
@@ -167,311 +170,358 @@
         </svg>
     </div>
     <div class="catalog-menu__left">
+        
         <ul class="catalog-menu__left-list">
+            <li class="isActive" data-menu-to-open="Настенные покрытия 1">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 1</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
             
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
-                </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            <li data-menu-to-open="Настенные покрытия 2">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 2</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
-                </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
                 </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            </li>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
-                </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            <li data-menu-to-open="Настенные покрытия 3">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 3</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
-                </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
                 </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            </li>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
-                </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            <li data-menu-to-open="Настенные покрытия 4">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 4</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
         
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
                 </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 5">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 5</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 6">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 6</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 7">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 7</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 8">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 8</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 9">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 9</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
         
 
         </ul>
@@ -492,9 +542,9 @@
     </div>
 
 
-    <div class="catalog-menu__right">
+    <div class="catalog-menu__right isOpened" data-menu-id="Настенные покрытия 1">
         <div class="catalog-menu__right-container">
-        <div class="catalog-menu__title">Настенные покрытия</div>
+        <div class="catalog-menu__title">Настенные покрытия 1</div>
         <div class="catalog-menu__right-menus">
             <ul class="catalog-menu__right-menu-list">
                 <li class="catalog-menu__right-menus-title">Обои</li>
@@ -578,6 +628,703 @@
         </div>
 
     </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 2">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 2</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 3">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 3</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 4">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 4</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 5">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 5</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 6">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 6</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 7">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 7</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 8">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 8</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 9">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 9</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="/img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="/img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
 </div>
 
 <div class="catalog-menu__overlay"></div>
@@ -882,6 +1629,10 @@
         </div>
        
     </div>
+
+
+
+    
                     <div class="bottom-menu">
     <div class="bottom-menu__in">
         <a href="#" class="bottom-menu__item">
@@ -941,7 +1692,48 @@
 
                 </div>
             </footer>
-        
+            <div class="popup-modal" data-modal-id="callback">
+    <div class="popup-modal__content">
+        <div class="popup-modal__closer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none">
+                <path d="M2 24L13 13M13 13L24 2M13 13L2 2M13 13L24 24" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="popup-modal__title">
+            Обратный звонок
+        </div>
+        <div class="popup-modal__body">
+            <form action="" class="popup-modal__form">
+    <div class="form__field">
+        <input type="text" placeholder="Имя">
+    </div>
+    <div class="form__field">
+        <input type="tel" placeholder="Телефон">
+    </div>
+    
+
+    <button class="button button--primary popup-modal__submit">
+ 
+
+Перезвоните мне
+
+
+
+    </button>
+
+</form>
+
+<div class="popup-modal__message" style="display: none;">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%"  viewBox="0 0 138 92" fill="none">
+        <path d="M0 49.9136L47.2573 92L138 11.4199L124.972 0L47.2573 68.9996L12.8472 38.4133L0 49.9136Z" fill="#1BC49B"/>
+        </svg>
+    </div>
+    <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
+</div>
+        </div>
+    </div>
+</div>
         
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>

@@ -64,7 +64,9 @@
                     @@include("../blocks/modules/bottom-menu/bottom-menu.html")
                 </div>
             </footer>
-        
+            @@include('../blocks/components/modal/modal.html', {
+                "modal_id": "callback"
+            })
         <!-- @@include("../blocks/modules/footer/footer.html") -->
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>

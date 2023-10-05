@@ -2,6 +2,74 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/components/modal/modal.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/components/modal/modal.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var Modal = /*#__PURE__*/function () {
+  function Modal() {
+    _classCallCheck(this, Modal);
+  }
+  _createClass(Modal, [{
+    key: "addModalOpenHandler",
+    value: function addModalOpenHandler() {
+      if (!document.querySelector('[data-modal-toggle]')) return;
+      document.querySelectorAll('[data-modal-toggle]').forEach(function (opener) {
+        opener.addEventListener('click', function (event) {
+          document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('isOpened');
+        });
+      });
+    }
+  }, {
+    key: "addModalCloseHandler",
+    value: function addModalCloseHandler() {
+      if (document.querySelector('.popup-modal__closer')) {
+        document.querySelectorAll('.popup-modal__closer').forEach(function (closer) {
+          closer.addEventListener('click', function (event) {
+            event.currentTarget.closest('.popup-modal').classList.remove('isOpened');
+          });
+        });
+      }
+      if (document.querySelector('.popup-modal')) {
+        document.querySelectorAll('.popup-modal').forEach(function (closer) {
+          closer.addEventListener('click', function (event) {
+            event.currentTarget.classList.remove('isOpened');
+          });
+        });
+      }
+      if (document.querySelector('.popup-modal__content')) {
+        document.querySelectorAll('.popup-modal__content').forEach(function (closer) {
+          closer.addEventListener('click', function (event) {
+            event.stopPropagation();
+          });
+        });
+      }
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.addModalOpenHandler();
+      this.addModalCloseHandler();
+    }
+  }]);
+  return Modal;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Modal);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/action/action.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/action/action.js ***!
@@ -495,50 +563,51 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var CatalogMenu = /*#__PURE__*/function () {
   function CatalogMenu() {
     _classCallCheck(this, CatalogMenu);
-    this.slider = null;
   }
   _createClass(CatalogMenu, [{
     key: "initSlider",
     value: function initSlider() {
       if (!document.querySelector('.catalog-menu__right-products-slider.swiper')) return;
-      this.slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-menu__right-products-slider.swiper', {
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
-        zoom: {
-          maxRatio: 0
-        },
-        breakpoints: {
-          1700: {
-            slidesPerView: 3
+      document.querySelectorAll('.catalog-menu__right-products-slider.swiper').forEach(function (slider) {
+        new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](slider, {
+          loop: true,
+          slidesPerView: 3,
+          spaceBetween: 30,
+          zoom: {
+            maxRatio: 0
           },
-          1000: {
-            slidesPerView: 2
+          breakpoints: {
+            1700: {
+              slidesPerView: 3
+            },
+            1000: {
+              slidesPerView: 2
+            },
+            900: {
+              slidesPerView: 1,
+              spaceBetween: 25
+            },
+            0: {
+              slidesPerView: 1.5,
+              spaceBetween: 15
+            }
           },
-          900: {
-            slidesPerView: 1,
-            spaceBetween: 25
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination'
           },
-          0: {
-            slidesPerView: 1.5,
-            spaceBetween: 15
+          // Navigation arrows
+          navigation: {
+            nextEl: '.popular-categories__arrow.swiper-button-next',
+            prevEl: '.popular-categories__arrow.swiper-button-prev'
           }
-        },
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.popular-categories__arrow.swiper-button-next',
-          prevEl: '.popular-categories__arrow.swiper-button-prev'
-        }
 
-        // // And if we need scrollbar
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        // },
-      }).mount();
+          // // And if we need scrollbar
+          // scrollbar: {
+          //   el: '.swiper-scrollbar',
+          // },
+        }).mount();
+      });
     }
   }, {
     key: "openMenu",
@@ -551,8 +620,25 @@ var CatalogMenu = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "addShowOnHoverHandler",
+    value: function addShowOnHoverHandler() {
+      if (!document.querySelector('[data-menu-to-open]')) return;
+      document.querySelectorAll('[data-menu-to-open]').forEach(function (opener) {
+        opener.addEventListener('mouseenter', function (event) {
+          document.querySelector('[data-menu-to-open].isActive').classList.remove('isActive');
+          event.currentTarget.classList.add('isActive');
+          console.log("[data-menu-id=\"".concat(event.currentTarget.dataset.menuToOpen, "]"));
+          if (document.querySelector("[data-menu-id=\"".concat(event.currentTarget.dataset.menuToOpen, "\"]"))) {
+            document.querySelector("[data-menu-id].isOpened").classList.remove('isOpened');
+            document.querySelector("[data-menu-id=\"".concat(event.currentTarget.dataset.menuToOpen, "\"]")).classList.add('isOpened');
+          }
+        });
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
+      this.addShowOnHoverHandler();
       this.initSlider();
       this.openMenu();
     }
@@ -915,7 +1001,7 @@ var Header = /*#__PURE__*/function () {
       if (window.innerWidth > 1300) {
         document.querySelector('.catalog-menu').style.height = "".concat(this.calculateCatalogBounds().height, "px");
         document.querySelector('.catalog-menu').style.top = "".concat(this.calculateCatalogBounds().top, "px");
-        document.querySelector('.catalog-menu__plate').style.width = "".concat(this.calculateCatalogBounds().left + 30, "px");
+        document.querySelector('.catalog-menu').style.setProperty('--plateWidth', "".concat(this.calculateCatalogBounds().left + 30, "px"));
         document.querySelector('.catalog-menu').style.right = "".concat(this.calculateCatalogBounds().right, "px");
       }
     }
@@ -1153,6 +1239,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/compare/compare */ "./src/blocks/modules/compare/compare.js");
 /* harmony import */ var _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/brands-detail-top/brands-detail-top */ "./src/blocks/modules/brands-detail-top/brands-detail-top.js");
 /* harmony import */ var _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/affiliate-program/affiliate-program */ "./src/blocks/modules/affiliate-program/affiliate-program.js");
+/* harmony import */ var _components_modal_modal__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %components%/modal/modal */ "./src/blocks/components/modal/modal.js");
+
 
 
 
@@ -1184,6 +1272,7 @@ window.app.catalogDetailPage = new _modules_catalog_detail_page_catalog_detail_p
 window.app.compare = new _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__["default"]();
 window.app.brandsDetaiTop = new _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__["default"]();
 window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_14__["default"]();
+window.app.modal = new _components_modal_modal__WEBPACK_IMPORTED_MODULE_15__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();
@@ -1199,6 +1288,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.app.catalogDetailPage.init();
   window.app.compare.init();
   window.app.brandsDetaiTop.init();
+  window.app.affiliateProgram.init();
+  window.app.modal.init();
 });
 
 /***/ })

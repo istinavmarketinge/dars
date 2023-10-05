@@ -1,12 +1,11 @@
 import Swiper from 'swiper/bundle';
 
 const CatalogMenu = class CatalogMenu {
-    constructor() {
-        this.slider = null;
-    }
+    constructor() {}
     initSlider() {
         if (!document.querySelector('.catalog-menu__right-products-slider.swiper')) return;
-        this.slider = new Swiper('.catalog-menu__right-products-slider.swiper', {
+        document.querySelectorAll('.catalog-menu__right-products-slider.swiper').forEach(slider => {
+        new Swiper(slider, {
             loop: true,
             slidesPerView: 3,
             spaceBetween: 30,
@@ -48,6 +47,7 @@ const CatalogMenu = class CatalogMenu {
             //   el: '.swiper-scrollbar',
             // },
           }).mount();
+        })
     }
     openMenu() {
         document.querySelectorAll(".catalog-menu__left-list li").forEach((menuItem) => {
@@ -60,7 +60,22 @@ const CatalogMenu = class CatalogMenu {
           })
         
     }
+    addShowOnHoverHandler() {
+      if (!document.querySelector('[data-menu-to-open]')) return;
+      document.querySelectorAll('[data-menu-to-open]').forEach(opener => {
+        opener.addEventListener('mouseenter', (event) => {
+          document.querySelector('[data-menu-to-open].isActive').classList.remove('isActive');
+          event.currentTarget.classList.add('isActive');
+          console.log(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}]`);
+          if (document.querySelector(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}"]`)) {
+            document.querySelector(`[data-menu-id].isOpened`).classList.remove('isOpened');
+            document.querySelector(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}"]`).classList.add('isOpened')
+          }
+        })
+      })
+    }
     init() {
+        this.addShowOnHoverHandler();
         this.initSlider();
         this.openMenu();
     }
