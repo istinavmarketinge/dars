@@ -6292,10 +6292,10 @@ body.isScrollPrevented {
   background: #FFF;
 }
 .elements-item__button:active, .elements-item__button.isActive {
-  background: #F0380F;
+  background: var(--bgColor, #F0380F);
   opacity: 1;
 }
-.elements-item__button:active svg path, .elements-item__button.isActive svg path {
+.elements-item__button:active:not(.elements-item__button--light) svg path, .elements-item__button.isActive:not(.elements-item__button--light) svg path {
   stroke: #fff;
 }
 
