@@ -7,45 +7,85 @@
         </svg>
     </div>
     <div class="catalog-menu__left">
+        
         <ul class="catalog-menu__left-list">
+            <li class="isActive" data-menu-to-open="Настенные покрытия 1">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 1</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
             @@for ($i = 0; $i < 8; $i++) {
-            <li><a href="#">
-                <div class="catalog-menu__left-icon">
-                    <img src="./img/catalog-menu-icons.svg" alt="icon">
+            <li data-menu-to-open="Настенные покрытия `+ ($i+2) +`">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия `+ ($i+2) +`</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Обои</li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Декоративная
+                                штукатурка</li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">3D панели</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Краска</li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title">Фрески</li>
+                        </ul>
+                    </div>
                 </div>
-                <span>Настенные покрытия</span>
-            </a>
-            <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
-                <div class="catalog-menu__right-menus">
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Обои</li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Декоративная
-                            штукатурка</li>
-                        <li><a href="#">Минеральная</a></li>
-                        <li><a href="#">Бумажные</a></li>
-                        <li><a href="#">Венецианская</a></li>
-                    </ul>
-    
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">3D панели</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Краска</li>
-                    </ul>
-                    <ul class="catalog-menu__right-menu-list">
-                        <li class="catalog-menu__right-menus-title">Фрески</li>
-                    </ul>
-                </div>
-            </div>
-        </li>
+            </li>
         }
 
         </ul>
@@ -56,7 +96,7 @@
         </div>
 
         <a href="#" class="catalog-menu__best-categiries">
-            <img src="/img/logo.svg" alt="logo">
+            <img src="./img/logo.svg" alt="logo">
             <div class="catalog-menu__best-categiries-title">
                 Лучшие товары категории
             </div>
@@ -66,9 +106,9 @@
     </div>
 
 
-    <div class="catalog-menu__right">
+    <div class="catalog-menu__right isOpened" data-menu-id="Настенные покрытия 1">
         <div class="catalog-menu__right-container">
-        <div class="catalog-menu__title">Настенные покрытия</div>
+        <div class="catalog-menu__title">Настенные покрытия 1</div>
         <div class="catalog-menu__right-menus">
             <ul class="catalog-menu__right-menu-list">
                 <li class="catalog-menu__right-menus-title">Обои</li>
@@ -103,28 +143,28 @@
             <div class="catalog-menu__right-products-slider swiper">
                 <div class="swiper-wrapper">
                     <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
-                        <img src="/img/logo.svg" alt="logo">
+                        <img src="./img/logo.svg" alt="logo">
                         <div class="catalog-menu__best-categiries-title">
                             Лучшие товары категории
                         </div>
                     </a>
                     <a href="#" class="catalog-menu__right-products-item swiper-slide">
                         <div class="products-item-image">
-                            <img src="/img/menu-product.png" alt="product">
+                            <img src="./img/menu-product.png" alt="product">
                         </div>
                         <div class="catalog-menu__right-products-text">
                             Штукатурка фасадная Гарант Формула выг...
                         </div>
                     </a>
                     <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
-                        <img src="/img/logo.svg" alt="logo">
+                        <img src="./img/logo.svg" alt="logo">
                         <div class="catalog-menu__best-categiries-title">
                             Лучшие товары категории
                         </div>
                     </a>
                     <a href="#" class="catalog-menu__right-products-item swiper-slide">
                         <div class="products-item-image">
-                            <img src="/img/menu-product.png" alt="product">
+                            <img src="./img/menu-product.png" alt="product">
                         </div>
                         <div class="catalog-menu__right-products-text">
                             Штукатурка фасадная Гарант Формула выг...
@@ -132,7 +172,7 @@
                     </a>
                     <a href="#" class="catalog-menu__right-products-item swiper-slide">
                         <div class="products-item-image">
-                            <img src="/img/menu-product.png" alt="product">
+                            <img src="./img/menu-product.png" alt="product">
                         </div>
                         <div class="catalog-menu__right-products-text">
                             Штукатурка фасадная Гарант Формула выг...
@@ -140,7 +180,7 @@
                     </a>
                     <a href="#" class="catalog-menu__right-products-item swiper-slide">
                         <div class="products-item-image">
-                            <img src="/img/menu-product.png" alt="product">
+                            <img src="./img/menu-product.png" alt="product">
                         </div>
                         <div class="catalog-menu__right-products-text">
                             Штукатурка фасадная Гарант Формула выг...
@@ -152,6 +192,94 @@
         </div>
 
     </div>
+    @@for ($i = 0; $i < 8; $i++) {
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия `+ ($i+2) +`">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия `+ ($i+2) +`</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Обои</li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Декоративная
+                        штукатурка</li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">3D панели</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Краска</li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title">Фрески</li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    }
 </div>
 
 <div class="catalog-menu__overlay"></div>

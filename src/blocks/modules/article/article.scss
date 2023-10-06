@@ -20,6 +20,10 @@
         @media (max-width:1200px) {
             width:100%;
         }
+        @media (max-width:900px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     &__name {
@@ -48,6 +52,9 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+        @media (max-width:900px) {
+            color: #838383;
+        }
     }
     &__backlink:before{
         content:"";
@@ -57,6 +64,9 @@
         height: 7px;
         flex-shrink: 0;
         background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M4 6.5L1 3.5L4 0.5" stroke="%230F7DF0" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        @media (max-width:900px) {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="7" viewBox="0 0 5 7" fill="none"><path d="M4 6.5L1 3.5L4 0.5" stroke="%230F7DF0" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        }
     }
     &__content {
         width:50%;

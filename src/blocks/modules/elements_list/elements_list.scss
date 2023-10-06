@@ -65,10 +65,12 @@
         }
         &:active,
         &.isActive {
-            background: #F0380F;
+            background: var(--bgColor, #F0380F);
             opacity: 1;
-            svg path {
-                stroke: #fff;
+            &:not(.elements-item__button--light) {
+                svg path {
+                    stroke: #fff;
+                }
             }
         }
     }

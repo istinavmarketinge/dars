@@ -48,7 +48,7 @@ const Header = class Header {
 		
 			document.querySelector('.catalog-menu').style.height = `${this.calculateCatalogBounds().height}px`;
 			document.querySelector('.catalog-menu').style.top = `${this.calculateCatalogBounds().top}px`;
-			document.querySelector('.catalog-menu__plate').style.width = `${this.calculateCatalogBounds().left + 30}px`;
+			document.querySelector('.catalog-menu').style.setProperty('--plateWidth', `${this.calculateCatalogBounds().left + 30}px`);
 			document.querySelector('.catalog-menu').style.right = `${this.calculateCatalogBounds().right}px`;
 		}
 	}

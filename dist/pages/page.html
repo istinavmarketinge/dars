@@ -69,7 +69,7 @@
             </div>
          </div>
          <div class="header-top__item --top-contacts">
-            <div class="header-top__button">
+            <div class="header-top__button" data-modal-toggle="callback">
              <div class="header-top__button-icon">
                  <img src="./img/call-back.svg" alt="icon">
              </div>
@@ -78,7 +78,7 @@
             <div class="header-top__contacts">
                  <a href="#" class="header-top__contacts-phone">8 (800) 440-30-25</a>
                  <a href="#" class="header-top__contacts-mail">info@dars.com</a>
-                 <a href="#" class="header-top__contacts-mail-mobile">
+                 <a href="#" class="header-top__contacts-mail-mobile" data-modal-toggle="callback">
                     <img src="./img/e-mail.svg" alt="icon">
                  </a>
              </div>
@@ -104,25 +104,28 @@
                </form>
          </div>
          <div class="header-bottom__right-icons">
-            <a href="favorites.html" class="right-icons__item">
-                 <div class="right-icons__image">
+            <a href="favorites.html" class="right-icons__item right-icons__item--favorites">
+                <div class="right-icons__image">
+                     <div class="right-icons__item-counter">14</div>
                      <img src="./img/favourites.svg" alt="icon">
                  </div>
                  <span>Избранное</span>
             </a>
-            <a href="compare.html" class="right-icons__item">
-                 <div class="right-icons__image">
-                     <img src="./img/compare.svg" alt="icon">
-                 </div>
+            <a href="compare.html" class="right-icons__item right-icons__item--compare">
+                <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
+                    <img src="./img/compare.svg" alt="icon">
+                </div>
                  <span>Сравнить</span>
             </a>
-              <div class="right-icons__item">
+              <div class="right-icons__item right-icons__item--cart right-icons__item--filled">
                  <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
                      <img src="./img/basket.svg" alt="icon ">
                  </div>
                  <span>Корзина</span>
               </div>
-              <div class="right-icons__item">
+              <div class="right-icons__item right-icons__item--login">
                  <div class="right-icons__image">
                      <img src="./img/enter.svg" alt="icon">
                  </div>
@@ -261,6 +264,10 @@
         </div>
        
     </div>
+
+
+
+    
         <script src="../js/vendor.js"></script>
     </body>
 </html>

@@ -1,0 +1,53 @@
+.brands-detail {
+    &__filter {
+        margin-bottom: 50px;
+    }
+    &__title {
+        margin-bottom: 30px;
+        @media (width <= 960px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__categories {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 20px 40px;
+        gap: 15px;
+        border-radius: 6px;
+        background: #F6F6F6;
+        @media (width <= 960px) {
+            padding: 20px;
+        }
+    }
+    &__category {
+        display: flex;
+        align-items: center;
+        display: flex;
+        padding: 10px 17px 10px 27px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 31px;
+        border: 1px solid #2D2D2D;
+        background: #FFF;
+        .text {
+            color: #676767;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.45px;
+        }
+        .count {
+            color: #A9A9A9;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+}

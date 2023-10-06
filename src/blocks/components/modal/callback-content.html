@@ -1,0 +1,24 @@
+<form action="" class="popup-modal__form">
+    <div class="form__field">
+        <input type="text" placeholder="Имя">
+    </div>
+    <div class="form__field">
+        <input type="tel" placeholder="Телефон">
+    </div>
+    @@include('../button/button.html', {
+        "type": "primary",
+        "link": false,
+        "outlined": false,
+        "text": "Перезвоните мне",
+        "class_name": "popup-modal__submit"
+    })
+</form>
+
+<div class="popup-modal__message" style="display: none;">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%"  viewBox="0 0 138 92" fill="none">
+        <path d="M0 49.9136L47.2573 92L138 11.4199L124.972 0L47.2573 68.9996L12.8472 38.4133L0 49.9136Z" fill="#1BC49B"/>
+        </svg>
+    </div>
+    <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
+</div>

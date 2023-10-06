@@ -1,0 +1,15 @@
+@@if (link) {
+    <a href="@@link" class="button button--@@type@@if(outlined){ button--outlined} @@class_name">
+}
+@@if (!link) {
+    <button class="button button--@@type@@if(outlined){ button--outlined} @@class_name">
+} 
+
+@@text
+
+@@if (link) {
+    </a>
+}
+@@if (!link) {
+    </button>
+}

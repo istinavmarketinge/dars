@@ -24,6 +24,8 @@
     }
     &__page-top {
         flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
     }
     &__page-right {
         width: 100%;
@@ -33,6 +35,22 @@
         @media (width <= 960px) {
             padding-left: calc(50vw - 20px);
         }
+    }
+    &__page-buttons {
+        flex: 1 1 auto;
+        @media (width <= 960px) {
+            flex-direction: column;
+        }
+    }
+    &__page-button {
+        @media (width <= 960px) {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+    &__page-add-to-cart {
+        flex: 1 1 auto;
+        text-align: center;
     }
     &__page-items,
     &__page-right &__page-bottom-items {
@@ -58,6 +76,9 @@
     &__page .elements-item {
         margin-bottom: 0;
         box-sizing: border-box;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
     }
     &__page-bottom,
     &__page-top {            
@@ -76,6 +97,16 @@
         &:not(:first-of-type) {
             margin-top: 40px;
         }
+        @media (width <= 960px) {
+            margin-top: 40px;
+        }
+    }
+    &__page-right &__page-bottom-item-title {
+        @media (width >= 961px) {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
     }
     &__page-bottom-item-table {
         display: flex;
@@ -100,22 +131,36 @@
         width: 100%;
     }
     &__page-bottom-item-td {
-        margin-bottom: 10px;
-        position: relative;
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: -24px;
-            right: -24px;
-            top: 12px;
-            border-bottom: 1px dashed #ccc;
+        @media (width >= 961px) {
+            margin-bottom: 10px;
+            position: relative;
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -24px;
+                right: -24px;
+                top: 12px;
+                border-bottom: 1px dashed #ccc;
+            }
+        }
+        @media (width <= 960px) {
+            margin-bottom: 20px;
         }
     }
     &__page-left &__page-bottom-item-td {
         &:before {
             left: 0;
         }
+    }
+    &__page-bottom-item-td strong {
+        display: block;
+        margin-bottom: 5px;
+        color: #484848;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
     }
     &__page-bottom-item-td span {
         &::before,
@@ -132,6 +177,9 @@
         position: relative;
         z-index: 10;
         margin-left: -6px;
+        &.isUnique {
+            color: #F0820F;
+        }
     }
     &__page-right-line {
         position: absolute;
@@ -177,12 +225,61 @@
             visibility: visible;
         }
     }
-    .compare__page-right &__page-item.isPinned {
+    &__page-left &__page-item::before {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__page-left &__page-item &__page-bottom-item-td span {
+        background-color: #FAFAFA;
+    }
+    &__page-right &__page-item.isPinned {
         @media (width <= 960px) {
             display: none;
         }
     }
     &__page-item:hover &__page-bottom-item-td span {
         background-color: #FAFAFA;
+    }
+    &__page-top .tabs__slider-item-text {
+        @media (width <= 960px) {
+            order: -1;
+            margin-bottom: 11px;
+        }
+    }
+    &__page-top .tabs__slider-item-image {
+        @media (width <= 960px) {
+            order: -2;
+        }
+    }
+    &__page-conpare-with-it {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        background: #F8F8F8;
+        .icon {
+            width: 20px;
+            font-size: 0;
+        }
+        .text {
+            width: calc(100% - 20px - 10px);
+            color: #000;
+            leading-trim: both;
+            text-edge: cap;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &__page-left &__page-conpare-with-it {
+        background: #FFD748;
+        pointer-events: none;
+        .text {
+            color: #000;
+        }
     }
 }
