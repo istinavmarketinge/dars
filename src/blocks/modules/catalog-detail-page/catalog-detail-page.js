@@ -5,7 +5,7 @@ const DetailCatalogSlider = class DetailCatalogSlider {
         this.slider = null;
     }
     initSlider() {
-        if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav')) return;
+        if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav, .catalog-detail-page-tabs-list')) return;
 
         let navSlider = new Swiper('.catalog-detail-slider-nav', {
           loop: true,
@@ -22,12 +22,106 @@ const DetailCatalogSlider = class DetailCatalogSlider {
             thumbs: {
               swiper: navSlider,
             },
+            breakpoints: {
+              960: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              600: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+              },
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              }
+            }
           });
 
+        let catalogSlider = new Swiper('.catalog-detail-page__catalog-slider', {
+          loop: true,
+          spaceBetween: 20,
+          slidesPerView: 6,
+          freeMode: true,
+          watchSlidesProgress: true,
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              freeMode: false,
+            },
+            400: {
+              slidesPerView: 2,
+              freeMode: false,
+            },
+            700: {
+              slidesPerView: 3,
+            },
+            800: {
+              slidesPerView: 4,
+            },
+            1300: {
+              slidesPerView: 5,
+            },
+            1600: {
+              slidesPerView: 6,
+            },
+          }
+        });
 
+        var init = false;
+        var catalogSliderVertical;
+        function swiperCard() {
+          if (window.innerWidth <= 1500) {
+            if (!init) {
+              init = true;
+              catalogSliderVertical = new Swiper('.catalog-detail-page-related-products__list', {
+                spaceBetween: 20,
+                slidesPerView: 6,
+                freeMode: true,
+                scrollbar: {
+                  el: '.swiper-scrollbar',
+                },
+                breakpoints: {
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    freeMode: false,
+                  },
+                  400: {
+                    slidesPerView: 2,
+                    freeMode: false,
+                  },
+                  700: {
+                    slidesPerView: 3,
+                  },
+                  800: {
+                    slidesPerView: 4,
+                  },
+                  1300: {
+                    slidesPerView: 5,
+                  },
+                  1600: {
+                    slidesPerView: 6,
+                  },
+                }
+              });
+            }
+          } else if (init) {
+            catalogSliderVertical.destroy();
+            init = false;
+          }
+        }
+
+        swiperCard();
+        window.addEventListener("resize", swiperCard);
     }
+
     init() {
-        this.initSlider();
+      this.initSlider();
     }
 }
 
@@ -91,5 +185,24 @@ jQuery(document).ready(function() {
       .addClass('active').siblings().removeClass('active')
       .closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq($(this).index()).addClass('active');
   });
+
+  $('.review-form__estimation-input').on('change', function(){
+    let num = $(this).val();
+    $('.rating-calculation__estimation-value').text(num);
+  });
+
+  $('.reviews-list-box__add-review').on('click', function () {
+    $(this).toggleClass('active');
+
+    if($(this).hasClass('active')){
+      $(this).text($(this).data('activeText'));
+    } else {
+      $(this).text($(this).data('text'));
+    }
+
+
+      $('.review-block__review-form').slideToggle();
+  });
 	
+
 });

@@ -294,7 +294,7 @@ var DetailCatalogSlider = /*#__PURE__*/function () {
   _createClass(DetailCatalogSlider, [{
     key: "initSlider",
     value: function initSlider() {
-      if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav')) return;
+      if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav, .catalog-detail-page-tabs-list')) return;
       var navSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-detail-slider-nav', {
         loop: true,
         spaceBetween: 3,
@@ -308,8 +308,100 @@ var DetailCatalogSlider = /*#__PURE__*/function () {
         spaceBetween: 10,
         thumbs: {
           swiper: navSlider
+        },
+        breakpoints: {
+          960: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          600: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
         }
       });
+      var catalogSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-detail-page__catalog-slider', {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 6,
+        freeMode: true,
+        watchSlidesProgress: true,
+        scrollbar: {
+          el: '.swiper-scrollbar'
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            freeMode: false
+          },
+          400: {
+            slidesPerView: 2,
+            freeMode: false
+          },
+          700: {
+            slidesPerView: 3
+          },
+          800: {
+            slidesPerView: 4
+          },
+          1300: {
+            slidesPerView: 5
+          },
+          1600: {
+            slidesPerView: 6
+          }
+        }
+      });
+      var init = false;
+      var catalogSliderVertical;
+      function swiperCard() {
+        if (window.innerWidth <= 1500) {
+          if (!init) {
+            init = true;
+            catalogSliderVertical = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.catalog-detail-page-related-products__list', {
+              spaceBetween: 20,
+              slidesPerView: 6,
+              freeMode: true,
+              scrollbar: {
+                el: '.swiper-scrollbar'
+              },
+              breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                  freeMode: false
+                },
+                400: {
+                  slidesPerView: 2,
+                  freeMode: false
+                },
+                700: {
+                  slidesPerView: 3
+                },
+                800: {
+                  slidesPerView: 4
+                },
+                1300: {
+                  slidesPerView: 5
+                },
+                1600: {
+                  slidesPerView: 6
+                }
+              }
+            });
+          }
+        } else if (init) {
+          catalogSliderVertical.destroy();
+          init = false;
+        }
+      }
+      swiperCard();
+      window.addEventListener("resize", swiperCard);
     }
   }, {
     key: "init",
@@ -360,6 +452,19 @@ jQuery(document).ready(function () {
   });
   $('.catalog-detail-page-tabs-list').on('click', 'li:not(.active)', function () {
     $(this).addClass('active').siblings().removeClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq($(this).index()).addClass('active');
+  });
+  $('.review-form__estimation-input').on('change', function () {
+    var num = $(this).val();
+    $('.rating-calculation__estimation-value').text(num);
+  });
+  $('.reviews-list-box__add-review').on('click', function () {
+    $(this).toggleClass('active');
+    if ($(this).hasClass('active')) {
+      $(this).text($(this).data('activeText'));
+    } else {
+      $(this).text($(this).data('text'));
+    }
+    $('.review-block__review-form').slideToggle();
   });
 });
 
