@@ -1,0 +1,67 @@
+<div class="auth-modal">
+    <div class="auth-modal-box">
+        <form class="auth-modal-box__form auth-modal-box-registration">
+            <button type="button" class="auth-modal-box__btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M2 20L11 11L2 20ZM11 11L20 2L11 11ZM11 11L2 2L11 11ZM11 11L20 20L11 11Z" fill="white"/>
+                    <path d="M2 20L11 11M11 11L20 2M11 11L2 2M11 11L20 20" stroke="" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </button>
+            <div class="auth-modal-box__wrap">
+                <div class="auth-modal-box__title">Регистрация</div>
+                <div class="auth-modal-box__body">
+                    <div class="auth-modal-box__row required">
+                        <input type="text" name="name" id="auth-modal-box__control-name" placeholder="" required>
+                        <label for="auth-modal-box__control-name" class="auth-modal-box__label"><span>Имя</span></label>
+                    </div>
+                    <div class="auth-modal-box__row required">
+                        <input type="text" name="surname" id="auth-modal-box__control-surname" placeholder="" required>
+                        <label for="auth-modal-box__control-surname" class="auth-modal-box__label"><span>Фамилия</span></label>
+                    </div>
+                    <div class="auth-modal-box__row">
+                        <input type="tel" name="phone" id="auth-modal-box__control-phone" placeholder="">
+                        <label for="auth-modal-box__control-phone" class="auth-modal-box__label"><span>Телефон</span></label>
+                    </div>
+                    <div class="auth-modal-box__row required">
+                        <input type="password" name="pass" id="auth-modal-box__control-pass" placeholder="" required>
+                        <label for="auth-modal-box__control-pass" class="auth-modal-box__label"><span>Пароль</span></label>
+                    </div>
+                    <div class="auth-modal-box__row required">
+                        <input type="password" name="pass-confirm" id="auth-modal-box__control-pass-confirm" placeholder="" required>
+                        <label for="auth-modal-box__control-pass-confirm" class="auth-modal-box__label"><span>Подтверждение пароля</span></label>
+                    </div>
+                </div>
+                <div class="auth-modal-box__footer">
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--orange auth-modal-box__btn-registration">Зарегистрироваться</button>
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--gray auth-modal-box__btn-auth">Войти</button>
+                </div>
+                <div class="auth-modal-box__consent-text">
+                    <p>Нажимая кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных, в соответствии с <a href="#">Политикой</a> и соглашаюсь с Правилами</p>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth-modal-box-successfully" hidden>
+            <button type="button" class="auth-modal-box__btn-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <path d="M2 20L11 11L2 20ZM11 11L20 2L11 11ZM11 11L2 2L11 11ZM11 11L20 20L11 11Z" fill="white"/>
+                    <path d="M2 20L11 11M11 11L20 2M11 11L2 2M11 11L20 20" stroke="" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+            </button>
+            <div class="auth-modal-box-successfully__wrap">
+                <div class="auth-modal-box-successfully__title">
+                    <span>Благодарим за регистрацию!</span>
+                    <span>Осталось совсем немного</span>
+                </div>
+                <div class="auth-modal-box-successfully__body">
+                    Чтобы завершить регистрацию, перейдите по ссылке, которую мы отправили на указанную вами почту.
+                </div>
+                <div class="auth-modal-box-successfully__footer">
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--orange auth-modal-box__btn-ok">Ок</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

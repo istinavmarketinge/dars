@@ -1,0 +1,277 @@
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(35 35 35 / 50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.auth-modal-box {
+    border-radius: 12px;
+    background: #FFF;
+    position: relative;
+
+    @media(width <= 420px){
+        max-width: 90%;
+    }
+
+		.auth-modal-box-registration {
+            max-width: 530px;
+
+            @media(width <= 650px){
+                max-width: 390px;
+            }
+		}
+
+		&__btn-close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            stroke: #A9A9A9;
+            border: none;
+            padding: 0;
+            margin: 0;
+            background: none;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            
+            @media(width <= 420px){
+                right: 15px;
+                width: 15px;
+                height: 15px;
+            }
+
+            &:hover,
+            &:focus,
+            &:focus-within {
+                stroke: #F0820F;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+		}
+
+		&__wrap {
+            padding: 70px 75px 40px;
+
+            @media(width <= 650px){
+                padding: 35px 30px 20px;
+            }
+
+            @media(width <= 420px){
+                padding: 30px 15px 20px;
+            }
+		}
+
+		&__title {
+            text-align: center;
+            font-size: 36px;
+            letter-spacing: 1.08px;
+
+            @media(width <= 650px){
+                font-size: 26px;
+            }
+		}
+
+		&__body {
+            margin-top: 35px;
+            display: grid;
+            gap: 20px;
+
+            @media(width <= 650px){
+                margin-top: 20px;
+            }
+		}
+
+		&__row {
+            position: relative;
+		}
+
+        input {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 18px 20px;
+            border: none;
+            border-bottom: 1px solid #CED0D6;
+            border-radius: 3px;
+            background-color: #fff;
+            transition: background 0.3s, border-color 0.3s;
+
+            @media(width <= 650px){
+                padding: 10px 15px;
+            }
+
+            &:focus,
+            &:focus-within,
+            &:hover {
+                border-color: #F0820F;
+                outline: none;
+                background: #f0820f1c;
+            }
+        }
+
+        input:focus + label span,
+        input:focus-within + label span,
+        input:not(:placeholder-shown) + label span {
+            transform: translate(-10px, -37px);
+            font-size: 14px;
+
+            @media(width <= 650px){
+                transform: translate(-10px, -24px);
+                font-size: 12px;
+            }
+        }
+
+		&__label {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 18px 20px;
+            cursor: pointer;
+            color: #999;
+            font-size: 16px;
+
+            @media(width <= 650px){
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            span {
+                position: relative;
+                display: flex;
+                gap: 3px;
+                transition: transform 0.3s, font-size 0.3s;
+
+                @media(width <= 650px){
+
+                }
+
+                &::after {
+                    content: '*';
+                    color: #F0820F;
+                }
+            }
+		}
+
+		&__footer {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 10px;
+            grid-auto-rows: 56px;
+
+            @media(width <= 650px){
+                margin-top: 20px;
+                grid-template-columns: 80%;
+                grid-auto-rows: 50px;
+                justify-content: center;
+            }
+		}
+
+		&__btn {
+            border-radius: 4px;
+            background: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            border: none;
+
+            &--orange {
+                background-color: #F0820F;
+                color: #fff;
+                font-weight: 500;
+                font-size: 20px;
+
+                @media(width <= 650px){
+                    font-size: 16px;
+                }
+            }
+
+            &--gray {
+                outline: 1px solid #E2E2E2;
+                font-size: 15px;
+
+                @media(width <= 650px){
+                    font-size: 16px;
+                }
+            }
+		}
+
+		&__consent-text {
+            margin-top: 25px;
+            color: #9A9A9A;
+            font-size: 13px;
+            letter-spacing: 0.39px;
+
+            @media(width <= 650px){
+                margin-top: 10px;
+                font-size: 10px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            a {
+                color: #F0820F;
+                text-decoration: none;
+            }
+		}
+}
+
+.auth-modal-box-successfully {
+    max-width: 585px;
+
+    &__wrap {
+        padding: 80px 75px 50px;
+    }
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 130%;
+        letter-spacing: 0.84px;
+        display: grid;
+    }
+
+    &__body {
+        margin-top: 40px;
+        color: #3F3F3F;
+        font-size: 18px;
+        letter-spacing: 0.54px;
+    }
+
+    &__footer {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 130px;
+        gap: 10px;
+        grid-auto-rows: 56px;
+    }
+
+    .auth-modal-box {
+        &__btn-ok {
+            text-transform: uppercase;
+        }
+    }
+    
+}
