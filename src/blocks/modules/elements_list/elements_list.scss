@@ -20,6 +20,9 @@
         @media(max-width:1230px){            
             width: 45%;
         }
+        @media(max-width:960px){            
+            width: calc(50% - 8px);
+        }
     }
     a{
         text-decoration: none;

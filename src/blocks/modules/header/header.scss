@@ -160,8 +160,8 @@
         font-weight: 400;
         line-height: normal;
         position: relative;
+        padding-left: 0;
         @media all and (max-width:1700px) {
-            padding-left: 15px;
             grid-gap: 20px;
         }
         li {

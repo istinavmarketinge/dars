@@ -13,6 +13,11 @@
     &__page-title {
         margin-bottom: 0;
     }
+    &__catalog {
+        .pagination {
+            margin-bottom: 60px;
+        }
+    }
     &__catalog-items {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
