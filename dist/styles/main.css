@@ -9035,6 +9035,73 @@ dl.open .specifications-block__row {
   cursor: pointer;
 }
 
+.section__left-title {
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.08px;
+}
+.section__left {
+  width: 401px;
+}
+.section__subtitle {
+  color: #C3C3C3;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  margin-bottom: 15px;
+}
+.section__left-back {
+  color: #0F7DF0;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  display: block;
+  margin-top: 25px;
+}
+
+.section__left + .section__content {
+  box-sizing: border-box;
+}
+@media (width >= 1367px) {
+  .section__left + .section__content {
+    padding-right: 264px;
+  }
+}
+@media (width >= 961px) {
+  .section__left + .section__content {
+    width: calc(100% - 401px);
+  }
+}
+@media (width <= 960px) {
+  .section__left + .section__content {
+    width: 100%;
+  }
+}
+
+@media (width >= 1367px) {
+  .search-section .elements-item {
+    width: calc(33.3333333333% - 13.3333333333px);
+  }
+}
+@media (width <= 1366px) {
+  .search-section .elements-item {
+    width: calc(50% - 10px);
+  }
+}
+@media (width <= 640px) {
+  .search-section .elements-item {
+    width: 100%;
+  }
+}
+
 .popup-modal {
   position: fixed;
   top: 0;

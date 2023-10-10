@@ -1,0 +1,23 @@
+<section class="section search-section">
+    <div class="section__into">
+        <div class="section__left hide_on_mobile">
+            <div class="section__left-title">Поиск по сайту</div>
+            <a class="section__left-back">< Назад</a>
+        </div>
+        <div class="section__content">
+            <div class="section__subtitle">Вы искали:</div>
+            <div class="general__page-title">
+                <h2 class="title">Керамогранит</h2>
+                <div class="general__page-count">302 товара</div>
+            </div>
+            
+            <div class="section__elements_list">
+                @@include("../elements_list/elements_list.html")                         
+                <!-- show_more_btn -->
+                @@include("../pagination/pagination.html",{
+                    "show_more_btn" : true
+                })
+            </div>   
+        </div>
+    </div>
+</section>
