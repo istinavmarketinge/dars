@@ -8,7 +8,9 @@
         letter-spacing: 1.08px;
     }
     &__left {
-        width: 401px;
+        width: 337px;
+        padding-right: 95px;
+        box-sizing: border-box;
     }
     &__subtitle {
         color: #C3C3C3;
@@ -34,9 +36,6 @@
 
 .section__left + .section__content {
     box-sizing: border-box;
-    @media (width >= 1367px) {
-        padding-right: 264px;
-    }
     @media (width >= 961px) {
         width: calc(100% - 401px);
     }
@@ -49,7 +48,7 @@
     .elements-item {
         
         @media (width >= 1367px) {
-            width: calc(100% / 3 - 20px * 2 / 3);
+            width: calc(100% / 4 - 20px * 3 / 4);
         }
         @media (width <= 1366px) {
             width: calc(100% / 2 - 20px * 1 / 2);

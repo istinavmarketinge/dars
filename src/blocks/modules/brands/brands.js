@@ -49,22 +49,55 @@ const PopularBrands = class PopularBrands {
             scrollbar: {
               el: '.swiper-scrollbar',
             },
-          }).mount();
+          }).init();
+    }
+    openSelect() {
+      $('.brands__button-categories').on('click',function(){
+        $('.brands__categories-list').toggleClass('open');
+      });
+    }
+    chooseSelectValue() {
+      console.log('chooseSelectValue');
+      if (!document.querySelector('[data-brand-category-id]')) return;
+      document.querySelectorAll('[data-brand-category-id]').forEach(option => {
+        option.addEventListener('click', (event) => {
+          event.currentTarget.closest('.brands__button-categories').querySelector('li.isActive').classList.remove('isActive')
+          event.currentTarget.classList.add('isActive')
+          event.currentTarget.closest('.brands__button-categories').querySelector('span').innerHTML = event.currentTarget.innerHTML;
+          this.filterBrands(event.currentTarget.dataset.brandCategoryId);
+          setTimeout(() => {
+            this.slider.update()
+          }, 100)
+        })
+      })
+    }
+    filterBrands(id) {
+      console.log(id);
+      console.log();
+      if (id == 'all') {
+        this.slider.el.querySelectorAll('[data-brand-category-ids]').forEach(brand => {
+          brand.style.display = 'flex';
+        });
+        return false;
+      }
+      this.slider.el.querySelectorAll('[data-brand-category-ids]').forEach(brand => {
+        if (brand.dataset.brandCategoryIds.includes(id)) {
+          brand.style.display = 'flex';
+          console.log(brand);
+        } else {
+          console.log(brand);
+          brand.style.display = 'none';
+        }
+      })
+      
     }
     init() {
         this.initSlider();
+        this.openSelect();
+        this.chooseSelectValue();
     }
 }
 
 export default PopularBrands;
 
-jQuery(document).ready(function() {
-	
-	$('.brands__button-categories').on('click',function(){
-		$('.brands__categories-list').toggleClass('open');
-	});
-  //   $('.header-top__modal-close').on('click',function(){
-	// 	$('.header-top__modal-city').removeClass('open');
-	// });
-	
-});
+

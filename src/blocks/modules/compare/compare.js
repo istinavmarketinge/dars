@@ -56,9 +56,6 @@ const Compare = class Compare {
                 }
             });
         });
-        console.group('checkUniqueParams')
-        console.table(itemIds);
-        console.groupEnd();
     }
     linePositionSetter() {
         document.querySelectorAll('[data-compare-item-key]').forEach(item => {

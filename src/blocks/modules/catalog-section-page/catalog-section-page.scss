@@ -126,7 +126,8 @@
         width: 100%;
         box-sizing: border-box;
     }
-    &__sort-div-select-option a{
+    &__sort-div-select-option,
+    &__sort-div-select-option a {
         display: inline-block;
         width: 100%;
         color: #000;

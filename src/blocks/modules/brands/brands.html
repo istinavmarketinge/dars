@@ -4,17 +4,17 @@
             <div class="brands__title-left">
                 <h2 class="title">Популярные бренды</h2>
                 <div class="brands__button-categories">
-                    Все категории
+                    <span>Все категории</span>
                     <ul class="brands__categories-list">
-                        <li><a href="#">Плитка</a></li>
-                        <li><a href="#">Напольные покрытия</a></li>
-                        <li><a href="#">Плитка</a></li>
-                        <li><a href="#">Отопление и водоснабжение</a></li>
-                        <li><a href="#">Настенные покрытия</a></li>
-                        <li><a href="#">Лепнина</a></li>
-                        <li><a href="#">Свет</a></li>
-                        <li><a href="#">Электротовары</a></li>
-
+                        <li data-brand-category-id="all" class="isActive">Все категории</a></li>
+                        <li data-brand-category-id="1">Плитка</a></li>
+                        <li data-brand-category-id="2">Напольные покрытия</a></li>
+                        <li data-brand-category-id="3">Плитка</li>
+                        <li data-brand-category-id="4">Отопление и водоснабжение</li>
+                        <li data-brand-category-id="5">Настенные покрытия</li>
+                        <li data-brand-category-id="6">Лепнина</li>
+                        <li data-brand-category-id="7">Свет</li>
+                        <li data-brand-category-id="8">Электротовары</li>
                     </ul>
                 </div>
             </div>
@@ -28,11 +28,11 @@
                 <div class="swiper-wrapper">
                   
                     @@for ($i = 0; $i < 10; $i++) {
-                    <a href="#" class="brands__item swiper-slide">
-                        <div class="brands__image">
-                            <img src="./img/brand.png" alt="image">
-                        </div>
-                    </a>
+                        <a href="#" data-brand-category-ids="`+ $i +`,`+ Math.floor(Math.random() * 10) +`" class="brands__item swiper-slide">
+                            <div class="brands__image">
+                                <img src="./img/brand.png" alt="image">
+                            </div>
+                        </a>
                     }
                   
                 </div>

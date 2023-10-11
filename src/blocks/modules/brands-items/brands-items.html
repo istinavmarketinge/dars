@@ -1,9 +1,29 @@
 
-<div class="brands-items__item">
+<div class="brands-items__item" data-word-type="en">
     <div class="brands-items__letter">@@letter</div>
     <div class="brands-items__logos">
         @@for (var i = 0; i < logos.length; i++) {
-            <a href="`+ logos[i].link +`" class="brands-items__logo">
+            <a href="`+ logos[i].link +`" class="brands-items__logo" data-item-category="`+ Math.floor(Math.random() * 10) +`, `+ Math.floor(Math.random() * 10) +`">
+                <img src="`+ logos[i].image +`" alt="">
+            </a>
+        }        
+    </div>
+</div>
+<div class="brands-items__item" data-word-type="en">
+    <div class="brands-items__letter">@@letter</div>
+    <div class="brands-items__logos">
+        @@for (var i = 0; i < logos.length; i++) {
+            <a href="`+ logos[i].link +`" class="brands-items__logo" data-item-category="`+ Math.floor(Math.random() * 10) +`, `+ Math.floor(Math.random() * 10) +`">
+                <img src="`+ logos[i].image +`" alt="">
+            </a>
+        }        
+    </div>
+</div>
+<div class="brands-items__item" data-word-type="ru">
+    <div class="brands-items__letter">@@letter</div>
+    <div class="brands-items__logos">
+        @@for (var i = 0; i < logos.length; i++) {
+            <a href="`+ logos[i].link +`" class="brands-items__logo" data-item-category="`+ Math.floor(Math.random() * 10) +`, `+ Math.floor(Math.random() * 10) +`">
                 <img src="`+ logos[i].image +`" alt="">
             </a>
         }        
