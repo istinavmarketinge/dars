@@ -9128,6 +9128,44 @@ dl.open .specifications-block__row {
   }
 }
 
+.cart-page {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.cart-page__left {
+  width: calc(100% - 527px - 60px);
+}
+.cart-page__right {
+  width: 527px;
+}
+.cart-page__right:after {
+  content: "";
+  display: block;
+}
+.cart-page__sticky {
+  position: sticky;
+  top: 0;
+}
+
+.cart-page__total {
+  padding: 40px 50px;
+  background: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.cart-page__total-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cart-page__total-info .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .popup-modal {
   position: fixed;
   top: 0;

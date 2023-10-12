@@ -27,8 +27,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,20 +47,15 @@
 
             <section>
                 <div class="container">
-                    @@include("../blocks/modules/banners/banners.html")
-                    @@include("../blocks/modules/popular-categories/popular-categories.html")
-                </div>
-                    @@include("../blocks/modules/tabs/tabs.html")
-                <div class="container">
-                    @@include("../blocks/modules/sale/sale.html")
-                    @@include("../blocks/modules/brands/brands.html")
-                    @@include("../blocks/modules/articles/articles.html")
-
+                    @@include("../blocks/modules/breadcrumbs/breadcrumbs.html")
+                    <div class="popular-categories__title">
+                        <h2 class="title">Корзина</h2>
+                    </div>
+                    @@include("../blocks/modules/cart-page/cart-page.html")
                 </div>
             </section>
             <div class="container">
                 @@include("../blocks/modules/subscription/subscription.html")
-
             </div>
 
             <footer>
@@ -72,9 +67,7 @@
             @@include('../blocks/components/modal/modal.html', {
                 "modal_id": "callback"
             })
-        
         <!-- @@include("../blocks/modules/footer/footer.html") -->
-        @@include("../blocks/components/auth/auth.html")
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>
     </body>

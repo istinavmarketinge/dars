@@ -1,0 +1,22 @@
+.cart-page {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    &__left {
+        width: calc(100% - 527px - 60px);
+    }
+    &__right {
+        width: 527px;
+        &:after {
+            content: "";
+            display: block;
+        }
+    }
+    &__sticky {
+        position: sticky;
+        top: 0;
+    }
+}
+
+
+@import "./cart-page-total";
