@@ -14,9 +14,10 @@
     }
     &__sticky {
         position: sticky;
-        top: 0;
+        top: 100px;
     }
 }
 
 
 @import "./cart-page-total";
+@import "./cart-page-items";

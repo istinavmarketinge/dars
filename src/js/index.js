@@ -17,6 +17,7 @@ import BrandsTop from "%modules%/brands-top/brands-top";
 import AffiliateProgram from "%modules%/affiliate-program/affiliate-program";
 import Modal from "%components%/modal/modal";
 import Auth from "%components%/auth/auth";
+import CartPage from "%modules%/cart-page/cart-page";
 
 
 
@@ -44,6 +45,7 @@ window.app.brandsTop = new BrandsTop();
 window.app.affiliateProgram = new AffiliateProgram();
 window.app.modal = new Modal();
 window.app.auth = new Auth();
+window.app.cartPage = new CartPage();
 
 
 
@@ -66,5 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.affiliateProgram.init();
     window.app.modal.init();
     window.app.auth.init();
+    window.app.cartPage.init();
 })
 

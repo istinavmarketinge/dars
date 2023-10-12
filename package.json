@@ -79,6 +79,7 @@
         "jquery": "^3.7.0",
         "overlayscrollbars": "^2.3.2",
         "swiper": "^10.2.0",
+        "tippy.js": "^6.3.7",
         "webpack": "^5.70.0",
         "webpack-stream": "^7.0.0"
     },
