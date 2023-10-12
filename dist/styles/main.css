@@ -5085,6 +5085,7 @@ body.isScrollPrevented {
 }
 .section__sort-div-select-option.selected {
   opacity: 0.2;
+  pointer-events: none;
 }
 .section__sort-div-select-option:last-child {
   border-bottom: none;
@@ -8249,6 +8250,9 @@ dl.open .specifications-block__row {
 .brands-items__item:not(:last-child) {
   margin-bottom: 20px;
 }
+.brands-items__item.isEmpty {
+  display: none !important;
+}
 .brands-items__letter {
   color: #000;
   font-size: 20px;
@@ -8257,7 +8261,10 @@ dl.open .specifications-block__row {
   line-height: normal;
   padding: 5px 24px;
   border-bottom: 1px solid #D0D0D0;
+  background: #fff;
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
 }
 .brands-items__logos {
   display: flex;

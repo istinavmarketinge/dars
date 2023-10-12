@@ -72,8 +72,6 @@ const PopularBrands = class PopularBrands {
       })
     }
     filterBrands(id) {
-      console.log(id);
-      console.log();
       if (id == 'all') {
         this.slider.el.querySelectorAll('[data-brand-category-ids]').forEach(brand => {
           brand.style.display = 'flex';

@@ -152,6 +152,7 @@
     }
     &__sort-div-select-option.selected{
         opacity: 0.2;
+        pointer-events: none;
     }
     &__sort-div-select-option:last-child{
         border-bottom: none;

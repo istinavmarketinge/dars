@@ -444,7 +444,6 @@ var BrandsTop = /*#__PURE__*/function () {
   _createClass(BrandsTop, [{
     key: "openSelect",
     value: function openSelect(opener) {
-      console.log(opener);
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(opener).closest('.brands-top__sort-select').find('.section__sort-div-select-block').slideToggle('fast');
     }
   }, {
@@ -464,15 +463,71 @@ var BrandsTop = /*#__PURE__*/function () {
         switcher.addEventListener('click', function (event) {
           document.querySelector('.lang-switch__item--active').classList.remove('lang-switch__item--active');
           event.currentTarget.classList.add('lang-switch__item--active');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('[data-word-type]').slideToggle('slow');
+          console.log(event.currentTarget.dataset.lang);
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"]")).slideDown('fast');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item:not([data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"])")).slideUp('fast');
         });
       });
+    }
+  }, {
+    key: "changeCategory",
+    value: function changeCategory() {
+      var _this2 = this;
+      if (!document.querySelector('[data-item-category-id]')) return;
+      document.querySelectorAll('[data-item-category-id]').forEach(function (option) {
+        option.addEventListener('click', function (event) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).closest('.brands-top__sort-select').find('.section__sort-div-select-block').slideToggle('fast');
+          event.currentTarget.closest('.brands-top__sort-select').querySelector('.section__sort-selected').innerHTML = event.currentTarget.innerHTML;
+          event.currentTarget.closest('.brands-top__sort-select').querySelector('[data-item-category-id].selected').classList.remove('selected');
+          event.currentTarget.classList.add('selected');
+          _this2.filterBrands(event.currentTarget.dataset.itemCategoryId);
+        });
+      });
+    }
+  }, {
+    key: "filterBrands",
+    value: function filterBrands(categoryId) {
+      console.log(categoryId);
+      if (!document.querySelector('[data-item-category-ids]')) return;
+      if (categoryId == 'all') {
+        document.querySelectorAll('[data-item-category-ids]').forEach(function (brand) {
+          brand.style.display = 'flex';
+        });
+        this.checkIfWrapIsEmpty();
+        return false;
+      }
+      document.querySelectorAll('[data-item-category-ids]').forEach(function (brand) {
+        if (brand.dataset.itemCategoryIds.includes(categoryId)) {
+          brand.style.display = 'flex';
+          console.log(brand);
+        } else {
+          console.log(brand);
+          brand.style.display = 'none';
+        }
+      });
+      this.checkIfWrapIsEmpty();
+    }
+  }, {
+    key: "checkIfWrapIsEmpty",
+    value: function checkIfWrapIsEmpty(wrap) {
+      setTimeout(function () {
+        document.querySelectorAll('.brands-items__logos').forEach(function (wrap) {
+          var length = wrap.querySelectorAll('[data-item-category-ids][style="display: flex;"]').length;
+          console.log(length);
+          if (!length) {
+            wrap.closest('.brands-items__item').classList.add('isEmpty');
+          } else {
+            wrap.closest('.brands-items__item').classList.remove('isEmpty');
+          }
+        });
+      }, 0);
     }
   }, {
     key: "init",
     value: function init() {
       this.addOpenerClickHandler();
       this.changeLanguage();
+      this.changeCategory();
       console.log('BrandsTop');
     }
   }]);
@@ -578,8 +633,6 @@ var PopularBrands = /*#__PURE__*/function () {
   }, {
     key: "filterBrands",
     value: function filterBrands(id) {
-      console.log(id);
-      console.log();
       if (id == 'all') {
         this.slider.el.querySelectorAll('[data-brand-category-ids]').forEach(function (brand) {
           brand.style.display = 'flex';

@@ -1,6 +1,7 @@
 [
     {
         "letter": "A",
+        "lang": "ru",
         "logos": [
             {
                 "link": "brands_detail.html",
@@ -66,6 +67,7 @@
     },
     {
         "letter": "Б",
+        "lang": "ru",
         "logos": [
             {
                 "link": "brands_detail.html",
@@ -91,6 +93,125 @@
     },
     {
         "letter": "В",
+        "lang": "ru",
+        "logos": [
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    },
+    {
+        "letter": "С",
+        "lang": "en",
+        "logos": [
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    },
+    {
+        "letter": "D",
+        "lang": "en",
+        "logos": [
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            },
+            {
+                "link": "brands_detail.html",
+                "image": "http://via.placeholder.com/110x100"
+            }
+        ]
+    },
+    {
+        "letter": "E",
+        "lang": "en",
         "logos": [
             {
                 "link": "brands_detail.html",
