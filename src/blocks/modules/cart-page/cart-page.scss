@@ -1,12 +1,31 @@
 .cart-page {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #C0C0C0;
+    @media (width <= 1180px) {
+        flex-direction: column;
+    }
+    
     &__left {
         width: calc(100% - 527px - 60px);
+        @media (width <= 1366px) {
+            width: calc(100% - 400px - 60px);
+        }
+        @media (width <= 1180px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
     }
     &__right {
         width: 527px;
+        @media (width <= 1366px) {
+            width: 400px;
+        }
+        @media (width <= 1180px) {
+            width: 100%;
+        }
         &:after {
             content: "";
             display: block;
@@ -14,7 +33,7 @@
     }
     &__sticky {
         position: sticky;
-        top: 100px;
+        top: 50px;
     }
 }
 
