@@ -21,7 +21,6 @@
     &__catalog-items {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
         margin-bottom: 30px;
         @media all and (min-width: 961px) and (max-width: 1280px) {
             grid-template-columns: repeat(4, 1fr);

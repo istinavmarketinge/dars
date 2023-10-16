@@ -6,9 +6,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
     &-item {
-        width: calc(100% / 4);
+        width: calc(100% / var(--count, 4));
         user-select: none;
         box-sizing: border-box;
         padding: 15px 18px 0;
