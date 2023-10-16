@@ -85,11 +85,9 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        color: #F0380F;
         &.inStock {
             color: #1BC39B;
-        }
-        &.outOfStock {
-            color: #F0380F;
         }
     }
     &-item__popover-article {

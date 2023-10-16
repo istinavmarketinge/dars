@@ -6600,12 +6600,10 @@ body.isScrollPrevented {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: #F0380F;
 }
 .elements-item__popover-stock.inStock {
   color: #1BC39B;
-}
-.elements-item__popover-stock.outOfStock {
-  color: #F0380F;
 }
 .elements-item__popover-article {
   color: #0F7DF0;
@@ -8613,7 +8611,7 @@ dl.open .specifications-block__row {
   padding-top: 10px;
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 13;
   background: #fff;
 }
 .brands-details__page-title {
