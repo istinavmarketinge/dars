@@ -1,4 +1,4 @@
-<div class="elements-item js_element_item" data-slide-type="stock">
+<div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
     <div class="tabs__slider-item-image">
         <div title="@@name">
             <div class="tabs__hidden-block">
@@ -44,5 +44,35 @@
         <a href="element_detail.html" class="js_element_name" title="@@name">
             @@name
         </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            @@for($i = 0; $i < 3; $i++) {
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            }
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            @@include('../../components/button/button.html', {
+                "type": "primary",
+                "link": false,
+                "outlined": false,
+                "text": "В корзину",
+                "class_name": "elements-item__popover-button"
+            })
+            @@include('../../components/button/button.html', {
+                "type": "primary",
+                "link": false,
+                "outlined": true,
+                "text": "Купить в 1 клик",
+                "class_name": "elements-item__popover-button"
+            })
+        </div>
     </div>
 </div>

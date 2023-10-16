@@ -1330,9 +1330,23 @@ var ElementsList = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "addHoverHandler",
+    value: function addHoverHandler() {
+      if (!document.querySelector('.elements-item--with-buttons') || !document.querySelector('.elements-item__popover')) return;
+      document.querySelectorAll('.elements-item--with-buttons').forEach(function (item) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).hover(function (event) {
+          console.log('mouseover');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').slideDown('fast');
+        }, function (event) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').slideUp('fast');
+        });
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.addClickHandler();
+      this.addHoverHandler();
     }
   }]);
   return ElementsList;
