@@ -1,6 +1,24 @@
 .section {
+    &__title {
+        display: flex;
+        gap: 12px;
+
+        @media(width <= 960px){
+            margin-bottom: 25px;
+            flex-direction: column;
+        }
+    }
+
     h1{
         margin-top: 0;
+
+        @media(width <= 960px){
+            margin-bottom: 10px;
+        }
+    }
+    &__title-result-count {
+        color: #A9A9A9;
+        font-size: 12px;
     }
     &__into {
         display: flex;
@@ -8,9 +26,11 @@
 
     &__filter {
         width: 20%;
+        padding-top: 15px;
     }
 
     &__content {
+        padding-top: 8px;
         width: 80%;
         @media(max-width: 900px){            
             width: 100%
