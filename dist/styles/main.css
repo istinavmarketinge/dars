@@ -8611,8 +8611,17 @@ dl.open .specifications-block__row {
   padding-top: 10px;
   position: sticky;
   top: 0;
-  z-index: 13;
+  z-index: 16;
   background: #fff;
+}
+@media (width >= 961px) {
+  .brands-details__catalog-top {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 0 0 6px 6px;
+  }
 }
 .brands-details__page-title {
   margin-bottom: 0;
