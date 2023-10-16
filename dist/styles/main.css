@@ -9432,13 +9432,15 @@ dl.open .specifications-block__row {
 .cart-page {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 70px;
   margin-bottom: 50px;
+  padding-bottom: 70px;
   border-bottom: 1px solid #C0C0C0;
 }
 @media (width <= 1180px) {
   .cart-page {
     flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: none;
   }
 }
 .cart-page__left {
