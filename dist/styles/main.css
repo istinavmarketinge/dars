@@ -6522,7 +6522,6 @@ body.isScrollPrevented {
   width: calc(100% / var(--count, 4));
   user-select: none;
   box-sizing: border-box;
-  padding: 15px 18px 0;
 }
 @media (max-width: 1300px) {
   .elements-item {
@@ -6539,6 +6538,7 @@ body.isScrollPrevented {
   border: 1px solid transparent;
   transition: all 0.3s ease;
   position: relative;
+  padding: 15px 18px 0;
 }
 .elements-item--with-buttons:hover {
   border-color: #EAEAEA;
@@ -6704,7 +6704,7 @@ body.isScrollPrevented {
   box-sizing: border-box;
 }
 .compare__page-left {
-  width: 324px;
+  width: 281px;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -6728,7 +6728,7 @@ body.isScrollPrevented {
 .compare__page-right {
   width: 100%;
   padding-bottom: 70px;
-  padding-left: 324px;
+  padding-left: 281px;
   box-sizing: border-box;
 }
 @media (width <= 960px) {
@@ -6763,8 +6763,8 @@ body.isScrollPrevented {
   padding-right: 8px;
 }
 .compare__page-items .elements-item, .compare__page-bottom-item-table {
-  min-width: 324px;
-  max-width: 324px;
+  min-width: 321px;
+  max-width: 321px;
   padding: 0 35px;
 }
 @media (width <= 960px) {
@@ -6808,14 +6808,6 @@ body.isScrollPrevented {
     opacity: 0;
     visibility: hidden;
   }
-}
-.compare__page-bottom-item-table {
-  display: flex;
-}
-.compare__page-bottom-item-table {
-  min-width: 324px;
-  max-width: 324px;
-  box-sizing: border-box;
 }
 .compare__page .os-scrollbar.os-scrollbar-horizontal {
   bottom: 0;
@@ -10047,6 +10039,38 @@ dl.open .specifications-block__row {
 }
 .cart-page__right .cart-page__small-price {
   padding-top: 20px;
+}
+
+.compare-alone {
+  padding-bottom: 90px;
+}
+.compare-alone__in {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 39px;
+}
+.compare-alone__item {
+  width: 254px;
+}
+.compare-alone__item .elements-item {
+  width: 100%;
+}
+.compare-alone__item-add {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #F9F9F9;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+  text-decoration: none;
+  padding: 30px;
+  box-sizing: border-box;
 }
 
 .popup-modal {
