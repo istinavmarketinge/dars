@@ -6563,31 +6563,47 @@ body.isScrollPrevented {
     width: 100%;
   }
 }
-.elements-item--with-buttons {
-  border-radius: 6px 6px 0px 0px;
-  border: 1px solid transparent;
-  transition: all 0.1s ease;
-  position: relative;
-  padding: 15px 18px 0;
+@media (width >= 961px) {
+  .elements-item--with-buttons {
+    border-radius: 6px 6px 0px 0px;
+    border: 1px solid transparent;
+    transition: all 0.1s ease;
+    position: relative;
+    padding: 15px 18px 0;
+  }
+  .elements-item--with-buttons:hover {
+    border-color: #EAEAEA;
+    filter: drop-shadow(0px 18px 38px rgba(0, 0, 0, 0.15));
+    z-index: 15;
+  }
 }
-.elements-item--with-buttons:hover {
-  border-color: #EAEAEA;
-  filter: drop-shadow(0px 18px 38px rgba(0, 0, 0, 0.15));
-  z-index: 15;
+@media (width <= 960px) {
+  .elements-item--with-buttons:not(:last-child) {
+    margin-bottom: 45px;
+  }
 }
 .elements-item__popover {
-  position: absolute;
-  left: -1px;
-  right: -1px;
-  top: 100%;
   border-radius: 0px 0px 6px 6px;
-  padding: 15px 18px 27px;
-  border: 1px solid #EAEAEA;
   border-top: none;
   background: #fff;
-  display: none;
   width: calc(100% + 2px) !important;
   box-sizing: border-box;
+}
+@media (width >= 961px) {
+  .elements-item__popover {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 100%;
+    display: none;
+    border: 1px solid #EAEAEA;
+    padding: 15px 18px 27px;
+  }
+}
+@media (width <= 960px) {
+  .elements-item__popover {
+    padding-top: 15px;
+  }
 }
 .elements-item__popover-list {
   padding: 0;
@@ -9605,6 +9621,20 @@ dl.open .specifications-block__row {
   padding-bottom: 70px;
   border-bottom: 1px solid #C0C0C0;
 }
+.cart-page__page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-page__page-title .cart-page__section-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.cart-page__page-title .cart-page__section-in span:last-child {
+  color: #666666;
+}
 @media (width <= 1180px) {
   .cart-page {
     flex-direction: column;
@@ -9814,6 +9844,11 @@ dl.open .specifications-block__row {
   display: flex;
   gap: 15px;
 }
+@media (width <= 960px) {
+  .cart-page__promocode-input {
+    flex-direction: column;
+  }
+}
 .cart-page__promocode-input .input {
   flex: 1 1 auto;
   position: relative;
@@ -9828,6 +9863,11 @@ dl.open .specifications-block__row {
   border-radius: 6px;
   border: 1px solid #CED0D6;
   transition: all 0.3s ease;
+}
+@media (width <= 960px) {
+  .cart-page__promocode-input .input input {
+    height: 50px;
+  }
 }
 .cart-page__promocode-input .input input, .cart-page__promocode-input .input input::placeholder {
   color: #999;

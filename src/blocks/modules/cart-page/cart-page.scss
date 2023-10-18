@@ -4,6 +4,22 @@
     margin-bottom: 50px;
     padding-bottom: 70px;
     border-bottom: 1px solid #C0C0C0;
+    &__page-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__page-title &__section-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        span {
+            &:last-child {
+                color: #666666;
+            }
+        }
+    }
     
     @media (width <= 1180px) {
         flex-direction: column;
