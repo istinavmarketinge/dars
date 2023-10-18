@@ -5032,7 +5032,9 @@ body.isScrollPrevented {
 }
 .catalog-sections__list-item-header-image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 50%;
   display: block;
 }
 .catalog-sections__list-item-header-title {
