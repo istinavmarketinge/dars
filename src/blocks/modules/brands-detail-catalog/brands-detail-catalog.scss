@@ -16,6 +16,15 @@
             padding-right: 40px;
             border-radius: 0 0 6px 6px;
         }
+        & ~ .pagination {
+            margin-bottom: 0;
+        }
+        & ~ .show_more_block {
+            margin-top: 40px;
+        }
+    }
+    &__elements_list {
+        margin-bottom: 50px;
     }
     &__page-title {
         margin-bottom: 0;

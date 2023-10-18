@@ -1,12 +1,21 @@
 .compare-alone {
     padding-bottom: 90px;
+    @media (width <= 960px) {
+        padding-bottom: 50px;
+    }
     &__in {
         display: flex;
         flex-wrap: wrap;
         gap: 39px;
+        @media (width <= 960px) {
+            gap: 10px;
+        }
     }
     &__item {
         width: 254px;
+        @media (width <= 960px) {
+            width: calc(50% - 5px);
+        }
         .elements-item {
             width: 100%;
         }
@@ -27,5 +36,9 @@
         text-decoration: none;
         padding: 30px;
         box-sizing: border-box;
+        @media (width <= 960px) {
+            font-size: 14px;
+            padding: 18px;
+        }
     }
 }
