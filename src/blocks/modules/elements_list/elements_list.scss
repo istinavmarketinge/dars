@@ -20,7 +20,7 @@
         &--with-buttons {
             border-radius: 6px 6px 0px 0px;
             border: 1px solid transparent;
-            transition: all .3s ease;
+            transition: all .1s ease;
             position: relative;
             padding: 15px 18px 0;
             &:hover {
@@ -41,6 +41,8 @@
         border-top: none;
         background: #fff;
         display: none;
+        width: calc(100% + 2px) !important;
+        box-sizing: border-box;
         
     }
     &-item__popover-list {

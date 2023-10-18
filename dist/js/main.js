@@ -1354,9 +1354,9 @@ var ElementsList = /*#__PURE__*/function () {
       document.querySelectorAll('.elements-item--with-buttons').forEach(function (item) {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).hover(function (event) {
           console.log('mouseover');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').slideDown('fast');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').show(100);
         }, function (event) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').slideUp('fast');
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').hide(100);
         });
       });
     }

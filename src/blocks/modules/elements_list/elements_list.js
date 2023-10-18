@@ -14,9 +14,9 @@ const ElementsList = class ElementsList {
       document.querySelectorAll('.elements-item--with-buttons').forEach(item => {
         $(item).hover(function(event) {
           console.log('mouseover');
-          $(event.currentTarget).find('.elements-item__popover').slideDown('fast');
+          $(event.currentTarget).find('.elements-item__popover').show(100);
         }, function(event) {
-          $(event.currentTarget).find('.elements-item__popover').slideUp('fast');
+          $(event.currentTarget).find('.elements-item__popover').hide(100);
         })
       })
     }

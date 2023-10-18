@@ -6557,7 +6557,7 @@ body.isScrollPrevented {
 .elements-item--with-buttons {
   border-radius: 6px 6px 0px 0px;
   border: 1px solid transparent;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
   position: relative;
   padding: 15px 18px 0;
 }
@@ -6577,6 +6577,8 @@ body.isScrollPrevented {
   border-top: none;
   background: #fff;
   display: none;
+  width: calc(100% + 2px) !important;
+  box-sizing: border-box;
 }
 .elements-item__popover-list {
   padding: 0;
@@ -8641,11 +8643,14 @@ dl.open .specifications-block__row {
 .brands-details__catalog-top ~ .pagination {
   margin-bottom: 0;
 }
-.brands-details__catalog-top ~ .show_more_block {
-  margin-top: 40px;
+.brands-details__catalog-top ~ .elements {
+  margin-bottom: 40px;
 }
 .brands-details__elements_list {
   margin-bottom: 50px;
+}
+.brands-details__elements_list:hover + .brands-details__elements_list .brands-details__catalog-top {
+  z-index: 12;
 }
 .brands-details__page-title {
   margin-bottom: 0;
