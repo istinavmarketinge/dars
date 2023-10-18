@@ -9014,6 +9014,7 @@ dl.open .specifications-block__row {
   cursor: pointer;
   display: block;
   text-decoration: none;
+  text-align: center;
 }
 .button--primary {
   border: 1px solid #F0820F;
