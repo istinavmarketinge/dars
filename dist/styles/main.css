@@ -10064,7 +10064,6 @@ dl.open .specifications-block__row {
   padding-top: 20px;
 }
 
-<<<<<<< HEAD
 .personal-account {
   min-height: 875px;
   padding-bottom: 90px;
@@ -10304,7 +10303,8 @@ dl.open .specifications-block__row {
 
 .required {
   color: #F0820F;
-=======
+}
+
 .compare-alone {
   padding-bottom: 90px;
 }
@@ -10335,7 +10335,6 @@ dl.open .specifications-block__row {
   text-decoration: none;
   padding: 30px;
   box-sizing: border-box;
->>>>>>> 71c623fde7200f7b0f93acca35edea140514caf8
 }
 
 .popup-modal {
