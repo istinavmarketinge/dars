@@ -5306,7 +5306,7 @@ body.isScrollPrevented {
 .section__sort-block {
   display: flex;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 7px;
   justify-content: space-between;
 }
 .section__sort-select {
