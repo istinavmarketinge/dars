@@ -1,3 +1,9 @@
+.section__elements_list:not(.brands-details__elements_list) {
+    @media (width >= 961px) {
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+}
 .section__elements_list .elements-item {
     background: #fff;
 }

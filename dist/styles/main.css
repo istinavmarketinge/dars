@@ -6531,6 +6531,13 @@ body.isScrollPrevented {
   }
 }
 
+@media (width >= 961px) {
+  .section__elements_list:not(.brands-details__elements_list) {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+
 .section__elements_list .elements-item {
   background: #fff;
 }
