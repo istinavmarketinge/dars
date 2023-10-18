@@ -10,16 +10,17 @@
     text-decoration: none;
     &--primary {
         border: 1px solid #F0820F;
-        color: #FFF;
     }
     &--success {
         border: 1px solid #1BC39B;
     }
     &--primary:not(&--outlined) {
         background: #F0820F;
+        color: #FFF;
     }
     &--success:not(&--outlined) {
         background: #1BC39B;
+        color: #FFF;
     }
     &--outlined {
         background: #fff;

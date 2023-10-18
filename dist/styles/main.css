@@ -9017,16 +9017,17 @@ dl.open .specifications-block__row {
 }
 .button--primary {
   border: 1px solid #F0820F;
-  color: #FFF;
 }
 .button--success {
   border: 1px solid #1BC39B;
 }
 .button--primary:not(.button--outlined) {
   background: #F0820F;
+  color: #FFF;
 }
 .button--success:not(.button--outlined) {
   background: #1BC39B;
+  color: #FFF;
 }
 .button--outlined {
   background: #fff;
