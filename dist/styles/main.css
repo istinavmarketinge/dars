@@ -7006,12 +7006,26 @@ body.isScrollPrevented {
   color: #000;
 }
 
+.catalog-detail-page {
+  padding-bottom: 100px;
+}
+@media (width <= 960px) {
+  .catalog-detail-page {
+    padding-bottom: 50px;
+  }
+}
 .catalog-detail-page__additional-offers {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
+}
+.catalog-detail-page__additional-offers .elements.swiper-initialized {
+  padding: 0 0 50px 0;
 }
 @media (width <= 960px) {
   .catalog-detail-page__additional-offers {
-    padding: 25px 0;
+    padding: 25px 0 0 0;
+  }
+  .catalog-detail-page__additional-offers .elements.swiper-initialized {
+    padding: 0 0 25px 0;
   }
 }
 .catalog-detail-page__additional-offers-title {
