@@ -18,6 +18,7 @@ import AffiliateProgram from "%modules%/affiliate-program/affiliate-program";
 import Modal from "%components%/modal/modal";
 import Auth from "%components%/auth/auth";
 import CartPage from "%modules%/cart-page/cart-page";
+import PersonalAccount from "%modules%/personal-account/personal-account";
 
 
 
@@ -46,6 +47,7 @@ window.app.affiliateProgram = new AffiliateProgram();
 window.app.modal = new Modal();
 window.app.auth = new Auth();
 window.app.cartPage = new CartPage();
+window.app.personalAccount = new PersonalAccount();
 
 
 
@@ -69,5 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.modal.init();
     window.app.auth.init();
     window.app.cartPage.init();
+    window.app.personalAccount.init();
 })
 

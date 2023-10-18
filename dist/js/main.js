@@ -28,18 +28,21 @@ var Auth = /*#__PURE__*/function () {
       if (!document.querySelector('.right-icons__item--login')) return;
       document.querySelectorAll('.right-icons__item--login').forEach(function (opener) {
         opener.addEventListener('click', function (event) {
-          document.querySelector('.auth-modal').classList.add('active');
+          document.querySelector('.auth-modal--registration').classList.add('active');
         });
       });
     }
   }, {
     key: "addModalCloseHandler",
     value: function addModalCloseHandler() {
-      if (document.querySelector('.auth-modal-box__btn-close')) {
-        document.querySelector('.auth-modal-box__btn-close').addEventListener('click', function () {
-          document.querySelector('.auth-modal').classList.remove('active');
+      if (!document.querySelector('.auth-modal-box__btn-close')) return;
+      document.querySelectorAll('.auth-modal-box__btn-close').forEach(function (close) {
+        close.addEventListener('click', function (event) {
+          document.querySelectorAll('.auth-modal').forEach(function (wrap) {
+            wrap.classList.remove('active');
+          });
         });
-      }
+      });
     }
   }, {
     key: "init",
@@ -51,12 +54,27 @@ var Auth = /*#__PURE__*/function () {
   return Auth;
 }();
 $(document).ready(function () {
-  $('.auth-modal-box__btn-registration').on('click', function () {
-    $(this).closest('.auth-modal-box__form').fadeOut();
-    $('.auth-modal-box-successfully').fadeIn();
+  $('.auth-modal-box__btn-registration[type="submit"]').on('click', function () {
+    $(this).closest('.auth-modal-box__form').hide();
+    $('.auth-modal-box-successfully').show();
   });
-  $('.auth-modal-box__btn-ok').on('click', function () {
-    $(this).closest('.auth-modal').fadeOut();
+  $('.auth-modal-box__btn-registration[type="button"]').on('click', function () {
+    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+    $('.auth-modal--registration').addClass('active');
+  });
+  $('.auth-modal-box__btn-ok, .auth-modal-box__btn-auth[type="submit"]').on('click', function () {
+    var wrap = $(this).closest('.auth-modal');
+    wrap.fadeOut(300, function () {
+      wrap.removeClass('active').removeAttr('style');
+    });
+  });
+  $('.auth-modal-box__btn-auth[type="button"]').on('click', function () {
+    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+    $('.auth-modal--authorization').addClass('active');
+  });
+  $('.auth-modal-box__btn-link--password-recovery').on('click', function () {
+    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+    $('.auth-modal--password-recovery').addClass('active');
   });
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Auth);
@@ -1435,6 +1453,61 @@ var Header = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/personal-account/personal-account.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/modules/personal-account/personal-account.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var PersonalAccount = /*#__PURE__*/function () {
+  function PersonalAccount() {
+    _classCallCheck(this, PersonalAccount);
+  }
+  _createClass(PersonalAccount, [{
+    key: "init",
+    value: function init() {}
+  }]);
+  return PersonalAccount;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PersonalAccount);
+$(document).ready(function () {
+  $('.js-copy-data').on('change', function () {
+    var dataNameFrom = $(this).data('copyFrom');
+    var dataNameTo = $(this).data('copyTo');
+    var fromElem = $("[name=\"".concat(dataNameFrom, "\"]"));
+    var toElem = $("[name=\"".concat(dataNameTo, "\"]"));
+    if ($(this).is(':checked')) {
+      var donorValue = fromElem === null || fromElem === void 0 ? void 0 : fromElem.val();
+      toElem === null || toElem === void 0 ? void 0 : toElem.val(donorValue).prop('disabled', true);
+    } else {
+      toElem === null || toElem === void 0 ? void 0 : toElem.prop('disabled', false);
+    }
+  });
+  $('[name="legal-entity"]').each(function () {
+    $(this).on('change', function () {
+      toogleInputs($(this).val());
+    });
+  });
+  toogleInputs($('[name="legal-entity"][checked]').val());
+  function toogleInputs(name) {
+    $('[data-type]').each(function (index, element) {
+      $(element).data('type').includes(name) ? $(this).show() : $(this).hide();
+    });
+  }
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/popular-categories/popular-categories.js":
 /*!*********************************************************************!*\
   !*** ./src/blocks/modules/popular-categories/popular-categories.js ***!
@@ -1656,6 +1729,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %components%/modal/modal */ "./src/blocks/components/modal/modal.js");
 /* harmony import */ var _components_auth_auth__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %components%/auth/auth */ "./src/blocks/components/auth/auth.js");
 /* harmony import */ var _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/cart-page/cart-page */ "./src/blocks/modules/cart-page/cart-page.js");
+/* harmony import */ var _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/personal-account/personal-account */ "./src/blocks/modules/personal-account/personal-account.js");
+
 
 
 
@@ -1695,6 +1770,7 @@ window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__
 window.app.modal = new _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"]();
 window.app.auth = new _components_auth_auth__WEBPACK_IMPORTED_MODULE_17__["default"]();
 window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__["default"]();
+window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();
@@ -1715,6 +1791,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.app.modal.init();
   window.app.auth.init();
   window.app.cartPage.init();
+  window.app.personalAccount.init();
 });
 
 /***/ })

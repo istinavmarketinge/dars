@@ -1,0 +1,205 @@
+<div class="personal-account">
+    <div class="personal-account__wrap">
+        <div class="personal-account-sidebar">
+            <div class="personal-account-sidebar-user-info">
+                <div class="personal-account-sidebar-user-info__title">Мой профиль</div>
+                <div class="personal-account-sidebar-user-info__name">Илон Маск</div>
+                <div class="personal-account-sidebar-user-info__contact-data">
+                    <span>ilon.mask@gmail.com</span>
+                    <span>+7 (962) 278-35-56</span>
+                </div>
+                <a href="#" class="personal-account-sidebar-user-info__out-profile">Выйти</a>
+            </div>
+            <div class="personal-account-sidebar-menu">
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item personal-account-sidebar-menu__item--active">
+                        <a href="#">Личный кабинет</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Избранное</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Мои заказы</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Смена пароля</a>
+                    </li>
+                </ul>
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Партнерская программа</a>
+                    </li>
+                </ul>
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Настройки подписки</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="personal-account-main">
+            <div class="personal-account-main__title">Личный кабинет</div>
+            <form action="">
+                <div class="personal-account-main__form">
+                    <div class="personal-account-main__header">
+                        <label class="personal-account-main__radio">
+                            <input type="radio" name="legal-entity" value="natural" hidden checked>
+                            <div class="personal-account-main__radio-wrap">
+                                <span class="personal-account-main__radio-text">Физическое лицо</span>
+                            </div>
+                        </label>
+                        <label class="personal-account-main__radio">
+                            <input type="radio" name="legal-entity" value="legal" hidden>
+                            <div class="personal-account-main__radio-wrap">
+                                <span class="personal-account-main__radio-text">Юридическое лицо</span>
+                            </div>
+                        </label>
+                        <label class="personal-account-main__radio">
+                            <input type="radio" name="legal-entity" value="individual" hidden>
+                            <div class="personal-account-main__radio-wrap">
+                                <span class="personal-account-main__radio-text">Индивиндуальный предприниматель</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="personal-account-main-row personal-account-main-row--contact-person">
+                        <div class="personal-account-main-row__title">Контактное лицо</div>
+                        <div class="personal-account-main-row__wrap">
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Фамилия <span class="required">*</span></span>
+                                    <input type="text" placeholder="Иванов">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Имя</span>
+                                    <input type="text" placeholder="Иван">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Отчество</span>
+                                    <input type="text" placeholder="Иванович">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Должность</span>
+                                    <input type="text" placeholder="Ген. директор околовсяческих наук">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account-main-row personal-account-main-row--contacts-data">
+                        <div class="personal-account-main-row__title">Контактные данные</div>
+                        <div class="personal-account-main-row__wrap">
+                            <div class="personal-account-main-row__item">
+                                <div class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">E-mail</span>
+                                    <input type="email" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <div class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Телефон</span>
+                                    <input type="tel" placeholder="+7 (999) 999-99-99">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account-main-row personal-account-main-row--requisites" data-type="legal,individual">
+                        <div class="personal-account-main-row__title">Реквизиты</div>
+                        <div class="personal-account-main-row__wrap">
+                            <div class="personal-account-main-row__item" data-type="legal,individual">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">ИНН</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item" data-type="legal,individual">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">КПП</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item" data-type="legal">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">ОГРН</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item" data-type="individual">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">ОГРНИП</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account-main-row personal-account-main-row--address" data-type="legal,individual">
+                        <div class="personal-account-main-row__title">Адреса</div>
+                        <div class="personal-account-main-row__wrap">
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Юридическое название организации</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Юридический адрес</span>
+                                    <input type="text" name="legal-address" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Фактический адрес</span>
+                                    <input type="text" name="actual-address" placeholder="">
+                                </label>
+                                <label class="personal-account-main__checkbox">
+                                    <input type="checkbox" name="coincides-with-the-legal" class="js-copy-data" data-copy-from="legal-address" data-copy-to="actual-address" hidden>
+                                    <div class="personal-account-main__checkbox-wrap">
+                                        <span class="personal-account-main__checkbox-text">Совпадает с юридическим</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account-main-row personal-account-main-row--subscription" data-type="legal">
+                        <div class="personal-account-main-row__title">Банковские реквизиты <span class="personal-account-main-row__title-description">для выплаты комиссионных</span></div>
+                        <div class="personal-account-main-row__wrap">
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">БИК</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Расчетный счет</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Банк</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">Корреспондентский счет</span>
+                                    <input type="text" placeholder="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal-account-main__footer">
+                        <button type="submit" class="personal-account-main__btn-save">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

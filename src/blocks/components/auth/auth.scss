@@ -275,3 +275,77 @@
     }
     
 }
+
+.auth-modal-box-authorization {
+    width: 530px;
+
+    .auth-modal-box__wrap {
+        padding: 90px 75px 70px;
+    }
+
+    .auth-modal-box__footer {
+        grid-template-columns: 1.1fr 1fr;
+        margin-top: 30px;
+    }
+
+    .auth-modal-box__body {
+        margin-top: 50px;
+    }
+
+    .auth-modal-box__after-body {
+        margin-top: 10px;
+    }
+    
+    .auth-modal-box__btn-link {
+        border: none;
+        padding: 10px 14px;
+        margin: 0;
+        background: none;
+        font-size: 14px;
+        cursor: pointer;
+    }
+}
+
+
+.auth-modal-box-password-recovery {
+    max-width: 530px;
+
+    .auth-modal-box__wrap {
+        padding: 90px 75px 70px;
+    }
+    
+    .auth-modal-box__title {
+        font-size: 32px;
+    }
+    
+    .auth-modal-box__info {
+        margin-top: 20px;
+        color: #999;
+        font-size: 14px;
+        letter-spacing: 0.42px;
+    }
+
+    .auth-modal-box__footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .auth-modal-box__infooter {
+        display: grid;
+        grid-auto-rows: 1fr;
+        gap: 5px;
+    }
+    
+    .auth-modal-box__infooter button {
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        text-align: right;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    
+
+}
+

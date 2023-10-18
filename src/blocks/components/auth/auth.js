@@ -5,16 +5,19 @@ const Auth = class Auth {
 
         document.querySelectorAll('.right-icons__item--login').forEach(opener => {
             opener.addEventListener('click', (event) => {
-                document.querySelector('.auth-modal').classList.add('active');
+                document.querySelector('.auth-modal--registration').classList.add('active');
             })
         })
     }
     addModalCloseHandler() {
-        if (document.querySelector('.auth-modal-box__btn-close')) {
-            document.querySelector('.auth-modal-box__btn-close').addEventListener('click', ()=>{
-                document.querySelector('.auth-modal').classList.remove('active');
+        if (!document.querySelector('.auth-modal-box__btn-close')) return;
+        document.querySelectorAll('.auth-modal-box__btn-close').forEach(close => {
+            close.addEventListener('click', (event)=>{
+                document.querySelectorAll('.auth-modal').forEach(wrap => {
+                    wrap.classList.remove('active');
+                });
             });
-        }
+        })
     }
     init() {
         this.addModalOpenHandler();
@@ -23,13 +26,31 @@ const Auth = class Auth {
 }
 
 $(document).ready(function () {
-    $('.auth-modal-box__btn-registration').on('click', function(){
-        $(this).closest('.auth-modal-box__form').fadeOut();
-        $('.auth-modal-box-successfully').fadeIn();
+    $('.auth-modal-box__btn-registration[type="submit"]').on('click', function(){
+        $(this).closest('.auth-modal-box__form').hide();
+        $('.auth-modal-box-successfully').show();
     });
 
-    $('.auth-modal-box__btn-ok').on('click', function(){
-        $(this).closest('.auth-modal').fadeOut();
+    $('.auth-modal-box__btn-registration[type="button"]').on('click', function(){
+        $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+        $('.auth-modal--registration').addClass('active');
+    });
+
+    $('.auth-modal-box__btn-ok, .auth-modal-box__btn-auth[type="submit"]').on('click', function(){
+        let wrap = $(this).closest('.auth-modal');
+        wrap.fadeOut(300, function(){
+            wrap.removeClass('active').removeAttr('style');
+        });
+    });
+
+    $('.auth-modal-box__btn-auth[type="button"]').on('click', function(){
+        $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+        $('.auth-modal--authorization').addClass('active');
+    });
+
+    $('.auth-modal-box__btn-link--password-recovery').on('click', function(){
+        $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
+        $('.auth-modal--password-recovery').addClass('active');
     });
 });
 
