@@ -241,9 +241,16 @@
         display: flex;
         align-items: center;
         grid-gap: 7px;
+        .mail-icon {
+            font-size: 0;
+        }
         .mail {
             text-decoration: none;
             color: #595959;
+            transition: all .3s ease;
+        }
+        &:hover .mail {
+            color: #F0820F;
         }
         @media all and (max-width:700px) {
             border-radius: 8px;

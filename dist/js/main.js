@@ -1048,8 +1048,11 @@ var CatalogMenu = /*#__PURE__*/function () {
     value: function openMenu() {
       document.querySelectorAll(".catalog-menu__left-list li").forEach(function (menuItem) {
         menuItem.addEventListener("click", function (event) {
+          // if (window.innerWidth <= 960) return;
           console.log(menuItem);
-          event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
+          if (event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile")) {
+            event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
+          }
         });
       });
     }

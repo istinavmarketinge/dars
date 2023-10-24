@@ -2359,7 +2359,7 @@ body.isScrollPrevented {
   content: "";
   position: absolute;
   top: -3px;
-  left: 0;
+  left: -27px;
   width: 9px;
   height: 25px;
   background: url("../img/menu-line.svg") 0 0/contain no-repeat;
@@ -2450,6 +2450,10 @@ body.isScrollPrevented {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
+  transition: all 0.3s ease;
+}
+.header-top__contacts-mail:hover {
+  color: #F0820F;
 }
 @media all and (max-width: 640px) {
   .header-top__contacts-mail {
@@ -2557,6 +2561,10 @@ body.isScrollPrevented {
   width: 100%;
   max-width: 854px;
   outline: none;
+}
+.header-bottom__search form input:not(:focus) {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.25) inset;
+  background: #FAFAFB;
 }
 @media all and (max-width: 640px) {
   .header-bottom__search form input {
@@ -4362,9 +4370,16 @@ body.isScrollPrevented {
   align-items: center;
   grid-gap: 7px;
 }
+.footer__mail .mail-icon {
+  font-size: 0;
+}
 .footer__mail .mail {
   text-decoration: none;
   color: #595959;
+  transition: all 0.3s ease;
+}
+.footer__mail:hover .mail {
+  color: #F0820F;
 }
 @media all and (max-width: 700px) {
   .footer__mail {
@@ -4468,12 +4483,18 @@ body.isScrollPrevented {
   top: 125px;
   left: 0;
   background: #fff;
-  z-index: 14;
+  z-index: 15;
   padding: 39px 30px 62px 0px;
   box-sizing: border-box;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 29px 0px 63px 0px rgba(0, 0, 0, 0.05), 115px 0px 115px 0px rgba(0, 0, 0, 0.04), 258px 0px 155px 0px rgba(0, 0, 0, 0.03), 458px 0px 183px 0px rgba(0, 0, 0, 0.01), 716px 0px 200px 0px rgba(0, 0, 0, 0);
   display: none;
   align-items: flex-start;
+}
+@media (width >= 961px) {
+  .catalog-menu {
+    height: 100vh !important;
+    top: 0 !important;
+  }
 }
 .catalog-menu__closer {
   position: absolute;
@@ -4491,7 +4512,7 @@ body.isScrollPrevented {
   right: 0;
   bottom: 0;
   background: rgba(34, 34, 34, 0.3);
-  z-index: 10;
+  z-index: 14;
   backdrop-filter: blur(5px);
 }
 .catalog-menu__plate {
@@ -4531,8 +4552,9 @@ body.isScrollPrevented {
   border-right: 1px solid #E2E2E2;
   padding-right: 40px;
   box-sizing: border-box;
-  max-height: 100%;
-  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 @media all and (max-width: 900px) {
   .catalog-menu__left {
@@ -4554,7 +4576,6 @@ body.isScrollPrevented {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  overflow: auto;
   padding-right: 70px;
   padding-left: 66px;
 }
@@ -4564,6 +4585,7 @@ body.isScrollPrevented {
 @media all and (max-width: 900px) {
   .catalog-menu__right {
     padding-left: 30px;
+    padding-right: 30px;
     width: 50%;
   }
 }
@@ -4575,12 +4597,11 @@ body.isScrollPrevented {
   }
 }
 .catalog-menu__left-list {
-  display: flex;
-  flex-direction: column;
-  grid-gap: 4px;
+  height: calc(100% - 17px - 80px - 252px - 37px);
   padding: 0;
   margin: 0;
   margin-bottom: 37px;
+  overflow: auto;
 }
 .catalog-menu__left-list li {
   list-style: none;
@@ -4610,6 +4631,7 @@ body.isScrollPrevented {
   font-weight: 400;
   line-height: normal;
   color: #000;
+  padding-right: 30px;
 }
 .catalog-menu__left-second {
   display: flex;
@@ -4729,13 +4751,15 @@ body.isScrollPrevented {
 }
 .catalog-menu__right-menus-title {
   max-width: 142px;
+}
+.catalog-menu__right-menu-list .catalog-menu__right-menus-title a {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 @media all and (max-width: 700px) {
-  .catalog-menu__right-menus-title {
+  .catalog-menu__right-menu-list .catalog-menu__right-menus-title a {
     font-size: 16px;
     font-weight: 500;
   }
@@ -4781,6 +4805,10 @@ body.isScrollPrevented {
   right: 0;
   width: 94%;
   transform: translate(-50%, 100%);
+}
+.catalog-menu__right-container {
+  height: calc(100% - 263px);
+  overflow: auto;
 }
 @media all and (max-width: 700px) {
   .catalog-menu__right-container {
@@ -5353,7 +5381,7 @@ body.isScrollPrevented {
   position: absolute;
   top: 40px;
   left: 12px;
-  z-index: 12;
+  z-index: 16;
 }
 .section__sort-div-select {
   display: inline-flex;
@@ -6704,8 +6732,8 @@ body.isScrollPrevented {
 }
 .elements-item__buttons {
   position: absolute;
-  top: 11px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   border-radius: 3px;
   overflow: hidden;
   z-index: 12;

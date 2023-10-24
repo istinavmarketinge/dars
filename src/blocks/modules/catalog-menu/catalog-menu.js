@@ -52,9 +52,11 @@ const CatalogMenu = class CatalogMenu {
     openMenu() {
         document.querySelectorAll(".catalog-menu__left-list li").forEach((menuItem) => {
             menuItem.addEventListener("click", (event) => {
-            console.log(menuItem);
-
-            event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
+              // if (window.innerWidth <= 960) return;
+              console.log(menuItem);
+              if (event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile")) {
+                event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
+              }
             
             })
           })
