@@ -19,6 +19,7 @@ import Modal from "%components%/modal/modal";
 import Auth from "%components%/auth/auth";
 import CartPage from "%modules%/cart-page/cart-page";
 import PersonalAccount from "%modules%/personal-account/personal-account";
+import PersonalAccountCreatePromocode from "%modules%/personal-account-create-promocode/personal-account-create-promocode";
 
 
 
@@ -48,6 +49,7 @@ window.app.modal = new Modal();
 window.app.auth = new Auth();
 window.app.cartPage = new CartPage();
 window.app.personalAccount = new PersonalAccount();
+window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode();
 
 
 
@@ -72,5 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.auth.init();
     window.app.cartPage.init();
     window.app.personalAccount.init();
+    window.app.personalAccountCreatePromocode.init();
 })
 
