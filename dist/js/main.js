@@ -927,14 +927,17 @@ jQuery(document).ready(function () {
       $(this).find('.controls-bar__item-title').text('В избранное');
     }
   });
-  $('.box-to-compare').on('click', function () {
-    $(this).toggleClass('active');
-    if ($(this).hasClass('active')) {
-      $(this).find('.controls-bar__item-title').text('В сравнении');
-    } else {
-      $(this).find('.controls-bar__item-title').text('К сравнению');
-    }
-  });
+
+  // $('.box-to-compare').on('click',function(){
+  //   $(this).toggleClass('active');
+
+  //   if($(this).hasClass('active')){
+  //     $(this).find('.controls-bar__item-title').text('В сравнении');
+  //   } else {
+  //     $(this).find('.controls-bar__item-title').text('К сравнению');
+  //   }
+  // });
+
   $('.catalog-detail-page-header__specifications-more').on('click', function () {
     var link = $(this).data('link');
     var tabsBlockPosition = $('.catalog-detail-page-header__in-right-block').offset().top;
@@ -1189,7 +1192,7 @@ var Compare = /*#__PURE__*/function () {
                 console.log(event.clientX, viewport.scrollLeft);
                 // osInstance.scroll({y: event.offsetX})
                 viewport.scrollTo({
-                  left: viewport.scrollLeft + (event.clientX - viewport.clientWidth / 2) / 10
+                  left: viewport.scrollLeft - (event.clientX - viewport.clientWidth / 2) / 10
                 });
               }
             });

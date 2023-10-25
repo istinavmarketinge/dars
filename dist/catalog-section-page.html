@@ -23,8 +23,12 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="https://dars.test-ivm.ru/local/templates/dars_individual/components/bitrix/catalog.smart.filter/main/style.min.css">
+        <link rel="stylesheet" href="https://dars.test-ivm.ru/local/templates/dars_individual/components/bitrix/catalog.smart.filter/main/themes/green/colors.min.css">
+        <link rel="stylesheet" href="https://dars.test-ivm.ru/bitrix/css/main/bootstrap.min.css?1695371525121326">
         
-            <link rel="stylesheet" href="styles/main.css?16:28">
+        
+            <link rel="stylesheet" href="styles/main.css?12:10">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1415,7 +1419,309 @@
                     <section class="section">
     <div class="section__into">
         <div class="section__filter hide_on_mobile"><div class="filter">
-    <img src="./img/catalog/catalog_filter.png" alt="" />
+    <div class="rootsubcatstree">
+        <div class="">
+            <div class="" data-depth-level="0">
+                <a href="/catalog/">
+                    Все категории </a>
+            </div>
+            <div class="" data-depth-level="1">
+                <a href="/catalog/plitka/">
+                    Плитка </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/keramicheskaya_plitka/">
+                    Керамическая плитка </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/keramogranit/">
+                    Керамогранит </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/mozaika/">
+                    Мозаика </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/stupeni_i_klinker/">
+                    Ступени и клинкер </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/kvartsvinilovaya_plitka/">
+                    Кварцвиниловая плитка </a>
+            </div>
+            <div class="" data-depth-level="2">
+                <a href="/catalog/soputstvuyushchie_tovary/">
+                    Сопутствующие товары </a>
+            </div>
+            <div class="" data-depth-level="3">
+                <a href="/catalog/zatirka/">
+                    Затирка </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="bx-filter bx-green ">
+        <div class="bx-filter-section container-fluid">
+            <div class="row">
+                <div class="col-lg-12 bx-filter-title">Подбор параметров</div>
+            </div>
+            <form name="arrFilter_form" action="/catalog/plitka/" method="get" class="smartfilter">
+                <div class="row">
+                    <div class="col-lg-12 bx-filter-parameters-box bx-active">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+                            <span>Розничная цена <i data-role="prop_angle" class="fa fa-angle-down"></i></span></div>
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-6 bx-filter-parameters-box-container-block bx-left">
+                                    <i class="bx-ft-sub">От</i>
+                                    <div class="bx-filter-input-container">
+                                        <input class="min-price" type="text" name="arrFilter_P1_MIN"
+                                            id="arrFilter_P1_MIN" value="" size="5" onkeyup="smartFilter.keyup(this)">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 bx-filter-parameters-box-container-block bx-right">
+                                    <i class="bx-ft-sub">До</i>
+                                    <div class="bx-filter-input-container">
+                                        <input class="max-price" type="text" name="arrFilter_P1_MAX"
+                                            id="arrFilter_P1_MAX" value="" size="5" onkeyup="smartFilter.keyup(this)">
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-10 col-xs-offset-1 bx-ui-slider-track-container">
+                                    <div class="bx-ui-slider-track" id="drag_track_c4ca4238a0b923820dcc509a6f75849b">
+                                        <div class="bx-ui-slider-part p1"><span>3&nbsp;400</span></div>
+                                        <div class="bx-ui-slider-part p2"><span>3&nbsp;800</span></div>
+                                        <div class="bx-ui-slider-part p3"><span>4&nbsp;200</span></div>
+                                        <div class="bx-ui-slider-part p4"><span>4&nbsp;600</span></div>
+                                        <div class="bx-ui-slider-part p5"><span>5&nbsp;000</span></div>
+
+                                        <div class="bx-ui-slider-pricebar-vd" style="left: 0;right: 0;"
+                                            id="colorUnavailableActive_c4ca4238a0b923820dcc509a6f75849b"></div>
+                                        <div class="bx-ui-slider-pricebar-vn" style="left: 0%; right: 0%;"
+                                            id="colorAvailableInactive_c4ca4238a0b923820dcc509a6f75849b"></div>
+                                        <div class="bx-ui-slider-pricebar-v" style="left: 0%; right: 0%;"
+                                            id="colorAvailableActive_c4ca4238a0b923820dcc509a6f75849b"></div>
+                                        <div class="bx-ui-slider-range"
+                                            id="drag_tracker_c4ca4238a0b923820dcc509a6f75849b"
+                                            style="left: 0%; right: 0%;">
+                                            <a class="bx-ui-slider-handle left" style="left:0;"
+                                                href="javascript:void(0)"
+                                                id="left_slider_c4ca4238a0b923820dcc509a6f75849b"></a>
+                                            <a class="bx-ui-slider-handle right" style="right:0;"
+                                                href="javascript:void(0)"
+                                                id="right_slider_c4ca4238a0b923820dcc509a6f75849b"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        BX.ready(function () {
+                            window['trackBarc4ca4238a0b923820dcc509a6f75849b'] = new BX.Iblock.SmartFilter({
+                                'leftSlider': 'left_slider_c4ca4238a0b923820dcc509a6f75849b',
+                                'rightSlider': 'right_slider_c4ca4238a0b923820dcc509a6f75849b',
+                                'tracker': 'drag_tracker_c4ca4238a0b923820dcc509a6f75849b',
+                                'trackerWrap': 'drag_track_c4ca4238a0b923820dcc509a6f75849b',
+                                'minInputId': 'arrFilter_P1_MIN',
+                                'maxInputId': 'arrFilter_P1_MAX',
+                                'minPrice': '3400',
+                                'maxPrice': '5000',
+                                'curMinPrice': '',
+                                'curMaxPrice': '',
+                                'fltMinPrice': '3400',
+                                'fltMaxPrice': '5000',
+                                'precision': '0',
+                                'colorUnavailableActive': 'colorUnavailableActive_c4ca4238a0b923820dcc509a6f75849b',
+                                'colorAvailableActive': 'colorAvailableActive_c4ca4238a0b923820dcc509a6f75849b',
+                                'colorAvailableInactive': 'colorAvailableInactive_c4ca4238a0b923820dcc509a6f75849b'
+                            });
+                        });
+                    </script>
+                    <div class="col-lg-12 bx-filter-parameters-box ">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+                            <span class="bx-filter-parameters-box-hint">Материал <i data-role="prop_angle"
+                                    class="fa fa-angle-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_11_2874049711" class="bx-filter-param-label "
+                                            for="arrFilter_11_2874049711">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_11_2874049711"
+                                                    id="arrFilter_11_2874049711" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text"
+                                                    title="Керамогранит">Керамогранит&nbsp;(<span
+                                                        data-role="count_arrFilter_11_2874049711">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bx-filter-parameters-box ">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+                            <span class="bx-filter-parameters-box-hint">Цвет <i data-role="prop_angle"
+                                    class="fa fa-angle-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_12_2751284698" class="bx-filter-param-label "
+                                            for="arrFilter_12_2751284698">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_12_2751284698"
+                                                    id="arrFilter_12_2751284698" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text"
+                                                    title="Коричневый">Коричневый&nbsp;(<span
+                                                        data-role="count_arrFilter_12_2751284698">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 bx-filter-parameters-box bx-active">
+                        <span class="bx-filter-container-modef"></span>
+                        <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+                            <span class="bx-filter-parameters-box-hint">Бренд <i data-role="prop_angle"
+                                    class="fa fa-angle-up"></i>
+                            </span>
+                        </div>
+
+                        <div class="bx-filter-block" data-role="bx_filter_block">
+                            <div class="row bx-filter-parameters-box-container">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_2367533627" class="bx-filter-param-label "
+                                            for="arrFilter_26_2367533627">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_2367533627"
+                                                    id="arrFilter_26_2367533627" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="AM-PM">AM-PM&nbsp;(<span
+                                                        data-role="count_arrFilter_26_2367533627">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_1685985038" class="bx-filter-param-label "
+                                            for="arrFilter_26_1685985038">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_1685985038"
+                                                    id="arrFilter_26_1685985038" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text"
+                                                    title="Millenium">Millenium&nbsp;(<span
+                                                        data-role="count_arrFilter_26_1685985038">2</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_2944839123" class="bx-filter-param-label "
+                                            for="arrFilter_26_2944839123">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_2944839123"
+                                                    id="arrFilter_26_2944839123" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Velvex">Velvex&nbsp;(<span
+                                                        data-role="count_arrFilter_26_2944839123">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_3632373061" class="bx-filter-param-label "
+                                            for="arrFilter_26_3632373061">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_3632373061"
+                                                    id="arrFilter_26_3632373061" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Velvex 1">Velvex 1&nbsp;(<span
+                                                        data-role="count_arrFilter_26_3632373061">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_326707096" class="bx-filter-param-label "
+                                            for="arrFilter_26_326707096">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_326707096"
+                                                    id="arrFilter_26_326707096" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Velvex 5">Velvex 5&nbsp;(<span
+                                                        data-role="count_arrFilter_26_326707096">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_4196041389" class="bx-filter-param-label "
+                                            for="arrFilter_26_4196041389">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_4196041389"
+                                                    id="arrFilter_26_4196041389" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Velvex 7">Velvex 7&nbsp;(<span
+                                                        data-role="count_arrFilter_26_4196041389">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_1662243607" class="bx-filter-param-label "
+                                            for="arrFilter_26_1662243607">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_1662243607"
+                                                    id="arrFilter_26_1662243607" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Velvex 8">Velvex 8&nbsp;(<span
+                                                        data-role="count_arrFilter_26_1662243607">1</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label data-role="label_arrFilter_26_2225864208" class="bx-filter-param-label "
+                                            for="arrFilter_26_2225864208">
+                                            <span class="bx-filter-input-checkbox">
+                                                <input type="checkbox" value="Y" name="arrFilter_26_2225864208"
+                                                    id="arrFilter_26_2225864208" onclick="smartFilter.click(this)">
+                                                <span class="bx-filter-param-text" title="Акварид">Акварид&nbsp;(<span
+                                                        data-role="count_arrFilter_26_2225864208">2</span>)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+                </div><!--//row-->
+                <div class="row">
+                    <div class="col-xs-12 bx-filter-button-box">
+                        <div class="bx-filter-block">
+                            <div class="bx-filter-parameters-box-container">
+                                <input class="btn btn-themes" type="button" id="set_filter" name="set_filter"
+                                    value="Показать">
+                                <input class="btn btn-link" type="button" id="del_filter" name="del_filter"
+                                    value="Сбросить">
+                                <div class="bx-filter-popup-result left" id="modef" style="display:none">
+                                    Выбрано: <span id="modef_num">0</span> <span class="arrow"></span>
+                                    <br>
+                                    <a href="/catalog/plitka/filter/clear/apply/" target="">Показать</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clb"></div>
+            </form>
+        </div>
+    </div>
 </div></div>
         <div class="section__content">
             <div class="section__title">
@@ -1425,43 +1731,43 @@
             <div class="section__filter_tags hide_on_mobile">
                 <ul class="js_ps">
     
-        <li>Kerama Marazzi</li>
+        <li><a href="#">Kerama Marazzi</a></li>
     
-        <li>Cersanit</li>
+        <li><a href="#">Cersanit</a></li>
     
-        <li>Italon</li>
+        <li><a href="#">Italon</a></li>
     
-        <li>Gracia Ceramica</li>
+        <li><a href="#">Gracia Ceramica</a></li>
     
-        <li>Estima</li>
+        <li><a href="#">Estima</a></li>
     
-        <li>Atlas  Concorde</li>
+        <li><a href="#">Atlas  Concorde</a></li>
     
-        <li>Vitra</li>
+        <li><a href="#">Vitra</a></li>
     
-        <li>Creto</li>
+        <li><a href="#">Creto</a></li>
     
-        <li>APE</li>
+        <li><a href="#">APE</a></li>
     
-        <li>Meissen</li>
+        <li><a href="#">Meissen</a></li>
     
-        <li>Marazzi Italy</li>
+        <li><a href="#">Marazzi Italy</a></li>
     
-        <li>Villeroy&Boch</li>
+        <li><a href="#">Villeroy&Boch</a></li>
     
-        <li>Ragno</li>
+        <li><a href="#">Ragno</a></li>
     
-        <li>Carmen</li>
+        <li><a href="#">Carmen</a></li>
     
-        <li>Tau Ceramica</li>
+        <li><a href="#">Tau Ceramica</a></li>
     
-        <li>Serenissima Cir</li>
+        <li><a href="#">Serenissima Cir</a></li>
     
-        <li>Ametis</li>
+        <li><a href="#">Ametis</a></li>
     
-        <li>Mosplitka</li>
+        <li><a href="#">Mosplitka</a></li>
     
-        <li>Interbau&Blink</li>
+        <li><a href="#">Interbau&Blink</a></li>
     
 </ul>
 <script>$(document).ready(function(){$($('.js_ps li')[1]).addClass("active");});</script>
@@ -1485,14 +1791,14 @@
                 </div>
                 <div class="section__sort-filter hide_on_mobile">
                     <div class="section__sort-filter-title">Отображать только:</div>
-                    <div class="section__sort-filter-item">
+                    <a href="" class="section__sort-filter-item">
                         <div class="section__sort-filter-item-name">Товары со скидками</div>
-                        <a href="" class="section__sort-filter-item-check chcecked"></a>
-                    </div>
-                    <div class="section__sort-filter-item">
+                        <div class="section__sort-filter-item-check"></div>
+                    </a>
+                    <a href="" class="section__sort-filter-item checked">
                         <div class="section__sort-filter-item-name">Новинки</div>
-                        <a href="" class="section__sort-filter-item-check"></a>
-                    </div>
+                        <div class="section__sort-filter-item-check"></div>
+                    </a>
                 </div>
                 <div class="section__sort-filter-mobile hide_on_desktop">
                     <div class="section__sort-filter-mobile-button">

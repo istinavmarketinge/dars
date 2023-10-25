@@ -139,15 +139,15 @@ jQuery(document).ready(function() {
     }
   });
 
-	$('.box-to-compare').on('click',function(){
-    $(this).toggleClass('active');
+	// $('.box-to-compare').on('click',function(){
+  //   $(this).toggleClass('active');
     
-    if($(this).hasClass('active')){
-      $(this).find('.controls-bar__item-title').text('В сравнении');
-    } else {
-      $(this).find('.controls-bar__item-title').text('К сравнению');
-    }
-	});
+  //   if($(this).hasClass('active')){
+  //     $(this).find('.controls-bar__item-title').text('В сравнении');
+  //   } else {
+  //     $(this).find('.controls-bar__item-title').text('К сравнению');
+  //   }
+	// });
   
   $('.catalog-detail-page-header__specifications-more').on('click',function(){
     let link = $(this).data('link');

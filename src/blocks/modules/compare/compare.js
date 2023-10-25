@@ -22,7 +22,7 @@ const Compare = class Compare {
                         if (osInstance.isClicked) {
                             console.log(event.clientX, viewport.scrollLeft);
                             // osInstance.scroll({y: event.offsetX})
-                            viewport.scrollTo({ left: (viewport.scrollLeft +  (event.clientX - viewport.clientWidth / 2) / 10)})
+                            viewport.scrollTo({ left: (viewport.scrollLeft -  (event.clientX - viewport.clientWidth / 2) / 10)})
                         }
                     })
                 }
