@@ -1542,7 +1542,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module 'air-datepicker'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var air_datepicker__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! air-datepicker */ "./node_modules/air-datepicker/index.es.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
@@ -1592,7 +1592,7 @@ var PersonalAccountCreatePromocode = /*#__PURE__*/function () {
     key: "initialiseDatepecker",
     value: function initialiseDatepecker() {
       var startDate = new Date();
-      this.datepicker = new Object(function webpackMissingModule() { var e = new Error("Cannot find module 'air-datepicker'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(this.datepickerClass, {
+      this.datepicker = new air_datepicker__WEBPACK_IMPORTED_MODULE_1__["default"](this.datepickerClass, {
         range: true,
         multipleDatesSeparator: ' до ',
         minDate: startDate,
