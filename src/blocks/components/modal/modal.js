@@ -10,8 +10,8 @@ const Modal = class Modal {
         })
     }
     addModalCloseHandler() {
-        if (document.querySelector('.popup-modal__closer')) {
-            document.querySelectorAll('.popup-modal__closer').forEach(closer => {
+        if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no')) {
+            document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no').forEach(closer => {
                 closer.addEventListener('click', (event) => {
                     event.currentTarget.closest('.popup-modal').classList.remove('isOpened');
                 })
@@ -24,8 +24,8 @@ const Modal = class Modal {
                 })
             })
         }
-        if (document.querySelector('.popup-modal__content')) {
-            document.querySelectorAll('.popup-modal__content').forEach(closer => {
+        if (document.querySelector('.popup-modal__content, .modal-delete-promocode')) {
+            document.querySelectorAll('.popup-modal__content, .modal-delete-promocode').forEach(closer => {
                 closer.addEventListener('click', (event) => {
                     event.stopPropagation();
                 })

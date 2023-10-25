@@ -75,6 +75,7 @@
     },
     "dependencies": {
         "@glidejs/glide": "^3.6.0",
+        "air-datepicker": "^3.4.0",
         "dynamic-countdown": "^1.4.2",
         "jquery": "^3.7.0",
         "overlayscrollbars": "^2.3.2",
