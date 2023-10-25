@@ -4,12 +4,15 @@
     top: 125px;
     left: 0;
     background: #fff;
-    z-index: 14;
+    z-index: 15;
     padding: 39px 30px 62px 0px;
     box-sizing: border-box;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.05), 29px 0px 63px 0px rgba(0, 0, 0, 0.05), 115px 0px 115px 0px rgba(0, 0, 0, 0.04), 258px 0px 155px 0px rgba(0, 0, 0, 0.03), 458px 0px 183px 0px rgba(0, 0, 0, 0.01), 716px 0px 200px 0px rgba(0, 0, 0, 0.00);
     display: none;
-    
+    @media (width >= 961px) {
+        height: 100vh !important;
+        top: 0 !important;
+    }
     align-items: flex-start;
     &__closer {
         position: absolute;
@@ -27,7 +30,7 @@
         right: 0;
         bottom: 0;
         background: rgb(34, 34, 34, .3);
-        z-index: 10;
+        z-index: 14;
         backdrop-filter: blur(5px);
 
     }
@@ -65,8 +68,10 @@
         border-right: 1px solid #E2E2E2;
         padding-right: 40px;
         box-sizing: border-box;
-        max-height: 100%;
-        overflow: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // overflow: auto;
         @media all and (max-width:900px) {
             padding-right: 20px;
             width: 45%;
@@ -84,7 +89,6 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        overflow: auto;
         padding-right: 70px;
         padding-left: 66px;
         &:not(.isOpened) {
@@ -92,6 +96,7 @@
         }
         @media all and (max-width:900px) {
             padding-left: 30px;
+            padding-right: 30px;
             width: 50%;
         }
         @media all and (max-width:700px) {
@@ -101,12 +106,11 @@
         }
     }
     &__left-list {
-        display: flex;
-        flex-direction: column;
-        grid-gap: 4px;
+        height: calc(100% - 17px - 80px - 252px - 37px );
         padding: 0;
         margin: 0;
         margin-bottom: 37px;
+        overflow: auto;
         li {
             list-style: none;
             padding: 8px 4px;
@@ -136,6 +140,7 @@
             font-weight: 400;
             line-height: normal;
             color: #000;
+            padding-right: 30px;
         }
     }
     &__left-second {
@@ -246,6 +251,8 @@
     }
     &__right-menus-title {
         max-width: 142px;
+    }
+    &__right-menu-list &__right-menus-title a {
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -299,6 +306,8 @@
         transform: translate(-50%, 100%);
     }
     &__right-container {
+        height: calc(100% - 263px);
+        overflow: auto;
         @media all and (max-width:700px) {
             display: none;
         }
