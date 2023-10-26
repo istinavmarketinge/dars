@@ -20,11 +20,8 @@ import Auth from "%components%/auth/auth";
 import CartPage from "%modules%/cart-page/cart-page";
 import PersonalAccount from "%modules%/personal-account/personal-account";
 import PersonalAccountCreatePromocode from "%modules%/personal-account-create-promocode/personal-account-create-promocode";
-<<<<<<< HEAD
 import CatalogFilter from "%modules%/catalog-filter/catalog-filter";
-=======
 import PersonalAccountStatistics from "%modules%/personal-account-statistics/personal-account-statistics";
->>>>>>> 20a91144f31a2db7433b6fbd899b1303c9864a98
 
 
 
@@ -55,12 +52,9 @@ window.app.auth = new Auth();
 window.app.cartPage = new CartPage();
 window.app.personalAccount = new PersonalAccount();
 window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode();
-<<<<<<< HEAD
 window.app.catalogFilter = new CatalogFilter();
 
-=======
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
->>>>>>> 20a91144f31a2db7433b6fbd899b1303c9864a98
 
 
 
@@ -86,11 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.cartPage.init();
     window.app.personalAccount.init();
     window.app.personalAccountCreatePromocode.init();
-<<<<<<< HEAD
     window.app.catalogFilter.init();
 
-=======
     window.app.personalAccountStatistics.init();
->>>>>>> 20a91144f31a2db7433b6fbd899b1303c9864a98
 })
 

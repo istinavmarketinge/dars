@@ -1,0 +1,3620 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        
+            <link rel="stylesheet" href="styles/main.css?12:55">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="header-top">
+    <div class="header-top__in">
+        <div class="header-top__logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+         <div class="header-top__item --top-adress">
+            <div class="header-top__adress">
+                 <div class="header-top__city">Тула</div>
+                 <div class="header-top__street">ул. Пролетарская д 44, к 3</div>
+                 <div class="header-top__modal-city">
+                    <div class="header-top__modal-close">
+                        <img src="./img/close.svg" alt="close">
+                    </div>
+                    <span>Вы находитесь в г.Тула?</span>
+                    <div class="header-top__modal-buttons">
+                        <div>Да</div>
+                        <div>Нет, изменить</div>
+                    </div>
+
+                 </div>
+            </div>
+            <div class="header-top__work-time">
+                 <div class="work-time__icon">
+                     <img src="./img/time.svg" alt="icon">
+                 </div>
+                 <div class="work-time__info">
+                     Пн-Вс  9.00-18.00 <span>/ сб-вс вых.</span> 
+                 </div>
+            </div>
+         </div>
+         <div class="header-top__item --top-menu">
+            <div class="header-top__menu">
+                 <ul class="header-top__menu-list">
+                     <li><a href="#" class="header-top__menu-link">О нас</a></li>
+                     <li><a href="actions.html" class="header-top__menu-link header-top__menu-link-sale">Акции</a></li>
+                     <li><a href="news.html" class="header-top__menu-link">Новости</a></li>
+                     <li><a href="#" class="header-top__menu-link">Контакты</a></li>
+                     <li><a href="#" class="header-top__menu-link">Покупателям</a></li>
+
+                 </ul>
+            </div>
+         </div>
+         <div class="header-top__item --top-contacts">
+            <div class="header-top__button" data-modal-toggle="callback">
+             <div class="header-top__button-icon">
+                 <img src="./img/call-back.svg" alt="icon">
+             </div>
+             <span>Обратный звонок</span>
+            </div>
+            <div class="header-top__contacts">
+                 <a href="#" class="header-top__contacts-phone">8 (800) 440-30-25</a>
+                 <a href="#" class="header-top__contacts-mail">info@dars.com</a>
+                 <a href="#" class="header-top__contacts-mail-mobile" data-modal-toggle="callback">
+                    <img src="./img/e-mail.svg" alt="icon">
+                 </a>
+             </div>
+         </div>
+    </div>
+ </div>
+
+ <div class="header-bottom">
+     <div class="header-bottom__in">
+         <div class="header-bottom__logo">
+            <a href="/"><img src="./img/logo.svg" alt="logo"></a>
+         </div>
+         <div class="header-bottom__catalog-button">
+             <div class="header-bottom__catalog-icon">
+                 <img src="./img/icon-catalog.svg" alt="icon">
+             </div>
+             <span>Каталог</span>
+         </div>
+         <div class="header-bottom__search">
+             <form action="" method="get">
+                 <input name="s" placeholder="Искать товары" type="search">
+                 <button type="submit"><img src="./img/search.svg" alt="search"></button>
+               </form>
+         </div>
+         <div class="header-bottom__right-icons">
+            <a href="favorites.html" class="right-icons__item right-icons__item--favorites">
+                <div class="right-icons__image">
+                     <div class="right-icons__item-counter">14</div>
+                     <img src="./img/favourites.svg" alt="icon">
+                 </div>
+                 <span>Избранное</span>
+            </a>
+            <a href="compare.html" class="right-icons__item right-icons__item--compare">
+                <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
+                    <img src="./img/compare.svg" alt="icon">
+                </div>
+                 <span>Сравнить</span>
+            </a>
+            <a href="cart-page.html" class="right-icons__item right-icons__item--cart right-icons__item--filled">
+                 <div class="right-icons__image">
+                    <div class="right-icons__item-counter">5</div>
+                     <img src="./img/basket.svg" alt="icon ">
+                 </div>
+                 <span>Корзина</span>
+            </a>
+              <div class="right-icons__item right-icons__item--login">
+                 <div class="right-icons__image">
+                     <img src="./img/enter.svg" alt="icon">
+                 </div>
+                 <span>Войти</span>
+              </div>
+         </div>
+     </div>
+
+     <div class="header-top__item --top-menu --top-menu-mobile">
+        <div class="header-top__menu">
+             <ul class="header-top__menu-list">
+                 <li><a href="#" class="header-top__menu-link">О нас</a></li>
+                 <li><a href="#" class="header-top__menu-link header-top__menu-link-sale">Акции</a></li>
+                 <li><a href="#" class="header-top__menu-link">Новости</a></li>
+                 <li><a href="#" class="header-top__menu-link">Контакты</a></li>
+                 <li><a href="#" class="header-top__menu-link">Покупателям</a></li>
+
+             </ul>
+        </div>
+     </div>
+
+ </div>
+ <div class="top-menu">
+    <div class="top-menu__in">
+        <ul class="top-menu__list">
+            
+
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Плитка</span>
+            </a></li>
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Отопление и водоснабжение</span>
+            </a></li>
+        
+
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Плитка</span>
+            </a></li>
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Отопление и водоснабжение</span>
+            </a></li>
+        
+
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Плитка</span>
+            </a></li>
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Отопление и водоснабжение</span>
+            </a></li>
+        
+
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Плитка</span>
+            </a></li>
+            <li><a href="#" class="top-menu__item">
+                <div class="top-menu__icon">
+                    <img src="./img/icon-menu.svg" alt="icon">
+                </div>
+                <span>Отопление и водоснабжение</span>
+            </a></li>
+        
+
+        </ul>
+    </div>
+</div>
+ 
+    <div class="container">
+        <div class="breadcrumbs">
+    <div class="breadcrumbs__in">
+        <ul class="breadcrumbs__list">
+            <li><a href="#"><img src="./img/home.svg" alt="icon"></a></li>
+            <li><a href="#">Категория</a></li>
+            <li><a href="#">Под категория</a></li>
+            <li>Страница</li>
+        </ul>
+    </div>
+</div>
+    </div>
+
+                
+                
+<div class="catalog-menu">
+    <div class="catalog-menu__plate"></div>
+    <div class="catalog-menu__closer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M2 16L9 9M9 9L16 2M9 9L2 2M9 9L16 16" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+    <div class="catalog-menu__left">
+        
+        <ul class="catalog-menu__left-list">
+            <li class="isActive" data-menu-to-open="Настенные покрытия 1">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия покрытия 1</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            
+            <li data-menu-to-open="Настенные покрытия 2">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 2</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 3">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 3</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 4">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 4</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 5">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 5</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 6">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 6</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 7">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 7</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 8">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 8</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+            <li data-menu-to-open="Настенные покрытия 9">
+                <a href="#">
+                    <div class="catalog-menu__left-icon">
+                        <img src="./img/catalog-menu-icons.svg" alt="icon">
+                    </div>
+                    <span>Настенные покрытия 9</span>
+                </a>
+                <div class="catalog-menu__right-container catalog-menu__right-container--mobile">
+                    <div class="catalog-menu__right-menus">
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                            <li><a href="#">Минеральная</a></li>
+                            <li><a href="#">Бумажные</a></li>
+                            <li><a href="#">Венецианская</a></li>
+                        </ul>
+        
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                        </ul>
+                        <ul class="catalog-menu__right-menu-list">
+                            <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        
+
+        </ul>
+        <div class="catalog-menu__left-second">
+            <a href="#" class="catalog-menu__left-second-item">Бренды</a>
+            <a href="#" class="catalog-menu__left-second-item">Статьи</a>
+            <a href="#" class="catalog-menu__left-second-item catalog-menu__left-second-item-sale">Акции</a>
+        </div>
+
+        <a href="#" class="catalog-menu__best-categiries">
+            <img src="./img/logo.svg" alt="logo">
+            <div class="catalog-menu__best-categiries-title">
+                Лучшие товары категории
+            </div>
+        </a>
+
+
+    </div>
+
+
+    <div class="catalog-menu__right isOpened" data-menu-id="Настенные покрытия 1">
+        <div class="catalog-menu__right-container">
+        <div class="catalog-menu__title">Настенные покрытия 1</div>
+        <div class="catalog-menu__right-menus">
+            <ul class="catalog-menu__right-menu-list">
+                <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                <li><a href="#">Бумажные</a></li>
+                <li><a href="#">Бумажные</a></li>
+                <li><a href="#">Бумажные</a></li>
+                <li><a href="#">Бумажные</a></li>
+                <li><a href="#">Бумажные</a></li>
+            </ul>
+
+            <ul class="catalog-menu__right-menu-list">
+                <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                <li><a href="#">Минеральная</a></li>
+                <li><a href="#">Бумажные</a></li>
+                <li><a href="#">Венецианская</a></li>
+            </ul>
+
+            <ul class="catalog-menu__right-menu-list">
+                <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+            </ul>
+            <ul class="catalog-menu__right-menu-list">
+                <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+            </ul>
+            <ul class="catalog-menu__right-menu-list">
+                <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="catalog-menu__right-products">
+
+            <div class="catalog-menu__right-products-slider swiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                        <img src="./img/logo.svg" alt="logo">
+                        <div class="catalog-menu__best-categiries-title">
+                            Лучшие товары категории
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                        <div class="products-item-image">
+                            <img src="./img/menu-product.png" alt="product">
+                        </div>
+                        <div class="catalog-menu__right-products-text">
+                            Штукатурка фасадная Гарант Формула выг...
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                        <img src="./img/logo.svg" alt="logo">
+                        <div class="catalog-menu__best-categiries-title">
+                            Лучшие товары категории
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                        <div class="products-item-image">
+                            <img src="./img/menu-product.png" alt="product">
+                        </div>
+                        <div class="catalog-menu__right-products-text">
+                            Штукатурка фасадная Гарант Формула выг...
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                        <div class="products-item-image">
+                            <img src="./img/menu-product.png" alt="product">
+                        </div>
+                        <div class="catalog-menu__right-products-text">
+                            Штукатурка фасадная Гарант Формула выг...
+                        </div>
+                    </a>
+                    <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                        <div class="products-item-image">
+                            <img src="./img/menu-product.png" alt="product">
+                        </div>
+                        <div class="catalog-menu__right-products-text">
+                            Штукатурка фасадная Гарант Формула выг...
+                        </div>
+                    </a>
+                                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 2">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 2</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 3">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 3</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 4">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 4</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 5">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 5</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 6">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 6</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 7">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 7</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 8">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 8</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="catalog-menu__right" data-menu-id="Настенные покрытия 9">
+            <div class="catalog-menu__right-container">
+            <div class="catalog-menu__title">Настенные покрытия 9</div>
+            <div class="catalog-menu__right-menus">
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Обои</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Декоративная штукатурка</a></li>
+                    <li><a href="#">Минеральная</a></li>
+                    <li><a href="#">Бумажные</a></li>
+                    <li><a href="#">Венецианская</a></li>
+                </ul>
+    
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">3D панели</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Краска</a></li>
+                </ul>
+                <ul class="catalog-menu__right-menu-list">
+                    <li class="catalog-menu__right-menus-title"><a href="#">Фрески</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="catalog-menu__right-products">
+    
+                <div class="catalog-menu__right-products-slider swiper">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__best-categiries catalog-menu__best-categiries--mobile swiper-slide">
+                            <img src="./img/logo.svg" alt="logo">
+                            <div class="catalog-menu__best-categiries-title">
+                                Лучшие товары категории
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                        <a href="#" class="catalog-menu__right-products-item swiper-slide">
+                            <div class="products-item-image">
+                                <img src="./img/menu-product.png" alt="product">
+                            </div>
+                            <div class="catalog-menu__right-products-text">
+                                Штукатурка фасадная Гарант Формула выг...
+                            </div>
+                        </a>
+                                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+</div>
+
+<div class="catalog-menu__overlay"></div>
+                <div class="header-fixed">
+    <div class="header-fixed__in">
+        <div class="header-fixed__logo">
+            <img src="./img/logo.svg" alt="logo">
+        </div>
+        <div class="header-fixed__search">
+            <form action="" method="get">
+                <input name="s" placeholder="Искать товары" type="search">
+                <button type="submit"><img src="./img/search.svg" alt="search"></button>
+              </form>
+
+        </div>
+        <a href="#" class="header-fixed__callback">
+            <img src="./img/call.svg" alt="icon">
+        </a>
+    </div>
+</div>
+            </div>      
+            </header>
+
+
+            <section>
+                <div class="container">
+                    <section class="section search-section">
+    <div class="section__into">
+        <div class="section__left hide_on_mobile">
+            <div class="section__left-title">Поиск по сайту</div>
+            <a class="section__left-back">< Назад</a>
+        </div>
+        <div class="section__content">
+            <div class="section__subtitle">Вы искали:</div>
+            <div class="general__page-title">
+                <h2 class="title">Керамогранит</h2>
+                <div class="general__page-count">302 товара</div>
+            </div>
+            
+            <div class="section__elements_list">
+                <div class="elements">
+    
+        <div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana ">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana ">
+            Плитка из керамогранита Arcana 
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div>
+    
+        <div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana ">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana ">
+            Плитка из керамогранита Arcana 
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div>
+    
+        <div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana ">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana ">
+            Плитка из керамогранита Arcana 
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div>
+    
+        <div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana ">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana ">
+            Плитка из керамогранита Arcana 
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div>
+    
+        <div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana ">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana ">
+            Плитка из керамогранита Arcana 
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div><div class="elements-item elements-item--with-buttons js_element_item" data-slide-type="stock">
+    <div class="tabs__slider-item-image">
+        <div title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            <div class="tabs__hidden-block">
+                <div class="tabs__hidden-item isActive" data-image-to-show="1"></div>
+                <div class="tabs__hidden-item" data-image-to-show="2"></div>
+                <div class="tabs__hidden-item" data-image-to-show="3"></div>
+            </div>
+            <img class="tabs__image tabs__image--active" data-image_id="1" src="./img/articles.png" alt="image">
+            <img class="tabs__image" data-image_id="2" src="./img/plitka.png" alt="image">
+            <img class="tabs__image" data-image_id="3" src="./img/plitka2.png" alt="image">
+        </div>
+        <div class="elements-item__buttons">
+            <div class="elements-item__button elements-item__button--light" style="--bgColor: #FFD748;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 19" fill="none">
+                    <path d="M17.0534 15.0525H7.0573C5.20616 15.0525 1.50391 13.9416 1.50391 9.4977C1.50391 6.56911 3.11183 5.08802 4.73819 4.41847M17.0534 15.0525L14.2767 12.2752M17.0534 15.0525L14.2767 17.83M20.2355 13.1985C20.9794 12.3529 21.4961 11.1578 21.4961 9.4977C21.4961 5.05384 17.7939 3.94288 15.9427 3.94288H9.27865M10.934 1.17004L8.15729 3.94745L10.934 6.72487" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button" style="--bgColor: #F0820F;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 22 18">
+                    <path id="ÐÐ¾Ð±Ð°Ð²Ð¸ÑÑ Ðº ÑÑÐ°Ð²Ð½ÐµÐ½Ð¸Ñ" d="M10.6836 12.2331H20.3797M15.5643 17.1136V7.41344M1 12.3106H6.8102M1 6.57778H11.1485M1 1H16.6488" stroke-width="1.63721" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 23 21">
+                    <path d="M22 7.1879C22 8.8203 21.3765 10.3882 20.2631 11.5481C17.7001 14.2187 15.2143 17.0036 12.5556 19.5775C11.9461 20.1589 10.9794 20.1377 10.3962 19.53L2.73645 11.5481C0.421185 9.13538 0.421185 5.24041 2.73645 2.82777C5.07446 0.391419 8.88333 0.391419 11.2213 2.82777L11.4998 3.11789L11.778 2.82794C12.899 1.65919 14.4257 1 16.0206 1C17.6154 1 19.142 1.65913 20.2631 2.82777C21.3766 3.9877 22 5.55554 22 7.1879Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <div class="elements-item__button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 21 22">
+                    <path d="M1.5 5H3.5M3.5 5H19.5M3.5 5V19C3.5 19.5304 3.71071 20.0391 4.08579 20.4142C4.46086 20.7893 4.96957 21 5.5 21H15.5C16.0304 21 16.5391 20.7893 16.9142 20.4142C17.2893 20.0391 17.5 19.5304 17.5 19V5M6.5 5V3C6.5 2.46957 6.71071 1.96086 7.08579 1.58579C7.46086 1.21071 7.96957 1 8.5 1H12.5C13.0304 1 13.5391 1.21071 13.9142 1.58579C14.2893 1.96086 14.5 2.46957 14.5 3V5M8.5 10V16M12.5 10V16" stroke-width="1.44" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="tabs__slider-item-price">
+        <div class="new-price">3 680 ₽/шт</div>
+        <div class="old-price">5 990 ₽/м²</div>
+    </div>
+    <div class="tabs__slider-item-stickers">
+        <div class="sticker sticker-discount">-20%</div>
+    </div>
+    <div class="tabs__slider-item-text">
+        <a href="element_detail.html" class="js_element_name" title="Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar">
+            Плитка из керамогранита Arcana Stracciatella 80х80 см 1.28 м² Stracciatella-R Nacar
+        </a>         
+    </div>
+    <div class="elements-item__popover">
+        <ul class="elements-item__popover-list">
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+                <li>
+                    <div class="text">Размер</div>
+                    <div class="text">80х80 см</div>
+                </li>
+            
+        </ul>
+        <div class="elements-item__popover-info">
+             <div class="elements-item__popover-stock inStock">В наличии</div>  <!-- Если нет в наличии то класс outOfStock-->
+            <div class="elements-item__popover-article">Арт. 421259</div>
+        </div>
+        <div class="elements-item__popover-buttons">
+            
+
+    <button class="button button--primary elements-item__popover-button">
+ 
+
+В корзину
+
+
+
+    </button>
+
+            
+
+    <button class="button button--primary button--outlined elements-item__popover-button">
+ 
+
+Купить в 1 клик
+
+
+
+    </button>
+
+        </div>
+    </div>
+</div>
+    
+</div>                         
+                <!-- show_more_btn -->
+                
+    <div class="show_more_block">
+        <div class="show_more_block__btn">Показать ещё</div>
+    </div>
+
+<div class="pagination">
+    <div class="pagination__nums">
+    <div class="pagination__num pagination__num--active"><a href="?PAGEN_1=1">1</a></div>
+    
+        <div class="pagination__num"><a href="?PAGEN_1=2">2</a></div>
+    
+        <div class="pagination__num"><a href="?PAGEN_1=3">3</a></div>
+    
+        <div class="pagination__num"><a href="?PAGEN_1=4">4</a></div>
+    
+        <div class="pagination__num"><a href="?PAGEN_1=5">5</a></div>
+    
+    
+    <div class="pagination__num">...</div>
+    <div class="pagination__num pagination__num--gray"><a href="?PAGEN_1=10">10</a></div>
+    </div>
+    <form class="pagination__gotopage" action="" method="GET">
+        <span class="pagination__gotopage-text">Перейти на страницу</span> 
+        <input type="number" name="PAGEN_1" value="" />
+        <button type="submit"></button>
+    </form>
+</div>
+            </div>   
+        </div>
+    </div>
+</section>
+                </div>
+            </section>
+            <div class="container">
+                <div class="subscription">
+    <div class="subscription__in">
+        <div class="subscription__left">
+            <div>Эксклюзивные скидки и акции</div>
+            <div>только для подписчиков!</div>
+
+        </div>
+        <div class="subscription__right">
+            <form action="">
+                <input type="text" placeholder="e-mail">
+                <button type="submit">Подписаться</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+            </div>
+
+            <footer>
+                <div class="container">
+                    
+    <div class="footer__in">
+        <div class="footer__left">
+            <div class="footer__info">
+                <div class="footer__first">
+                    <div class="footer__logo">
+                        <img src="./img/logo.svg" alt="logo">
+                    </div>
+                    <div class="footer__phones">
+                        <a href="#" class="footer__phone">8 (800) 440-30-25</a>
+                        <div class="footer__feedback-button">
+                            <div class="footer__feedback-button-icon">
+                                <img src="./img/call-back.svg" alt="icon">
+                            </div>
+                            <span>Обратный звонок</span>
+                           </div>
+                    </div>
+
+                    <div class="footer__work-time footer__work-time-mobile">
+                        <div class="work-time__icon">
+                            <img src="./img/time.svg" alt="icon">
+                        </div>
+                        <div class="work-time__info">
+                            Пн-Вс  9.00-18.00 <br><span> сб-вс вых.</span> 
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer__menus">
+                    <div class="footer__first-menu">
+                        <div class="footer__menu-title">Информация</div>
+                        <ul class="footer__menu-list">
+                            <li><a href="#">О нас</a></li>
+                            <li class="isIconed"><a href="#">Акции</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Покупателям</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__second-menu">
+                        <div class="footer__menu-title">Каталог</div>
+                        <ul class="footer__menu-list">
+                            <li><a href="#">Плитка</a></li>
+                            <li><a href="#">Напольные покрытия</a></li>
+                            <li><a href="#">Сантехника</a></li>
+                            <li><a href="#">Отопление и водоснабжение</a></li>
+                            <li><a href="#">Настенные покрытия</a></li>
+                            <li><a href="#">Лепнина</a></li>
+                            <li><a href="#">Плитка</a></li>
+                            <li><a href="#">Плитка</a></li> 
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__adress">
+                        <div class="footer__city">Тула</div>
+                        <div class="footer__street">ул. Пролетарская д 44, к 3</div>
+                    </div>
+                    <div class="footer__map footer__map--mobile">
+                        <img src="./img/map.jpg" alt="icon">
+                    </div>
+                    <div class="footer__work-time">
+                        <div class="work-time__icon">
+                            <img src="./img/time.svg" alt="icon">
+                        </div>
+                        <div class="work-time__info">
+                            Пн-Вс  9.00-18.00 <span>/ сб-вс вых.</span> 
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="footer__phone-mobile">8 (800) 440-30-25</a>
+                    <div class="footer__mail">
+                        <div class="mail-icon">
+                            <img src="./img/mail.svg" alt="icon">
+                        </div>
+                        <a href="#" class="mail">info@dars.com</a>
+                    </div>
+                    <div class="footer__socials">
+                        
+                        <a href="#" class="social-item">
+                            <img src="./img/socials.svg" alt="icon">
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="./img/socials.svg" alt="icon">
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="./img/socials.svg" alt="icon">
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="./img/socials.svg" alt="icon">
+                        </a>
+                        
+                        <a href="#" class="social-item">
+                            <img src="./img/socials.svg" alt="icon">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="footer__coopy">
+                    ООО "DARS" ОГРН 103500545613 <br>
+Указанные на сайте цены не являются публичной офертой (ст. 435 ГК РФ). Наличие товара просьба уточнять в офисе продаж. Все цены действительны при самовывозе со склада по адресу: г. Тула, пр-т Юных Ленинцев, д. 41.
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__map">
+            <img src="./img/map.jpg" alt="icon">
+        </div>
+       
+    </div>
+
+
+
+    
+                    <div class="bottom-menu">
+    <div class="bottom-menu__in">
+        <a href="#" class="bottom-menu__item">
+            <div class="bottom-menu__image">
+                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.125 6.80556L10.625 1L1.125 6.80556M3.23571 10.5V17.2555C3.23571 17.6054 3.51923 17.8889 3.86904 17.8889H17.3802C17.7299 17.8889 18.0135 17.6054 18.0135 17.2555V10.5" stroke="black" stroke-width="1.58333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <span>Главная</span>
+        </a>
+        <a href="#" class="bottom-menu__item">
+            <div class="bottom-menu__image">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.0003 6.83539C21.0003 8.37479 20.4092 9.8534 19.3536 10.9472C16.9239 13.4657 14.5672 16.0919 12.0467 18.5192C11.469 19.0674 10.5525 19.0474 9.99964 18.4744L2.73799 10.9472C0.543067 8.67193 0.543067 4.99884 2.73799 2.72365C4.95448 0.426088 8.56537 0.426088 10.7818 2.72365L11.0458 2.99724L11.3096 2.7238C12.3723 1.62164 13.8197 1 15.3316 1C16.8436 1 18.2908 1.62158 19.3536 2.72365C20.4093 3.8175 21.0003 5.29602 21.0003 6.83539Z" stroke="black" stroke-width="1.43873" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <span>Избранное</span>
+        </a>
+        <a href="#" class="bottom-menu__item">
+            <div class="bottom-menu__image">
+                <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 11.9999H6.77778H1Z" fill="black"/>
+                    <path d="M1 11.9999H6.77778" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 6.49988H10.3889H1Z" fill="black"/>
+                    <path d="M1 6.49988H10.3889" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 0.999878H14H1Z" fill="black"/>
+                    <path d="M1 0.999878H14" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.5 15.4999L29 18.9999M15 10.9999C15 14.3136 17.6863 16.9999 21 16.9999C22.6597 16.9999 24.1621 16.326 25.2483 15.2369C26.3308 14.1516 27 12.6539 27 10.9999C27 7.68617 24.3137 4.99988 21 4.99988C17.6863 4.99988 15 7.68617 15 10.9999Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <span>Каталог</span>
+        </a>
+        <a href="#" class="bottom-menu__item">
+            <div class="bottom-menu__image">
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.79729 3.65765H21.9954L18.8062 14.2882H4.98647L1.79729 3.65765ZM1.79729 3.65765L1 1M10.3018 18.0089C10.3018 18.8896 9.58782 19.6035 8.70718 19.6035C7.82651 19.6035 7.11259 18.8896 7.11259 18.0089M16.6801 18.0089C16.6801 18.8896 15.9661 19.6035 15.0855 19.6035C14.2049 19.6035 13.4909 18.8896 13.4909 18.0089" stroke="black" stroke-width="1.59459" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+            </div>
+            <span>Корзина</span>
+        </a>
+        <a href="#" class="bottom-menu__item">
+            <div class="bottom-menu__image">
+                <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="&#208;&#146;&#208;&#190;&#208;&#185;&#209;&#130;&#208;&#184;" d="M0.871094 19.7903V18.629C0.871094 14.1394 4.51061 10.4999 9.00017 10.4999M9.00017 10.4999C13.4897 10.4999 17.1292 14.1394 17.1292 18.629V19.7903M9.00017 10.4999C11.5656 10.4999 13.6454 8.4202 13.6454 5.85478C13.6454 3.28931 11.5656 1.20959 9.00017 1.20959C6.4347 1.20959 4.35498 3.28931 4.35498 5.85478C4.35498 8.4202 6.4347 10.4999 9.00017 10.4999Z" stroke="black" stroke-width="1.74194" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            </div>
+            <span>Войти</span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+                </div>
+            </footer>
+            <div class="popup-modal" data-modal-id="callback">
+    <div class="popup-modal__content">
+        <div class="popup-modal__closer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none">
+                <path d="M2 24L13 13M13 13L24 2M13 13L2 2M13 13L24 24" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="popup-modal__title">
+            Обратный звонок
+        </div>
+        <div class="popup-modal__body">
+            <form action="" class="popup-modal__form">
+    <div class="form__field">
+        <input type="text" placeholder="Имя">
+    </div>
+    <div class="form__field">
+        <input type="tel" placeholder="Телефон">
+    </div>
+    
+
+    <button class="button button--primary popup-modal__submit">
+ 
+
+Перезвоните мне
+
+
+
+    </button>
+
+</form>
+
+<div class="popup-modal__message" style="display: none;">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%"  viewBox="0 0 138 92" fill="none">
+        <path d="M0 49.9136L47.2573 92L138 11.4199L124.972 0L47.2573 68.9996L12.8472 38.4133L0 49.9136Z" fill="#1BC49B"/>
+        </svg>
+    </div>
+    <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
+</div>
+        </div>
+    </div>
+</div>
+        
+        <script src="js/vendor.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
