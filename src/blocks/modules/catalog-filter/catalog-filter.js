@@ -31,18 +31,45 @@ const CatalogFilter = class CatalogFilter {
             }
         }
 
+        searchFilterCheckIncludes(title, value) {
+            return title.toLowerCase().includes(value.toLowerCase())
+        }
+        searchFilterShowHide(checkboxClass, checkbox, element, title) {
+            if(this.searchFilterCheckIncludes(title, element.value)) {
+                checkbox.closest(checkboxClass).style.display = 'block';
+                console.log("yes");
+            } else {
+                checkbox.closest(checkboxClass).style.display = 'none';
+                console.log('no');
+            }
+        }
+        searchFilter({inputSelector, eventName, boxClass, checkboxClass}) {
+
+            document.querySelectorAll(inputSelector).forEach(element =>{
+                element.addEventListener(eventName, (event) => {
+                    event.currentTarget.closest(boxClass).querySelectorAll('.bx-filter-param-text').forEach(checkbox => {
+                        
+                        
+                        this.searchFilterShowHide(checkboxClass, checkbox, element, checkbox.getAttribute('title'));
+                    });
+                   
+                });
+            })
+
+        }
 
 
-
-
-
-
-        
         
     init() {
         this.openMoreCheckbox();
         this.openMobileFilter();
         this.openMoreFilters();
+        this.searchFilter({
+            inputSelector: '.bx-filter-parameters-box-search input',
+            eventName: 'keyup',
+            boxClass: '.bx-filter-parameters-box',
+            checkboxClass: '.checkbox',
+        });
     }
 }
 

@@ -1034,11 +1034,49 @@ var CatalogFilter = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "searchFilterCheckIncludes",
+    value: function searchFilterCheckIncludes(title, value) {
+      return title.toLowerCase().includes(value.toLowerCase());
+    }
+  }, {
+    key: "searchFilterShowHide",
+    value: function searchFilterShowHide(checkboxClass, checkbox, element, title) {
+      if (this.searchFilterCheckIncludes(title, element.value)) {
+        checkbox.closest(checkboxClass).style.display = 'block';
+        console.log("yes");
+      } else {
+        checkbox.closest(checkboxClass).style.display = 'none';
+        console.log('no');
+      }
+    }
+  }, {
+    key: "searchFilter",
+    value: function searchFilter(_ref) {
+      var _this = this;
+      var inputSelector = _ref.inputSelector,
+        eventName = _ref.eventName,
+        boxClass = _ref.boxClass,
+        checkboxClass = _ref.checkboxClass;
+      document.querySelectorAll(inputSelector).forEach(function (element) {
+        element.addEventListener(eventName, function (event) {
+          event.currentTarget.closest(boxClass).querySelectorAll('.bx-filter-param-text').forEach(function (checkbox) {
+            _this.searchFilterShowHide(checkboxClass, checkbox, element, checkbox.getAttribute('title'));
+          });
+        });
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.openMoreCheckbox();
       this.openMobileFilter();
       this.openMoreFilters();
+      this.searchFilter({
+        inputSelector: '.bx-filter-parameters-box-search input',
+        eventName: 'keyup',
+        boxClass: '.bx-filter-parameters-box',
+        checkboxClass: '.checkbox'
+      });
     }
   }]);
   return CatalogFilter;
