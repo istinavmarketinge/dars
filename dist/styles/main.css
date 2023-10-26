@@ -7407,6 +7407,7 @@ body.isScrollPrevented {
   }
 }
 
+<<<<<<< HEAD
 form.smartfilter {
   max-width: 220px;
   width: 100%;
@@ -7707,6 +7708,43 @@ form.smartfilter .row {
   margin: 0;
   max-width: 220px;
   width: 100%;
+=======
+.filter__title {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-bottom: 13px;
+}
+.filter__menu {
+  margin-bottom: 40px;
+}
+.filter__menu-in {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.filter__menu-item a {
+  text-decoration: none;
+  display: block;
+  padding: 5px 5px 5px calc(var(--depth) * 14px);
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5' fill='none'%3E%3Cpath d='M1 4.5L3 2.5L1 0.5' stroke='black' stroke-width='0.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 4px;
+  background-position: calc(var(--depth) * 14px - 7px - 4px) 50%;
+}
+.filter__menu-item--all a {
+  color: #969696;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='9' viewBox='0 0 5 9' fill='none'%3E%3Cpath d='M4 7.5L1 4.5L4 1.5' stroke='%23969696' stroke-width='1.125' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-position: calc(var(--depth) * 14px - 12px) 50%;
+>>>>>>> 7930581 (filter menu)
 }
 
 .bx-filter-parameters-box-container:not(.isOpened) .checkbox:nth-of-type(n+4) {
