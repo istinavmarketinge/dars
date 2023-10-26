@@ -1,1 +1,250 @@
-@import './catalog-filter-menu';
+ @import './catalog-filter-menu';
+
+ form.smartfilter {
+    max-width: 220px;
+    width: 100%;
+ }
+ .bx-filter.bx-green {
+    .bx-filter-section {
+        background: none;
+    }
+    .bx-ui-slider-track {
+        background: #D0D0D0;
+        height: 4px;
+        border-radius: 3px;
+    }
+ }
+ .bx-filter .bx-filter {
+    &-input-container input {
+        border-radius: 3px;
+        border: 1px solid #DCDCDC;
+        padding: 7px 12px 7px 19px;
+        height: 30px;
+        position: relative;
+        &::before {
+            content: "от";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            color: #C9C9C9;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            z-index: 100;
+        }
+    }
+    &-parameters-box-container-block {
+        padding-left: 0;
+        padding-right: 4px;
+    }
+
+ }
+
+ .bx-filter .bx-ui-slider-part {
+    display: none;
+ }
+ .bx-filter-parameters-box-container .col-xs-offset-1 {
+    margin-left: 0;
+ }
+ .bx-filter-parameters-box-container .col-xs-10 {
+    width: 100%;
+ }
+ .bx-filter.bx-green .bx-ui-slider-pricebar-v {
+    background: #D0D0D0;
+    height: 2px;
+    top: 1px;
+ }
+ .bx-filter.bx-green .bx-ui-slider-pricebar-vn {
+    background: #F3F3F3;
+    border-radius: 3px;
+    box-shadow: 0px 0.6px 0.6px 0px rgba(0, 0, 0, 0.07) inset;
+}
+.bx-ui-slider-track-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.bx-filter .bx-ui-slider-handle {
+    border-radius: 12px;
+    background: #D0D0D0;
+    box-shadow: 0px 2px 2px 0px rgba(102, 84, 0, 0.10);
+    width: 12px;
+    height: 12px;
+    top: -4px;
+}
+.bx-filter.bx-green .bx-ui-slider-handle.left, 
+.bx-filter.bx-green .bx-ui-slider-handle.right {
+    background: #D0D0D0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bx-filter .bx-ui-slider-range {
+    z-index: 80;
+}
+.bx-filter .bx-ui-slider-track-container {
+    padding-top: 13px;
+    padding-bottom: 40px;
+}
+.bx-filter-parameters-box-container {
+    padding-bottom: 0;
+}
+.bx-filter .bx-filter-parameters-box {
+    padding: 0;
+}
+.bx-filter-parameters-box-container {
+    max-width: 220px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.bx-filter .bx-filter-parameters-box-title span {
+    color: #111214;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.bx-filter .bx-filter-parameters-box-title span i {
+    display: none;
+}
+.bx-filter .bx-filter-parameters-box-title {
+    padding-bottom: 18px;
+}
+.bx-filter-parameters-box-container .col-xs-12 {
+    padding: 0;
+}
+.bx-filter-parameters-box-container .bx-filter-param-label {
+    padding-left: 0;
+}
+.bx-filter-parameters-box-container .bx-filter-param-label .bx-filter-input-checkbox input {
+    // margin-left: -29px;
+}
+.bx-filter-parameters-box-container .col-xs-12 .checkbox:not(:last-child) {
+    margin-bottom: 14px;
+}
+.bx-filter .bx-filter-button-box {
+    padding: 0;
+    margin-top: 40px;
+}
+.bx-filter-parameters-box-container .btn-themes {
+    width: 100%;
+    padding: 10px 23px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+.bx-filter.bx-green .btn-themes,
+.bx-filter.bx-green .btn-themes.bx-active, 
+.bx-filter.bx-green .btn-themes.focus, 
+.bx-filter.bx-green .btn-themes:active, 
+.bx-filter.bx-green .btn-themes:focus,
+.bx-filter.bx-green .btn-themes:hover {
+    background: #F3F3F3;
+    color: #111214;
+    border-color: transparent;
+    outline: none;
+}
+.bx-filter-parameters-box-container .btn-link {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    color: #B6B6B6;
+    text-decoration: none;
+}
+.bx-filter-parameters-box-container .btn-link:hover {
+    text-decoration: none;
+}
+.bx-filter-parameters-box-container .btn-link:focus {
+    outline: none;
+}
+.bx-filter .bx-filter-input-checkbox .bx-filter-param-text span {
+    color: #A9A9A9;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.bx-filter .bx-filter-input-checkbox .bx-filter-param-text {
+    font-size: 13px;
+    color: #111214;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    display: block;
+    width: calc(100% - 16px - 16px);
+}
+.bx-filter.bx-green .bx-filter-input-container input:focus {
+    border-color: inherit;
+}
+.bx-filter-input-checkbox {
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+.bx-filter-input-checkbox input {
+    display: none;
+}
+.bx-filter-input-checkbox--phantom {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 0.889px solid #B7B7B7;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='9' viewBox='0 0 12 9' fill='none'%3E%3Cpath d='M0.666748 4.80239L4.31948 8.05545L11.3334 1.82703L10.3264 0.944336L4.31948 6.27764L1.65977 3.91348L0.666748 4.80239Z' fill='white'/%3E%3C/svg%3E") 50% 50% / 10px no-repeat;
+    order: -1;
+    margin-right: 16px;
+}
+.bx-filter-input-checkbox input:checked ~ .bx-filter-input-checkbox--phantom {
+    background-color: #F0820F;
+    border: 0.889px solid #F0820F;
+}
+.bx-filter-parameters-box-title {
+    display: flex;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+.bx-filter .bx-filter-parameters-box-title span {
+    border-bottom: none;
+}
+.bx-filter-parameters-box-search {
+    padding: 7px 12px;
+    border-radius: 3px;
+    border: 1px solid #DCDCDC;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bx-filter-parameters-box-search input {
+    border: none;
+    outline: none;
+    margin-right: 4px;
+    width: 85%;
+}
+.bx-filter-parameters-box-search button {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    width: 11%;
+}
+.bx-filter-parameters-box-search input::placeholder {
+    color: #C9C9C9;
+}
+form.smartfilter .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.container-fluid {
+    padding: 0;
+    margin: 0;
+    max-width: 220px;
+    width: 100%;
+}
