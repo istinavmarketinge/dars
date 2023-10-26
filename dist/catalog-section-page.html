@@ -29,7 +29,7 @@
         <script src="https://use.fontawesome.com/c9a8962e52.js"></script>
         
         
-            <link rel="stylesheet" href="styles/main.css?18:8">
+            <link rel="stylesheet" href="styles/main.css?11:30">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1461,6 +1461,31 @@
     </div>
 
 </div>
+
+    <div class="filter-mobile">
+         <div class="filter-mobile__back">Назад</div>
+         <div class="filter-mobile__title">
+            <h2>Фильтры</h2>
+            <div class="filter-mobile__del-filter">
+                <input class="btn btn-link" type="button" id="del_filter" name="del_filter" value="Очистить фильтр">
+            </div>
+         </div>
+
+         <div class="section__sort-filter hide_on_mobile" bis_skin_checked="1">
+            <div class="section__sort-filter-title" bis_skin_checked="1">Отображать только:</div>
+            <a href="" class="section__sort-filter-item">
+                <div class="section__sort-filter-item-name" bis_skin_checked="1">Товары со скидками</div>
+                <div class="section__sort-filter-item-check" bis_skin_checked="1"></div>
+            </a>
+            <a href="" class="section__sort-filter-item checked">
+                <div class="section__sort-filter-item-name" bis_skin_checked="1">Новинки</div>
+                <div class="section__sort-filter-item-check" bis_skin_checked="1"></div>
+            </a>
+        </div>
+
+    </div>
+
+    
     <div class="bx-filter bx-green ">
         <div class="bx-filter-section container-fluid">
             <div class="row">
@@ -1718,6 +1743,13 @@
                                             </span>
                                         </label>
                                     </div>
+
+                                    <div class="bx-filter-input-checkbox-more-checkbox">
+                                        <span class="more-show">Ещё</span>
+                                        <span class="more-hide">Свернуть</span>
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div style="clear: both"></div>
@@ -1729,6 +1761,7 @@
                     <div class="col-xs-12 bx-filter-button-box">
                         <div class="bx-filter-block">
                             <div class="bx-filter-parameters-box-container">
+                                <div class="bx-filter-parameters-box-container-all-filters">Все фильтры</div>
                                 <input class="btn btn-themes" type="button" id="set_filter" name="set_filter"
                                     value="Показать">
                                 <input class="btn btn-link" type="button" id="del_filter" name="del_filter"
