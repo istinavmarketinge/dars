@@ -12283,6 +12283,210 @@ input:checked + .dars-control__btn-name::before {
   color: #F0820F;
 }
 
+.personal-account-statistics {
+  max-width: 711px;
+  width: 100%;
+}
+.personal-account-statistics__header {
+  border-radius: 10px;
+  background: rgba(240, 130, 15, 0.1);
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: max-content repeat(4, 1fr);
+  align-items: center;
+}
+.personal-account-statistics__header-total {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+  border-right: 1px solid #EADED0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+.personal-account-statistics__header-col {
+  text-align: center;
+}
+.personal-account-statistics__header-title {
+  color: #BAAEA0;
+  font-size: 14px;
+}
+.personal-account-statistics__header-value {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+  margin-top: 3px;
+}
+.personal-account-statistics__body {
+  margin-top: 30px;
+}
+
+.account-statistics__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 30px;
+}
+.account-statistics-item__header {
+  padding: 15px 20px 0;
+  border-radius: 10px;
+  border: 1px solid #E9E9E9;
+  background: #FFF;
+  z-index: 1;
+  position: relative;
+}
+.account-statistics-item__header-row-1 {
+  display: flex;
+}
+.account-statistics-item__promocode {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.account-statistics-item__promocode-value {
+  flex: 1;
+  border-radius: 3px;
+  background: rgba(240, 130, 15, 0.1);
+  font-size: 15px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  line-height: 32px;
+  letter-spacing: 0.45px;
+}
+.account-statistics-item__btn-copy {
+  width: 35px;
+  margin-left: auto;
+  align-self: stretch;
+  cursor: pointer;
+  border-radius: 3.205px;
+  border: 0.801px solid #E4E4E4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-statistics-item__btn-copy svg {
+  fill: #808080;
+}
+.account-statistics-item__btn-copy.copy {
+  border-color: #787878;
+}
+.account-statistics-item__utm {
+  width: 257px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.account-statistics-item__utm-value {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  max-width: 222px;
+  line-height: 35px;
+  padding: 0 5px 0 10px;
+  box-sizing: border-box;
+  background: #fff;
+  transition: 0.3s max-width;
+}
+.account-statistics-item__utm-value:hover {
+  max-width: none;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.1);
+  color: #0F7DF0;
+}
+.account-statistics-item__header-row-2 {
+  padding: 20px 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.account-statistics-item__total-title {
+  color: #C0C0C0;
+  font-size: 14px;
+}
+.account-statistics-item__total-value {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.48px;
+}
+.account-statistics-item__btn-toggle-detail {
+  display: flex;
+  width: 100%;
+  padding: 7px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #fff;
+}
+.account-statistics-item__btn-toggle-detail::before, .account-statistics-item__btn-toggle-detail::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #F2F2F2;
+}
+.account-statistics-item__btn-toggle-detail span {
+  display: block;
+  width: 9px;
+  height: 5px;
+  background: 50%/contain no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5' fill='none'%3E%3Cpath d='M8 4L4.5 1L1 4' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  padding: 0 20px;
+}
+.account-statistics-item__btn-toggle-detail.open span {
+  transform: rotateX(180deg);
+}
+.account-statistics-item__detail {
+  margin-top: -5px;
+  padding: 25px 20px 20px;
+  border-radius: 0px 0px 10px 10px;
+  background: #F6F6F6;
+}
+.account-statistics-item__detail-table {
+  text-align: center;
+}
+.account-statistics-item__detail-table-header {
+  grid-auto-rows: 41px;
+}
+.account-statistics-item__detail-table-header .account-statistics-item__detail-table-title {
+  color: #949494;
+}
+.account-statistics-item__detail-table-header, .account-statistics-item__detail-table-body-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(5, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.account-statistics-item__detail-table-title {
+  text-align: left;
+  font-size: 14px;
+}
+.account-statistics-item__detail-table-col {
+  font-size: 15px;
+}
+.account-statistics-item__detail-table-total {
+  font-size: 15px;
+}
+.account-statistics-item__detail-table-body {
+  margin-top: 15px;
+  display: grid;
+  gap: 5px;
+}
+.account-statistics-item__detail-table-body-row {
+  grid-auto-rows: 34px;
+}
 .popup-modal {
   position: fixed;
   top: 0;
