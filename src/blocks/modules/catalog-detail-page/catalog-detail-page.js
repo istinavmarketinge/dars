@@ -129,15 +129,15 @@ export default DetailCatalogSlider;
 
 jQuery(document).ready(function() {
 	
-	$('.box-to-favourites').on('click',function(){
-		$(this).toggleClass('active');
+	// $('.box-to-favourites').on('click',function(){
+	// 	$(this).toggleClass('active');
 
-    if($(this).hasClass('active')){
-      $(this).find('.controls-bar__item-title').text('В избранном');
-    } else {
-      $(this).find('.controls-bar__item-title').text('В избранное');
-    }
-  });
+  //   if($(this).hasClass('active')){
+  //     $(this).find('.controls-bar__item-title').text('В избранном');
+  //   } else {
+  //     $(this).find('.controls-bar__item-title').text('В избранное');
+  //   }
+  // });
 
 	// $('.box-to-compare').on('click',function(){
   //   $(this).toggleClass('active');
