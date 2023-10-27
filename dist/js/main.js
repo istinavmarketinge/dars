@@ -941,10 +941,9 @@ jQuery(document).ready(function () {
 
   $('.catalog-detail-page-header__specifications-more').on('click', function () {
     var link = $(this).data('link');
-    var tabsBlockPosition = $('.catalog-detail-page-header__in-right-block').offset().top;
-    window.scrollTo({
-      top: tabsBlockPosition
-    });
+    $("html, body").animate({
+      scrollTop: $('.catalog-detail-page-tabs-list').offset().top - 100
+    }, 200);
     var index = $('.catalog-detail-page-tabs-list').find("#".concat(link)).index();
     $('.catalog-detail-page-tabs-list').find('li').removeClass('active').eq(index).addClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(index).addClass('active');
   });

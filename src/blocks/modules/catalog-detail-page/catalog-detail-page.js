@@ -151,11 +151,10 @@ jQuery(document).ready(function() {
   
   $('.catalog-detail-page-header__specifications-more').on('click',function(){
     let link = $(this).data('link');
-    let tabsBlockPosition = $('.catalog-detail-page-header__in-right-block').offset().top;
     
-    window.scrollTo({
-      top: tabsBlockPosition
-    });
+    $("html, body").animate({
+      scrollTop: $('.catalog-detail-page-tabs-list').offset().top - 100
+    }, 200);
 
     let index = $('.catalog-detail-page-tabs-list').find(`#${link}`).index();
 
