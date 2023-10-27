@@ -29,7 +29,7 @@
         <script src="https://use.fontawesome.com/c9a8962e52.js"></script>
         
         
-            <link rel="stylesheet" href="styles/main.css?12:16">
+            <link rel="stylesheet" href="styles/main.css?12:18">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1420,47 +1420,63 @@
                     <section class="section">
     <div class="section__into">
         <div class="section__filter hide_on_mobile"><div class="filter">
-    <div class="rootsubcatstree">
-    <div class="">
-        <div class="" data-depth-level="0">
-            <a href="/catalog/">
-                Все категории </a>
+    <div class="filter__title">Категория</div>
+<nav class="filter__menu">
+    <ul class="filter__menu-in">
+        <li class="filter__menu-item filter__menu-item--all" style="--depth: 1;">
+            <a href="/catalog/">Все категории </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 1;">
+            <a href="/catalog/plitka/">Плитка </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 2;">
+            <a href="/catalog/keramicheskaya_plitka/">Керамическая плитка </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 2;">
+            <a href="/catalog/keramogranit/">Керамогранит </a>
+        </li>
+        <li class="filter__menu-item isActive" style="--depth: 2;">
+            <a href="/catalog/mozaika/">Мозаика </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 2;">
+            <a href="/catalog/stupeni_i_klinker/">Ступени и клинкер </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 2;">
+            <a href="/catalog/kvartsvinilovaya_plitka/">Кварцвиниловая плитка </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 2;">
+            <a href="/catalog/soputstvuyushchie_tovary/">Сопутствующие товары </a>
+        </li>
+        <li class="filter__menu-item" style="--depth: 3;">
+            <a href="/catalog/zatirka/">Затирка </a>
+        </li>
+    </ul>
+</nav>
+
+    <div class="filter-mobile">
+         <div class="filter-mobile__back">Назад</div>
+         <div class="filter-mobile__title">
+            <h2>Фильтры</h2>
+            <div class="filter-mobile__del-filter">
+                <input class="btn btn-link" type="button" id="del_filter" name="del_filter" value="Очистить фильтр">
+            </div>
+         </div>
+
+         <div class="section__sort-filter hide_on_mobile" bis_skin_checked="1">
+            <div class="section__sort-filter-title" bis_skin_checked="1">Отображать только:</div>
+            <a href="" class="section__sort-filter-item">
+                <div class="section__sort-filter-item-name" bis_skin_checked="1">Товары со скидками</div>
+                <div class="section__sort-filter-item-check" bis_skin_checked="1"></div>
+            </a>
+            <a href="" class="section__sort-filter-item checked">
+                <div class="section__sort-filter-item-name" bis_skin_checked="1">Новинки</div>
+                <div class="section__sort-filter-item-check" bis_skin_checked="1"></div>
+            </a>
         </div>
-        <div class="" data-depth-level="1">
-            <a href="/catalog/plitka/">
-                Плитка </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/keramicheskaya_plitka/">
-                Керамическая плитка </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/keramogranit/">
-                Керамогранит </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/mozaika/">
-                Мозаика </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/stupeni_i_klinker/">
-                Ступени и клинкер </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/kvartsvinilovaya_plitka/">
-                Кварцвиниловая плитка </a>
-        </div>
-        <div class="" data-depth-level="2">
-            <a href="/catalog/soputstvuyushchie_tovary/">
-                Сопутствующие товары </a>
-        </div>
-        <div class="" data-depth-level="3">
-            <a href="/catalog/zatirka/">
-                Затирка </a>
-        </div>
+
     </div>
 
-</div>
+    
     <div class="bx-filter bx-green ">
         <div class="bx-filter-section container-fluid">
             <div class="row">
@@ -1617,6 +1633,11 @@
                             </span>
                         </div>
 
+                        <div class="bx-filter-parameters-box-search">
+                            <input name="s" placeholder="Поиск" type="search">
+                            <button type="submit"><img src="./img/search-gray.svg" alt="icon"></button>
+                        </div>
+
                         <div class="bx-filter-block" data-role="bx_filter_block"
                             style="display: block; opacity: 1; height: 225px;">
                             <div class="row bx-filter-parameters-box-container">
@@ -1718,6 +1739,13 @@
                                             </span>
                                         </label>
                                     </div>
+
+                                    <div class="bx-filter-input-checkbox-more-checkbox">
+                                        <span class="more-show">Ещё</span>
+                                        <span class="more-hide">Свернуть</span>
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div style="clear: both"></div>
@@ -1729,6 +1757,7 @@
                     <div class="col-xs-12 bx-filter-button-box">
                         <div class="bx-filter-block">
                             <div class="bx-filter-parameters-box-container">
+                                <div class="bx-filter-parameters-box-container-all-filters">Все фильтры</div>
                                 <input class="btn btn-themes" type="button" id="set_filter" name="set_filter"
                                     value="Показать">
                                 <input class="btn btn-link" type="button" id="del_filter" name="del_filter"

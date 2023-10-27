@@ -52,14 +52,10 @@
             <section>
                 <div class="container">
                     <div class="general__page-title cart-page__page-title">
-                        <h2 class="title">Корзина</h2>
-                        <div class="cart-page__section hide_on_desktop">
-                            <div class="cart-page__section-in"><span>Общий вес:</span> <span>140,8 кг</span></div>
-                            <div class="cart-page__section-in"><span>Общий объем:</span> <span>4 куб. м</span></div>
-                        </div>
+                        <h2 class="title">Оформление заказа</h2>
                     </div>
                     @@include("../blocks/modules/cart-page-layout/cart-page-layout.html", {
-                        "main": "@@include('../cart-page/cart-page.html')"
+                        "main": "@@include('../cart-page-order/cart-page-order.html')"
                     })
                 </div>
             </section>
