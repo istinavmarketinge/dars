@@ -11471,6 +11471,12 @@ dl.open .specifications-block__row {
   letter-spacing: 0.96px;
   margin-bottom: 40px;
 }
+.personal-account-main__title-count {
+  color: #A9A9A9;
+  font-size: 12px;
+  font-weight: 400;
+  vertical-align: top;
+}
 .personal-account-main__form {
   display: grid;
   gap: 40px;
@@ -13458,6 +13464,10 @@ input:checked + .dars-control__btn-name::before {
   border-radius: 5px;
   background: rgba(240, 56, 15, 0.1);
   margin-top: 15px;
+}
+
+.personal-favourites-products {
+  margin: 0 -15px;
 }
 
 .popup-modal {
