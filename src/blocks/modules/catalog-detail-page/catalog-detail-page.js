@@ -149,14 +149,14 @@ jQuery(document).ready(function() {
   //   }
 	// });
   
-  $('.catalog-detail-page-header__specifications-more').on('click',function(){
-    let link = $(this).data('link');
+  $('[data-scroll-to]').on('click',function(){
+    let id = $(this).data('scrollTo');
     
     $("html, body").animate({
       scrollTop: $('.catalog-detail-page-tabs-list').offset().top - 100
-    }, 200);
+    }, 100);
 
-    let index = $('.catalog-detail-page-tabs-list').find(`#${link}`).index();
+    let index = $('.catalog-detail-page-tabs-list').find(`[data-scroll-for="${id}"]`).index();
 
     $('.catalog-detail-page-tabs-list').find('li').removeClass('active').eq(index).addClass('active')
     .closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(index).addClass('active');

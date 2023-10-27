@@ -939,12 +939,12 @@ jQuery(document).ready(function () {
   //   }
   // });
 
-  $('.catalog-detail-page-header__specifications-more').on('click', function () {
-    var link = $(this).data('link');
+  $('[data-scroll-to]').on('click', function () {
+    var id = $(this).data('scrollTo');
     $("html, body").animate({
       scrollTop: $('.catalog-detail-page-tabs-list').offset().top - 100
-    }, 200);
-    var index = $('.catalog-detail-page-tabs-list').find("#".concat(link)).index();
+    }, 100);
+    var index = $('.catalog-detail-page-tabs-list').find("[data-scroll-for=\"".concat(id, "\"]")).index();
     $('.catalog-detail-page-tabs-list').find('li').removeClass('active').eq(index).addClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(index).addClass('active');
   });
   $('.btn-to-basket').on('click', function () {

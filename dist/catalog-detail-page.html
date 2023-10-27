@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
-            <link rel="stylesheet" href="styles/main.css?14:38">
+            <link rel="stylesheet" href="styles/main.css?15:5">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1456,7 +1456,7 @@
         <div class="catalog-detail-page-header__controls-bar">
 
             <div class="controls-bar">
-                <button type="button" class="controls-bar__item box-estimation">
+                <button type="button" class="controls-bar__item box-estimation" data-scroll-to="tab-reviews">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.00984375 4.61541C-0.0223033 4.79158 0.0229405 4.98437 0.165451 5.12964L2.68695 7.7001L2.09187 11.3314C2.01545 11.7978 2.48316 12.1534 2.88328 11.9331L6 10.2177L9.1167 11.9331C9.51684 12.1534 9.98454 11.7978 9.9081 11.3314L9.31302 7.7001L11.8346 5.12964C12.1583 4.79964 11.9801 4.22432 11.5329 4.15591L8.04756 3.62273L6.48906 0.318175C6.39291 0.114282 6.20945 0.00838652 6.0226 0.000488281V6.35766L0.00984375 4.61541Z" fill="#F0820F" />
                         <path d="M4.02803 4.11697C4.1925 4.09181 4.33368 3.98649 4.40465 3.836L5.96317 0.531447L5.96318 0.531418C5.9725 0.511654 5.98108 0.505995 5.98368 0.504381C5.98783 0.501804 5.99337 0.5 6 0.5C6.00663 0.5 6.01216 0.501804 6.01632 0.504381C6.01892 0.505995 6.0275 0.511654 6.03682 0.531418L6.03683 0.531445L7.59533 3.836C7.6663 3.98649 7.80748 4.09181 7.97195 4.11697L11.4573 4.65015C11.4671 4.65166 11.4713 4.65442 11.4753 4.65811C11.4811 4.66346 11.4897 4.67468 11.4952 4.69262C11.5008 4.71052 11.5012 4.72833 11.4981 4.74267C11.4954 4.75511 11.4899 4.76702 11.4776 4.77948C11.4776 4.77949 11.4776 4.77949 11.4776 4.7795L8.95608 7.34995C8.84453 7.46367 8.79384 7.62374 8.8196 7.78095L9.41468 11.4123L9.41468 11.4123C9.41864 11.4364 9.41499 11.4522 9.41068 11.4626C9.40572 11.4747 9.39763 11.4848 9.3885 11.4917C9.37937 11.4987 9.37283 11.4998 9.37136 11.5C9.37072 11.5 9.37017 11.5 9.36915 11.4998C9.36824 11.4996 9.36451 11.4988 9.35779 11.4951L6.24109 9.77966C6.09098 9.69704 5.90902 9.69704 5.75891 9.77966L2.64219 11.4951L2.88328 11.9331L2.64218 11.4951C2.63547 11.4988 2.63174 11.4996 2.63083 11.4998C2.62982 11.5 2.62927 11.5 2.62863 11.5C2.62716 11.4998 2.62062 11.4987 2.61149 11.4917C2.60235 11.4848 2.59426 11.4747 2.58929 11.4626C2.58499 11.4522 2.58134 11.4364 2.58529 11.4123C2.58529 11.4123 2.58529 11.4123 2.58529 11.4123L3.18037 7.78095C3.20613 7.62374 3.15544 7.46367 3.04389 7.34995L0.522388 4.77949L0.522369 4.77947C0.510134 4.767 0.504597 4.75508 0.501922 4.74266C0.498837 4.72833 0.499248 4.71052 0.50479 4.69263C0.510347 4.67469 0.518895 4.66347 0.524698 4.65812C0.528707 4.65442 0.532874 4.65166 0.54272 4.65015L4.02803 4.11697Z" stroke="#F0820F" stroke-linecap="round" stroke-linejoin="round" />
@@ -1521,7 +1521,7 @@
                         </div>
                     </dl>
                 </div>
-                <button type="button" class="catalog-detail-page-header__specifications-more" data-link="tab-specifications">Подробнее</button>
+                <button type="button" class="catalog-detail-page-header__specifications-more" data-scroll-to="tab-specifications">Подробнее</button>
             </div>
 
             <div class="catalog-detail-page-header__purchase-block">
@@ -1575,7 +1575,7 @@
                 <li class="catalog-detail-page-tabs-list__item active">
                     <button type="button" class="catalog-detail-page-tabs-list__btn">Описание</button>
                 </li>
-                <li class="catalog-detail-page-tabs-list__item" id="tab-specifications">
+                <li class="catalog-detail-page-tabs-list__item" data-scroll-for="tab-specifications">
                     <button type="button" class="catalog-detail-page-tabs-list__btn">Характеристики</button>
                 </li>
                 <li class="catalog-detail-page-tabs-list__item">
@@ -1584,7 +1584,7 @@
                 <li class="catalog-detail-page-tabs-list__item">
                     <button type="button" class="catalog-detail-page-tabs-list__btn">Задать вопрос</button>
                 </li>
-                <li class="catalog-detail-page-tabs-list__item">
+                <li class="catalog-detail-page-tabs-list__item" data-scroll-for="tab-reviews">
                     <button type="button" class="catalog-detail-page-tabs-list__btn">Отзывы <sup>4</sup></button>
                 </li>
             </ul>
