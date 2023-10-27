@@ -21,6 +21,7 @@ import CartPage from "%modules%/cart-page/cart-page";
 import PersonalAccount from "%modules%/personal-account/personal-account";
 import PersonalAccountCreatePromocode from "%modules%/personal-account-create-promocode/personal-account-create-promocode";
 import PersonalAccountStatistics from "%modules%/personal-account-statistics/personal-account-statistics";
+import Orders from "%modules%/orders/orders";
 
 
 
@@ -52,6 +53,7 @@ window.app.cartPage = new CartPage();
 window.app.personalAccount = new PersonalAccount();
 window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode();
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
+window.app.orders = new Orders();
 
 
 
@@ -78,5 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.personalAccount.init();
     window.app.personalAccountCreatePromocode.init();
     window.app.personalAccountStatistics.init();
+    window.app.orders.init();
 })
 

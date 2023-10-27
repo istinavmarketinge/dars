@@ -1413,71 +1413,680 @@
             <section>
                 <div class="container">
                     <div class="personal-account">
-    <div class="personal-account__in">
-        <div class="personal-account__left">
-
-            <div class="personal-account__profile">
-                <span class="personal-account__title">Мой профиль</span>
-                <div class="personal-account__name">Илон Маск</div>
-                <a href="mailto:#" class="personal-account__mail">ilon.mask@gmail.com</a>
-                <a href="tel:#" class="personal-account__phone">+7 (962) 278-35-56</a>
-                <a href="#" class="personal-account__exit">Выйти</a>
+    <div class="personal-account__wrap">
+        <div class="personal-account-sidebar">
+            <div class="personal-account-sidebar-user-info">
+                <div class="personal-account-sidebar-user-info__title">Мой профиль</div>
+                <div class="personal-account-sidebar-user-info__name">Илон Маск</div>
+                <div class="personal-account-sidebar-user-info__contact-data">
+                    <span>ilon.mask@gmail.com</span>
+                    <span>+7 (962) 278-35-56</span>
+                </div>
+                <a href="#" class="personal-account-sidebar-user-info__out-profile">Выйти</a>
             </div>
-
-            <div class="personal-account__tabs">
-                <a href="#" class="personal-account__tabs-item">Личный кабинет</a>
-                <a href="#" class="personal-account__tabs-item">Избранное</a>
-                <a href="#" class="personal-account__tabs-item">Мои заказы</a>
-                <a href="#" class="personal-account__tabs-item">Смена пароля</a>
-                <a href="#" class="personal-account__tabs-item --bottom-tabs">Партнерская программа</a>
-                <a href="#" class="personal-account__tabs-item ">Настройки подписки</a>
+            <div class="personal-account-sidebar-menu">
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item ">
+                        <a href="personal-account.html">Личный кабинет</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Избранное</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Мои заказы</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Смена пароля</a>
+                    </li>
+                </ul>
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Партнерская программа</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Создать промокод</a>
+                    </li>
+                    <li class="personal-account-sidebar-menu__item">
+                        <a href="#">Статистика</a>
+                    </li>
+                </ul>
+                <ul class="personal-account-sidebar-menu__group">
+                    <li class="personal-account-sidebar-menu__item ">
+                        <a href="personal-account-subscription.html">Настройки подписки</a>
+                    </li>
+                </ul>
             </div>
-             
         </div>
 
-
-        <div class="personal-account__right">
-            <div class="affiliate-program"> 
-                <div class="affiliate-program__left">
-                    <h2 class="affiliate-program__title">Партнерская программа</h2>
-                    <div class="affiliate-program__text">
-                        <div class="affiliate-program__text-application">
-                                Оставьте заявку, чтобы стать участником <span class="affiliate-program__more ">партнерской программы</span>
-                            <img src="./img/application.svg" alt="icon">
+        <div class="personal-account-main">
+           <div class="orders-page">
+    <ul class="orders-page__tabs">
+        <li class="orders-page__tab active">
+            <span class="orders-page__tab-name">Текущие заказы</span>
+            <span class="orders-page__tab-num">5</span>
+        </li>
+        <li class="orders-page__tab">
+            <span class="orders-page__tab-name">История заказов</span>
+            <span class="orders-page__tab-num">14</span>
+        </li>
+    </ul>
+    <div class="orders-page__body">
+        <div class="orders-box orders-box--orders-current">
+            <ul class="orders-box__list">
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--orange">Ожидает оплаты</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
                         </div>
-                        <div>Вы можете зарабатывать на приглашенных вами покупателях, не прикладывая никаких усилий!</div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка магазина</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">г. Тула, ул. Арсенальная, кв. 404</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                    <div class="orders-box-item__delivery-comment">За час до приезда с вами свяжется курьер</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка ТК</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-tc orders-box-item__delivery-tc--sdek separator"></div>
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--cashe">Наличные</div>
+                                    </div>
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--sbp">СБП</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-cancel" data-modal-toggle="cancelTheOrder">Отменить заказ</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="affiliate-program__button">Стать партнером </div>
-                </div>
-                <div class="affiliate-program__right">
-                    <div class="affiliate-program__hide-details">Скрыть подробности</div>
-                    <div class="affiliate-program__text-abot-program">
-                        <p>Lorem ipsum dolor sit amet consectetur. Eleifend diam augue quis bibendum egestas. Tellus condimentum diam platea sed turpis fames arcu varius amet. Euismod vestibulum egestas elit adipiscing urna interdum. Vitae urna magna blandit eget donec tristique quis. Felis ut velit molestie eleifend interdum tincidunt. Ac duis vel nibh sapien sagittis pulvinar in. A mauris massa urna scelerisque cursus viverra.</p>
-
-                        <p>Sem sit est maecenas habitasse nunc molestie. Lorem odio aliquet venenatis in. Orci risus ultricies fermentum ullamcorper facilisi sagittis tristique. Nibh felis ultrices nec accumsan donec urna. Varius commodo vitae rhoncus nunc.</p>
-
-                        <p>Duis diam duis egestas ipsum vitae adipiscing nullam bibendum massa. Molestie aliquam turpis eleifend eget porta donec luctus et felis. Libero porttitor volutpat vel tempus porta sit suspendisse. Lectus scelerisque tortor quis a tortor. Maecenas nec non urna eget dictum. Interdum proin aenean eget dignissim suscipit diam tellus bibendum tellus. Id arcu non venenatis in nunc. Mi ac nec id tortor in in leo rhoncus.</p>
-
-                        <p>Non sed volutpat luctus orci diam viverra integer. Lacus sit aliquam et cursus id egestas risus volutpat. Porta eget dignissim sed tempus donec aliquet justo. Diam molestie nec ut duis. Adipiscing purus aliquam erat in tempus id. Ut nunc eros imperdiet cursus nunc magna diam egestas. Feugiat interdum egestas adipiscing tellus consectetur nunc massa quisque.</p>
-
-                        <p>Sem sit est maecenas habitasse nunc molestie. Lorem odio aliquet venenatis in. Orci risus ultricies fermentum ullamcorper facilisi sagittis tristique. Nibh felis ultrices nec accumsan donec urna. Varius commodo vitae rhoncus nunc.</p>
-
-                        <p>Duis diam duis egestas ipsum vitae adipiscing nullam bibendum massa. Molestie aliquam turpis eleifend eget porta donec luctus et felis. Libero porttitor volutpat vel tempus porta sit suspendisse. Lectus scelerisque tortor quis a tortor. Maecenas nec non urna eget dictum. Interdum proin aenean eget dignissim suscipit diam tellus bibendum tellus. Id arcu non venenatis in nunc. Mi ac nec id tortor in in leo rhoncus.</p>
+                </li>
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">21.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--orange">Ожидает оплаты</div>
+                            <div class="orders-box-item__header-order-cost">48 550 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+    
+                                            <div class="cart-line__count">7 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">30 уп</div>
+                                            <div class="cart-line__price">1 422 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--cashe">Наличные</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-cancel" data-modal-toggle="cancelTheOrder">Отменить заказ</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </li>
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--green">Оплачен</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--orange">Ожидает оплаты</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка ТК</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-tc orders-box-item__delivery-tc--sdek separator"></div>
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-cancel" data-modal-toggle="cancelTheOrder">Отменить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="orders-box orders-box--orders-history" hidden>
+            <ul class="orders-box__list">
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--green">Завершен</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка магазина</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">г. Тула, ул. Арсенальная, кв. 404</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                    <div class="orders-box-item__delivery-comment">За час до приезда с вами свяжется курьер</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка ТК</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-tc orders-box-item__delivery-tc--sdek separator"></div>
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--cashe">Наличные</div>
+                                    </div>
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--sbp">СБП</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-repeat">Повторить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">21.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--green">Завершен</div>
+                            <div class="orders-box-item__header-order-cost">48 550 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+    
+                                            <div class="cart-line__count">7 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">30 уп</div>
+                                            <div class="cart-line__price">1 422 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--cashe">Наличные</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-repeat">Повторить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders-box__item orders-box__item--cancelled">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--orange">Отменён</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Самовывоз</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023 по 14.10.2023</div>
+                                    <div class="orders-box-item__delivery-time separator">9.00-18.00</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-repeat">Повторить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="orders-box__item">
+                    <div class="orders-box-item">
+                        <div class="orders-box-item__header js-orders-box-item-open">
+                            <div class="orders-box-item__header-order-number">Заказ № 442 184</div>
+                            <div class="orders-box-item__header-order-date">25.09.2023</div>
+                            <div class="orders-box-item__header-order-status orders-box-item__header-order-status--green">Завершен</div>
+                            <div class="orders-box-item__header-order-cost">10 542 ₽</div>
+                        </div>
+                        <div class="orders-box-item__body" hidden>
+                            <div class="orders-box-item__count-products">Товары (5)</div>
+                            <ul class="orders-box-item__products-list">
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                                <li class="orders-box-item__products-list-item">
+                                    <div class="cart-line">
+                                        <div class="cart-line__wrap" target="_blank">
+                                            <a href="#" class="cart-line__image"><img src="/img/catalog/plitka.jpg" alt=""></a>
+                                            <div class="cart-line__articul">Арт. 421259</div>
+                                            <div class="cart-line__name">Глазурованный керамогранит Artens Charm 18.5x59.8 см 1.216 м² матовый цвет коричневый рельеф</div>
+                                            <div class="cart-line__discount">
+                                                <div class="cart-line__discount-tile">-10%</div>
+                                                <div class="cart-line__discount-price">-2 814 ₽</div>
+                                            </div>
+    
+                                            <div class="cart-line__count">4 уп</div>
+                                            <div class="cart-line__price">10 232 ₽</div>
+                                        </>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="orders-box-item__delivery">
+                                <div class="orders-box-item__delivery-title">Доставка ТК</div>
+                                <div class="orders-box-item__delivery-wrap">
+                                    <div class="orders-box-item__delivery-tc orders-box-item__delivery-tc--sdek separator"></div>
+                                    <div class="orders-box-item__delivery-address separator">ул. Пролетарская, д. 44, к.3</div>
+                                    <div class="orders-box-item__delivery-date">29.09.2023</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__payment">
+                                <div class="orders-box-item__payment-title">Способ оплаты</div>
+                                <div class="orders-box-item__payment-method">
+                                    <div class="orders-box-item__payment-item">
+                                        <div class="orders-box-item__payment-item-name orders-box-item__payment-item-name--invoice">Счет  №523/1 от 25.09.2023</div>
+                                        <a href="#" class="orders-box-item__payment-btn">Оплатить</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__total">
+                                <div class="orders-box-item__total-title">Итого</div>
+                                <div class="orders-box-item__total-amount">
+                                    <div class="orders-box-item__total-discount">15 788 ₽</div>
+                                    <div class="orders-box-item__total-price">10 542 ₽</div>
+                                </div>
+                            </div>
+                            <div class="orders-box-item__controls">
+                                <button type="button" class="orders-box-item__btn-repeat">Повторить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="orders-box__show-more">
+                <button type="button" class="orders-box__show-more-btn">Показать еще</button>
             </div>
+            <ul class="orders-box__pagination">
+                <li class="orders-box__pagination-item current"><a>1</a></li>
+                <li class="orders-box__pagination-item"><a href="#">2</a></li>
+                <li class="orders-box__pagination-item"><a href="#">3</a></li>
+            </ul>
         </div>
     </div>
 </div>
-                    <div class="thanks-you">
-    <div class="thanks-you__in">
-        <div class="thanks-you__close"></div>
-        <h2>Спасибо за вашу заявку!</h2>
-        <div class="thanks-you__text">Ваши данные направлены на рассмотрение. Ожидайте ответа по указанной вами почте. Надеемся на плодотворное сотрудничество!</div>
-        <div class="thanks-you__button">ОК</div>
+        </div>
     </div>
 </div>
-
                 </div>
             </section>
             <div class="container">
@@ -1498,7 +2107,6 @@
     </div>
 </div>
             </div>
-
 
             <footer>
                 <div class="container">
@@ -1679,6 +2287,21 @@
 
                 </div>
             </footer>
+            <div class="popup-modal" data-modal-id="cancelTheOrder">
+    <form class="modal-delete-order">
+        <input type="hidden" value="" name="id-del-promocode">
+        <div class="popup-modal__closer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none">
+                <path d="M2 24L13 13M13 13L24 2M13 13L2 2M13 13L24 24" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="modal-delete-order__title">Вы точно хотите отменить заказ?</div>
+        <div class="modal-delete-order__controls">
+            <button type="button" class="modal-delete-order__btn modal-delete-order__yes">Да</button>
+            <button type="button" class="modal-delete-order__btn modal-delete-order__no">Нет</button>
+        </div>
+    </form>
+</div>
         
         
         <script src="js/vendor.js"></script>
