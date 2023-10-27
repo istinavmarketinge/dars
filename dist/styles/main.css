@@ -12647,6 +12647,7 @@ input:checked + .dars-control__btn-name::before {
   align-items: center;
   padding-right: 20px;
   margin-right: 20px;
+  font-weight: 500;
 }
 .personal-account-statistics__header-col {
   text-align: center;
