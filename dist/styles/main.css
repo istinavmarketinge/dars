@@ -12829,7 +12829,6 @@ input:checked + .dars-control__btn-name::before {
 .account-statistics-item__detail-table-body-row {
   grid-auto-rows: 34px;
 }
-<<<<<<< HEAD
 .orders-page__tabs {
   padding: 0;
   margin: 0;
@@ -13223,7 +13222,8 @@ input:checked + .dars-control__btn-name::before {
   display: inline-block;
   position: relative;
   top: 8px;
-=======
+}
+
 .cart-page__total {
   display: flex;
   flex-direction: column;
@@ -13457,7 +13457,6 @@ input:checked + .dars-control__btn-name::before {
   border-radius: 5px;
   background: rgba(240, 56, 15, 0.1);
   margin-top: 15px;
->>>>>>> ec75a28d99451dc754248fbaff178bda35dec411
 }
 
 .popup-modal {
