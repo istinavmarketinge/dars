@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Swiper from 'swiper/bundle';
 
 const DetailCatalogSlider = class DetailCatalogSlider {
@@ -202,6 +203,45 @@ jQuery(document).ready(function() {
 
       $('.review-block__review-form').slideToggle();
   });
-	
+ 
+});
 
+function showMore(count){
+    let ajaxElement = $('.reviews-list-box-list__ajax-load');
+
+    if (ajaxElement.attr('data-next')) {
+      if(ajaxElement.attr('data-next') >= $('.reviews-list-box-list__item').length) {
+        return;
+      }
+
+      count = +ajaxElement.attr('data-next');
+    }
+
+    let wt = $(window).scrollTop();
+    let wh = $(window).height();
+    let et = ajaxElement.offset().top;
+    let eh = ajaxElement.outerHeight();
+    let dh = $(document).height();   
+    let centerWindow = wt + (wh / 2);
+
+    if (centerWindow >= et) {
+      setTimeout(() => { ajaxElement.removeClass('visually-hidden') }, 500);
+      setTimeout(() => { 
+        $('.reviews-list-box-list__item').each(function (index) {
+
+          if (index <= count) {
+            $(this).css({'display': 'block'});
+          }
+          
+        });
+        ajaxElement.attr('data-next', count + 5).addClass('visually-hidden');
+      }, 1500);
+    }
+}
+
+$(window).scroll(function(){
+  if($('[data-scroll-for="tab-reviews"]').hasClass('active')){
+    let countViewed = 5;
+    showMore(countViewed);
+  };
 });
