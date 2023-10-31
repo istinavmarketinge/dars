@@ -4,7 +4,7 @@ const Action = class Action {
     constructor() {
         this.action_find_height=0;
         this.jquery_obj = ".action .js_click_closest .js_click_find";
-        this.class_close = "close";
+        this.class_close = "isClose";
 
     }
     addClickHandler(action_find_heigh) {

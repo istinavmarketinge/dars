@@ -128,7 +128,7 @@
         transition: height 0.5s linear;
     }
     @media(max-width:961px){
-        &__text-block.close {
+        &__text-block.isClose {
             height: 140px;
             overflow: hidden;
         }

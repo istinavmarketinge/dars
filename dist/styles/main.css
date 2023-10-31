@@ -7233,7 +7233,7 @@ body.isScrollPrevented {
   transition: height 0.5s linear;
 }
 @media (max-width: 961px) {
-  .action__text-block.close {
+  .action__text-block.isClose {
     height: 140px;
     overflow: hidden;
   }

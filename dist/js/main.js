@@ -173,7 +173,7 @@ var Action = /*#__PURE__*/function () {
     _classCallCheck(this, Action);
     this.action_find_height = 0;
     this.jquery_obj = ".action .js_click_closest .js_click_find";
-    this.class_close = "close";
+    this.class_close = "isClose";
   }
   _createClass(Action, [{
     key: "addClickHandler",
