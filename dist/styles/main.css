@@ -7225,7 +7225,7 @@ body.isScrollPrevented {
   color: #8C8C8C;
   font-family: Inter;
   font-size: 16px;
-  font-style: normal;
+  font-style: normal !important;
   font-weight: 400;
   line-height: 130%; /* 20.8px */
 }
@@ -13678,7 +13678,7 @@ input:checked + .dars-control__btn-name::before {
   transition: all 0.3s ease;
 }
 .cart-page__open-map .text:before {
-  content: "Посмотреть на карте";
+  content: attr(data-noopened-text);
   color: #333;
   font-size: 16px;
   font-style: normal;

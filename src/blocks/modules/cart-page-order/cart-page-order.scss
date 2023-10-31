@@ -115,7 +115,7 @@
         }
         .text {
             &:before {
-                content: "Посмотреть на карте";
+                content: attr(data-noopened-text);
                 color: #333;
                 font-size: 16px;
                 font-style: normal;

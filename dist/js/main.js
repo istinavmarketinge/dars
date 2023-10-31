@@ -703,34 +703,117 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 var OrderPage = /*#__PURE__*/function () {
   function OrderPage() {
     _classCallCheck(this, OrderPage);
-    this.map = null;
+    this.mapOpen = null;
+    this.mapChoose = null;
   }
   _createClass(OrderPage, [{
-    key: "createMap",
-    value: function createMap() {
+    key: "createOpenMap",
+    value: function createOpenMap() {
       var _this = this;
       return new Promise(function (resolve, reject) {
-        if (!document.querySelector('#cart-page__map-wrap--js')) {
+        if (!document.querySelector('#cart-page__map-wrap--js-open')) {
           reject('Не найден селектор для инициализации карты');
           return false;
         }
         ;
         ymaps.ready(function () {
-          _this.map = new ymaps.Map("cart-page__map-wrap--js", {
+          _this.mapOpen = new ymaps.Map("cart-page__map-wrap--js-open", {
             center: [55.76, 37.64],
             zoom: 7
           });
-          resolve(_this.map);
+          resolve(_this.mapOpen);
         });
+      });
+    }
+  }, {
+    key: "customChooseBaloon",
+    value: function customChooseBaloon() {
+      var template = ymaps.templateLayoutFactory.createClass('<div class="balloon-root ">' + '<a class="close" href="#">&times;</a>' + '<div class="arrow balloon-pin"></div>' + '<div class="balloon-head balloon">asdasads</div>' + '<div class="balloon-body balloon">asdasdadsads</div>' + '<div class="balloon-footer balloon">asdasdassdasd</div>' + '</div>', {
+        //Формирование макета
+        build: function build() {
+          this.constructor.superclass.build.call(this);
+          console.log('build');
+          // this._$element = $('.balloon-root', this.getParentElement());
+
+          // this.applyElementOffset();
+
+          // this._$element.find('.close')
+          //     .on('click', $.proxy(this.onCloseClick, this));
+        },
+
+        //удаление макета из DOM
+        clear: function clear() {
+          // this._$element.find('.close')
+          //     .off('click');
+
+          // this.constructor.superclass.clear.call(this);
+        },
+        //закрытие балуна
+        onCloseClick: function onCloseClick(e) {
+          // e.preventDefault();
+
+          // this.events.fire('userclose');
+        }
+      });
+      return template;
+    }
+  }, {
+    key: "createChooseMap",
+    value: function createChooseMap() {
+      var _this2 = this;
+      return new Promise(function (resolve, reject) {
+        if (!document.querySelector('#cart-page__map-wrap--js-choose')) {
+          reject('Не найден селектор для инициализации карты');
+          return false;
+        }
+        ;
+        ymaps.ready(function () {
+          _this2.mapChoose = new ymaps.Map("cart-page__map-wrap--js-choose", {
+            center: [55.76, 37.64],
+            zoom: 16,
+            controls: []
+          });
+          _this2.mapChoose.events.add('click', function (e) {
+            var coords = e.get('coords');
+            _this2.mapChoose.geoObjects.removeAll();
+            // // Если метка уже создана – просто передвигаем ее.
+            // if (myPlacemark) {
+            //     myPlacemark.geometry.setCoordinates(coords);
+            // }
+            // // Если нет – создаем.
+            // else {
+            var myPlacemark = new ymaps.Placemark(coords, {}, {
+              draggable: true
+            });
+            _this2.mapChoose.geoObjects.add(myPlacemark);
+            // Слушаем событие окончания перетаскивания на метке.
+            myPlacemark.events.add('dragend', function () {
+              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+            });
+            // // }
+            _this2.getAddress(coords);
+          });
+          resolve(_this2.mapChoose);
+          console.log('карта инициализирована');
+        });
+      });
+    }
+  }, {
+    key: "getAddress",
+    value: function getAddress(coords) {
+      ymaps.geocode(coords).then(function (res) {
+        var firstGeoObject = res.geoObjects.get(0),
+          address = firstGeoObject.getAddressLine();
+        document.querySelector('#delivery-address input').value = address;
       });
     }
   }, {
     key: "setMapPoint",
     value: function setMapPoint(map, address) {
-      var _this2 = this;
-      console.log(address);
+      var _this3 = this;
+      console.log('address', address);
       return new Promise(function (resolve, reject) {
-        _this2.map.geoObjects.removeAll();
+        map.geoObjects.removeAll();
         ymaps.geocode(address, {
           results: 1
         }).then(function (res) {
@@ -738,7 +821,7 @@ var OrderPage = /*#__PURE__*/function () {
           var point = new ymaps.Placemark(coords);
           map.geoObjects.add(point);
           console.log(coords);
-          _this2.setMapCenter(coords);
+          _this3.setMapCenter(map, coords);
           resolve(coords);
         })["catch"](function (error) {
           return reject(error);
@@ -747,33 +830,33 @@ var OrderPage = /*#__PURE__*/function () {
     }
   }, {
     key: "setMapCenter",
-    value: function setMapCenter(coords) {
-      this.map.setCenter(coords);
+    value: function setMapCenter(map, coords) {
+      map.setCenter(coords);
     }
   }, {
     key: "setChangeHandler",
     value: function setChangeHandler() {
-      var _this3 = this;
+      var _this4 = this;
       if (!document.querySelector('.cart-page__choose-address')) return;
       document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
-        if (!_this3.map) return;
-        _this3.setMapPoint(_this3.map, event.currentTarget.value);
+        if (!_this4.mapOpen) return;
+        _this4.setMapPoint(_this4.mapOpen, event.currentTarget.value);
       });
     }
   }, {
-    key: "initMap",
+    key: "initOpenMap",
     value: function () {
-      var _initMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      var _initOpenMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         var map, coords;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return this.createMap();
+              return this.createOpenMap();
             case 2:
               map = _context.sent;
               _context.next = 5;
-              return this.setMapPoint(this.map, document.querySelector('.cart-page__choose-address').value);
+              return this.setMapPoint(this.mapOpen, document.querySelector('.cart-page__choose-address').value);
             case 5:
               coords = _context.sent;
             case 6:
@@ -782,44 +865,93 @@ var OrderPage = /*#__PURE__*/function () {
           }
         }, _callee, this);
       }));
-      function initMap() {
-        return _initMap.apply(this, arguments);
+      function initOpenMap() {
+        return _initOpenMap.apply(this, arguments);
       }
-      return initMap;
+      return initOpenMap;
     }()
   }, {
-    key: "openMap",
-    value: function openMap() {
-      var _this4 = this;
-      if (!document.querySelector('.cart-page__open-map')) return;
-      document.querySelector('.cart-page__open-map').addEventListener('click', function (event) {
+    key: "initChooseMap",
+    value: function () {
+      var _initChooseMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var address, map, coords;
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              address = "".concat(document.querySelector('#delivery-city input').value, ", ").concat(document.querySelector('#delivery-address input').value, " ");
+              console.log(address, 'address');
+              _context2.next = 4;
+              return this.createChooseMap();
+            case 4:
+              map = _context2.sent;
+              _context2.next = 7;
+              return this.setMapPoint(this.mapChoose, address);
+            case 7:
+              coords = _context2.sent;
+            case 8:
+            case "end":
+              return _context2.stop();
+          }
+        }, _callee2, this);
+      }));
+      function initChooseMap() {
+        return _initChooseMap.apply(this, arguments);
+      }
+      return initChooseMap;
+    }()
+  }, {
+    key: "openOpenMap",
+    value: function openOpenMap() {
+      var _this5 = this;
+      if (!document.querySelector('.cart-page__open-map-open')) return;
+      document.querySelector('.cart-page__open-map-open').addEventListener('click', function (event) {
         event.currentTarget.classList.toggle('isOpened');
         event.currentTarget.closest('.cart-page__order-map').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
-        if (!_this4.map) {
+        if (!_this5.mapOpen) {
           setTimeout(function () {
-            _this4.initMap();
+            _this5.initOpenMap();
           }, 300);
         } else {
-          _this4.map.destroy();
-          _this4.map = null;
+          _this5.mapOpen.destroy();
+          _this5.mapOpen = null;
         }
-        console.log(_this4.map);
+        console.log(_this5.mapOpen);
+      });
+    }
+  }, {
+    key: "openChooseMap",
+    value: function openChooseMap() {
+      var _this6 = this;
+      if (!document.querySelector('.cart-page__open-map-choose')) return;
+      document.querySelector('.cart-page__open-map-choose').addEventListener('click', function (event) {
+        event.currentTarget.classList.toggle('isOpened');
+        event.currentTarget.closest('.cart-page__order-block-in').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
+        if (!_this6.mapChoose) {
+          setTimeout(function () {
+            _this6.initChooseMap();
+          }, 300);
+        } else {
+          _this6.mapChoose.destroy();
+          _this6.mapChoose = null;
+          console.log(_this6.mapChoose);
+        }
       });
     }
   }, {
     key: "init",
     value: function () {
-      var _init = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-          while (1) switch (_context2.prev = _context2.next) {
+      var _init = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
             case 0:
-              this.openMap();
+              this.openOpenMap();
+              this.openChooseMap();
               this.setChangeHandler();
-            case 2:
+            case 3:
             case "end":
-              return _context2.stop();
+              return _context3.stop();
           }
-        }, _callee2, this);
+        }, _callee3, this);
       }));
       function init() {
         return _init.apply(this, arguments);
