@@ -13929,6 +13929,49 @@ input:checked + .dars-control__btn-name::before {
 .cart-page__form-field--delivery .general__form-check-right img {
   max-width: 100%;
 }
+.cart-page__order-block-bank-targets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cart-page__order-block-bank-target .name {
+  color: #808080;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.39px;
+  margin-bottom: 8px;
+}
+.cart-page__order-block-bank-target .text {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+
+.cart-page__sbp {
+  padding-bottom: 100px;
+}
+.cart-page__sbp .action__backlink {
+  margin-top: 0;
+}
+.cart-page__sbp-top {
+  margin-bottom: 10px;
+}
+.cart-page__sbp-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+}
+.cart-page__sbp-left {
+  width: 462px;
+}
+.cart-page__sbp-right {
+  width: 395px;
+}
 
 .personal-favourites-products {
   margin: 0 -15px;

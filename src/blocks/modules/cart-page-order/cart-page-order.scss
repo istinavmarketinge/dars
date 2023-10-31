@@ -352,4 +352,28 @@
             }
         }
     }
+    &__order-block-bank-targets {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__order-block-bank-target {
+        .name {
+            color: #808080;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.39px;
+            margin-bottom: 8px;
+        }
+        .text {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.48px;
+        }
+    }
 }

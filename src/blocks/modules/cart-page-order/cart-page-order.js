@@ -72,26 +72,46 @@ const OrderPage = class OrderPage {
                     zoom: 16,
                     controls: []
                 });
+                let myPlacemark = null;
+                let address =  document.querySelector('#delivery-city input').value != '' || document.querySelector('#delivery-address input').value != "" ? `${document.querySelector('#delivery-city input').value}, ${document.querySelector('#delivery-address input').value} ` : 'г. Москва';
+                
+                
+
+                ymaps.geocode(address, {results:1}).then((res) => {
+                    console.log('address', address)
+                    let coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
+                    myPlacemark = new ymaps.Placemark(coords, {}, {
+                        draggable: true
+                    } );
+                    this.mapChoose.geoObjects.add(myPlacemark);
+                    myPlacemark.events.add('dragend', () => {
+                        this.getAddress(myPlacemark.geometry.getCoordinates());
+                    });
+                    this.setMapCenter(this.mapChoose, coords);
+                });
+
+                
 
                 this.mapChoose.events.add('click', (e) => {
-                    var coords = e.get('coords');
-                    this.mapChoose.geoObjects.removeAll();
-                    // // Если метка уже создана – просто передвигаем ее.
-                    // if (myPlacemark) {
-                    //     myPlacemark.geometry.setCoordinates(coords);
-                    // }
-                    // // Если нет – создаем.
-                    // else {
-                    let myPlacemark = new ymaps.Placemark(coords, {}, {
-                        draggable: true
-                    });
+                    var coordinates = e.get('coords');
+                    // this.mapChoose.geoObjects.removeAll();
+                    // Если метка уже создана – просто передвигаем ее.
+                    if (myPlacemark) {
+                        myPlacemark.geometry.setCoordinates(coordinates);
+                    }
+                    // Если нет – создаем.
+                    else {
+                        myPlacemark = new ymaps.Placemark(coordinates, {}, {
+                            draggable: true
+                        });
+                    }
                     this.mapChoose.geoObjects.add(myPlacemark);
                     // Слушаем событие окончания перетаскивания на метке.
                     myPlacemark.events.add('dragend', () => {
                         this.getAddress(myPlacemark.geometry.getCoordinates());
                     });
                     // // }
-                    this.getAddress(coords);
+                    this.getAddress(coordinates);
                 });
                 resolve(this.mapChoose);
                 console.log('карта инициализирована')
@@ -141,11 +161,11 @@ const OrderPage = class OrderPage {
         const coords = await this.setMapPoint(this.mapOpen, document.querySelector('.cart-page__choose-address').value)
     }
     async initChooseMap() {
-        let address = `${document.querySelector('#delivery-city input').value}, ${document.querySelector('#delivery-address input').value} `;
+        // let address = `${document.querySelector('#delivery-city input').value}, ${document.querySelector('#delivery-address input').value} `;
 
-        console.log(address, 'address')
+        // console.log(address, 'address')
         const map = await this.createChooseMap();
-        const coords = await this.setMapPoint(this.mapChoose, address)
+        // const coords = await this.setMapPoint(this.mapChoose, address)
 
     }
     openOpenMap() {

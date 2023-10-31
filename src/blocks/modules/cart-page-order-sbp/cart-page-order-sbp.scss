@@ -1,0 +1,23 @@
+.cart-page {
+    &__sbp {
+        padding-bottom: 100px; 
+        .action__backlink {
+            margin-top: 0;
+        }
+    }
+    &__sbp-top {
+        margin-bottom: 10px;
+    }
+    &__sbp-bottom {}
+    &__sbp-container {
+        display: flex;
+        align-items: flex-start; 
+        gap: 50px;
+    }
+    &__sbp-left {
+        width: 462px;
+    }
+    &__sbp-right {
+        width: 395px;
+    }
+}

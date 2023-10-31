@@ -773,25 +773,42 @@ var OrderPage = /*#__PURE__*/function () {
             zoom: 16,
             controls: []
           });
-          _this2.mapChoose.events.add('click', function (e) {
-            var coords = e.get('coords');
-            _this2.mapChoose.geoObjects.removeAll();
-            // // Если метка уже создана – просто передвигаем ее.
-            // if (myPlacemark) {
-            //     myPlacemark.geometry.setCoordinates(coords);
-            // }
-            // // Если нет – создаем.
-            // else {
-            var myPlacemark = new ymaps.Placemark(coords, {}, {
+          var myPlacemark = null;
+          var address = document.querySelector('#delivery-city input').value != '' || document.querySelector('#delivery-address input').value != "" ? "".concat(document.querySelector('#delivery-city input').value, ", ").concat(document.querySelector('#delivery-address input').value, " ") : 'г. Москва';
+          ymaps.geocode(address, {
+            results: 1
+          }).then(function (res) {
+            console.log('address', address);
+            var coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
+            myPlacemark = new ymaps.Placemark(coords, {}, {
               draggable: true
             });
+            _this2.mapChoose.geoObjects.add(myPlacemark);
+            myPlacemark.events.add('dragend', function () {
+              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+            });
+            _this2.setMapCenter(_this2.mapChoose, coords);
+          });
+          _this2.mapChoose.events.add('click', function (e) {
+            var coordinates = e.get('coords');
+            // this.mapChoose.geoObjects.removeAll();
+            // Если метка уже создана – просто передвигаем ее.
+            if (myPlacemark) {
+              myPlacemark.geometry.setCoordinates(coordinates);
+            }
+            // Если нет – создаем.
+            else {
+              myPlacemark = new ymaps.Placemark(coordinates, {}, {
+                draggable: true
+              });
+            }
             _this2.mapChoose.geoObjects.add(myPlacemark);
             // Слушаем событие окончания перетаскивания на метке.
             myPlacemark.events.add('dragend', function () {
               _this2.getAddress(myPlacemark.geometry.getCoordinates());
             });
             // // }
-            _this2.getAddress(coords);
+            _this2.getAddress(coordinates);
           });
           resolve(_this2.mapChoose);
           console.log('карта инициализирована');
@@ -874,21 +891,15 @@ var OrderPage = /*#__PURE__*/function () {
     key: "initChooseMap",
     value: function () {
       var _initChooseMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-        var address, map, coords;
+        var map;
         return _regeneratorRuntime().wrap(function _callee2$(_context2) {
           while (1) switch (_context2.prev = _context2.next) {
             case 0:
-              address = "".concat(document.querySelector('#delivery-city input').value, ", ").concat(document.querySelector('#delivery-address input').value, " ");
-              console.log(address, 'address');
-              _context2.next = 4;
+              _context2.next = 2;
               return this.createChooseMap();
-            case 4:
+            case 2:
               map = _context2.sent;
-              _context2.next = 7;
-              return this.setMapPoint(this.mapChoose, address);
-            case 7:
-              coords = _context2.sent;
-            case 8:
+            case 3:
             case "end":
               return _context2.stop();
           }
