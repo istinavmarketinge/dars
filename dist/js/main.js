@@ -482,8 +482,12 @@ var BrandsTop = /*#__PURE__*/function () {
           document.querySelector('.lang-switch__item--active').classList.remove('lang-switch__item--active');
           event.currentTarget.classList.add('lang-switch__item--active');
           console.log(event.currentTarget.dataset.lang);
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"]")).slideDown('fast');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item:not([data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"])")).slideUp('fast');
+          if (event.currentTarget.dataset.lang == 'all') {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type]").slideDown('fast');
+          } else {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"]")).slideDown('fast');
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item:not([data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"])")).slideUp('fast');
+          }
         });
       });
     }

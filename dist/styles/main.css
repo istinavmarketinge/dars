@@ -4691,7 +4691,7 @@ body.isScrollPrevented {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px 25px;
-  grid-template-areas: "first first two three" "first first last last" "four five last last";
+  grid-template-areas: "first first two three" "first first four four" "five last four four";
 }
 @media all and (max-width: 1360px) {
   .articles__list {
@@ -6298,6 +6298,7 @@ body.isScrollPrevented {
   border-radius: 5px;
   border: 1px solid #000;
   background: #FFF;
+  overflow: hidden;
 }
 .section__sort-div-select-option {
   display: flex;
@@ -6614,7 +6615,7 @@ body.isScrollPrevented {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 30px 25px;
-  grid-template-areas: "first first two three" "first first last last" "four five last last";
+  grid-template-areas: "first first two three" "first first four four" "five last four four";
 }
 @media all and (max-width: 1360px) {
   .news__list {
@@ -10352,10 +10353,6 @@ dl.open .specifications-block__row {
 }
 .brands-items__logo img {
   width: 100%;
-}
-
-[data-word-type=en] {
-  display: none;
 }
 
 .contacts {
