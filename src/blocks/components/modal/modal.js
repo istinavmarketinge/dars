@@ -5,7 +5,8 @@ const Modal = class Modal {
 
         document.querySelectorAll('[data-modal-toggle]').forEach(opener => {
             opener.addEventListener('click', (event) => {
-                document.querySelector(`[data-modal-id="${event.currentTarget.dataset.modalToggle}"]`).classList.toggle('isOpened');
+                event.preventDefault();
+                document.querySelector(`[data-modal-id="${event.currentTarget.dataset.modalToggle}"]`).classList.toggle('active');
             })
         })
     }
@@ -13,14 +14,14 @@ const Modal = class Modal {
         if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
             document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(closer => {
                 closer.addEventListener('click', (event) => {
-                    event.currentTarget.closest('.popup-modal').classList.remove('isOpened');
+                    event.currentTarget.closest('.popup-modal').classList.remove('active');
                 })
             })
         }
         if (document.querySelector('.popup-modal')) {
             document.querySelectorAll('.popup-modal').forEach(closer => {
                 closer.addEventListener('click', (event) => {
-                    event.currentTarget.classList.remove('isOpened');
+                    event.currentTarget.classList.remove('active');
                 })
             })
         }

@@ -15,6 +15,12 @@
     }
 
 }
+.section__elements_list .show_more_block {
+    margin-bottom: 0;
+}
+.section__elements_list  .pagination {
+    margin-top: 20px;
+}
 @media(max-width:625px){
     .articles__button{
         display: none!important;

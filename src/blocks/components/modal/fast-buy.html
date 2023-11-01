@@ -1,17 +1,13 @@
 <form action="" class="popup-modal__form auth-modal-box">
     <div class="auth-modal-box__row required">
-        <input type="text" name="name" id="auth-modal-box__control-name" placeholder="" required="" data-listener-added_326aa8a4="true">
-        <label for="auth-modal-box__control-name" class="auth-modal-box__label"><span>Имя</span></label>
-    </div>
-    <div class="auth-modal-box__row">
-        <input type="tel" name="phone" id="auth-modal-box__control-phone" placeholder="" data-listener-added_326aa8a4="true">
-        <label for="auth-modal-box__control-phone" class="auth-modal-box__label"><span>Телефон</span></label>
+        <input type="text" name="city" id="auth-modal-box__control-city" placeholder="" required="" data-listener-added_326aa8a4="true">
+        <label for="auth-modal-box__control-city" class="auth-modal-box__label"><span>Введите город</span></label>
     </div>
     @@include('../button/button.html', {
         "type": "primary",
         "link": false,
         "outlined": false,
-        "text": "Перезвоните мне",
+        "text": "Подтвердить",
         "class_name": "popup-modal__submit"
     })
 </form>

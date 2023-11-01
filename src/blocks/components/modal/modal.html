@@ -1,15 +1,39 @@
-<div class="popup-modal" data-modal-id="@@modal_id">
-    <div class="popup-modal__content">
-        <div class="popup-modal__closer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none">
-                <path d="M2 24L13 13M13 13L24 2M13 13L2 2M13 13L24 24" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+<div class="auth-modal auth-modal--default" data-modal-id="@@modal_id">
+    <div class="auth-modal-box">
+        <button type="button" class="auth-modal-box__btn-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M2 20L11 11L2 20ZM11 11L20 2L11 11ZM11 11L2 2L11 11ZM11 11L20 20L11 11Z" fill="white"/>
+                <path d="M2 20L11 11M11 11L20 2M11 11L2 2M11 11L20 20" stroke="" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+        </button>
+        <form class="auth-modal-box__form auth-modal-box-registration">
+            <div class="auth-modal-box__wrap">
+                <div class="auth-modal-box__title">@@title</div>
+                <div class="auth-modal-box__body">
+                    @@fields
+                </div>
+                <div class="auth-modal-box__consent-text">
+                    <p>Нажимая кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных, в соответствии с <a href="#">Политикой</a> и соглашаюсь с Правилами</p>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth-modal-box-successfully" hidden>
+            <div class="auth-modal-box-successfully__wrap">
+                <div class="auth-modal-box-successfully__title">
+                    <span>Благодарим за регистрацию!</span>
+                    <span>Осталось совсем немного</span>
+                </div>
+                <div class="auth-modal-box-successfully__body">
+                    Чтобы завершить регистрацию, перейдите по ссылке, которую мы отправили на указанную вами почту.
+                </div>
+                <div class="auth-modal-box-successfully__footer">
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--orange auth-modal-box__btn-ok">Ок</button>
+                </div>
+            </div>
         </div>
-        <div class="popup-modal__title">
-            Обратный звонок
-        </div>
-        <div class="popup-modal__body">
-            @@include('./callback-content.html')
-        </div>
+
     </div>
 </div>
+
+

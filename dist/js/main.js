@@ -107,7 +107,8 @@ var Modal = /*#__PURE__*/function () {
       if (!document.querySelector('[data-modal-toggle]')) return;
       document.querySelectorAll('[data-modal-toggle]').forEach(function (opener) {
         opener.addEventListener('click', function (event) {
-          document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('isOpened');
+          event.preventDefault();
+          document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('active');
         });
       });
     }
@@ -117,14 +118,14 @@ var Modal = /*#__PURE__*/function () {
       if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
         document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
-            event.currentTarget.closest('.popup-modal').classList.remove('isOpened');
+            event.currentTarget.closest('.popup-modal').classList.remove('active');
           });
         });
       }
       if (document.querySelector('.popup-modal')) {
         document.querySelectorAll('.popup-modal').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
-            event.currentTarget.classList.remove('isOpened');
+            event.currentTarget.classList.remove('active');
           });
         });
       }
@@ -1405,11 +1406,22 @@ var CatalogFilter = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "showMoreHandler",
+    value: function showMoreHandler() {
+      if (!document.querySelector('.filter__menu-item--more')) return;
+      document.querySelector('.filter__menu-item--more a').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.currentTarget.closest('.filter__menu-in').classList.add('isShowed');
+        console.log('more clicked');
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.openMoreCheckbox();
       this.openMobileFilter();
       this.openMoreFilters();
+      this.showMoreHandler();
       this.searchFilter({
         inputSelector: '.bx-filter-parameters-box-search input',
         eventName: 'keyup',
