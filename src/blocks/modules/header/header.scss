@@ -90,7 +90,7 @@
     &__modal-city {
         display: none;
         position: absolute;
-        top: 0;
+        top: calc(100% + 7px);
         left: 0;
         border: 3px solid #F0820F;
         background: #fff;
@@ -98,6 +98,28 @@
         min-width: 283px;
         width: 100%;
         box-sizing: border-box;
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: calc(100% - 3px);
+            left: 20px;
+            width: 25px;
+            height: 8px;
+            background: #fff;
+            clip-path: polygon(0 100%, 50% 0, 100% 100%);
+        }
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 100%;
+            left: 20px;
+            width: 25px;
+            height: 8px;
+            background: #F0820F;
+            clip-path: polygon(0 100%, 50% 0, 100% 100%);
+        }
         span {
             font-size: 16px;
             font-style: normal;
