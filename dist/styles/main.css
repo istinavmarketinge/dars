@@ -6148,7 +6148,6 @@ body.isScrollPrevented {
   .pagination__nums {
     width: 100%;
     margin-bottom: 20px;
-    justify-content: space-between;
   }
   .pagination__gotopage {
     width: 100%;
