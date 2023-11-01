@@ -12,7 +12,23 @@
             flex-wrap: wrap;
         }
         @media(max-width:560px){
-            display:block;
+            display:block; 
+        }
+        h2 {
+            color: #000;
+            
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.08px;
+            @media (width >= 961px) {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+            @media (width <= 960px) {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
         }
     }
 

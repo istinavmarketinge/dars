@@ -6308,11 +6308,11 @@ body.isScrollPrevented {
   width: 100%;
   box-sizing: border-box;
 }
-.section__sort-div-select-option a {
+.section__sort-div-select-option a, .section__sort-div-select-option span {
   padding: 9px 12px 9px 12px;
   box-sizing: border-box;
 }
-.section__sort-div-select-option, .section__sort-div-select-option a {
+.section__sort-div-select-option, .section__sort-div-select-option a, .section__sort-div-select-option span {
   display: inline-block;
   width: 100%;
   color: #000;
@@ -7118,6 +7118,25 @@ body.isScrollPrevented {
 @media (max-width: 560px) {
   .action__into {
     display: block;
+  }
+}
+.action__into h2 {
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.08px;
+}
+@media (width >= 961px) {
+  .action__into h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+@media (width <= 960px) {
+  .action__into h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
 }
 .action__title {

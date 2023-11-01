@@ -150,12 +150,14 @@
         width: 100%;
         box-sizing: border-box;
     }
-    &__sort-div-select-option a {
+    &__sort-div-select-option a,
+    &__sort-div-select-option span {
         padding: 9px 12px 9px 12px;
         box-sizing: border-box;
     }
     &__sort-div-select-option,
-    &__sort-div-select-option a {
+    &__sort-div-select-option a,
+    &__sort-div-select-option span {
         display: inline-block;
         width: 100%;
         color: #000;
