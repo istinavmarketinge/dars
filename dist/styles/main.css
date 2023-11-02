@@ -6399,7 +6399,7 @@ body.isScrollPrevented {
   justify-content: center;
   align-items: center;
   gap: 11px;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .section__sort-filter-item:hover {
   background: #F6F6F6;
@@ -7703,6 +7703,7 @@ form.smartfilter {
 
 .bx-filter .bx-filter-parameters-box {
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .bx-filter-parameters-box-container {
@@ -7878,7 +7879,7 @@ form.smartfilter .row {
   margin-left: 0;
 }
 
-.bx-filter-parameters-box-container:not(.isOpened) .checkbox:nth-of-type(n+4) {
+.bx-filter-parameters-box-container:not(.isOpened) .checkbox:nth-of-type(n + 5) {
   display: none;
 }
 
@@ -7891,6 +7892,11 @@ form.smartfilter .row {
   position: relative;
   width: fit-content;
   cursor: pointer;
+  display: none;
+}
+
+.bx-filter-parameters-box-container:not(.isOpened) .checkbox:nth-of-type(5) ~ .bx-filter-input-checkbox-more-checkbox {
+  display: block;
 }
 
 .bx-filter-input-checkbox-more-checkbox span::before {
@@ -7917,6 +7923,10 @@ form.smartfilter .row {
 
 .bx-filter-input-checkbox-more-checkbox span.more-hide::before {
   transform: rotate(180deg);
+}
+
+.bx-filter-block {
+  height: auto !important;
 }
 
 @media all and (max-width: 1400px) {
