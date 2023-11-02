@@ -301,9 +301,9 @@ form.smartfilter .row {
 .bx-filter-input-checkbox-more-checkbox span.more-hide::before {
     transform: rotate(180deg);
 }
-.bx-filter-block {
-    height: 100% !important;
-}
+// .bx-filter-block {
+//     height: 100% !important;
+// }
 
 @media all and (max-width:1400px) {
     .bx-filter {

@@ -3477,6 +3477,7 @@ body.isScrollPrevented {
 .header-bottom__search form {
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 .header-bottom__search form input {
   border-radius: 5px 0 0 5px;
@@ -7923,10 +7924,6 @@ form.smartfilter .row {
 
 .bx-filter-input-checkbox-more-checkbox span.more-hide::before {
   transform: rotate(180deg);
-}
-
-.bx-filter-block {
-  height: 100% !important;
 }
 
 @media all and (max-width: 1400px) {
@@ -14689,7 +14686,7 @@ input:checked + .dars-control__btn-name::before {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 950;
   display: flex;
   justify-content: center;
   align-items: center;
