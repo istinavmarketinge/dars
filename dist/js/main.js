@@ -1764,13 +1764,14 @@ var PersonalAccountCreatePromocode = /*#__PURE__*/function () {
         var selectedItem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent();
         if (!selectedItem.hasClass('dars-select-box__item--parent')) {
           var text = selectedItem.find('.dars-select-box__item-title').text();
+          var id = selectedItem.find('.dars-select-box__item-title').data('id');
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').text(text);
           if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('id') == "search") {
             jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').addClass('dars-select__btn--search');
           } else {
             jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').removeClass('dars-select__btn--search');
           }
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-category"]').val(text);
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-category"]').val(id);
           jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode__body').removeClass('create-promocode__body--blocked');
         }
       });

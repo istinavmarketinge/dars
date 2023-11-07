@@ -27,13 +27,14 @@ const PersonalAccountCreatePromocode = class PersonalAccountCreatePromocode {
             let selectedItem = $(this).parent();
             if(!selectedItem.hasClass('dars-select-box__item--parent')){
                 let text = selectedItem.find('.dars-select-box__item-title').text();
+                let id = selectedItem.find('.dars-select-box__item-title').data('id');
                 $('.dars-select__btn').text(text);
                 if ($(this).data('id') == "search") {
                     $('.dars-select__btn').addClass('dars-select__btn--search');
                 } else {
                     $('.dars-select__btn').removeClass('dars-select__btn--search');
                 }
-                $('input[name="promo-code-category"]').val(text);
+                $('input[name="promo-code-category"]').val(id);
                 $('.create-promocode__body').removeClass('create-promocode__body--blocked');
             }   
         });
