@@ -1,0 +1,12 @@
+.personal-account-main {
+    &__checkboxes {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        max-width: 444px;
+    }
+    &__checkboxes-button {
+        margin-top: 30px;
+        max-width: 193px;
+    }
+}
