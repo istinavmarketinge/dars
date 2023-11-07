@@ -18,8 +18,12 @@ const BrandsTop = class BrandsTop {
             document.querySelector('.lang-switch__item--active').classList.remove('lang-switch__item--active')
             event.currentTarget.classList.add('lang-switch__item--active')
             console.log(event.currentTarget.dataset.lang)
-            $(`.brands-items__item[data-word-type="${event.currentTarget.dataset.lang}"]`).slideDown('fast')
-            $(`.brands-items__item:not([data-word-type="${event.currentTarget.dataset.lang}"])`).slideUp('fast')
+            if (event.currentTarget.dataset.lang == 'all') {
+                $(`.brands-items__item[data-word-type]`).slideDown('fast')
+            } else {
+                $(`.brands-items__item[data-word-type="${event.currentTarget.dataset.lang}"]`).slideDown('fast')
+                $(`.brands-items__item:not([data-word-type="${event.currentTarget.dataset.lang}"])`).slideUp('fast')
+            }
         })
        })
     }

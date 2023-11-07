@@ -278,7 +278,9 @@
         letter-spacing: 0.66px;
         white-space: nowrap;
     }
-    &__right &__small-price {
-        padding-top: 20px;
+    &__item-right &__small-price {
+        @media (width >= 961px) {
+            padding-top: 20px;
+        }
     }
 }

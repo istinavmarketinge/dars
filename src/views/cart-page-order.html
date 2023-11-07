@@ -36,6 +36,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=3aff35bb-3a23-4157-9a47-97da3fe2e05e&load=package.full&&lang=ru-RU" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -71,7 +72,15 @@
                 </div>
             </footer>
             @@include('../blocks/components/modal/modal.html', {
-                "modal_id": "callback"
+                "modal_id": "callback",
+
+                "fields": "@@include('./callback-content.html')",
+"title": "Зкакзать обратный звонок"
+            })
+@@include('../blocks/components/modal/modal.html', {
+                "modal_id": "select-city",
+                "fields": "@@include('./select-city-content.html')",
+                "title": "Ваш город"
             })
         <!-- @@include("../blocks/modules/footer/footer.html") -->
         <script src="js/vendor.js"></script>

@@ -74,8 +74,18 @@
                 </div>
             </footer>
             @@include('../blocks/components/modal/modal.html', {
-                "modal_id": "callback"
+                "modal_id": "callback",
+                "fields": "@@include('./callback-content.html')",
+                "title": "Закзать обратный звонок"
             })
+
+            @@include('../blocks/components/modal/modal.html', {
+                "modal_id": "select-city",
+                "fields": "@@include('./select-city-content.html')",
+                "title": "Ваш город"
+            })
+
+           
         
         <!-- @@include("../blocks/modules/footer/footer.html") -->
         @@include("../blocks/components/auth/auth.html")

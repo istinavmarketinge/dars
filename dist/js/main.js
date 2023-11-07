@@ -107,7 +107,8 @@ var Modal = /*#__PURE__*/function () {
       if (!document.querySelector('[data-modal-toggle]')) return;
       document.querySelectorAll('[data-modal-toggle]').forEach(function (opener) {
         opener.addEventListener('click', function (event) {
-          document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('isOpened');
+          event.preventDefault();
+          document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('active');
         });
       });
     }
@@ -117,14 +118,14 @@ var Modal = /*#__PURE__*/function () {
       if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
         document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
-            event.currentTarget.closest('.popup-modal').classList.remove('isOpened');
+            event.currentTarget.closest('.popup-modal').classList.remove('active');
           });
         });
       }
       if (document.querySelector('.popup-modal')) {
         document.querySelectorAll('.popup-modal').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
-            event.currentTarget.classList.remove('isOpened');
+            event.currentTarget.classList.remove('active');
           });
         });
       }
@@ -173,7 +174,7 @@ var Action = /*#__PURE__*/function () {
     _classCallCheck(this, Action);
     this.action_find_height = 0;
     this.jquery_obj = ".action .js_click_closest .js_click_find";
-    this.class_close = "close";
+    this.class_close = "isClose";
   }
   _createClass(Action, [{
     key: "addClickHandler",
@@ -482,8 +483,12 @@ var BrandsTop = /*#__PURE__*/function () {
           document.querySelector('.lang-switch__item--active').classList.remove('lang-switch__item--active');
           event.currentTarget.classList.add('lang-switch__item--active');
           console.log(event.currentTarget.dataset.lang);
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"]")).slideDown('fast');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item:not([data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"])")).slideUp('fast');
+          if (event.currentTarget.dataset.lang == 'all') {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type]").slideDown('fast');
+          } else {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item[data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"]")).slideDown('fast');
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()(".brands-items__item:not([data-word-type=\"".concat(event.currentTarget.dataset.lang, "\"])")).slideUp('fast');
+          }
         });
       });
     }
@@ -678,6 +683,301 @@ var PopularBrands = /*#__PURE__*/function () {
   return PopularBrands;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PopularBrands);
+
+/***/ }),
+
+/***/ "./src/blocks/modules/cart-page-order/cart-page-order.js":
+/*!***************************************************************!*\
+  !*** ./src/blocks/modules/cart-page-order/cart-page-order.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, defineProperty = Object.defineProperty || function (obj, key, desc) { obj[key] = desc.value; }, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return defineProperty(generator, "_invoke", { value: makeInvokeMethod(innerFn, self, context) }), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; defineProperty(this, "_invoke", { value: function value(method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; } function maybeInvokeDelegate(delegate, context) { var methodName = context.method, method = delegate.iterator[methodName]; if (undefined === method) return context.delegate = null, "throw" === methodName && delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method) || "return" !== methodName && (context.method = "throw", context.arg = new TypeError("The iterator does not provide a '" + methodName + "' method")), ContinueSentinel; var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, defineProperty(Gp, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), defineProperty(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (val) { var object = Object(val), keys = []; for (var key in object) keys.push(key); return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var OrderPage = /*#__PURE__*/function () {
+  function OrderPage() {
+    _classCallCheck(this, OrderPage);
+    this.mapOpen = null;
+    this.mapChoose = null;
+  }
+  _createClass(OrderPage, [{
+    key: "createOpenMap",
+    value: function createOpenMap() {
+      var _this = this;
+      return new Promise(function (resolve, reject) {
+        if (!document.querySelector('#cart-page__map-wrap--js-open')) {
+          reject('Не найден селектор для инициализации карты');
+          return false;
+        }
+        ;
+        ymaps.ready(function () {
+          _this.mapOpen = new ymaps.Map("cart-page__map-wrap--js-open", {
+            center: [55.76, 37.64],
+            zoom: 7
+          });
+          resolve(_this.mapOpen);
+        });
+      });
+    }
+  }, {
+    key: "customChooseBaloon",
+    value: function customChooseBaloon() {
+      var template = ymaps.templateLayoutFactory.createClass('<div class="balloon-root ">' + '<a class="close" href="#">&times;</a>' + '<div class="arrow balloon-pin"></div>' + '<div class="balloon-head balloon">asdasads</div>' + '<div class="balloon-body balloon">asdasdadsads</div>' + '<div class="balloon-footer balloon">asdasdassdasd</div>' + '</div>', {
+        //Формирование макета
+        build: function build() {
+          this.constructor.superclass.build.call(this);
+          console.log('build');
+          // this._$element = $('.balloon-root', this.getParentElement());
+
+          // this.applyElementOffset();
+
+          // this._$element.find('.close')
+          //     .on('click', $.proxy(this.onCloseClick, this));
+        },
+
+        //удаление макета из DOM
+        clear: function clear() {
+          // this._$element.find('.close')
+          //     .off('click');
+
+          // this.constructor.superclass.clear.call(this);
+        },
+        //закрытие балуна
+        onCloseClick: function onCloseClick(e) {
+          // e.preventDefault();
+
+          // this.events.fire('userclose');
+        }
+      });
+      return template;
+    }
+  }, {
+    key: "createChooseMap",
+    value: function createChooseMap() {
+      var _this2 = this;
+      return new Promise(function (resolve, reject) {
+        if (!document.querySelector('#cart-page__map-wrap--js-choose')) {
+          reject('Не найден селектор для инициализации карты');
+          return false;
+        }
+        ;
+        ymaps.ready(function () {
+          _this2.mapChoose = new ymaps.Map("cart-page__map-wrap--js-choose", {
+            center: [55.76, 37.64],
+            zoom: 16,
+            controls: []
+          });
+          var myPlacemark = null;
+          var address = document.querySelector('#delivery-city input').value != '' || document.querySelector('#delivery-address input').value != "" ? "".concat(document.querySelector('#delivery-city input').value, ", ").concat(document.querySelector('#delivery-address input').value, " ") : 'г. Москва';
+          ymaps.geocode(address, {
+            results: 1
+          }).then(function (res) {
+            console.log('address', address);
+            var coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
+            myPlacemark = new ymaps.Placemark(coords, {}, {
+              draggable: true
+            });
+            _this2.mapChoose.geoObjects.add(myPlacemark);
+            myPlacemark.events.add('dragend', function () {
+              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+            });
+            _this2.setMapCenter(_this2.mapChoose, coords);
+          });
+          _this2.mapChoose.events.add('click', function (e) {
+            var coordinates = e.get('coords');
+            // this.mapChoose.geoObjects.removeAll();
+            // Если метка уже создана – просто передвигаем ее.
+            if (myPlacemark) {
+              myPlacemark.geometry.setCoordinates(coordinates);
+            }
+            // Если нет – создаем.
+            else {
+              myPlacemark = new ymaps.Placemark(coordinates, {}, {
+                draggable: true
+              });
+            }
+            _this2.mapChoose.geoObjects.add(myPlacemark);
+            // Слушаем событие окончания перетаскивания на метке.
+            myPlacemark.events.add('dragend', function () {
+              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+            });
+            // // }
+            _this2.getAddress(coordinates);
+          });
+          resolve(_this2.mapChoose);
+          console.log('карта инициализирована');
+        });
+      });
+    }
+  }, {
+    key: "getAddress",
+    value: function getAddress(coords) {
+      ymaps.geocode(coords).then(function (res) {
+        var firstGeoObject = res.geoObjects.get(0),
+          address = firstGeoObject.getAddressLine();
+        document.querySelector('#delivery-address input').value = address;
+      });
+    }
+  }, {
+    key: "setMapPoint",
+    value: function setMapPoint(map, address) {
+      var _this3 = this;
+      console.log('address', address);
+      return new Promise(function (resolve, reject) {
+        map.geoObjects.removeAll();
+        ymaps.geocode(address, {
+          results: 1
+        }).then(function (res) {
+          var coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
+          var point = new ymaps.Placemark(coords);
+          map.geoObjects.add(point);
+          console.log(coords);
+          _this3.setMapCenter(map, coords);
+          resolve(coords);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    }
+  }, {
+    key: "setMapCenter",
+    value: function setMapCenter(map, coords) {
+      map.setCenter(coords);
+    }
+  }, {
+    key: "setChangeHandler",
+    value: function setChangeHandler() {
+      var _this4 = this;
+      if (!document.querySelector('.cart-page__choose-address')) return;
+      document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
+        if (!_this4.mapOpen) return;
+        _this4.setMapPoint(_this4.mapOpen, event.currentTarget.value);
+      });
+    }
+  }, {
+    key: "initOpenMap",
+    value: function () {
+      var _initOpenMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        var map, coords;
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return this.createOpenMap();
+            case 2:
+              map = _context.sent;
+              _context.next = 5;
+              return this.setMapPoint(this.mapOpen, document.querySelector('.cart-page__choose-address').value);
+            case 5:
+              coords = _context.sent;
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }, _callee, this);
+      }));
+      function initOpenMap() {
+        return _initOpenMap.apply(this, arguments);
+      }
+      return initOpenMap;
+    }()
+  }, {
+    key: "initChooseMap",
+    value: function () {
+      var _initChooseMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
+        var map;
+        return _regeneratorRuntime().wrap(function _callee2$(_context2) {
+          while (1) switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return this.createChooseMap();
+            case 2:
+              map = _context2.sent;
+            case 3:
+            case "end":
+              return _context2.stop();
+          }
+        }, _callee2, this);
+      }));
+      function initChooseMap() {
+        return _initChooseMap.apply(this, arguments);
+      }
+      return initChooseMap;
+    }()
+  }, {
+    key: "openOpenMap",
+    value: function openOpenMap() {
+      var _this5 = this;
+      if (!document.querySelector('.cart-page__open-map-open')) return;
+      document.querySelector('.cart-page__open-map-open').addEventListener('click', function (event) {
+        event.currentTarget.classList.toggle('isOpened');
+        event.currentTarget.closest('.cart-page__order-map').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
+        if (!_this5.mapOpen) {
+          setTimeout(function () {
+            _this5.initOpenMap();
+          }, 300);
+        } else {
+          _this5.mapOpen.destroy();
+          _this5.mapOpen = null;
+        }
+        console.log(_this5.mapOpen);
+      });
+    }
+  }, {
+    key: "openChooseMap",
+    value: function openChooseMap() {
+      var _this6 = this;
+      if (!document.querySelector('.cart-page__open-map-choose')) return;
+      document.querySelector('.cart-page__open-map-choose').addEventListener('click', function (event) {
+        event.currentTarget.classList.toggle('isOpened');
+        event.currentTarget.closest('.cart-page__order-block-in').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
+        if (!_this6.mapChoose) {
+          setTimeout(function () {
+            _this6.initChooseMap();
+          }, 300);
+        } else {
+          _this6.mapChoose.destroy();
+          _this6.mapChoose = null;
+          console.log(_this6.mapChoose);
+        }
+      });
+    }
+  }, {
+    key: "init",
+    value: function () {
+      var _init = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee3() {
+        return _regeneratorRuntime().wrap(function _callee3$(_context3) {
+          while (1) switch (_context3.prev = _context3.next) {
+            case 0:
+              this.openOpenMap();
+              this.openChooseMap();
+              this.setChangeHandler();
+            case 3:
+            case "end":
+              return _context3.stop();
+          }
+        }, _callee3, this);
+      }));
+      function init() {
+        return _init.apply(this, arguments);
+      }
+      return init;
+    }()
+  }]);
+  return OrderPage;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OrderPage);
 
 /***/ }),
 
@@ -1106,11 +1406,22 @@ var CatalogFilter = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "showMoreHandler",
+    value: function showMoreHandler() {
+      if (!document.querySelector('.filter__menu-item--more')) return;
+      document.querySelector('.filter__menu-item--more a').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.currentTarget.closest('.filter__menu-in').classList.add('isShowed');
+        console.log('more clicked');
+      });
+    }
+  }, {
     key: "init",
     value: function init() {
       this.openMoreCheckbox();
       this.openMobileFilter();
       this.openMoreFilters();
+      this.showMoreHandler();
       this.searchFilter({
         inputSelector: '.bx-filter-parameters-box-search input',
         eventName: 'keyup',
@@ -1610,6 +1921,9 @@ var Header = /*#__PURE__*/function () {
         $('.header-top__modal-city').addClass('open');
       });
       $('.header-top__modal-close').on('click', function () {
+        $('.header-top__modal-city').removeClass('open');
+      });
+      $('.header-top__modal-yes').on('click', function () {
         $('.header-top__modal-city').removeClass('open');
       });
       document.querySelector('.header-bottom__catalog-button').addEventListener('click', function () {
@@ -2269,6 +2583,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
 /* harmony import */ var _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/personal-account-statistics/personal-account-statistics */ "./src/blocks/modules/personal-account-statistics/personal-account-statistics.js");
 /* harmony import */ var _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/orders/orders */ "./src/blocks/modules/orders/orders.js");
+/* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
+
 
 
 
@@ -2316,6 +2632,7 @@ window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_
 window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__["default"]();
 window.app.personalAccountCreatePromocode = new _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_20__["default"]();
 window.app.catalogFilter = new _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__["default"]();
+window.app.orderPage = new _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__["default"]();
 window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__["default"]();
 window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
@@ -2341,6 +2658,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.app.personalAccount.init();
   window.app.personalAccountCreatePromocode.init();
   window.app.catalogFilter.init();
+  window.app.orderPage.init();
   window.app.personalAccountStatistics.init();
   window.app.orders.init();
 });

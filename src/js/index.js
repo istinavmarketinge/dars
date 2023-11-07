@@ -23,6 +23,7 @@ import PersonalAccountCreatePromocode from "%modules%/personal-account-create-pr
 import CatalogFilter from "%modules%/catalog-filter/catalog-filter";
 import PersonalAccountStatistics from "%modules%/personal-account-statistics/personal-account-statistics";
 import Orders from "%modules%/orders/orders";
+import OrderPage from "%modules%/cart-page-order/cart-page-order";
 
 
 
@@ -54,6 +55,7 @@ window.app.cartPage = new CartPage();
 window.app.personalAccount = new PersonalAccount();
 window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode();
 window.app.catalogFilter = new CatalogFilter();
+window.app.orderPage = new OrderPage();
 
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
 window.app.orders = new Orders();
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.personalAccount.init();
     window.app.personalAccountCreatePromocode.init();
     window.app.catalogFilter.init();
+    window.app.orderPage.init();
 
     window.app.personalAccountStatistics.init();
     window.app.orders.init();

@@ -24,7 +24,11 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
+<<<<<<< HEAD
             <link rel="stylesheet" href="styles/main.css?14:1">
+=======
+            <link rel="stylesheet" href="styles/main.css?11:50">
+>>>>>>> 1a6b87d0d87778b0fe5ceddbbb3549cf3d1ae653
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,14 +52,14 @@
             <div class="header-top__adress">
                  <div class="header-top__city">Тула</div>
                  <div class="header-top__street">ул. Пролетарская д 44, к 3</div>
-                 <div class="header-top__modal-city">
+                 <div class="header-top__modal-city open">
                     <div class="header-top__modal-close">
                         <img src="./img/close.svg" alt="close">
                     </div>
                     <span>Вы находитесь в г.Тула?</span>
                     <div class="header-top__modal-buttons">
-                        <div>Да</div>
-                        <div>Нет, изменить</div>
+                        <div class="header-top__modal-yes">Да</div>
+                        <div class="header-top__modal-no" data-modal-toggle="select-city">Нет, изменить</div>
                     </div>
 
                  </div>
@@ -1710,23 +1714,26 @@
 
                 </div>
             </footer>
-            <div class="popup-modal" data-modal-id="callback">
-    <div class="popup-modal__content">
-        <div class="popup-modal__closer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 26 26" fill="none">
-                <path d="M2 24L13 13M13 13L24 2M13 13L2 2M13 13L24 24" stroke="#A9A9A9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-        <div class="popup-modal__title">
-            Обратный звонок
-        </div>
-        <div class="popup-modal__body">
-            <form action="" class="popup-modal__form">
-    <div class="form__field">
-        <input type="text" placeholder="Имя">
+            <div class="auth-modal auth-modal--default" data-modal-id="callback">
+    <div class="auth-modal-box">
+        <button type="button" class="auth-modal-box__btn-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M2 20L11 11L2 20ZM11 11L20 2L11 11ZM11 11L2 2L11 11ZM11 11L20 20L11 11Z" fill="white"/>
+                <path d="M2 20L11 11M11 11L20 2M11 11L2 2M11 11L20 20" stroke="" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+        </button>
+        <form class="auth-modal-box__form auth-modal-box-registration">
+            <div class="auth-modal-box__wrap">
+                <div class="auth-modal-box__title">Зкакзать обратный звонок</div>
+                <div class="auth-modal-box__body">
+                    <form action="" class="popup-modal__form auth-modal-box">
+    <div class="auth-modal-box__row required">
+        <input type="text" name="name" id="auth-modal-box__control-name" placeholder="" required="" data-listener-added_326aa8a4="true">
+        <label for="auth-modal-box__control-name" class="auth-modal-box__label"><span>Имя</span></label>
     </div>
-    <div class="form__field">
-        <input type="tel" placeholder="Телефон">
+    <div class="auth-modal-box__row">
+        <input type="tel" name="phone" id="auth-modal-box__control-phone" placeholder="" data-listener-added_326aa8a4="true">
+        <label for="auth-modal-box__control-phone" class="auth-modal-box__label"><span>Телефон</span></label>
     </div>
     
 
@@ -1749,9 +1756,98 @@
     </div>
     <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
 </div>
+                </div>
+                <div class="auth-modal-box__consent-text">
+                    <p>Нажимая кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных, в соответствии с <a href="#">Политикой</a> и соглашаюсь с Правилами</p>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth-modal-box-successfully" hidden>
+            <div class="auth-modal-box-successfully__wrap">
+                <div class="auth-modal-box-successfully__title">
+                    <span>Благодарим за регистрацию!</span>
+                    <span>Осталось совсем немного</span>
+                </div>
+                <div class="auth-modal-box-successfully__body">
+                    Чтобы завершить регистрацию, перейдите по ссылке, которую мы отправили на указанную вами почту.
+                </div>
+                <div class="auth-modal-box-successfully__footer">
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--orange auth-modal-box__btn-ok">Ок</button>
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
+
+
+
+<div class="auth-modal auth-modal--default" data-modal-id="select-city">
+    <div class="auth-modal-box">
+        <button type="button" class="auth-modal-box__btn-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M2 20L11 11L2 20ZM11 11L20 2L11 11ZM11 11L2 2L11 11ZM11 11L20 20L11 11Z" fill="white"/>
+                <path d="M2 20L11 11M11 11L20 2M11 11L2 2M11 11L20 20" stroke="" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+        </button>
+        <form class="auth-modal-box__form auth-modal-box-registration">
+            <div class="auth-modal-box__wrap">
+                <div class="auth-modal-box__title">Ваш город</div>
+                <div class="auth-modal-box__body">
+                    <form action="" class="popup-modal__form auth-modal-box">
+    <div class="auth-modal-box__row required">
+        <input type="text" name="city" id="auth-modal-box__control-city" placeholder="" required="" data-listener-added_326aa8a4="true">
+        <label for="auth-modal-box__control-city" class="auth-modal-box__label"><span>Введите город</span></label>
+    </div>
+    
+
+    <button class="button button--primary popup-modal__submit">
+ 
+
+Подтвердить
+
+
+
+    </button>
+
+</form>
+
+<div class="popup-modal__message" style="display: none;">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%"  viewBox="0 0 138 92" fill="none">
+        <path d="M0 49.9136L47.2573 92L138 11.4199L124.972 0L47.2573 68.9996L12.8472 38.4133L0 49.9136Z" fill="#1BC49B"/>
+        </svg>
+    </div>
+    <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
+</div>
+                </div>
+                <div class="auth-modal-box__consent-text">
+                    <p>Нажимая кнопку «Зарегистрироваться», я даю согласие на обработку персональных данных, в соответствии с <a href="#">Политикой</a> и соглашаюсь с Правилами</p>
+                </div>
+            </div>
+        </form>
+
+        <div class="auth-modal-box-successfully" hidden>
+            <div class="auth-modal-box-successfully__wrap">
+                <div class="auth-modal-box-successfully__title">
+                    <span>Благодарим за регистрацию!</span>
+                    <span>Осталось совсем немного</span>
+                </div>
+                <div class="auth-modal-box-successfully__body">
+                    Чтобы завершить регистрацию, перейдите по ссылке, которую мы отправили на указанную вами почту.
+                </div>
+                <div class="auth-modal-box-successfully__footer">
+                    <button type="submit" class="auth-modal-box__btn auth-modal-box__btn--orange auth-modal-box__btn-ok">Ок</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
         
         <script src="js/vendor.js"></script>
         <script src="js/main.js"></script>

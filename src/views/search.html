@@ -65,7 +65,15 @@
                 </div>
             </footer>
             @@include('../blocks/components/modal/modal.html', {
-                "modal_id": "callback"
+                "modal_id": "callback",
+
+                "fields": "@@include('./callback-content.html')",
+"title": "Зкакзать обратный звонок"
+            })
+@@include('../blocks/components/modal/modal.html', {
+                "modal_id": "select-city",
+                "fields": "@@include('./select-city-content.html')",
+                "title": "Ваш город"
             })
         <!-- @@include("../blocks/modules/footer/footer.html") -->
         <script src="js/vendor.js"></script>
