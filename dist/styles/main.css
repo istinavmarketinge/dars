@@ -13259,9 +13259,10 @@ input:checked + .dars-control__btn-name::before {
 }
 .account-statistics-item__header-row-1 {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .account-statistics-item__promocode {
-  margin-right: 10px;
   display: flex;
   align-items: center;
   gap: 3px;
