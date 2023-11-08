@@ -11997,6 +11997,7 @@ dl.open .specifications-block__row {
   text-decoration: none;
   padding: 30px;
   box-sizing: border-box;
+  min-height: 417px;
 }
 @media (width <= 960px) {
   .compare-alone__item-add {
@@ -12082,7 +12083,6 @@ dl.open .specifications-block__row {
 }
 @media (width <= 960px) {
   .create-promocode__btn-toggle {
-    display: block;
     color: #D3D3D3;
     font-size: 16px;
     font-weight: 400;

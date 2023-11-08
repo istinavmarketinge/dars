@@ -9,22 +9,12 @@ const Compare = class Compare {
         if (!document.querySelector('.compare__page-right')) return;
         this.scrollbar = OverlayScrollbars(document.querySelector('.compare__page-right'), {}, {
             initialized(osInstance) {
-                if (window.innerWidth >= 960) {
-                    osInstance.isClicked = false;
-                    const { viewport } = osInstance.elements();
-                    document.querySelector('.compare__page').addEventListener('mousedown', (event) => {
-                        osInstance.isClicked = true;
-                    })
-                    document.querySelector('.compare__page').addEventListener('mouseup', (event) => {
-                        osInstance.isClicked = false;
-                    })
-                    document.querySelector('.compare__page').addEventListener('mousemove', (event) => {
-                        if (osInstance.isClicked) {
-                            // osInstance.scroll({y: event.offsetX})
-                            viewport.scrollTo({ left: (viewport.scrollLeft -  (event.clientX - viewport.clientWidth / 2) / 10)})
-                        }
-                    })
-                }
+                const { viewport } = osInstance.elements();
+                document.querySelector('.compare__page-items').addEventListener('wheel', (event) => {
+                    event.preventDefault();
+                    viewport.scrollLeft += event.deltaY;
+                    console.log(event);
+                })
             },
         });
     }

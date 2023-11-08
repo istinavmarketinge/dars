@@ -1602,25 +1602,13 @@ var Compare = /*#__PURE__*/function () {
       if (!document.querySelector('.compare__page-right')) return;
       this.scrollbar = (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_1__.OverlayScrollbars)(document.querySelector('.compare__page-right'), {}, {
         initialized: function initialized(osInstance) {
-          if (window.innerWidth >= 960) {
-            osInstance.isClicked = false;
-            var _osInstance$elements = osInstance.elements(),
-              viewport = _osInstance$elements.viewport;
-            document.querySelector('.compare__page').addEventListener('mousedown', function (event) {
-              osInstance.isClicked = true;
-            });
-            document.querySelector('.compare__page').addEventListener('mouseup', function (event) {
-              osInstance.isClicked = false;
-            });
-            document.querySelector('.compare__page').addEventListener('mousemove', function (event) {
-              if (osInstance.isClicked) {
-                // osInstance.scroll({y: event.offsetX})
-                viewport.scrollTo({
-                  left: viewport.scrollLeft - (event.clientX - viewport.clientWidth / 2) / 10
-                });
-              }
-            });
-          }
+          var _osInstance$elements = osInstance.elements(),
+            viewport = _osInstance$elements.viewport;
+          document.querySelector('.compare__page-items').addEventListener('wheel', function (event) {
+            event.preventDefault();
+            viewport.scrollLeft += event.deltaY;
+            console.log(event);
+          });
         }
       });
     }
