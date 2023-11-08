@@ -20,7 +20,6 @@ const Compare = class Compare {
                     })
                     document.querySelector('.compare__page').addEventListener('mousemove', (event) => {
                         if (osInstance.isClicked) {
-                            console.log(event.clientX, viewport.scrollLeft);
                             // osInstance.scroll({y: event.offsetX})
                             viewport.scrollTo({ left: (viewport.scrollLeft -  (event.clientX - viewport.clientWidth / 2) / 10)})
                         }
@@ -28,7 +27,6 @@ const Compare = class Compare {
                 }
             },
         });
-        // console.log(this.scrollbar.elements());
     }
     calculateTdHeights() {
         if (!document.querySelector('[data-compare-item-key]')) return;
@@ -40,7 +38,6 @@ const Compare = class Compare {
         itemIds.forEach(id => {
             let maxHeight = 0;
             document.querySelectorAll(`[data-compare-item-key="${id}"]`).forEach(td => {
-                console.log(td.clientHeight);
                 if (td.clientHeight > maxHeight) {
                     maxHeight = td.clientHeight
                 }
@@ -50,14 +47,12 @@ const Compare = class Compare {
             });
         })
 
-        console.log(itemIds);
 
     }
     changeCompareItem() {
         if (!document.querySelector('.compare__page-right .compare__page-item')) return;
         let pinned = $('.compare__page-right .compare__page-item.isPinned').clone();
         $('.compare__page-left').html(pinned);
-        console.log('pinned', pinned);
         // $('.compare__page-right').on('click', '.compare__page-conpare-with-it', function() {
         //     $('.compare__page-left .compare__page-item').removeClass('isPinned').appendTo('.compare__page-right .compare__page-items')
         //     $(this).closest('.compare__page-item').addClass('isPinned').appendTo('.compare__page-left');
@@ -70,7 +65,6 @@ const Compare = class Compare {
                 items: Array.from(document.querySelectorAll(`.compare__page-right [data-compare-item-key="${rowItem.dataset.compareItemKey}"] span`))
             };
         });
-        console.log('itemIds', itemIds);
         itemIds.forEach(item => {
             document.querySelector(`.compare__page-item.isPinned [data-compare-item-key="${item.id}"] span`).innerHTML = document.querySelector(`.compare__page-item.isPinned [data-compare-item-key="${item.id}"]`).dataset.defaultOptions;
             let etalon = document.querySelector(`.compare__page-item.isPinned [data-compare-item-key="${item.id}"] span`).innerHTML.replace(/\s/g, '').split(',');
@@ -83,12 +77,6 @@ const Compare = class Compare {
                 })
                 cell.innerHTML = resultHtml;
             });
-            // document.querySelectorAll(`.compare__page-right [data-compare-item-key="${item.id}"] span`).forEach(td => {
-            //     console.log()
-            //     // if (count <= 1) {
-            //     //     td.classList.add('isUnique');
-            //     // }
-            // });
         });
 
         if (window.innerWidth <= 961) {
@@ -111,7 +99,6 @@ const Compare = class Compare {
         document.querySelectorAll('.compare__page-right .compare__page-item .compare__page-conpare-with-it').forEach(button => {
             button.addEventListener('click', event => {
                 document.querySelector('.compare__page-right .compare__page-item.isPinned').classList.remove('isPinned');
-                console.log(event.currentTarget)
                 event.currentTarget.closest('.compare__page-item').classList.add('isPinned');
                 this.checkUniqueParams();
                 
@@ -126,7 +113,6 @@ const Compare = class Compare {
         document.querySelectorAll('.compare__page-item .compare__page__button--compare').forEach(button => {
             button.addEventListener('click', event => {
                 document.querySelector('.compare__page-item.isPinned').classList.remove('isPinned');
-                console.log(event.currentTarget)
                 event.currentTarget.closest('.compare__page-item').classList.add('isPinned');
                 this.checkUniqueParams();
             })

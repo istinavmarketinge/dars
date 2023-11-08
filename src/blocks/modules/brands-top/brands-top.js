@@ -17,7 +17,6 @@ const BrandsTop = class BrandsTop {
         switcher.addEventListener('click', (event) => {
             document.querySelector('.lang-switch__item--active').classList.remove('lang-switch__item--active')
             event.currentTarget.classList.add('lang-switch__item--active')
-            console.log(event.currentTarget.dataset.lang)
             if (event.currentTarget.dataset.lang == 'all') {
                 $(`.brands-items__item[data-word-type]`).slideDown('fast')
             } else {
@@ -41,7 +40,6 @@ const BrandsTop = class BrandsTop {
 
     }
     filterBrands(categoryId) {
-        console.log(categoryId);
 
         if (!document.querySelector('[data-item-category-ids]')) return;
 
@@ -55,9 +53,7 @@ const BrandsTop = class BrandsTop {
         document.querySelectorAll('[data-item-category-ids]').forEach(brand => {
             if (brand.dataset.itemCategoryIds.includes(categoryId)) {
               brand.style.display = 'flex';
-              console.log(brand);
             } else {
-              console.log(brand);
               brand.style.display = 'none';
             }
         })
@@ -69,7 +65,6 @@ const BrandsTop = class BrandsTop {
         setTimeout(() => {
             document.querySelectorAll('.brands-items__logos').forEach(wrap => {
                 let length = wrap.querySelectorAll('[data-item-category-ids][style="display: flex;"]').length;
-                console.log(length);
                 if (!length) {
                     wrap.closest('.brands-items__item').classList.add('isEmpty');
                 } else {
@@ -82,7 +77,6 @@ const BrandsTop = class BrandsTop {
         this.addOpenerClickHandler();
         this.changeLanguage();
         this.changeCategory();
-        console.log('BrandsTop');
     }
 }
 

@@ -34,13 +34,6 @@ const OrderPage = class OrderPage {
             //Формирование макета
             build: function () {
                 this.constructor.superclass.build.call(this);
-                console.log('build')
-                // this._$element = $('.balloon-root', this.getParentElement());
-
-                // this.applyElementOffset();
-
-                // this._$element.find('.close')
-                //     .on('click', $.proxy(this.onCloseClick, this));
             },
             //удаление макета из DOM
             clear: function () {
@@ -78,7 +71,6 @@ const OrderPage = class OrderPage {
                 
 
                 ymaps.geocode(address, {results:1}).then((res) => {
-                    console.log('address', address)
                     let coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
                     myPlacemark = new ymaps.Placemark(coords, {}, {
                         draggable: true
@@ -114,7 +106,6 @@ const OrderPage = class OrderPage {
                     this.getAddress(coordinates);
                 });
                 resolve(this.mapChoose);
-                console.log('карта инициализирована')
 
             })
         })
@@ -130,14 +121,12 @@ const OrderPage = class OrderPage {
         });
     }
     setMapPoint(map, address) {
-        console.log('address', address);
         return new Promise((resolve, reject) => {
             map.geoObjects.removeAll();
             ymaps.geocode(address,{results:1}).then((res) => { 
                 let coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
                 let point = new ymaps.Placemark(coords);
                 map.geoObjects.add(point);
-                console.log(coords)
 
                 this.setMapCenter(map, coords);
 
@@ -163,7 +152,6 @@ const OrderPage = class OrderPage {
     async initChooseMap() {
         // let address = `${document.querySelector('#delivery-city input').value}, ${document.querySelector('#delivery-address input').value} `;
 
-        // console.log(address, 'address')
         const map = await this.createChooseMap();
         // const coords = await this.setMapPoint(this.mapChoose, address)
 
@@ -181,7 +169,6 @@ const OrderPage = class OrderPage {
                 this.mapOpen.destroy();
                 this.mapOpen = null;
             }
-            console.log(this.mapOpen);
         })
     }
     openChooseMap() {
@@ -197,7 +184,6 @@ const OrderPage = class OrderPage {
             } else {
                 this.mapChoose.destroy();
                 this.mapChoose = null;
-                console.log(this.mapChoose);
             }
         })
     }

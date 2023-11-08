@@ -57,7 +57,6 @@ const PopularBrands = class PopularBrands {
       });
     }
     chooseSelectValue() {
-      console.log('chooseSelectValue');
       if (!document.querySelector('[data-brand-category-id]')) return;
       document.querySelectorAll('[data-brand-category-id]').forEach(option => {
         option.addEventListener('click', (event) => {
@@ -81,9 +80,7 @@ const PopularBrands = class PopularBrands {
       this.slider.el.querySelectorAll('[data-brand-category-ids]').forEach(brand => {
         if (brand.dataset.brandCategoryIds.includes(id)) {
           brand.style.display = 'flex';
-          console.log(brand);
         } else {
-          console.log(brand);
           brand.style.display = 'none';
         }
       })

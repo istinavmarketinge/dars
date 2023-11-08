@@ -5,7 +5,6 @@ const CatalogFilter = class CatalogFilter {
             document.querySelector('.bx-filter-input-checkbox-more-checkbox').addEventListener('click', (event) => {
                 event.target.closest(".bx-filter-input-checkbox-more-checkbox").classList.toggle("isOpened");
                 event.target.closest(".bx-filter-block").querySelector('.bx-filter-parameters-box-container').classList.toggle('isOpened');
-                console.log(event);
             });
         }
     }
@@ -26,7 +25,6 @@ const CatalogFilter = class CatalogFilter {
             document.querySelector('.bx-filter-parameters-box-container-all-filters').addEventListener('click', (event) => {
                 event.target.classList.toggle("isOpened");
                 event.target.closest(".smartfilter").querySelector('.row').classList.toggle('isOpened');
-                console.log(event);
             });
         }
     }
@@ -37,10 +35,8 @@ const CatalogFilter = class CatalogFilter {
     searchFilterShowHide(checkboxClass, checkbox, element, title) {
         if (this.searchFilterCheckIncludes(title, element.value)) {
             checkbox.closest(checkboxClass).style.display = 'block';
-            console.log("yes");
         } else {
             checkbox.closest(checkboxClass).style.display = 'none';
-            console.log('no');
         }
     }
     searchFilter({
@@ -68,7 +64,6 @@ const CatalogFilter = class CatalogFilter {
         document.querySelector('.filter__menu-item--more a').addEventListener('click', (e) => {
             e.preventDefault();
             e.currentTarget.closest('.filter__menu-in').classList.add('isShowed')
-            console.log('more clicked');
         })
         
     }

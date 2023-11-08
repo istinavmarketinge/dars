@@ -201,7 +201,6 @@ $(document).ready(function () {
                     return arDate.join(' - ');
                 }
             } else if (formData[5].value == "on") {
-                console.log("Бессрочно");
                 return "Бессрочно";
             } else {
                 return "-";

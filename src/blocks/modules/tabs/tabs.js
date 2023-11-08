@@ -57,7 +57,6 @@ const Tabs = class Tabs {
 
 
           document.querySelector('.tabs__left-item--active').classList.remove('tabs__left-item--active');
-          console.log(tabButton.dataset.slideShow);
           document.querySelectorAll(`.tabs__slider-item`).forEach(slide => {
             if (slide.dataset.slideType == tabButton.dataset.slideShow) {
               slide.style.display = 'block';

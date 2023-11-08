@@ -13,7 +13,6 @@ const Action = class Action {
             obj.closest('.js_click_closest').find('.js_click_find').css('height',action_find_heigh+'px');
             $(this.jquery_obj).removeClass(this.class_close);
             obj.hide();
-            console.log(this.action_find_height,action_find_heigh);
         });      
     }
     init() {

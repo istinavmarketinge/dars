@@ -53,7 +53,6 @@ const CatalogMenu = class CatalogMenu {
         document.querySelectorAll(".catalog-menu__left-list li").forEach((menuItem) => {
             menuItem.addEventListener("click", (event) => {
               // if (window.innerWidth <= 960) return;
-              console.log(menuItem);
               if (event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile")) {
                 event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
               }
@@ -68,7 +67,6 @@ const CatalogMenu = class CatalogMenu {
         opener.addEventListener('mouseenter', (event) => {
           document.querySelector('[data-menu-to-open].isActive').classList.remove('isActive');
           event.currentTarget.classList.add('isActive');
-          console.log(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}]`);
           if (document.querySelector(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}"]`)) {
             document.querySelector(`[data-menu-id].isOpened`).classList.remove('isOpened');
             document.querySelector(`[data-menu-id="${event.currentTarget.dataset.menuToOpen}"]`).classList.add('isOpened')

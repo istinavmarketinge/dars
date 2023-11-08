@@ -35,8 +35,6 @@ const Header = class Header {
 		let headerTopHeight = document.querySelector('.header-top').clientHeight;
 		let headerBottomHeight = document.querySelector('.header-bottom').clientHeight;
 		let headerBottomBounds = document.querySelector('.header-bottom').getBoundingClientRect();
-		console.log(`${windowHeight} - ${headerTopHeight} - ${headerBottomHeight} = ${windowHeight - headerTopHeight - headerBottomHeight}`);
-		console.log(headerBottomBounds);
 		return {
 			top: headerTopHeight + headerBottomHeight,
 			left: headerBottomBounds.x,

@@ -5,7 +5,6 @@ const CartPage = class CartPage {
         this.tooltip = null;
     }
     addTooltip() {
-        console.log('tooltip');
         if (!document.getElementById('tooltip')) return;
         this.tooltip = tippy('#tooltip', {
             content: document.getElementById('tooltip').dataset.tooltipText,
