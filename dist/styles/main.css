@@ -3069,6 +3069,10 @@ body.isScrollPrevented {
     display: none !important;
   }
 }
+.product-item-container {
+  position: static;
+}
+
 .header-top {
   padding: 14px 0 20px 0;
 }
