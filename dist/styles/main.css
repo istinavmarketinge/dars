@@ -10727,10 +10727,6 @@ dl.open .specifications-block__row {
   background: #fff;
   color: #000;
 }
-.button.active {
-  background: #1BC39B;
-  color: #fff;
-}
 
 .personal-account__in {
   display: flex;
