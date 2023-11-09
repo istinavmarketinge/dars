@@ -18,6 +18,7 @@ const Modal = class Modal {
         if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
             document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(closer => {
                 closer.addEventListener('click', (event) => {
+                    console.log('close');
                     event.currentTarget.closest('.popup-modal').classList.remove('active');
                 })
             })

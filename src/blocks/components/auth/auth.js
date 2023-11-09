@@ -15,6 +15,8 @@ const Auth = class Auth {
             close.addEventListener('click', (event)=>{
                 document.querySelectorAll('.auth-modal').forEach(wrap => {
                     wrap.classList.remove('active');
+                    wrap.querySelector('.js_modal_thanks').style.display = "none";
+                    wrap.querySelector('.popup-modal__form').removeAttribute('style');
                 });
             });
         })

@@ -40,6 +40,8 @@ var Auth = /*#__PURE__*/function () {
         close.addEventListener('click', function (event) {
           document.querySelectorAll('.auth-modal').forEach(function (wrap) {
             wrap.classList.remove('active');
+            wrap.querySelector('.js_modal_thanks').style.display = "none";
+            wrap.querySelector('.popup-modal__form').removeAttribute('style');
           });
         });
       });
@@ -120,6 +122,7 @@ var Modal = /*#__PURE__*/function () {
       if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
         document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
+            console.log('close');
             event.currentTarget.closest('.popup-modal').classList.remove('active');
           });
         });
