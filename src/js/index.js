@@ -24,6 +24,7 @@ import CatalogFilter from "%modules%/catalog-filter/catalog-filter";
 import PersonalAccountStatistics from "%modules%/personal-account-statistics/personal-account-statistics";
 import Orders from "%modules%/orders/orders";
 import OrderPage from "%modules%/cart-page-order/cart-page-order";
+import Mask from "%modules%/inputmask/inputmask";
 
 
 
@@ -59,6 +60,7 @@ window.app.orderPage = new OrderPage();
 
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
 window.app.orders = new Orders();
+window.app.mask = new Mask();
 
 
 
@@ -89,5 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.app.personalAccountStatistics.init();
     window.app.orders.init();
+    window.app.mask.init();
 })
 

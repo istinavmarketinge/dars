@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
-            <link rel="stylesheet" href="styles/main.css?17:8">
+            <link rel="stylesheet" href="styles/main.css?17:49">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1528,7 +1528,7 @@
                             <div class="personal-account-main-row__item">
                                 <div class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">Телефон</span>
-                                    <input type="tel" placeholder="+7 (999) 999-99-99">
+                                    <input data-input-mask="+7 (999) 999-99-99" type="tel" placeholder="+7 (999) 999-99-99">
                                 </div>
                             </div>
                         </div>
@@ -1536,22 +1536,28 @@
                     <div class="personal-account-main-row personal-account-main-row--requisites" data-type="legal,individual">
                         <div class="personal-account-main-row__title">Реквизиты</div>
                         <div class="personal-account-main-row__wrap">
-                            <div class="personal-account-main-row__item" data-type="legal,individual">
+                            <div class="personal-account-main-row__item" data-type="legal">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">ИНН</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="9999999999" type="text" placeholder="">
+                                </label>
+                            </div>
+                            <div class="personal-account-main-row__item" data-type="individual">
+                                <label class="personal-account-main-row__item-label">
+                                    <span class="personal-account-main-row__item-title">ИНН</span>
+                                    <input data-input-mask="999999999999" type="text" placeholder="">
                                 </label>
                             </div>
                             <div class="personal-account-main-row__item" data-type="legal,individual">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">КПП</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="999999999" type="text" placeholder="">
                                 </label>
                             </div>
                             <div class="personal-account-main-row__item" data-type="legal">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">ОГРН</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="9999999999999" type="text" placeholder="">
                                 </label>
                             </div>
                             <div class="personal-account-main-row__item" data-type="individual">
@@ -1597,13 +1603,13 @@
                             <div class="personal-account-main-row__item">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">БИК</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="999999999" type="text" placeholder="">
                                 </label>
                             </div>
                             <div class="personal-account-main-row__item">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">Расчетный счет</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="99999999999999999999" type="text" placeholder="">
                                 </label>
                             </div>
                             <div class="personal-account-main-row__item">
@@ -1615,7 +1621,7 @@
                             <div class="personal-account-main-row__item">
                                 <label class="personal-account-main-row__item-label">
                                     <span class="personal-account-main-row__item-title">Корреспондентский счет</span>
-                                    <input type="text" placeholder="">
+                                    <input data-input-mask="99999999999999999999" type="text" placeholder="">
                                 </label>
                             </div>
                         </div>

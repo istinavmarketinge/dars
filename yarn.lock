@@ -6540,6 +6540,11 @@ ink-docstrap@^1.3.2:
     moment "^2.14.1"
     sanitize-html "^1.13.0"
 
+inputmask@^5.0.9-beta.39:
+  version "5.0.9-beta.39"
+  resolved "https://registry.npmjs.org/inputmask/-/inputmask-5.0.9-beta.39.tgz"
+  integrity sha512-g8Nvk2VyM4fBAAaEWgkyKNOvEUqBwy/MmCH3u/Xwtr7VgFbbCErsCkd7qNp/07IiTffWeHzlZPqxJaNdeeaK1Q==
+
 internal-slot@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npmjs.org/internal-slot/-/internal-slot-1.0.5.tgz"
