@@ -3094,6 +3094,11 @@ a {
   color: #0F7DF0;
 }
 
+.catalog-detail-page-header__found-cheaper span {
+  text-decoration: none;
+  color: #0F7DF0;
+}
+
 .header-top {
   padding: 14px 0 20px 0;
 }
