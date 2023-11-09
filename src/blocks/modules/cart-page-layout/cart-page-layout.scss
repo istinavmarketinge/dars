@@ -1,1 +1,13 @@
 @import "./cart-page-total";
+
+.cart-page {
+    &__empty {
+        color: #333;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 21px */
+        letter-spacing: 0.45px;
+        padding-bottom: 30px;
+    }
+}

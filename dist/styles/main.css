@@ -2948,6 +2948,15 @@ body.isScrollPrevented {
   overflow: hidden;
 }
 
+a {
+  color: #0F7DF0;
+  text-decoration: none;
+}
+
+.action_products .pagination {
+  margin-top: 20px;
+}
+
 .container {
   max-width: 1626px;
   width: 100%;
@@ -3914,6 +3923,9 @@ body.isScrollPrevented {
   text-decoration: none;
   color: #000;
   box-sizing: border-box;
+}
+.popular-categories__item--pt-0 {
+  padding-top: 0;
 }
 @media all and (max-width: 600px) {
   .popular-categories__item {
@@ -6090,7 +6102,7 @@ body.isScrollPrevented {
 }
 
 .show_more_block {
-  margin: 10px 0 20px 0;
+  margin: 20px 0 0 0;
 }
 .show_more_block__btn {
   cursor: pointer;
@@ -6106,14 +6118,6 @@ body.isScrollPrevented {
   text-align: center;
 }
 
-.section__elements_list .show_more_block {
-  margin-bottom: 0;
-}
-
-.section__elements_list .pagination {
-  margin-top: 20px;
-}
-
 @media (max-width: 625px) {
   .articles__button {
     display: none !important;
@@ -6122,7 +6126,7 @@ body.isScrollPrevented {
 .pagination {
   display: flex;
   align-items: center;
-  margin: 0 0 80px 0;
+  margin: 20px 0 80px 0;
 }
 .pagination a {
   display: block;
@@ -6202,6 +6206,10 @@ body.isScrollPrevented {
   .pagination__gotopage-text {
     margin-left: 0;
   }
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .section__title {
@@ -10694,6 +10702,7 @@ dl.open .specifications-block__row {
   display: block;
   text-decoration: none;
   text-align: center;
+  outline: none;
 }
 .button--primary {
   border: 1px solid #F0820F;
@@ -10712,6 +10721,10 @@ dl.open .specifications-block__row {
 .button--outlined {
   background: #fff;
   color: #000;
+}
+.button.active {
+  background: #1BC39B;
+  color: #fff;
 }
 
 .personal-account__in {
@@ -14147,6 +14160,16 @@ input:checked + .dars-control__btn-name::before {
 .cart-page__politics a {
   color: #0F7DF0;
   text-decoration: none;
+}
+
+.cart-page__empty {
+  color: #333;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 21px */
+  letter-spacing: 0.45px;
+  padding-bottom: 30px;
 }
 
 @media (width >= 961px) {

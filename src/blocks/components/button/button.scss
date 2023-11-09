@@ -9,6 +9,7 @@
     display: block;
     text-decoration: none;
     text-align: center;
+    outline: none;
     &--primary {
         border: 1px solid #F0820F;
     }
@@ -26,5 +27,9 @@
     &--outlined {
         background: #fff;
         color: #000;
+    }
+    &.active {
+        background: #1BC39B;
+        color: #fff;
     }
 }

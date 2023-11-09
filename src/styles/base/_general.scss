@@ -8,6 +8,15 @@ html {
 body.isScrollPrevented {
     overflow: hidden;
 }
+
+a {
+    color: #0F7DF0;
+    text-decoration: none;
+}
+
+.action_products .pagination {
+    margin-top: 20px;
+}
 .container {
     max-width: 1626px;
     width: 100%;
