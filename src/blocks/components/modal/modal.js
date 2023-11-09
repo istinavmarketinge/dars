@@ -4,10 +4,14 @@ const Modal = class Modal {
         if (!document.querySelector('[data-modal-toggle]')) return;
 
         document.querySelectorAll('[data-modal-toggle]').forEach(opener => {
+            
             opener.addEventListener('click', (event) => {
                 event.preventDefault();
+                window.app.modalParams = opener.dataset;
                 document.querySelector(`[data-modal-id="${event.currentTarget.dataset.modalToggle}"]`).classList.toggle('active');
+                console.log('window.app.modalParams', window.app.modalParams);
             })
+            
         })
     }
     addModalCloseHandler() {
