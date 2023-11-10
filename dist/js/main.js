@@ -2,93 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/blocks/components/auth/auth.js":
-/*!********************************************!*\
-  !*** ./src/blocks/components/auth/auth.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-var Auth = /*#__PURE__*/function () {
-  function Auth() {
-    _classCallCheck(this, Auth);
-  }
-  _createClass(Auth, [{
-    key: "addModalOpenHandler",
-    value: function addModalOpenHandler() {
-      if (!document.querySelector('.right-icons__item--login')) return;
-      document.querySelectorAll('.right-icons__item--login').forEach(function (opener) {
-        opener.addEventListener('click', function (event) {
-          document.querySelector('.modal--registration').classList.add('active');
-        });
-      });
-    }
-  }, {
-    key: "addModalCloseHandler",
-    value: function addModalCloseHandler() {
-      if (!document.querySelector('.modal-box__btn-close')) return;
-      document.querySelectorAll('.modal-box__btn-close').forEach(function (close) {
-        close.addEventListener('click', function (event) {
-          document.querySelectorAll('.modal').forEach(function (wrap) {
-            wrap.classList.remove('active');
-            wrap.querySelector('.js_modal_thanks').style.display = "none";
-            wrap.querySelector('form').removeAttribute('style');
-          });
-        });
-      });
-    }
-  }, {
-    key: "init",
-    value: function init() {
-      // this.addModalOpenHandler();
-      // this.addModalCloseHandler();
-    }
-  }]);
-  return Auth;
-}();
-
-// $(document).ready(function () {
-//     $('.modal-box__btn-registration[type="submit"]').on('click', function(){
-//         $(this).closest('.modal-box__form').hide();
-//         $('.modal-box-successfully').show();
-//     });
-
-//     $('.modal-box__btn-registration[type="button"]').on('click', function(){
-//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
-//         $('.modal--registration').addClass('active');
-//     });
-
-//     $('.modal-box__btn-ok, .modal-box__btn-auth[type="submit"]').on('click', function(){
-//         let wrap = $(this).closest('.modal');
-//         wrap.fadeOut(300, function(){
-//             wrap.removeClass('active').removeAttr('style');
-//         });
-//     });
-
-//     $('.modal-box__btn-auth[type="button"]').on('click', function(){
-//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
-//         $('.modal--authorization').addClass('active');
-//     });
-
-//     $('.modal-box__btn-link--password-recovery').on('click', function(){
-//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
-//         $('.modal--password-recovery').addClass('active');
-//     });
-// });
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Auth);
-
-/***/ }),
-
 /***/ "./src/blocks/components/modal/modal.js":
 /*!**********************************************!*\
   !*** ./src/blocks/components/modal/modal.js ***!
@@ -116,6 +29,9 @@ var Modal = /*#__PURE__*/function () {
       document.querySelectorAll('[data-modal-toggle]').forEach(function (opener) {
         opener.addEventListener('click', function (event) {
           event.preventDefault();
+          if (document.querySelector('.modal-webform.active')) {
+            document.querySelector('.modal-webform.active').classList.remove('active');
+          }
           window.app.modalParams = opener.dataset;
           document.querySelector("[data-modal-id=\"".concat(event.currentTarget.dataset.modalToggle, "\"]")).classList.toggle('active');
           console.log('window.app.modalParams', window.app.modalParams);
@@ -129,14 +45,14 @@ var Modal = /*#__PURE__*/function () {
         document.querySelectorAll('.modal-box__btn-close, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
             console.log('close');
-            event.currentTarget.closest('.modal').classList.remove('active');
-            event.currentTarget.closest('.modal').querySelector('.js_modal_thanks').style.display = "none";
-            event.currentTarget.closest('.modal').querySelector('form').removeAttribute('style');
+            event.currentTarget.closest('.modal-webform').classList.remove('active');
+            event.currentTarget.closest('.modal-webform').querySelector('.js_modal_thanks').style.display = "none";
+            event.currentTarget.closest('.modal-webform').querySelector('form').removeAttribute('style');
           });
         });
       }
-      if (document.querySelector('.modal')) {
-        document.querySelectorAll('.modal').forEach(function (closer) {
+      if (document.querySelector('.modal-webform')) {
+        document.querySelectorAll('.modal-webform').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
             event.currentTarget.classList.remove('active');
             event.currentTarget.querySelector('.js_modal_thanks').style.display = "none";
@@ -2589,16 +2505,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/brands-top/brands-top */ "./src/blocks/modules/brands-top/brands-top.js");
 /* harmony import */ var _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/affiliate-program/affiliate-program */ "./src/blocks/modules/affiliate-program/affiliate-program.js");
 /* harmony import */ var _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %components%/modal/modal */ "./src/blocks/components/modal/modal.js");
-/* harmony import */ var _components_auth_auth__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %components%/auth/auth */ "./src/blocks/components/auth/auth.js");
-/* harmony import */ var _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/cart-page/cart-page */ "./src/blocks/modules/cart-page/cart-page.js");
-/* harmony import */ var _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/personal-account/personal-account */ "./src/blocks/modules/personal-account/personal-account.js");
-/* harmony import */ var _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/personal-account-create-promocode/personal-account-create-promocode */ "./src/blocks/modules/personal-account-create-promocode/personal-account-create-promocode.js");
-/* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
-/* harmony import */ var _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/personal-account-statistics/personal-account-statistics */ "./src/blocks/modules/personal-account-statistics/personal-account-statistics.js");
-/* harmony import */ var _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/orders/orders */ "./src/blocks/modules/orders/orders.js");
-/* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
-/* harmony import */ var _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/inputmask/inputmask */ "./src/blocks/modules/inputmask/inputmask.js");
-
+/* harmony import */ var _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %modules%/cart-page/cart-page */ "./src/blocks/modules/cart-page/cart-page.js");
+/* harmony import */ var _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/personal-account/personal-account */ "./src/blocks/modules/personal-account/personal-account.js");
+/* harmony import */ var _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/personal-account-create-promocode/personal-account-create-promocode */ "./src/blocks/modules/personal-account-create-promocode/personal-account-create-promocode.js");
+/* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
+/* harmony import */ var _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/personal-account-statistics/personal-account-statistics */ "./src/blocks/modules/personal-account-statistics/personal-account-statistics.js");
+/* harmony import */ var _modules_orders_orders__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/orders/orders */ "./src/blocks/modules/orders/orders.js");
+/* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
+/* harmony import */ var _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/inputmask/inputmask */ "./src/blocks/modules/inputmask/inputmask.js");
 
 
 
@@ -2642,15 +2556,14 @@ window.app.brandsDetaiTop = new _modules_brands_detail_top_brands_detail_top__WE
 window.app.brandsTop = new _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_14__["default"]();
 window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_15__["default"]();
 window.app.modal = new _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"]();
-window.app.auth = new _components_auth_auth__WEBPACK_IMPORTED_MODULE_17__["default"]();
-window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__["default"]();
-window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__["default"]();
-window.app.personalAccountCreatePromocode = new _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_20__["default"]();
-window.app.catalogFilter = new _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__["default"]();
-window.app.orderPage = new _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__["default"]();
-window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__["default"]();
-window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__["default"]();
-window.app.mask = new _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_25__["default"]();
+window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_17__["default"]();
+window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_18__["default"]();
+window.app.personalAccountCreatePromocode = new _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_19__["default"]();
+window.app.catalogFilter = new _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_20__["default"]();
+window.app.orderPage = new _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_23__["default"]();
+window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_21__["default"]();
+window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_22__["default"]();
+window.app.mask = new _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();
@@ -2669,7 +2582,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.app.brandsTop.init();
   window.app.affiliateProgram.init();
   window.app.modal.init();
-  window.app.auth.init();
   window.app.cartPage.init();
   window.app.personalAccount.init();
   window.app.personalAccountCreatePromocode.init();
