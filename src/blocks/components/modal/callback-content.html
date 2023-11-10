@@ -1,11 +1,11 @@
-<form action="" class="popup-modal__form auth-modal-box" style="display: none;">
-    <div class="auth-modal-box__row required">
-        <input type="text" name="name" id="auth-modal-box__control-name" placeholder="" required="" data-listener-added_326aa8a4="true">
-        <label for="auth-modal-box__control-name" class="auth-modal-box__label"><span>Имя</span></label>
+<form action="">
+    <div class="modal-box__row required">
+        <input type="text" name="name" id="modal-box__control-name" placeholder="" required="" data-listener-added_326aa8a4="true">
+        <label for="modal-box__control-name" class="modal-box__label"><span>Имя</span></label>
     </div>
-    <div class="auth-modal-box__row">
-        <input type="tel" name="phone" id="auth-modal-box__control-phone" placeholder="" data-listener-added_326aa8a4="true">
-        <label for="auth-modal-box__control-phone" class="auth-modal-box__label"><span>Телефон</span></label>
+    <div class="modal-box__row">
+        <input type="tel" name="phone" id="modal-box__control-phone" placeholder="" data-listener-added_326aa8a4="true">
+        <label for="modal-box__control-phone" class="modal-box__label"><span>Телефон</span></label>
     </div>
     @@include('../button/button.html', {
         "type": "primary",
@@ -14,13 +14,9 @@
         "text": "Перезвоните мне",
         "class_name": "popup-modal__submit"
     })
-</form>
-
-<div class="popup-modal__message" style="display: none;">
-    <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%"  viewBox="0 0 138 92" fill="none">
-        <path d="M0 49.9136L47.2573 92L138 11.4199L124.972 0L47.2573 68.9996L12.8472 38.4133L0 49.9136Z" fill="#1BC49B"/>
-        </svg>
+    <div class="modal-box__consent-text">
+        <p>Нажимая кнопку «Перезвоните мне», я даю согласие на обработку персональных данных, в
+            соответствии с <a href="/politika-konfidentsialnosti/" target="_blank">Политикой</a>
+            и соглашаюсь с Правилами</p>
     </div>
-    <div class="message">Первый освободившийся оператор перезвонит вам в течение ближайшего времени</div>
-</div>
+</form>

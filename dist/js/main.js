@@ -28,20 +28,20 @@ var Auth = /*#__PURE__*/function () {
       if (!document.querySelector('.right-icons__item--login')) return;
       document.querySelectorAll('.right-icons__item--login').forEach(function (opener) {
         opener.addEventListener('click', function (event) {
-          document.querySelector('.auth-modal--registration').classList.add('active');
+          document.querySelector('.modal--registration').classList.add('active');
         });
       });
     }
   }, {
     key: "addModalCloseHandler",
     value: function addModalCloseHandler() {
-      if (!document.querySelector('.auth-modal-box__btn-close')) return;
-      document.querySelectorAll('.auth-modal-box__btn-close').forEach(function (close) {
+      if (!document.querySelector('.modal-box__btn-close')) return;
+      document.querySelectorAll('.modal-box__btn-close').forEach(function (close) {
         close.addEventListener('click', function (event) {
-          document.querySelectorAll('.auth-modal').forEach(function (wrap) {
+          document.querySelectorAll('.modal').forEach(function (wrap) {
             wrap.classList.remove('active');
             wrap.querySelector('.js_modal_thanks').style.display = "none";
-            wrap.querySelector('.popup-modal__form').removeAttribute('style');
+            wrap.querySelector('form').removeAttribute('style');
           });
         });
       });
@@ -49,36 +49,42 @@ var Auth = /*#__PURE__*/function () {
   }, {
     key: "init",
     value: function init() {
-      this.addModalOpenHandler();
-      this.addModalCloseHandler();
+      // this.addModalOpenHandler();
+      // this.addModalCloseHandler();
     }
   }]);
   return Auth;
 }();
-$(document).ready(function () {
-  $('.auth-modal-box__btn-registration[type="submit"]').on('click', function () {
-    $(this).closest('.auth-modal-box__form').hide();
-    $('.auth-modal-box-successfully').show();
-  });
-  $('.auth-modal-box__btn-registration[type="button"]').on('click', function () {
-    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
-    $('.auth-modal--registration').addClass('active');
-  });
-  $('.auth-modal-box__btn-ok, .auth-modal-box__btn-auth[type="submit"]').on('click', function () {
-    var wrap = $(this).closest('.auth-modal');
-    wrap.fadeOut(300, function () {
-      wrap.removeClass('active').removeAttr('style');
-    });
-  });
-  $('.auth-modal-box__btn-auth[type="button"]').on('click', function () {
-    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
-    $('.auth-modal--authorization').addClass('active');
-  });
-  $('.auth-modal-box__btn-link--password-recovery').on('click', function () {
-    $(this).closest('.auth-modal').hide().removeClass('active').removeAttr('style');
-    $('.auth-modal--password-recovery').addClass('active');
-  });
-});
+
+// $(document).ready(function () {
+//     $('.modal-box__btn-registration[type="submit"]').on('click', function(){
+//         $(this).closest('.modal-box__form').hide();
+//         $('.modal-box-successfully').show();
+//     });
+
+//     $('.modal-box__btn-registration[type="button"]').on('click', function(){
+//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
+//         $('.modal--registration').addClass('active');
+//     });
+
+//     $('.modal-box__btn-ok, .modal-box__btn-auth[type="submit"]').on('click', function(){
+//         let wrap = $(this).closest('.modal');
+//         wrap.fadeOut(300, function(){
+//             wrap.removeClass('active').removeAttr('style');
+//         });
+//     });
+
+//     $('.modal-box__btn-auth[type="button"]').on('click', function(){
+//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
+//         $('.modal--authorization').addClass('active');
+//     });
+
+//     $('.modal-box__btn-link--password-recovery').on('click', function(){
+//         $(this).closest('.modal').hide().removeClass('active').removeAttr('style');
+//         $('.modal--password-recovery').addClass('active');
+//     });
+// });
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Auth);
 
 /***/ }),
@@ -119,23 +125,27 @@ var Modal = /*#__PURE__*/function () {
   }, {
     key: "addModalCloseHandler",
     value: function addModalCloseHandler() {
-      if (document.querySelector('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn')) {
-        document.querySelectorAll('.popup-modal__closer, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
+      if (document.querySelector('.modal-box__btn-close, .modal-delete-promocode__no, .modal-delete-order__btn')) {
+        document.querySelectorAll('.modal-box__btn-close, .modal-delete-promocode__no, .modal-delete-order__btn').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
             console.log('close');
-            event.currentTarget.closest('.popup-modal').classList.remove('active');
+            event.currentTarget.closest('.modal').classList.remove('active');
+            event.currentTarget.closest('.modal').querySelector('.js_modal_thanks').style.display = "none";
+            event.currentTarget.closest('.modal').querySelector('form').removeAttribute('style');
           });
         });
       }
-      if (document.querySelector('.popup-modal')) {
-        document.querySelectorAll('.popup-modal').forEach(function (closer) {
+      if (document.querySelector('.modal')) {
+        document.querySelectorAll('.modal').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
             event.currentTarget.classList.remove('active');
+            event.currentTarget.querySelector('.js_modal_thanks').style.display = "none";
+            event.currentTarget.querySelector('form').removeAttribute('style');
           });
         });
       }
-      if (document.querySelector('.popup-modal__content, .modal-delete-promocode, .modal-delete-order')) {
-        document.querySelectorAll('.popup-modal__content, .modal-delete-promocode, .modal-delete-order').forEach(function (closer) {
+      if (document.querySelector('.modal-box, .modal-delete-promocode, .modal-delete-order')) {
+        document.querySelectorAll('.modal-box, .modal-delete-promocode, .modal-delete-order').forEach(function (closer) {
           closer.addEventListener('click', function (event) {
             event.stopPropagation();
           });

@@ -1,4 +1,4 @@
-.auth-modal {
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,7 +18,7 @@
         visibility: visible;
     }
 }
-.auth-modal-box {
+.modal-box {
     border-radius: 12px;
     background: #FFF;
     position: relative;
@@ -27,7 +27,7 @@
         max-width: 90%;
     }
 
-    .auth-modal-box-registration {
+    .modal-box-registration {
         max-width: 530px;
 
         @media(width <= 650px){
@@ -237,7 +237,7 @@
     }
 }
 
-.auth-modal-box-successfully {
+.modal-box-successfully {
     max-width: 585px;
 
     &__wrap {
@@ -267,7 +267,7 @@
         grid-auto-rows: 56px;
     }
 
-    .auth-modal-box {
+    .modal-box {
         &__btn-ok {
             text-transform: uppercase;
         }
@@ -275,27 +275,27 @@
     
 }
 
-.auth-modal-box-authorization {
+.modal-box-authorization {
     width: 530px;
 
-    .auth-modal-box__wrap {
+    .modal-box__wrap {
         padding: 90px 75px 70px;
     }
 
-    .auth-modal-box__footer {
+    .modal-box__footer {
         grid-template-columns: 1.1fr 1fr;
         margin-top: 30px;
     }
 
-    .auth-modal-box__body {
+    .modal-box__body {
         margin-top: 50px;
     }
 
-    .auth-modal-box__after-body {
+    .modal-box__after-body {
         margin-top: 10px;
     }
     
-    .auth-modal-box__btn-link {
+    .modal-box__btn-link {
         border: none;
         padding: 10px 14px;
         margin: 0;
@@ -306,36 +306,36 @@
 }
 
 
-.auth-modal-box-password-recovery {
+.modal-box-password-recovery {
     max-width: 530px;
 
-    .auth-modal-box__wrap {
+    .modal-box__wrap {
         padding: 90px 75px 70px;
     }
     
-    .auth-modal-box__title {
+    .modal-box__title {
         font-size: 32px;
     }
     
-    .auth-modal-box__info {
+    .modal-box__info {
         margin-top: 20px;
         color: #999;
         font-size: 14px;
         letter-spacing: 0.42px;
     }
 
-    .auth-modal-box__footer {
+    .modal-box__footer {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
     
-    .auth-modal-box__infooter {
+    .modal-box__infooter {
         display: grid;
         grid-auto-rows: 1fr;
         gap: 5px;
     }
     
-    .auth-modal-box__infooter button {
+    .modal-box__infooter button {
         background: none;
         padding: 0;
         margin: 0;
