@@ -1156,18 +1156,23 @@ jQuery(document).ready(function () {
     var index = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-detail-page-tabs-list').find("[data-scroll-for=\"".concat(id, "\"]")).index();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-detail-page-tabs-list').find('li').removeClass('active').eq(index).addClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(index).addClass('active');
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btn-to-basket').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href', '/basket/').html('Товар в корзине <span>Перейти</span>');
-    }
-  });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btn-fast-buy').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('active');
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('active')) {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).html('Спасибо за покупку! <span>Перейти в каталог</span>');
-    }
-  });
+
+  // $('.btn-to-basket').on('click',function(){
+  //   $(this).toggleClass('active');
+
+  //   if($(this).hasClass('active')){
+  //     $(this).attr('href', '/basket/').html('Товар в корзине <span>Перейти</span>');
+  //   }
+  // });
+
+  // $('.btn-fast-buy').on('click',function(){
+  //   $(this).toggleClass('active');
+
+  //   if($(this).hasClass('active')){
+  //     $(this).html('Спасибо за покупку! <span>Перейти в каталог</span>');
+  //   }
+  // });
+
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-detail-page-tabs-list').on('click', 'li:not(.active)', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active').siblings().removeClass('active').closest('.catalog-detail-page-tabs-block').find('.catalog-detail-page-main-list__item').removeClass('active').eq(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).index()).addClass('active');
   });

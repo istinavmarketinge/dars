@@ -164,21 +164,21 @@ jQuery(document).ready(function() {
     
   });
 
-  $('.btn-to-basket').on('click',function(){
-    $(this).toggleClass('active');
+  // $('.btn-to-basket').on('click',function(){
+  //   $(this).toggleClass('active');
 
-    if($(this).hasClass('active')){
-      $(this).attr('href', '/basket/').html('Товар в корзине <span>Перейти</span>');
-    }
-  });
+  //   if($(this).hasClass('active')){
+  //     $(this).attr('href', '/basket/').html('Товар в корзине <span>Перейти</span>');
+  //   }
+  // });
 
-  $('.btn-fast-buy').on('click',function(){
-    $(this).toggleClass('active');
+  // $('.btn-fast-buy').on('click',function(){
+  //   $(this).toggleClass('active');
 
-    if($(this).hasClass('active')){
-      $(this).html('Спасибо за покупку! <span>Перейти в каталог</span>');
-    }
-  });
+  //   if($(this).hasClass('active')){
+  //     $(this).html('Спасибо за покупку! <span>Перейти в каталог</span>');
+  //   }
+  // });
 
   $('.catalog-detail-page-tabs-list').on('click', 'li:not(.active)', function() {
     $(this)
