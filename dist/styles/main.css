@@ -15291,6 +15291,10 @@ input:checked + .dars-control__btn-name::before {
     max-width: 390px;
   }
 }
+.modal-box__form {
+  max-height: 90vh;
+  overflow: auto;
+}
 .modal-box__btn-close {
   position: absolute;
   top: 15px;
@@ -15357,7 +15361,7 @@ input:checked + .dars-control__btn-name::before {
 .modal-box__row:not(:last-child) {
   margin-bottom: 20px;
 }
-.modal-box input {
+.modal-box input, .modal-box textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -15369,25 +15373,31 @@ input:checked + .dars-control__btn-name::before {
   transition: background 0.3s, border-color 0.3s;
 }
 @media (width <= 650px) {
-  .modal-box input {
+  .modal-box input, .modal-box textarea {
     padding: 10px 15px;
   }
 }
-.modal-box input:focus, .modal-box input:focus-within, .modal-box input:hover {
+.modal-box input:focus, .modal-box input:focus-within, .modal-box input:hover, .modal-box textarea:focus, .modal-box textarea:focus-within, .modal-box textarea:hover {
   border-color: #F0820F;
   outline: none;
   background: rgba(240, 130, 15, 0.1098039216);
 }
 .modal-box input:focus + label span,
 .modal-box input:focus-within + label span,
-.modal-box input:not(:placeholder-shown) + label span {
+.modal-box input:not(:placeholder-shown) + label span,
+.modal-box textarea:focus + label span,
+.modal-box textarea:focus-within + label span,
+.modal-box textarea:not(:placeholder-shown) + label span {
   transform: translate(-10px, -37px);
   font-size: 14px;
 }
 @media (width <= 650px) {
   .modal-box input:focus + label span,
   .modal-box input:focus-within + label span,
-  .modal-box input:not(:placeholder-shown) + label span {
+  .modal-box input:not(:placeholder-shown) + label span,
+  .modal-box textarea:focus + label span,
+  .modal-box textarea:focus-within + label span,
+  .modal-box textarea:not(:placeholder-shown) + label span {
     transform: translate(-10px, -24px);
     font-size: 12px;
   }

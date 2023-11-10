@@ -63,6 +63,7 @@
     }
     &__form {
         padding: 0 32px;
+        
         @media (width <= 960px) {
             padding: 0 20px;
         }
@@ -263,6 +264,7 @@
     position: relative;
     width: 90vw;
     max-width: 530px;
+    
     @media(width <= 420px){
         max-width: 90%;
     }
@@ -273,6 +275,11 @@
         @media(width <= 650px){
             max-width: 390px;
         }
+    }
+
+    &__form {
+        max-height: 90vh;
+        overflow: auto;
     }
 
     &__btn-close {
@@ -345,7 +352,7 @@
         }
     }
 
-    input {
+    input, textarea {
         display: block;
         width: 100%;
         box-sizing: border-box;
@@ -368,10 +375,14 @@
             background: #f0820f1c;
         }
     }
+    
 
     input:focus + label span,
     input:focus-within + label span,
-    input:not(:placeholder-shown) + label span {
+    input:not(:placeholder-shown) + label span,
+    textarea:focus + label span,
+    textarea:focus-within + label span,
+    textarea:not(:placeholder-shown) + label span {
         transform: translate(-10px, -37px);
         font-size: 14px;
 
