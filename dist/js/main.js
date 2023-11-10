@@ -1817,12 +1817,11 @@ var ElementsList = /*#__PURE__*/function () {
     key: "addHoverHandler",
     value: function addHoverHandler() {
       if (!document.querySelector('.elements-item--with-buttons') || !document.querySelector('.elements-item__popover')) return;
-      document.querySelectorAll('.elements-item--with-buttons').forEach(function (item) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).hover(function (event) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').show(100);
-        }, function (event) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').hide(100);
-        });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('mouseenter', '.elements-item--with-buttons', function (event) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').show(100);
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('mouseleave', '.elements-item--with-buttons', function (event) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').hide(100);
       });
     }
   }, {

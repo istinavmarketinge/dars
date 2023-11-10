@@ -11,12 +11,11 @@ const ElementsList = class ElementsList {
     }
     addHoverHandler() {
       if (!document.querySelector('.elements-item--with-buttons') || !document.querySelector('.elements-item__popover')) return;
-      document.querySelectorAll('.elements-item--with-buttons').forEach(item => {
-        $(item).hover(function(event) {
-          $(event.currentTarget).find('.elements-item__popover').show(100);
-        }, function(event) {
-          $(event.currentTarget).find('.elements-item__popover').hide(100);
-        })
+      $(document).on('mouseenter', '.elements-item--with-buttons', function(event) {
+        $(event.currentTarget).find('.elements-item__popover').show(100);
+      })
+      $(document).on('mouseleave', '.elements-item--with-buttons', function(event) {
+        $(event.currentTarget).find('.elements-item__popover').hide(100);
       })
     }
     init() {
