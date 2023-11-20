@@ -1813,9 +1813,6 @@ var Header = /*#__PURE__*/function () {
       $('.header-top__modal-close').on('click', function () {
         $('.header-top__modal-city').removeClass('open');
       });
-      $('.header-top__modal-yes').on('click', function () {
-        $('.header-top__modal-city').removeClass('open');
-      });
       document.querySelector('.header-bottom__catalog-button').addEventListener('click', function () {
         document.querySelector('.catalog-menu').classList.toggle('open');
         _this.setCatalogBounds();
