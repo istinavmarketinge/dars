@@ -24,6 +24,7 @@ import PersonalAccountStatistics from "%modules%/personal-account-statistics/per
 import Orders from "%modules%/orders/orders";
 import OrderPage from "%modules%/cart-page-order/cart-page-order";
 import Mask from "%modules%/inputmask/inputmask";
+import UpButton from "%modules%/up-button/up-button";
 
 
 
@@ -55,6 +56,7 @@ window.app.personalAccount = new PersonalAccount();
 window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode();
 window.app.catalogFilter = new CatalogFilter();
 window.app.orderPage = new OrderPage();
+window.app.upButton = new UpButton();
 
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
 window.app.orders = new Orders();
@@ -85,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.personalAccountCreatePromocode.init();
     window.app.catalogFilter.init();
     window.app.orderPage.init();
+    window.app.upButton.init();
 
     window.app.personalAccountStatistics.init();
     window.app.orders.init();

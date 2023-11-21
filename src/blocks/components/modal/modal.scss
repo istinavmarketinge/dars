@@ -265,9 +265,9 @@
     width: 90vw;
     max-width: 530px;
     
-    @media(width <= 420px){
-        max-width: 90%;
-    }
+    // @media(width <= 420px){
+    //     max-width: 90%;
+    // }
 
     .modal-box-registration {
         max-width: 530px;

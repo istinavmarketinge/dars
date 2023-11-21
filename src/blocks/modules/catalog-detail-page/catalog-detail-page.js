@@ -40,7 +40,7 @@ const DetailCatalogSlider = class DetailCatalogSlider {
           });
 
         let catalogSlider = new Swiper('.catalog-detail-page__catalog-slider', {
-          loop: true,
+          loop: false,
           spaceBetween: 20,
           slidesPerView: 6,
           freeMode: true,
