@@ -631,11 +631,58 @@ var OrderPage = /*#__PURE__*/function () {
     _classCallCheck(this, OrderPage);
     this.mapOpen = null;
     this.mapChoose = null;
+    this.selectedRadio = [];
   }
   _createClass(OrderPage, [{
+    key: "fillSelectedRadios",
+    value: function fillSelectedRadios() {
+      var _this = this;
+      if (!document.querySelector('[data-fields-id]')) return;
+      this.selectedRadio = [];
+      document.querySelectorAll('[data-fields-id]').forEach(function (radio) {
+        if (radio.checked) {
+          _this.selectedRadio.push(radio.dataset.fieldsId);
+        }
+      });
+      console.log(this.selectedRadio);
+      this.toggleRelatedElements();
+    }
+  }, {
+    key: "setRadioChangeHandler",
+    value: function setRadioChangeHandler() {
+      var _this2 = this;
+      if (!document.querySelector('[data-fields-id]')) return;
+      document.querySelectorAll('[data-fields-id]').forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          _this2.fillSelectedRadios();
+        });
+      });
+    }
+  }, {
+    key: "toggleRelatedElements",
+    value: function toggleRelatedElements() {
+      var _this3 = this;
+      if (!document.querySelector('[data-field]')) return;
+      document.querySelectorAll('[data-field]').forEach(function (field) {
+        if (!field.dataset.styleDisplay) {
+          field.dataset.styleDisplay = window.getComputedStyle(field).display;
+        }
+        console.log('field.dataset.styleDisplay', field.dataset.styleDisplay);
+        var fields = [];
+        field.dataset.field.replace(/\s/g, '').split(',').forEach(function (tag) {
+          fields.push(_this3.selectedRadio.includes(tag));
+        });
+        if (fields.includes(false)) {
+          field.style.display = 'none';
+        } else {
+          field.style.display = field.dataset.styleDisplay;
+        }
+      });
+    }
+  }, {
     key: "createOpenMap",
     value: function createOpenMap() {
-      var _this = this;
+      var _this4 = this;
       return new Promise(function (resolve, reject) {
         if (!document.querySelector('#cart-page__map-wrap--js-open')) {
           reject('Не найден селектор для инициализации карты');
@@ -643,11 +690,11 @@ var OrderPage = /*#__PURE__*/function () {
         }
         ;
         ymaps.ready(function () {
-          _this.mapOpen = new ymaps.Map("cart-page__map-wrap--js-open", {
+          _this4.mapOpen = new ymaps.Map("cart-page__map-wrap--js-open", {
             center: [55.76, 37.64],
             zoom: 7
           });
-          resolve(_this.mapOpen);
+          resolve(_this4.mapOpen);
         });
       });
     }
@@ -678,7 +725,7 @@ var OrderPage = /*#__PURE__*/function () {
   }, {
     key: "createChooseMap",
     value: function createChooseMap() {
-      var _this2 = this;
+      var _this5 = this;
       return new Promise(function (resolve, reject) {
         if (!document.querySelector('#cart-page__map-wrap--js-choose')) {
           reject('Не найден селектор для инициализации карты');
@@ -686,7 +733,7 @@ var OrderPage = /*#__PURE__*/function () {
         }
         ;
         ymaps.ready(function () {
-          _this2.mapChoose = new ymaps.Map("cart-page__map-wrap--js-choose", {
+          _this5.mapChoose = new ymaps.Map("cart-page__map-wrap--js-choose", {
             center: [55.76, 37.64],
             zoom: 16,
             controls: []
@@ -700,13 +747,13 @@ var OrderPage = /*#__PURE__*/function () {
             myPlacemark = new ymaps.Placemark(coords, {}, {
               draggable: true
             });
-            _this2.mapChoose.geoObjects.add(myPlacemark);
+            _this5.mapChoose.geoObjects.add(myPlacemark);
             myPlacemark.events.add('dragend', function () {
-              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+              _this5.getAddress(myPlacemark.geometry.getCoordinates());
             });
-            _this2.setMapCenter(_this2.mapChoose, coords);
+            _this5.setMapCenter(_this5.mapChoose, coords);
           });
-          _this2.mapChoose.events.add('click', function (e) {
+          _this5.mapChoose.events.add('click', function (e) {
             var coordinates = e.get('coords');
             // this.mapChoose.geoObjects.removeAll();
             // Если метка уже создана – просто передвигаем ее.
@@ -719,15 +766,15 @@ var OrderPage = /*#__PURE__*/function () {
                 draggable: true
               });
             }
-            _this2.mapChoose.geoObjects.add(myPlacemark);
+            _this5.mapChoose.geoObjects.add(myPlacemark);
             // Слушаем событие окончания перетаскивания на метке.
             myPlacemark.events.add('dragend', function () {
-              _this2.getAddress(myPlacemark.geometry.getCoordinates());
+              _this5.getAddress(myPlacemark.geometry.getCoordinates());
             });
             // // }
-            _this2.getAddress(coordinates);
+            _this5.getAddress(coordinates);
           });
-          resolve(_this2.mapChoose);
+          resolve(_this5.mapChoose);
         });
       });
     }
@@ -743,7 +790,7 @@ var OrderPage = /*#__PURE__*/function () {
   }, {
     key: "setMapPoint",
     value: function setMapPoint(map, address) {
-      var _this3 = this;
+      var _this6 = this;
       return new Promise(function (resolve, reject) {
         map.geoObjects.removeAll();
         ymaps.geocode(address, {
@@ -752,7 +799,7 @@ var OrderPage = /*#__PURE__*/function () {
           var coords = [res.geoObjects.get(0).geometry.getCoordinates()[0], res.geoObjects.get(0).geometry.getCoordinates()[1]];
           var point = new ymaps.Placemark(coords);
           map.geoObjects.add(point);
-          _this3.setMapCenter(map, coords);
+          _this6.setMapCenter(map, coords);
           resolve(coords);
         })["catch"](function (error) {
           return reject(error);
@@ -767,11 +814,11 @@ var OrderPage = /*#__PURE__*/function () {
   }, {
     key: "setChangeHandler",
     value: function setChangeHandler() {
-      var _this4 = this;
+      var _this7 = this;
       if (!document.querySelector('.cart-page__choose-address')) return;
       document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
-        if (!_this4.mapOpen) return;
-        _this4.setMapPoint(_this4.mapOpen, event.currentTarget.value);
+        if (!_this7.mapOpen) return;
+        _this7.setMapPoint(_this7.mapOpen, event.currentTarget.value);
       });
     }
   }, {
@@ -827,36 +874,36 @@ var OrderPage = /*#__PURE__*/function () {
   }, {
     key: "openOpenMap",
     value: function openOpenMap() {
-      var _this5 = this;
+      var _this8 = this;
       if (!document.querySelector('.cart-page__open-map-open')) return;
       document.querySelector('.cart-page__open-map-open').addEventListener('click', function (event) {
         event.currentTarget.classList.toggle('isOpened');
         event.currentTarget.closest('.cart-page__order-map').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
-        if (!_this5.mapOpen) {
+        if (!_this8.mapOpen) {
           setTimeout(function () {
-            _this5.initOpenMap();
+            _this8.initOpenMap();
           }, 300);
         } else {
-          _this5.mapOpen.destroy();
-          _this5.mapOpen = null;
+          _this8.mapOpen.destroy();
+          _this8.mapOpen = null;
         }
       });
     }
   }, {
     key: "openChooseMap",
     value: function openChooseMap() {
-      var _this6 = this;
+      var _this9 = this;
       if (!document.querySelector('.cart-page__open-map-choose')) return;
       document.querySelector('.cart-page__open-map-choose').addEventListener('click', function (event) {
         event.currentTarget.classList.toggle('isOpened');
         event.currentTarget.closest('.cart-page__order-block-in').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
-        if (!_this6.mapChoose) {
+        if (!_this9.mapChoose) {
           setTimeout(function () {
-            _this6.initChooseMap();
+            _this9.initChooseMap();
           }, 300);
         } else {
-          _this6.mapChoose.destroy();
-          _this6.mapChoose = null;
+          _this9.mapChoose.destroy();
+          _this9.mapChoose = null;
         }
       });
     }
@@ -870,7 +917,9 @@ var OrderPage = /*#__PURE__*/function () {
               this.openOpenMap();
               this.openChooseMap();
               this.setChangeHandler();
-            case 3:
+              this.fillSelectedRadios();
+              this.setRadioChangeHandler();
+            case 5:
             case "end":
               return _context3.stop();
           }

@@ -2,6 +2,48 @@ const OrderPage = class OrderPage {
     constructor() {
         this.mapOpen = null;
         this.mapChoose = null;
+        this.selectedRadio = [];
+    }
+    fillSelectedRadios() {
+        if (!document.querySelector('[data-fields-id]')) return;
+        this.selectedRadio = [];
+        document.querySelectorAll('[data-fields-id]').forEach(radio => {
+            if (radio.checked) {
+                this.selectedRadio.push(radio.dataset.fieldsId);
+            }
+        });
+        console.log(this.selectedRadio);
+        this.toggleRelatedElements();
+    }
+    setRadioChangeHandler() {
+        if (!document.querySelector('[data-fields-id]')) return;
+        document.querySelectorAll('[data-fields-id]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                this.fillSelectedRadios();
+            })
+        });
+    }
+    toggleRelatedElements() {
+        if (!document.querySelector('[data-field]')) return;
+
+        document.querySelectorAll('[data-field]').forEach(field => {
+            if (!field.dataset.styleDisplay) {
+                field.dataset.styleDisplay = window.getComputedStyle(field).display;
+            }
+
+            console.log('field.dataset.styleDisplay', field.dataset.styleDisplay);
+
+            let fields = [];
+            field.dataset.field.replace(/\s/g, '').split(',').forEach(tag => {
+                fields.push(this.selectedRadio.includes(tag))
+            });
+
+            if (fields.includes(false)) {
+                field.style.display = 'none';
+            } else {
+                field.style.display = field.dataset.styleDisplay;
+            }
+        });
     }
     createOpenMap() {
         return new Promise((resolve, reject) => {
@@ -190,7 +232,9 @@ const OrderPage = class OrderPage {
     async init() {
         this.openOpenMap();
         this.openChooseMap();
-        this.setChangeHandler();        
+        this.setChangeHandler();
+        this.fillSelectedRadios();
+        this.setRadioChangeHandler();  
     }
 }
 

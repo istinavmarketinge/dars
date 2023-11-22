@@ -14587,6 +14587,13 @@ input:checked + .dars-control__btn-name::before {
     width: 100%;
   }
 }
+.cart-page__order-placement-input .bx-sls .bx-ui-sls-container {
+  min-height: 50px;
+}
+.cart-page__order-placement-input .bx-sls .dropdown-icon, .cart-page__order-placement-input .bx-sls .bx-ui-sls-loader, .cart-page__order-placement-input .bx-sls .bx-ui-sls-clear {
+  top: 50%;
+  translate: 0 -50%;
+}
 .cart-page__order-placement-warning {
   display: flex;
   align-items: center;

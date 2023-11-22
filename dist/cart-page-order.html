@@ -23,9 +23,10 @@
         <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="https://dars.test-ivm.ru/bitrix/cache/css/s1/dars_individual/page_7948f29987a806939f9a9e769f44583f/page_7948f29987a806939f9a9e769f44583f_v1.css?170021484649743">
         
         
-            <link rel="stylesheet" href="styles/main.css?17:6">
+            <link rel="stylesheet" href="styles/main.css?15:9">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1425,8 +1426,7 @@
             <div class="cart-page__order-block">
                 <div class="cart-page__order-block-in cart-page__order-personType" style="--count: 3;">
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" checked="true" type="radio" value="1"
-                            name="personType">
+                        <input class="general__form-check-input" checked="true" type="radio" value="1" name="personType" data-fields-id="phisical">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1435,7 +1435,7 @@
                         </div>
                     </label>
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" type="radio" value="2" name="personType">
+                        <input class="general__form-check-input" type="radio" value="2" name="personType" data-fields-id="legal">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1444,7 +1444,7 @@
                         </div>
                     </label>
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" type="radio" value="2" name="personType">
+                        <input class="general__form-check-input" type="radio" value="2" name="personType" data-fields-id="individual">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1465,19 +1465,19 @@
                     </div>
                 </div>
                 <div class="cart-page__order-block-in cart-page__order-personType" style="--count: 3;">
-                    <div class="form__field cart-page__form-field">
+                    <div class="form__field cart-page__form-field" data-field="phisical">
                         <input type="text" placeholder="Фамилия">
                     </div>
-                    <div class="form__field cart-page__form-field">
+                    <div class="form__field cart-page__form-field" data-field="phisical, selftake, sbp">
                         <input type="text" placeholder="Имя">
                     </div>
-                    <div class="form__field cart-page__form-field">
+                    <div class="form__field cart-page__form-field" data-field="phisical">
                         <input type="text" placeholder="Отчество">
                     </div>
-                    <div class="form__field cart-page__form-field">
+                    <div class="form__field cart-page__form-field" data-field="phisical">
                         <input type="tel" placeholder="Телефон">
                     </div>
-                    <div class="form__field cart-page__form-field">
+                    <div class="form__field cart-page__form-field" data-field="phisical">
                         <input type="email" placeholder="Электронная почта">
                     </div>
                 </div>
@@ -1487,7 +1487,7 @@
                 <div class="cart-page__order-block-in cart-page__order-personType" style="--count: 2;">
                     <label class="general__form-check cart-page__form-field">
                         <input class="general__form-check-input" checked="true" type="radio" value="1"
-                            name="personType">
+                            name="deliveryType2" data-fields-id="delivery">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1498,7 +1498,7 @@
                         </div>
                     </label>
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" type="radio" value="2" name="personType">
+                        <input class="general__form-check-input" type="radio" value="2" name="deliveryType2" data-fields-id="selftake">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1664,7 +1664,7 @@
                         <label class="general__form-check cart-page__form-field cart-page__form-field--delivery"
                             style="--count: 5;">
                             <input class="general__form-check-input" checked="true" type="radio" value="1"
-                                name="personType">
+                                name="deliveryType" data-fields-id="store">
                             <div class="general__form-check--in">
                                 <div class="general__form-check-phantom"></div>
                                 <div class="general__form-check-right">
@@ -1674,8 +1674,8 @@
                         </label>
                         <label class="general__form-check cart-page__form-field cart-page__form-field--delivery"
                             style="--count: 5;">
-                            <input class="general__form-check-input" checked="true" type="radio" value="1"
-                                name="personType">
+                            <input class="general__form-check-input" type="radio" value="1"
+                                name="deliveryType" data-fields-id="dhl">
                             <div class="general__form-check--in">
                                 <div class="general__form-check-phantom"></div>
                                 <div class="general__form-check-right">
@@ -1687,8 +1687,8 @@
                         </label>
                         <label class="general__form-check cart-page__form-field cart-page__form-field--delivery"
                             style="--count: 5;">
-                            <input class="general__form-check-input" checked="true" type="radio" value="1"
-                                name="personType">
+                            <input class="general__form-check-input" type="radio" value="1"
+                                name="deliveryType" data-fields-id="sdek">
                             <div class="general__form-check--in">
                                 <div class="general__form-check-phantom"></div>
                                 <div class="general__form-check-right">
@@ -1700,8 +1700,8 @@
                         </label>
                         <label class="general__form-check cart-page__form-field cart-page__form-field--delivery"
                             style="--count: 5;">
-                            <input class="general__form-check-input" checked="true" type="radio" value="1"
-                                name="personType">
+                            <input class="general__form-check-input" type="radio" value="1"
+                                name="deliveryType" data-fields-id="pochta">
                             <div class="general__form-check--in">
                                 <div class="general__form-check-phantom"></div>
                                 <div class="general__form-check-right">
@@ -1785,7 +1785,20 @@
                     <div class="cart-page__map-wrap" id="cart-page__map-wrap--js-open"></div>
                     <div class="cart-page__worktime">
                         <div class="cart-page__worktime-title">График работы магазина:</div>
-                        <div class="cart-page__worktime-time">
+                        <div class="cart-page__worktime-time" data-field="store">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <path
+                                        d="M6.5 2.70008V6.00008H9.8M6.5 11.5C9.53754 11.5 12 9.03754 12 6C12 2.96243 9.53754 0.5 6.5 0.5C3.46243 0.5 1 2.96243 1 6C1 9.03754 3.46243 11.5 6.5 11.5Z"
+                                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                Пн-Вс 12.00-18.00 <span>Сб-вс вых.</span>
+                            </div>
+                        </div>
+                        <div class="cart-page__worktime-time" data-field="dhl">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
                                     fill="none">
@@ -1796,6 +1809,32 @@
                             </div>
                             <div class="text">
                                 Пн-Вс 9.00-18.00 <span>Сб-вс вых.</span>
+                            </div>
+                        </div>
+                        <div class="cart-page__worktime-time" data-field="sdek">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <path
+                                        d="M6.5 2.70008V6.00008H9.8M6.5 11.5C9.53754 11.5 12 9.03754 12 6C12 2.96243 9.53754 0.5 6.5 0.5C3.46243 0.5 1 2.96243 1 6C1 9.03754 3.46243 11.5 6.5 11.5Z"
+                                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                Пн-Вс 11.00-18.00 <span>Сб-вс вых.</span>
+                            </div>
+                        </div>
+                        <div class="cart-page__worktime-time" data-field="pochta">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <path
+                                        d="M6.5 2.70008V6.00008H9.8M6.5 11.5C9.53754 11.5 12 9.03754 12 6C12 2.96243 9.53754 0.5 6.5 0.5C3.46243 0.5 1 2.96243 1 6C1 9.03754 3.46243 11.5 6.5 11.5Z"
+                                        stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="text">
+                                Пн-Вс 14.00-18.00 <span>Сб-вс вых.</span>
                             </div>
                         </div>
                     </div>
@@ -1813,7 +1852,7 @@
                 <div class="cart-page__order-block-in cart-page__order-paymentType" style="--count: 3;">
                     <label class="general__form-check cart-page__form-field">
                         <input class="general__form-check-input" checked="true" type="radio" value="1"
-                            name="personType">
+                            name="paymentType" data-fields-id="sbp">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1825,7 +1864,7 @@
                         </div>
                     </label>
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" type="radio" value="2" name="personType">
+                        <input class="general__form-check-input" type="radio" value="2" name="paymentType" data-fields-id="bank">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1837,7 +1876,7 @@
                         </div>
                     </label>
                     <label class="general__form-check cart-page__form-field">
-                        <input class="general__form-check-input" type="radio" value="2" name="personType">
+                        <input class="general__form-check-input" type="radio" value="2" name="paymentType" data-fields-id="cash">
                         <div class="general__form-check--in">
                             <div class="general__form-check-phantom"></div>
                             <div class="general__form-check-right">
@@ -1849,36 +1888,38 @@
                         </div>
                     </label>
                 </div>
-                <div class="cart-page__order-block-text">Вы выбрали оплату наличными! Оформите заказ до конца, приятных
+                <div class="cart-page__order-block-text" data-field="cash">Вы выбрали оплату наличными! Оформите заказ до конца, приятных
                     покупок!</div>
 
                 <div class="cart-page__order-block-bank-targets">
-                     <div class="cart-page__order-block-bank-target">
+                    
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
                         <div class="name">Счет получателя</div>
                         <div class="text">40817810938052338205</div>
-                </div>
-                <div class="cart-page__order-block-bank-target">
-                    <div class="name">Бане получателя</div>
-                    <div class="text">Московский банк сбербанка россии г.Москва</div>
-                </div>
-                <div class="cart-page__order-block-bank-target">
-                    <div class="name">Код подразделения Банка по месту ведения счета карты (для внутренних переводов по
-                        системе Сбербанка)</div>
-                    <div class="text">38903801372</div>
-                </div>
-                 <div class="cart-page__order-block-bank-target">
+                    </div>
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
+                        <div class="name">Бане получателя</div>
+                        <div class="text">Московский банк сбербанка россии г.Москва</div>
+                    </div>
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
+                        <div class="name">Код подразделения Банка по месту ведения счета карты (для внутренних переводов по
+                            системе Сбербанка)</div>
+                        <div class="text">38903801372</div>
+                    </div>
+                
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
                         <div class="name">Счет получателя</div>
                         <div class="text">40817810938052338205</div>
-                </div>
-                <div class="cart-page__order-block-bank-target">
-                    <div class="name">Бане получателя</div>
-                    <div class="text">Московский банк сбербанка россии г.Москва</div>
-                </div>
-                <div class="cart-page__order-block-bank-target">
-                    <div class="name">Код подразделения Банка по месту ведения счета карты (для внутренних переводов по
-                        системе Сбербанка)</div>
-                    <div class="text">38903801372</div>
-                </div>
+                    </div>
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
+                        <div class="name">Бане получателя</div>
+                        <div class="text">Московский банк сбербанка россии г.Москва</div>
+                    </div>
+                    <div class="cart-page__order-block-bank-target" data-field="bank">
+                        <div class="name">Код подразделения Банка по месту ведения счета карты (для внутренних переводов по
+                            системе Сбербанка)</div>
+                        <div class="text">38903801372</div>
+                    </div>
                 
             </div>
         </div>

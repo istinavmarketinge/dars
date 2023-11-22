@@ -309,6 +309,15 @@
             width: 100%;
         }
     }
+    &__order-placement-input .bx-sls .bx-ui-sls-container {
+        min-height: 50px;
+    }
+    &__order-placement-input .bx-sls .dropdown-icon,
+    &__order-placement-input .bx-sls .bx-ui-sls-loader,
+    &__order-placement-input .bx-sls .bx-ui-sls-clear {
+        top: 50%;
+        translate: 0 -50%;
+    }
     &__order-placement-warning {
         display: flex;
         align-items: center;
