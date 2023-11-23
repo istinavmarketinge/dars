@@ -91,9 +91,15 @@
             </div>
 
         </div>
-        <div class="footer__map">
-            <img src="./img/map.jpg" alt="icon">
-        </div>
+        <div class="footer__map" id="footer__map"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let map = window.app.map.create({
+                    selector: 'footer__map' // id без #
+                });
+                console.log('map', map);
+            })
+        </script>
        
     </div>
 

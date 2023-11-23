@@ -25,6 +25,7 @@ import Orders from "%modules%/orders/orders";
 import OrderPage from "%modules%/cart-page-order/cart-page-order";
 import Mask from "%modules%/inputmask/inputmask";
 import UpButton from "%modules%/up-button/up-button";
+import Map from "%modules%/map/map";
 
 
 
@@ -61,6 +62,7 @@ window.app.upButton = new UpButton();
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
 window.app.orders = new Orders();
 window.app.mask = new Mask();
+window.app.map = new Map();
 
 
 

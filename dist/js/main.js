@@ -739,7 +739,7 @@ var OrderPage = /*#__PURE__*/function () {
             controls: []
           });
           var myPlacemark = null;
-          var address = document.querySelector('#delivery-city input').value != '' || document.querySelector('#delivery-address input').value != "" ? "".concat(document.querySelector('#delivery-city input').value, ", ").concat(document.querySelector('#delivery-address input').value, " ") : 'г. Москва';
+          var address = document.querySelector('#delivery-city .bx-ui-sls-fake').value != '' || document.querySelector('#delivery-address input').value != "" ? "".concat(document.querySelector('#delivery-city .bx-ui-sls-fake').value, ", ").concat(document.querySelector('#delivery-address input').value, " ") : 'г. Москва';
           ymaps.geocode(address, {
             results: 1
           }).then(function (res) {
@@ -818,7 +818,11 @@ var OrderPage = /*#__PURE__*/function () {
       if (!document.querySelector('.cart-page__choose-address')) return;
       document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
         if (!_this7.mapOpen) return;
-        console.log(document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
+        var address = '';
+        address += document.querySelector(".cart-page__choose-city option[value=\"".concat(document.querySelector('.cart-page__choose-city').value, "\"]")).innerHTML;
+        address += ' ';
+        address += document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML;
+        console.log(address);
         _this7.setMapPoint(_this7.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
       });
     }
@@ -1973,6 +1977,55 @@ var Mask = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/map/map.js":
+/*!***************************************!*\
+  !*** ./src/blocks/modules/map/map.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var Map = /*#__PURE__*/function () {
+  function Map() {
+    _classCallCheck(this, Map);
+  }
+  _createClass(Map, [{
+    key: "create",
+    value: function create() {
+      var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$selector = _ref.selector,
+        selector = _ref$selector === void 0 ? '#map' : _ref$selector;
+      console.log(selector);
+      if (!document.querySelector("#".concat(selector))) {
+        console.error("\u041D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0435 \u043D\u0435\u0442 \u0431\u043B\u043E\u043A\u0430 \u0441 \u0441\u0435\u043B\u0435\u043A\u0442\u043E\u0440\u043E\u043C ".concat(selector));
+        return false;
+      }
+      var map = null;
+      ymaps.ready(function () {
+        console.log('selector', selector);
+        map = new ymaps.Map(selector, {
+          center: [55.76, 37.64],
+          zoom: 16,
+          controls: []
+        });
+        return map;
+      });
+    }
+  }]);
+  return Map;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Map);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/orders/orders.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/orders/orders.js ***!
@@ -2609,6 +2662,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
 /* harmony import */ var _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/inputmask/inputmask */ "./src/blocks/modules/inputmask/inputmask.js");
 /* harmony import */ var _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/up-button/up-button */ "./src/blocks/modules/up-button/up-button.js");
+/* harmony import */ var _modules_map_map__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! %modules%/map/map */ "./src/blocks/modules/map/map.js");
+
 
 
 
@@ -2662,6 +2717,7 @@ window.app.upButton = new _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_
 window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_21__["default"]();
 window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_22__["default"]();
 window.app.mask = new _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__["default"]();
+window.app.map = new _modules_map_map__WEBPACK_IMPORTED_MODULE_26__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
   window.app.popularCategories.init();
