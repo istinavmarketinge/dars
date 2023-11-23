@@ -818,7 +818,8 @@ var OrderPage = /*#__PURE__*/function () {
       if (!document.querySelector('.cart-page__choose-address')) return;
       document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
         if (!_this7.mapOpen) return;
-        _this7.setMapPoint(_this7.mapOpen, event.currentTarget.value);
+        console.log(document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
+        _this7.setMapPoint(_this7.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
       });
     }
   }, {
@@ -834,7 +835,7 @@ var OrderPage = /*#__PURE__*/function () {
             case 2:
               map = _context.sent;
               _context.next = 5;
-              return this.setMapPoint(this.mapOpen, document.querySelector('.cart-page__choose-address').value);
+              return this.setMapPoint(this.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(document.querySelector('.cart-page__choose-address').value, "\"]")).innerHTML);
             case 5:
               coords = _context.sent;
             case 6:

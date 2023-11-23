@@ -184,12 +184,13 @@ const OrderPage = class OrderPage {
         if (!document.querySelector('.cart-page__choose-address')) return;
         document.querySelector('.cart-page__choose-address').addEventListener('change', (event) => {
             if (!this.mapOpen) return;
-            this.setMapPoint(this.mapOpen, event.currentTarget.value)
+            console.log(document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML)
+            this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML)
         })
     }
     async initOpenMap() {
         const map = await this.createOpenMap();
-        const coords = await this.setMapPoint(this.mapOpen, document.querySelector('.cart-page__choose-address').value)
+        const coords = await this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${document.querySelector('.cart-page__choose-address').value}"]`).innerHTML)
     }
     async initChooseMap() {
         // let address = `${document.querySelector('#delivery-city input').value}, ${document.querySelector('#delivery-address input').value} `;
