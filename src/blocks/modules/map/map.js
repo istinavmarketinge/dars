@@ -37,7 +37,7 @@ const Map = class Map {
     console.log(map);
     map.setZoom(18);
     // тут можно писать любой функционал поверх экземпляра карты, который хранится в объекте map
-    доступные методы для работы с картой: {@link https://yandex.ru/dev/jsapi30/doc/ru/ref/#class-ymap}
+    // доступные методы для работы с картой: {@link https://yandex.ru/dev/jsapi30/doc/ru/ref/#class-ymap}
 })
 
     */
