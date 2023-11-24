@@ -2021,7 +2021,9 @@ var Map = /*#__PURE__*/function () {
   points: [ "Тула, Маргелова 5а", [55.76, 37.64] ]
   }).then(map => {
   console.log(map);
+  map.setZoom(18);
   // тут можно писать любой функционал поверх экземпляра карты, который хранится в объекте map
+  доступные методы для работы с картой: {@link https://yandex.ru/dev/jsapi30/doc/ru/ref/#class-ymap}
   })
     */
   _createClass(Map, [{
