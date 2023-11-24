@@ -94,10 +94,19 @@
         <div class="footer__map" id="footer__map"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                let map = window.app.map.create({
-                    selector: 'footer__map' // id без #
-                });
-                console.log('map', map);
+                window.app.map.create({
+                    selector: 'footer__map', // id без #
+                    zoom: 10,
+                    center: [55.76, 37.64],
+                    points: [
+                        "Тула, Маргелова 5а",
+                        [55.76, 37.64]
+                    ]
+                }).then(map => {
+                    setTimeout(() => {
+                        map.setZoom(20);
+                    }, 5000)
+                })
             })
         </script>
        

@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
-            <link rel="stylesheet" href="styles/main.css?17:55">
+            <link rel="stylesheet" href="styles/main.css?16:13">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -3544,10 +3544,19 @@
         <div class="footer__map" id="footer__map"></div>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                let map = window.app.map.create({
-                    selector: 'footer__map' // id без #
-                });
-                console.log('map', map);
+                window.app.map.create({
+                    selector: 'footer__map', // id без #
+                    zoom: 10,
+                    center: [55.76, 37.64],
+                    points: [
+                        "Тула, Маргелова 5а",
+                        [55.76, 37.64]
+                    ]
+                }).then(map => {
+                    setTimeout(() => {
+                        map.setZoom(20);
+                    }, 5000)
+                })
             })
         </script>
        

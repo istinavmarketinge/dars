@@ -1,18 +1,5 @@
-/** @class Header */
 
 const Header = class Header {
-	/**
-	 * Конструктор Header
-	 * @constructor
-	*/
-    constructor() {}
-	/**
-	 * Функция открытия Меню
-	 * 
-	 * Вызов window.app.header.openMenuHandler();
-	 *
-	 * @returns {void}
-	*/
 	openMenuHandler() {
 		$('.header-top__city').on('click',function(){
 			$('.header-top__modal-city').addClass('open');

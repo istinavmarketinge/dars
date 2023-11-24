@@ -35,6 +35,7 @@
         "bem-tools-core": "bem-tools/bem-tools-core",
         "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.27.7",
+        "clean-jsdoc-theme": "^4.2.17",
         "del": "^6.0.0",
         "eslint": "^8.11.0",
         "gulp": "^4.0.2",
