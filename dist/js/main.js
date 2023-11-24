@@ -1840,13 +1840,25 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+/**
+ * @class Header
+ * @description Класс для работы с шапкой сайта
+ */
 var Header = /*#__PURE__*/function () {
   function Header() {
     _classCallCheck(this, Header);
   }
   _createClass(Header, [{
     key: "openMenuHandler",
-    value: function openMenuHandler() {
+    value:
+    /**
+     * @description Добавляет обработчики событий клика для открытия меню
+     * @example
+     * // Вызов функции для обработки клика на '.header-top__city', '.header-top__modal-close' и '.header-bottom__catalog-button'
+     * 
+     * window.app.header.openMenuHandler();
+     */
+    function openMenuHandler() {
       var _this = this;
       $('.header-top__city').on('click', function () {
         $('.header-top__modal-city').addClass('open');
@@ -1862,6 +1874,13 @@ var Header = /*#__PURE__*/function () {
         }
       });
     }
+    /**
+     * @description Добавляет обработчики событий клика для закрытия меню
+     * @example
+     * // Вызов функции для обработки клика на '.catalog-menu__overlay' и '.catalog-menu__closer'
+     * 
+     * window.app.header.closeMenuHandler();
+     */
   }, {
     key: "closeMenuHandler",
     value: function closeMenuHandler() {
@@ -1874,6 +1893,15 @@ var Header = /*#__PURE__*/function () {
         document.querySelector('body').classList.remove('isScrollPrevented');
       });
     }
+    /**
+     * @description Рассчитывает позиции меню каталога на странице при открытии
+     * @returns {Object} { top: 100, left: 100, height: 100, right: 100,} Объект с позициями относительно окна браузера
+     * @example
+     * // Вызов функции для получения позиции меню каталога относительно окна браузера
+     * 
+     * let bounds = window.app.header.calculateCatalogBounds();
+     * console.log(bounds.top);
+     */
   }, {
     key: "calculateCatalogBounds",
     value: function calculateCatalogBounds() {
@@ -1889,6 +1917,13 @@ var Header = /*#__PURE__*/function () {
         right: headerBottomBounds.y + 273
       };
     }
+    /**
+     * @description Задает позиции меню каталога относительно окна браузера
+     * @example
+     * // Вызов функции для задания позиции меню каталога относительно окна браузера
+     * 
+     * window.app.header.setCatalogBounds();
+     */
   }, {
     key: "setCatalogBounds",
     value: function setCatalogBounds() {
@@ -1899,6 +1934,13 @@ var Header = /*#__PURE__*/function () {
         document.querySelector('.catalog-menu').style.right = "".concat(this.calculateCatalogBounds().right, "px");
       }
     }
+    /**
+     * @description Запускает функции при загрузке страницы
+     * @example
+     * // Вызов функций необходимых для работы при загрузке страницы
+     * 
+     * window.app.header.init();
+     */
   }, {
     key: "init",
     value: function init() {
