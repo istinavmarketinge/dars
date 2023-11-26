@@ -1,9 +1,35 @@
+/**
+ * @class PopularCategories
+ * @description Класс для обработки блока "Популярные категории"
+ *
+*/
 import Swiper from 'swiper/bundle';
 
 const PopularCategories = class PopularCategories {
     constructor() {
         this.slider = null;
     }
+    /**
+     * @description Добавляет слайдер (swiper) для блока с классом .popular-categories__slider.swiper
+     * 
+     * @example
+     * // Вызов функции для создания слайдера
+     * 
+     * window.app.popularCategories.initSlider();
+     *
+     * @example
+     * // Для переопределения параметров необходимо переопределить функцию создания слайдера
+     * 
+     * window.app.popularCategories.initSlider = function() {
+     *   if (!document.querySelector('.popular-categories__slider.swiper')) return;
+     *   window.app.popularCategories.slider = new Swiper('.popular-categories__slider.swiper', {
+     *    loop: false,
+     *    slidesPerView: 5.5,
+     *    spaceBetween: 25,
+     *  }).mount();
+     *};
+     *  
+    */
     initSlider() {
         if (!document.querySelector('.popular-categories__slider.swiper')) return;
         this.slider = new Swiper('.popular-categories__slider.swiper', {

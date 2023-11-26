@@ -1,11 +1,6 @@
-# gulp-scss-starter
+# Dars gulp builder
 
-![License](https://img.shields.io/github/license/andreyalexeich/gulp-scss-starter)
-![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-scss-starter.svg?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/andreyalexeich/gulp-scss-starter.svg?style=social)<br>
-<a href="https://t.me/andrewalexeich"><img src="https://img.shields.io/badge/Donate%20to%20me%20(Telegram%20TON)-UQC5GESVoOmFKJ8Khw8wwGIM3stCsnrXRHDcdfHvVjwR4ddL-blue?style=for-the-badge"></a>
-
-## :fire: Особенности
+## Особенности
 * именование классов по [БЭМ](https://ru.bem.info/)
 * используется БЭМ-структура
 * используется препроцессор [SCSS](https://sass-lang.com/)
@@ -14,7 +9,7 @@
 * используется жёсткий кодгайд
 * используется проверка кода на ошибки перед коммитом
 
-## :hammer_and_wrench: Установка
+## Установка
 * установите [NodeJS](https://nodejs.org/en/)
 * установите глобально:
     * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
@@ -29,7 +24,7 @@
 
 Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером. Режим сборки предполагает оптимизацию проекта: сжатие изображений, минифицирование CSS и JS-файлов для загрузки на сервер.
 
-## :open_file_folder: Файловая структура
+## Файловая структура
 
 ```
 gulp-scss-starter
@@ -78,7 +73,7 @@ gulp-scss-starter
 * Папка ```dist``` - папка, из которой запускается локальный сервер для разработки (при запуске ```yarn run dev```)
 * Папка ```gulp-tasks``` - папка с Gulp-тасками
 
-## :keyboard: Команды
+## Команды
 * ```yarn run lint:styles``` - проверить SCSS-файлы. Для VSCode необходимо установить [плагин](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint). Для WebStorm
 или PHPStorm необходимо включить Stylelint в ```Languages & Frameworks - Style Sheets - Stylelint```
 * ```yarn run dev``` - запуск сервера для разработки проекта
@@ -97,7 +92,7 @@ gulp-scss-starter
 * ```yarn run lint:scripts``` - проверить JS-файлы
 * ```yarn run lint:scripts --fix``` - исправить ошибки в JS-файлах согласно настройкам ESLint
 
-## :bulb: Рекомендации по использованию
+## Рекомендации по использованию
 ### Компонентный подход к разработке сайтов
 * каждый БЭМ-блок имеет свою папку внутри ```src/blocks/modules```
 * папка одного БЭМ-блока содержит в себе один HTML-файл, один SCSS-файл и один JS-файл (если у блока используется скрипт)
@@ -167,12 +162,3 @@ svg use {
     ```
     * для подключения стилевых файлов библиотек импортируйте их в файл ```src/styles/vendor/_libs.scss```
     * JS-файлы и стилевые файлы библиотек самостоятельно изменять нельзя
-
-## :point_right: Нужен SCSS + Pug?
-Используйте [эту](https://github.com/andrewalexeich/gulp-pug-starter/) сборку.
-
-## :yellow_heart: Нравится проект?
-Сообщайте мне о [багах](https://github.com/andrewalexeich/gulp-scss-starter/issues), ставьте звёздочку, [задонатьте](https://t.me/andrewalexeich) мне Telegram TON на пиво :beer:
-
-## :envelope: Контакты
-По всем вопросам пишите в [Telegram](https://t.me/andrewalexeich)

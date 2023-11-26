@@ -7,6 +7,6 @@ import jsdoc from "gulp-jsdoc3";
  
 gulp.task('docs', (cb) => {
     const config = require('./jsdocConfig.json');
-    return gulp.src(paths.docs.src, {read: false})
+    return gulp.src(['README.md', ...paths.docs.src], {read: false})
         .pipe(jsdoc(config, cb));
 });

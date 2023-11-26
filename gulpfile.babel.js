@@ -42,7 +42,7 @@ const requireDir = require("require-dir"),
         },
         docs: {
             src: ['./src/**/*.js'],
-            watch: ['README.md', './src/**/*.js']
+            watch: ['./src/**/*.js']
         },
         images: {
             src: [
