@@ -7,19 +7,45 @@
     transition: all .3s ease;
     cursor: pointer;
     z-index: 10;
+    
     @media (width <= 1626px) {
         width: 50px;
     }
+    @media (width <= 960px) {
+        top: auto;
+        bottom: 69px;
+        right: 6px;
+        width: auto;
+        border-radius: 8px;
+        border: 1px solid #EDEDED;
+        background: #FFF;
+    }
     &:hover {
-        background: rgba(240, 130, 15, 0.10);
+        
+        @media (width >= 961px) {
+            background: rgba(240, 130, 15, 0.10);
+        }
     }
     &__in {
-        padding: 17px;
-        position: absolute;
-        bottom: 39px;
-        left: 0;
-        right: 0;
-        transition: all .3s ease;
+        
+        @media (width >= 961px) {
+            padding: 17px;
+            position: absolute;
+            bottom: 39px;
+            left: 0;
+            right: 0;
+            transition: all .3s ease;
+        }
+        @media (width <= 960px) {
+            display: flex;
+            height: 36px;
+            width: 72px;
+            padding: 14px 28px;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            
+        }
     }
     &:hover &__in {
         bottom: 79px;

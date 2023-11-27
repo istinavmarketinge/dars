@@ -15116,16 +15116,42 @@ input:checked + .dars-control__btn-name::before {
     width: 50px;
   }
 }
-.up-button:hover {
-  background: rgba(240, 130, 15, 0.1);
+@media (width <= 960px) {
+  .up-button {
+    top: auto;
+    bottom: 69px;
+    right: 6px;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid #EDEDED;
+    background: #FFF;
+  }
 }
-.up-button__in {
-  padding: 17px;
-  position: absolute;
-  bottom: 39px;
-  left: 0;
-  right: 0;
-  transition: all 0.3s ease;
+@media (width >= 961px) {
+  .up-button:hover {
+    background: rgba(240, 130, 15, 0.1);
+  }
+}
+@media (width >= 961px) {
+  .up-button__in {
+    padding: 17px;
+    position: absolute;
+    bottom: 39px;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+  }
+}
+@media (width <= 960px) {
+  .up-button__in {
+    display: flex;
+    height: 36px;
+    width: 72px;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
 }
 .up-button:hover .up-button__in {
   bottom: 79px;
