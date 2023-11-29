@@ -753,8 +753,10 @@ var OrderPage = /*#__PURE__*/function () {
         });
         if (fields.includes(false)) {
           field.style.display = 'none';
+          field.classList.remove('isShowed');
         } else {
           field.style.display = field.dataset.styleDisplay;
+          field.classList.add('isShowed');
         }
       });
     }
@@ -818,7 +820,7 @@ var OrderPage = /*#__PURE__*/function () {
             controls: []
           });
           var myPlacemark = null;
-          var address = document.querySelector('#delivery-city .bx-ui-sls-fake').value != '' || document.querySelector('#delivery-address input').value != "" ? "".concat(document.querySelector('#delivery-city .bx-ui-sls-fake').value, ", ").concat(document.querySelector('#delivery-address input').value, " ") : 'г. Москва';
+          var address = document.querySelector('#delivery-city .bx-ui-sls-fake').value != '' || document.querySelector('#delivery-address input.isShowed').value != "" ? "".concat(document.querySelector('#delivery-city .bx-ui-sls-fake').value, ", ").concat(document.querySelector('#delivery-address input.isShowed').value, " ") : 'г. Москва';
           ymaps.geocode(address, {
             results: 1
           }).then(function (res) {
@@ -863,7 +865,7 @@ var OrderPage = /*#__PURE__*/function () {
       ymaps.geocode(coords).then(function (res) {
         var firstGeoObject = res.geoObjects.get(0),
           address = firstGeoObject.getAddressLine();
-        document.querySelector('#delivery-address input').value = address;
+        document.querySelector('#delivery-address input.isShowed').value = address;
       });
     }
   }, {

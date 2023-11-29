@@ -40,8 +40,10 @@ const OrderPage = class OrderPage {
 
             if (fields.includes(false)) {
                 field.style.display = 'none';
+                field.classList.remove('isShowed');
             } else {
                 field.style.display = field.dataset.styleDisplay;
+                field.classList.add('isShowed');
             }
         });
     }
@@ -108,7 +110,7 @@ const OrderPage = class OrderPage {
                     controls: []
                 });
                 let myPlacemark = null;
-                let address =  document.querySelector('#delivery-city .bx-ui-sls-fake').value != '' || document.querySelector('#delivery-address input').value != "" ? `${document.querySelector('#delivery-city .bx-ui-sls-fake').value}, ${document.querySelector('#delivery-address input').value} ` : 'г. Москва';
+                let address =  document.querySelector('#delivery-city .bx-ui-sls-fake').value != '' || document.querySelector('#delivery-address input.isShowed').value != "" ? `${document.querySelector('#delivery-city .bx-ui-sls-fake').value}, ${document.querySelector('#delivery-address input.isShowed').value} ` : 'г. Москва';
                 
                 
 
@@ -159,7 +161,7 @@ const OrderPage = class OrderPage {
                 address = firstGeoObject.getAddressLine();
 
             
-            document.querySelector('#delivery-address input').value = address;
+            document.querySelector('#delivery-address input.isShowed').value = address;
         });
     }
     setMapPoint(map, address) {
@@ -200,7 +202,7 @@ const OrderPage = class OrderPage {
         const coords = await this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${document.querySelector('.cart-page__choose-address').value}"]`).innerHTML)
     }
     async initChooseMap() {
-        // let address = `${document.querySelector('#delivery-city .bx-ui-sls-fake').value}, ${document.querySelector('#delivery-address input').value} `;
+        // let address = `${document.querySelector('#delivery-city .bx-ui-sls-fake').value}, ${document.querySelector('#delivery-address input.isShowed').value} `;
 
         const map = await this.createChooseMap();
         // const coords = await this.setMapPoint(this.mapChoose, address)
