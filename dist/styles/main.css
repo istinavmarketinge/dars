@@ -14649,6 +14649,31 @@ input:checked + .dars-control__btn-name::before {
   flex-direction: column;
   gap: 20px;
 }
+.cart-page__order-block-bank-targets--bank {
+  padding: 20px 24px;
+  border: 1px solid #D3D3D3;
+  margin-bottom: 30px;
+  max-width: 617px;
+  box-sizing: border-box;
+}
+.cart-page__order-block-bank-targets--bank-title {
+  color: #000;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.08px;
+  margin-bottom: 30px;
+}
+.cart-page__order-block-bank-targets--bank-info {
+  color: #000;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.57px;
+  margin-bottom: 30px;
+}
 .cart-page__order-block-bank-target .name {
   color: #808080;
   font-size: 13px;
@@ -14921,6 +14946,11 @@ input:checked + .dars-control__btn-name::before {
     padding: 30px 20px 0;
   }
 }
+.cart-page__thanks-bottom--bank {
+  padding: 0;
+  max-width: 768px;
+  margin-top: 30px;
+}
 .cart-page__thanks-top-main {
   display: flex;
   align-items: center;
@@ -15047,6 +15077,15 @@ input:checked + .dars-control__btn-name::before {
   .cart-page__thanks-top-delivery-item .value-text {
     white-space: nowrap;
   }
+}
+.cart-page__thanks-message {
+  color: #F0380F;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.78px;
+  margin-bottom: 30px;
 }
 
 .personal-favourites-products {

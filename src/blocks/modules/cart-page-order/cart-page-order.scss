@@ -365,6 +365,31 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        &--bank {
+            padding: 20px 24px;
+            border: 1px solid #D3D3D3;
+            margin-bottom: 30px;
+            max-width: 617px;
+            box-sizing: border-box;
+        }
+    }
+    &__order-block-bank-targets--bank-title {
+        color: #000;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.08px;
+        margin-bottom: 30px;
+    }
+    &__order-block-bank-targets--bank-info {
+        color: #000;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.57px;
+        margin-bottom: 30px;
     }
     &__order-block-bank-target {
         .name {

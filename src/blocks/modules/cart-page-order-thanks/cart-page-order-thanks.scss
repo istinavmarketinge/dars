@@ -32,6 +32,12 @@
         @media (width <= 960px) {
             padding: 30px 20px 0;
         }
+
+        &--bank {
+            padding: 0;
+            max-width: 768px;
+            margin-top: 30px;
+        }
     }
     &__thanks-top-main {
         display: flex;
@@ -148,5 +154,14 @@
                 white-space: nowrap;
             }
         }
+    }
+    &__thanks-message {
+        color:#F0380F;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.78px;
+        margin-bottom: 30px;
     }
 }
