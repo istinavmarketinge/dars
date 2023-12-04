@@ -86,7 +86,7 @@
         }
     }
     &__slider-item {
-        &:not([data-slide-type$="stock"]) {
+        &:not([data-slide-type^="stock"]) {
             display: none;
         }
     }
