@@ -8492,6 +8492,7 @@ form.smartfilter .row {
 }
 .compare__page-items, .compare__page-right .compare__page-bottom-items {
   display: flex;
+  width: fit-content;
 }
 .compare__page-left .elements-item {
   width: 100%;

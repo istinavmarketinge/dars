@@ -56,6 +56,7 @@
     &__page-items,
     &__page-right &__page-bottom-items {
         display: flex;
+        width: fit-content;
     }
     &__page-left .elements-item {
         width: 100%;
