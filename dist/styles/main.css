@@ -4388,7 +4388,7 @@ a {
 .tabs__slider .swiper-wrapper {
   padding-bottom: 40px;
 }
-.tabs__slider-item:not([data-slide-type=stock]) {
+.tabs__slider-item:not([data-slide-type$=stock]) {
   display: none;
 }
 .tabs__slider-item-text {
