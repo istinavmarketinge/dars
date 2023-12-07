@@ -24,14 +24,14 @@ $(document).ready(function () {
         }
     });
 
-    
-    $('[name="legal-entity"]').each(function () {
+    console.log($('[data-group-type]'))
+    $('[data-group-type]').each(function () {
         $(this).on('change', function(){
-            toogleInputs($(this).val());
+            toogleInputs($(this).data("group-type"));
         });
     });
 
-    toogleInputs($('[name="legal-entity"][checked]').val());
+    toogleInputs($('[data-group-type][checked]').data("group-type"));
     
     function toogleInputs(name){
         $('[data-type]').each(function (index, element) {

@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
-            <link rel="stylesheet" href="styles/main.css?16:28">
+            <link rel="stylesheet" href="styles/main.css?11:35">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=3aff35bb-3a23-4157-9a47-97da3fe2e05e&load=package.full&&lang=ru-RU" type="text/javascript"></script>
     </head>
     <body>
         <header>
@@ -1469,19 +1470,19 @@
                 <div class="personal-account-main__form">
                     <div class="personal-account-main__header">
                         <label class="personal-account-main__radio">
-                            <input type="radio" name="legal-entity" value="natural" hidden checked>
+                            <input type="radio" name="legal-entity" data-group-type="natural" value="natural" hidden checked>
                             <div class="personal-account-main__radio-wrap">
                                 <span class="personal-account-main__radio-text">Физическое лицо</span>
                             </div>
                         </label>
                         <label class="personal-account-main__radio">
-                            <input type="radio" name="legal-entity" value="legal" hidden>
+                            <input type="radio" name="legal-entity" data-group-type="legal" value="legal" hidden>
                             <div class="personal-account-main__radio-wrap">
                                 <span class="personal-account-main__radio-text">Юридическое лицо</span>
                             </div>
                         </label>
                         <label class="personal-account-main__radio">
-                            <input type="radio" name="legal-entity" value="individual" hidden>
+                            <input type="radio" name="legal-entity" data-group-type="individual" value="individual" hidden>
                             <div class="personal-account-main__radio-wrap">
                                 <span class="personal-account-main__radio-text">Индивиндуальный предприниматель</span>
                             </div>
