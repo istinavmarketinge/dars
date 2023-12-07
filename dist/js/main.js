@@ -2564,14 +2564,18 @@ $(document).ready(function () {
     var dataNameTo = $(this).data('copyTo');
     var fromElem = $("[name=\"".concat(dataNameFrom, "\"]"));
     var toElem = $("[name=\"".concat(dataNameTo, "\"]"));
-    if ($(this).is(':checked')) {
-      var donorValue = fromElem === null || fromElem === void 0 ? void 0 : fromElem.val();
-      toElem === null || toElem === void 0 ? void 0 : toElem.val(donorValue).prop('disabled', true);
+    /*
+    if($(this).is(':checked')){
+        let donorValue = fromElem?.val();
+        toElem?.val(donorValue).prop('disabled', true);
     } else {
-      toElem === null || toElem === void 0 ? void 0 : toElem.prop('disabled', false);
+        toElem?.prop('disabled', false);
+    }
+    */
+    if ($(this).is(':checked')) {
+      toElem === null || toElem === void 0 ? void 0 : toElem.val(fromElem === null || fromElem === void 0 ? void 0 : fromElem.val());
     }
   });
-  console.log($('[data-group-type]'));
   $('[data-group-type]').each(function () {
     $(this).on('change', function () {
       toogleInputs($(this).data("group-type"));

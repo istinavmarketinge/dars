@@ -15,16 +15,19 @@ $(document).ready(function () {
         let dataNameTo = $(this).data('copyTo');
         let fromElem = $(`[name="${dataNameFrom}"]`);
         let toElem = $(`[name="${dataNameTo}"]`);
-        
+        /*
         if($(this).is(':checked')){
             let donorValue = fromElem?.val();
             toElem?.val(donorValue).prop('disabled', true);
         } else {
             toElem?.prop('disabled', false);
         }
+        */
+        if($(this).is(':checked')){
+            toElem?.val(fromElem?.val());
+        }
     });
 
-    console.log($('[data-group-type]'))
     $('[data-group-type]').each(function () {
         $(this).on('change', function(){
             toogleInputs($(this).data("group-type"));
