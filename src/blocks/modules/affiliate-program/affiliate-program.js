@@ -11,7 +11,7 @@ const AffiliateProgram = class AffiliateProgram {
 export default AffiliateProgram;
 
 
-if(document.querySelector(".affiliate-program__more")) {
+if(document.querySelector(".js-affiliate-program__more")) {
     jQuery(document).ready(function() {
 
         $(document).on('click','.js-affiliate-program__more',function(){

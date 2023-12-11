@@ -244,7 +244,7 @@ var AffiliateProgram = /*#__PURE__*/function () {
   return AffiliateProgram;
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AffiliateProgram);
-if (document.querySelector(".affiliate-program__more")) {
+if (document.querySelector(".js-affiliate-program__more")) {
   jQuery(document).ready(function () {
     $(document).on('click', '.js-affiliate-program__more', function () {
       $('.js-affiliate-program__right').addClass('open');
