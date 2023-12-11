@@ -11,21 +11,14 @@ const AffiliateProgram = class AffiliateProgram {
 export default AffiliateProgram;
 
 
-if(document.querySelector(".affiliate-program__more ")) {
+if(document.querySelector(".affiliate-program__more")) {
     jQuery(document).ready(function() {
 
-        $('.affiliate-program__more ').on('click',function(){
-            $('.affiliate-program__right').addClass('open');
+        $(document).on('click','.js-affiliate-program__more',function(){
+            $('.js-affiliate-program__right').addClass('open');
         });
-        $('.affiliate-program__hide-details').on('click',function(){
-            $('.affiliate-program__right').removeClass('open');
+        $(document).on('click','.js-affiliate-program__hide-details',function(){
+            $('.js-affiliate-program__right').removeClass('open');
         });
-        $('.affiliate-program__button').on('click',function(){
-            $('.thanks-you').addClass('open');
-        });
-        $('.thanks-you__close').on('click',function(){
-            $('.thanks-you').removeClass('open');
-        });
-        
-        });
+    });
 }
