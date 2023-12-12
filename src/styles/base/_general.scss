@@ -162,3 +162,13 @@ a {
     text-decoration: none;
     color: #0F7DF0;
 }
+
+.nativejs-select {
+    &__placeholder {
+        &:after {}
+    }
+    &__placeholder-value {}
+    &__dropdown {}
+    &__options {}
+    &__option {}
+}

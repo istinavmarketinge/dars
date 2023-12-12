@@ -1,3 +1,5 @@
+import NativejsSelect from 'nativejs-select';
+
 /**
  * @class Modal
  * @description Класс для добавления обработчиков событий открытия модальных окон
@@ -83,6 +85,12 @@ const Modal = class Modal {
             })
         }
     }
+    stylizeSelect() {
+        if (!document.querySelector('.customized-select-js')) return;
+        new NativejsSelect({
+            selector: '.customized-select-js',
+        });
+    }
     /**
     * @example
     * // для создания модального окна используйте следующий пример
@@ -128,7 +136,7 @@ const Modal = class Modal {
     init() {
         this.addModalOpenHandler();
         this.addModalCloseHandler();
-
+        this.stylizeSelect();
         
     }
 }

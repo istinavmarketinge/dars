@@ -81,6 +81,7 @@
         "dynamic-countdown": "^1.4.2",
         "inputmask": "^5.0.9-beta.39",
         "jquery": "^3.7.0",
+        "nativejs-select": "^1.0.7",
         "overlayscrollbars": "^2.3.2",
         "swiper": "^10.2.0",
         "tippy.js": "^6.3.7",

@@ -1,0 +1,123 @@
+.nativejs-select {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .nativejs-select__placeholder,
+  .nativejs-select__option {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    background: #fff;
+    color: #111214;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .nativejs-select__placeholder {
+    width: 100%;
+    padding: 9px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #CED0D6;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  .nativejs-select__placeholder:after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 4px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url('../img/select-arrow.svg') 50% 50% / cover no-repeat;
+  }
+  
+  .nativejs-select__placeholder img {
+    margin-right: 5px;
+  }
+  
+  .nativejs-select__placeholder_fixed {
+    padding-right: 5px;
+    color: #7ca95c;
+  }
+  
+  .nativejs-select__dropdown {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    transform: translateY(100%);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    z-index: 5;
+    display: none;
+    border: 1px solid #CED0D6;
+    border-top: none;
+    box-sizing: border-box;
+    border-radius: 0 0 6px 6px;
+    max-height: 156px;
+    overflow: auto;
+  }
+  
+  .nativejs-select__option {
+    width: 100%;
+    padding: 9px 15px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .nativejs-select__option img {
+    margin-right: 10px;
+  }
+  
+  // .nativejs-select__option:hover {
+  //   border-bottom: 1px solid #7ca95c;
+  // }
+  
+  .nativejs-select_active {
+    border-radius: 3px 3px 0 0;
+  }
+  .nativejs-select_active .nativejs-select__placeholder {
+    border: 1px solid #CED0D6;
+    border-bottom: 1px solid transparent;
+  }
+  .nativejs-select_active .nativejs-select__placeholder:after {
+    transform: rotate(180deg);
+  }
+  
+  .nativejs-select_active .nativejs-select__dropdown {
+    display: block;
+  }
+  
+  .nativejs-select__search {
+    padding: 5px;
+  }
+  
+  .nativejs-select__search-inp {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+  }
+  
+  .nativejs-select__placeholder-value {
+    display: flex;
+    align-items: center;
+  }
+  
