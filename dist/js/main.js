@@ -2453,18 +2453,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     console.log(checked);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.dars-control').toggleClass('dars-control--disabled').find('.date-picker').prop('disabled', checked);
   });
-
-  /** Для теста. На бою нужно будет удалить */
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-name"]').on('input', function () {
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val() == 'TEST_IVM') {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.dars-control').addClass('dars-control--error');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.promo-code-generation__row').append("<div class=\"promo-code-generation__row-error\">\u0422\u0430\u043A\u043E\u0439 \u043F\u0440\u043E\u043C\u043E\u043A\u043E\u0434 \u0443\u0436\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F, \u043F\u0440\u0438\u0434\u0443\u043C\u0430\u0439\u0442\u0435 \u0434\u0440\u0443\u0433\u043E\u0439</div>");
-    } else {
-      var _$$closest$find;
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.dars-control').removeClass('dars-control--error');
-      (_$$closest$find = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.promo-code-generation__row').find('.promo-code-generation__row-error')) === null || _$$closest$find === void 0 ? void 0 : _$$closest$find.hide();
-    }
-  });
   function generateRandomString(length) {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -2476,34 +2464,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-control__btn--random').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-name"]').val(generateRandomString(10));
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo-code-generation__btn-submit').on('click', function () {
-    var _formData$4$value;
-    var form = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('form');
-    var formData = form.serializeArray();
-    var dataIdPromocode = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.personal-promocode-item').length + 1;
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-    today = dd + '.' + mm + '.' + yyyy;
-    var arDate = (_formData$4$value = formData[4].value) === null || _formData$4$value === void 0 ? void 0 : _formData$4$value.split(' до ');
-    var dateFromTo = function dateFromTo() {
-      if (arDate) {
-        if (arDate.length == 1) {
-          return arDate.join();
-        } else {
-          return arDate.join(' - ');
-        }
-      } else if (formData[5].value == "on") {
-        return "Бессрочно";
-      } else {
-        return "-";
-      }
-    };
-    form[0].reset();
-  });
-
-  /** / Для теста. На бою нужно будет удалить */
 });
 
 /***/ }),

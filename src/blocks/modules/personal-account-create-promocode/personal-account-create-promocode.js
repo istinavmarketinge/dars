@@ -196,18 +196,6 @@ $(document).ready(function () {
         $(this).closest('.dars-control').toggleClass('dars-control--disabled').find('.date-picker').prop('disabled', checked);
     });
 
-
-    /** Для теста. На бою нужно будет удалить */
-    $('input[name="promo-code-name"]').on('input', function() {
-        if ($(this).val() == 'TEST_IVM') {
-            $(this).closest('.dars-control').addClass('dars-control--error');
-            $(this).closest('.promo-code-generation__row').append(`<div class="promo-code-generation__row-error">Такой промокод уже используется, придумайте другой</div>`);
-        } else {
-            $(this).closest('.dars-control').removeClass('dars-control--error');
-            $(this).closest('.promo-code-generation__row').find('.promo-code-generation__row-error')?.hide();
-        }
-    });
-
     function generateRandomString(length) {
         let text = "";
         let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -222,35 +210,4 @@ $(document).ready(function () {
     $('.dars-control__btn--random').on('click', function() {
         $('input[name="promo-code-name"]').val(generateRandomString(10));
     });
-
-    $('.promo-code-generation__btn-submit').on('click', function() {
-        let form = $(this).closest('form');
-        let formData = form.serializeArray();
-        let dataIdPromocode = $('.personal-promocode-item').length + 1;
-        let today = new Date();
-        let dd = String(today.getDate()).padStart(2, '0');
-        let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        let yyyy = today.getFullYear();
-        today = dd + '.' + mm + '.' + yyyy;
-
-        let arDate = formData[4].value?.split(' до ');
-        let dateFromTo = () => {
-            if (arDate) {
-                if (arDate.length == 1) {
-                    return arDate.join();
-                } else {
-                    return arDate.join(' - ');
-                }
-            } else if (formData[5].value == "on") {
-                return "Бессрочно";
-            } else {
-                return "-";
-            }
-        };
-
-        form[0].reset();
-    });
-
-    /** / Для теста. На бою нужно будет удалить */
-
 });
