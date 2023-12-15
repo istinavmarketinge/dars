@@ -2309,20 +2309,27 @@ var PersonalAccountCreatePromocode = /*#__PURE__*/function () {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).toggleClass('dars-select__btn--open');
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select-box').toggleClass('dars-select-box--active');
       });
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select-box__item-wrap').on('click', function () {
-        var selectedItem = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent();
-        if (!selectedItem.hasClass('dars-select-box__item--parent')) {
-          var text = selectedItem.find('.dars-select-box__item-title').text();
-          var id = selectedItem.find('.dars-select-box__item-title').data('id');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').text(text);
-          if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('id') == "search") {
-            jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').addClass('dars-select__btn--search');
-          } else {
-            jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').removeClass('dars-select__btn--search');
-          }
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-category"]').val(id);
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode__body').removeClass('create-promocode__body--blocked');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-active-find-articul').on('click', function () {
+        var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+        var text = obj.find('.js-category-name').html();
+        if (text !== '') {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').html(text);
         }
+      });
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_cond_select').on('click', function () {
+        var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+        var text = obj.find('.js-category-name').html();
+        var percent = obj.data('percent');
+        var halfPercent = percent / 2;
+        var halfPercentCeil = Math.ceil(percent / 2);
+        var ourPercent = percent - halfPercentCeil;
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-range').attr('max', percent).val(halfPercent);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-first').text(halfPercentCeil).siblings('input').val(halfPercentCeil);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-last').text(ourPercent).siblings('input').val(ourPercent);
+        if (text !== '') {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-select__btn').html(text);
+        }
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode__body').removeClass('create-promocode__body--blocked');
       });
     }
   }, {
@@ -2362,8 +2369,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo-code-generation__btn-submit').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-successfully').slideDown();
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-successfully__btn-close').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-successfully').slideUp();
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-create-promocode-result-close').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.create-promocode__result').slideUp();
   });
   function copyText(el) {
     var $temp = jquery__WEBPACK_IMPORTED_MODULE_0___default()("<input>");
@@ -2387,11 +2394,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-open-description').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-open-description').removeClass('open');
-    var popup = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.personal-account-promocode__popup-description');
     var text = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('popupDescription');
-    var popupHeight = popup.text(text).outerHeight();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-open-description').removeClass('open');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('open');
+    var popup = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.personal-account-promocode__popup-description').clone();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.personal-account-promocode__popup-description').remove();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').append(popup);
+    var popupHeight = popup.text(text).outerHeight();
     popup.css({
       'top': jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).offset().top - popupHeight - 10,
       'left': jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).offset().left - 45
@@ -2424,6 +2433,26 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       title.slideDown();
     }
   }
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-dars-select-list li').on('click', function () {
+    var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+    console.log(obj.attr('class'));
+    if (obj.hasClass('js_cond_select')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-window-find-articul').slideUp();
+    } else if (obj.hasClass('js-active-find-articul')) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-window-find-articul').slideDown();
+    }
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-reset-search').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-search-box-input').val('');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-search-result-box-list li').hide();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-search-result-box-error').hide();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.search-box').removeClass('search-box--error');
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-promo-code-indefinitely input').on('click', function () {
+    var checked = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).prop('checked');
+    console.log(checked);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.dars-control').toggleClass('dars-control--disabled').find('.date-picker').prop('disabled', checked);
+  });
 
   /** Для теста. На бою нужно будет удалить */
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-name"]').on('input', function () {
@@ -2472,7 +2501,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
       }
     };
     form[0].reset();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("<li class=\"personal-promocode-item\" data-id-promocode=\"".concat(dataIdPromocode, "\" hidden>\n        <div class=\"personal-promocode-item__header\">\n            <span class=\"personal-promocode-item__name\" data-copy-text-id=\"promocode\">").concat(formData[3].value, "</span>\n            <div class=\"personal-promocode-item__header-controls\">\n                <button class=\"personal-promocode-item__btn personal-promocode-item__btn--copy\" data-copy-text-from=\"promocode\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\">\n                        <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.60313 0.259416C3.42119 0.436684 3.43883 0.724412 3.64376 0.924198C3.79152 1.06806 4.2234 1.09186 6.69158 1.09186H9.56722L10.0983 1.64234L10.2079 9.25623L10.4603 9.29113C11.0284 9.36957 11.0294 9.36242 11.0294 5.31118C11.0294 1.59325 11.0266 1.54725 10.7771 1.08759C10.6047 0.769983 10.3739 0.545116 10.048 0.377132C9.58464 0.138391 9.48781 0.131348 6.65281 0.131348C4.5291 0.131348 3.69875 0.166246 3.60313 0.259416ZM2.26684 2.0702C1.82532 2.19144 1.2413 2.69784 1.06517 3.11214C0.982587 3.30638 0.954108 4.56561 0.975686 7.07362L1.00723 10.7504L1.27022 11.1097C1.77461 11.7987 2.10824 11.8659 5.03602 11.8686C7.87189 11.8712 8.09994 11.8333 8.64004 11.2704C8.80192 11.1018 8.9867 10.8286 9.05078 10.6634C9.12438 10.4736 9.16732 9.08643 9.16732 6.8971C9.16732 3.70681 9.15078 3.39976 8.95987 3.0353C8.44682 2.05568 8.07716 1.95376 5.05989 1.95995C3.73456 1.96273 2.47769 2.01225 2.26684 2.0702ZM8.18154 3.43007V6.92325C8.18154 10.3628 8.17792 10.4203 7.94342 10.6635C7.70738 10.9082 7.68142 10.9104 5.10447 10.9104C3.6741 10.9104 2.42402 10.8806 2.32654 10.8442C1.87154 10.6741 1.82872 10.3306 1.82872 6.85206V3.53007L2.46904 2.90617H7.64385L8.18154 3.43007Z\" fill=\"#515151\"></path>\n                      </svg>\n                </button>\n                <button class=\"js-open-description personal-promocode-item__btn personal-promocode-item__btn--comment\" data-popup-description=\"").concat(formData[5].value, "\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" fill=\"none\">\n                        <path d=\"M0.680211 3.43297V12.5957C0.680211 13.3265 1.54665 13.7109 2.08841 13.2205L3.98049 11.508C4.21292 11.2977 4.51523 11.1812 4.82873 11.1812H11.214C12.3775 11.1812 13.3208 10.2379 13.3208 9.0744V3.43297C13.3208 2.26944 12.3775 1.32621 11.214 1.32621H2.78697C1.62344 1.32621 0.680211 2.26943 0.680211 3.43297Z\" stroke=\"#404040\" stroke-width=\"0.842704\"></path>\n                        <path d=\"M4.89296 5.96087C4.89296 6.19357 4.70432 6.38222 4.47161 6.38222C4.2389 6.38222 4.05026 6.19357 4.05026 5.96087C4.05026 5.72816 4.2389 5.53952 4.47161 5.53952C4.70432 5.53952 4.89296 5.72816 4.89296 5.96087ZM7.84242 5.96087C7.84242 6.19357 7.65378 6.38222 7.42107 6.38222C7.18837 6.38222 6.99972 6.19357 6.99972 5.96087C6.99972 5.72816 7.18837 5.53952 7.42107 5.53952C7.65378 5.53952 7.84242 5.72816 7.84242 5.96087ZM10.7919 5.96087C10.7919 6.19357 10.6032 6.38222 10.3705 6.38222C10.1378 6.38222 9.94918 6.19357 9.94918 5.96087C9.94918 5.72816 10.1378 5.53952 10.3705 5.53952C10.6032 5.53952 10.7919 5.72816 10.7919 5.96087Z\" stroke=\"#404040\" stroke-width=\"0.842704\"></path>\n                      </svg>\n                </button>\n                <button class=\"personal-promocode-item__btn personal-promocode-item__btn--delete js-delete-promocode\" data-modal-toggle=\"deletePromocode\">\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"8\" height=\"8\" viewBox=\"0 0 8 8\" fill=\"none\">\n                        <path d=\"M1.3125 6.68698L3.9995 4M3.9995 4L6.68648 1.31299M3.9995 4L1.3125 1.31299M3.9995 4L6.68648 6.68698\" stroke=\"#515151\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n                      </svg>\n                </button>\n            </div>\n        </div>\n        <div class=\"personal-promocode-item__link\">\n            <a href=\"https://dars.ru/?utm-code=maslennikov\" class=\"personal-promocode-item__link-name\" data-copy-text-id=\"link\" target=\"_blank\">https://dars.ru/?utm-code=maslennikov</a>\n            <button class=\"personal-promocode-item__btn personal-promocode-item__btn--copy\" data-copy-text-from=\"link\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\" fill=\"none\">\n                    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M3.60313 0.259416C3.42119 0.436684 3.43883 0.724412 3.64376 0.924198C3.79152 1.06806 4.2234 1.09186 6.69158 1.09186H9.56722L10.0983 1.64234L10.2079 9.25623L10.4603 9.29113C11.0284 9.36957 11.0294 9.36242 11.0294 5.31118C11.0294 1.59325 11.0266 1.54725 10.7771 1.08759C10.6047 0.769983 10.3739 0.545116 10.048 0.377132C9.58464 0.138391 9.48781 0.131348 6.65281 0.131348C4.5291 0.131348 3.69875 0.166246 3.60313 0.259416ZM2.26684 2.0702C1.82532 2.19144 1.2413 2.69784 1.06517 3.11214C0.982587 3.30638 0.954108 4.56561 0.975686 7.07362L1.00723 10.7504L1.27022 11.1097C1.77461 11.7987 2.10824 11.8659 5.03602 11.8686C7.87189 11.8712 8.09994 11.8333 8.64004 11.2704C8.80192 11.1018 8.9867 10.8286 9.05078 10.6634C9.12438 10.4736 9.16732 9.08643 9.16732 6.8971C9.16732 3.70681 9.15078 3.39976 8.95987 3.0353C8.44682 2.05568 8.07716 1.95376 5.05989 1.95995C3.73456 1.96273 2.47769 2.01225 2.26684 2.0702ZM8.18154 3.43007V6.92325C8.18154 10.3628 8.17792 10.4203 7.94342 10.6635C7.70738 10.9082 7.68142 10.9104 5.10447 10.9104C3.6741 10.9104 2.42402 10.8806 2.32654 10.8442C1.87154 10.6741 1.82872 10.3306 1.82872 6.85206V3.53007L2.46904 2.90617H7.64385L8.18154 3.43007Z\" fill=\"#515151\"></path>\n                  </svg>\n            </button>\n        </div>\n        <div class=\"personal-promocode-item__body\">\n            <dl class=\"personal-promocode-item__dl\">\n                <div class=\"personal-promocode-item__dl-row\">\n                    <dt class=\"personal-promocode-item__dt\">\u0422\u043E\u0432\u0430\u0440, \u0430\u0440\u0442\u0438\u043A\u0443\u043B:</dt>\n                    <dd class=\"personal-promocode-item__dd\">").concat(formData[0].value, "</dd>\n                </div>\n                <div class=\"personal-promocode-item__dl-row\">\n                    <dt class=\"personal-promocode-item__dt\">\u0421\u043A\u0438\u0434\u043A\u0430 \u043A\u043B\u0438\u0435\u043D\u0442\u0443:</dt>\n                    <dd class=\"personal-promocode-item__dd\">\n                        <span class=\"personal-promocode-item__ellipse personal-promocode-item__ellipse--red\">-").concat(formData[1].value, "%</span>\n                    </dd>\n                </div>\n                <div class=\"personal-promocode-item__dl-row\">\n                    <dt class=\"personal-promocode-item__dt\">\u0412\u0430\u0448\u0435 \u0432\u043E\u0437\u043D\u0430\u0433\u0440\u0430\u0436\u0434\u0435\u043D\u0438\u0435:</dt>\n                    <dd class=\"personal-promocode-item__dd\">\n                        <span class=\"personal-promocode-item__ellipse personal-promocode-item__ellipse--green\">+").concat(formData[2].value, "%</span>\n                    </dd>\n                </div>\n                <div class=\"personal-promocode-item__dl-row\">\n                    <dt class=\"personal-promocode-item__dt\">\u0421\u0440\u043E\u043A \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F:</dt>\n                    <dd class=\"personal-promocode-item__dd\">\n                        <div class=\"personal-promocode-item__validity-period\">\n                            <span>").concat(dateFromTo(), "</span>\n                        </div>\n                    </dd>\n                </div>\n            </dl>\n        </div>\n        <div class=\"personal-promocode-item__footer\">\n            <span class=\"personal-promocode-item__date-creation\">").concat(today, "</span>\n            <span class=\"personal-promocode-item__status personal-promocode-item__status--consideration\">\u041D\u0430 \u0440\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0435\u043D\u0438\u0438</span>\n        </div>\n    </li>")).prependTo('.personal-promocode__list').slideDown();
   });
 
   /** / Для теста. На бою нужно будет удалить */
