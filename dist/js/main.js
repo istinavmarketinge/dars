@@ -2357,14 +2357,14 @@ var PersonalAccountCreatePromocode = /*#__PURE__*/function () {
 }();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PersonalAccountCreatePromocode);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-range').on('input', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_percent_range').on('input', function () {
     var range = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
     var discountToTheClient = Math.round(range.attr('max') - range.val());
     var partnerRemuneration = Math.round(range.val());
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-first').val(discountToTheClient);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="discount-to-the-client"]').val(discountToTheClient);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-percent__input-last').val(partnerRemuneration);
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="partner-remuneration"]').val(partnerRemuneration);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_percent_first_output').val(discountToTheClient);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_percent_first_input').val(discountToTheClient);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_percent_last_output').val(partnerRemuneration);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_percent_last_input').val(partnerRemuneration);
   });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo-code-generation__btn-submit').on('click', function () {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.create-promocode-successfully').slideDown();

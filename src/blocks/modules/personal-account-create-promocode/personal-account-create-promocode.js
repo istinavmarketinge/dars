@@ -75,16 +75,16 @@ const PersonalAccountCreatePromocode = class PersonalAccountCreatePromocode {
 export default PersonalAccountCreatePromocode;
 
 $(document).ready(function () {
-    $('.create-promocode-percent__input-range').on('input', function () { 
+    $('.js_percent_range').on('input', function () { 
         let range = $(this);
         let discountToTheClient = Math.round(range.attr('max') - range.val());
         let partnerRemuneration = Math.round(range.val());
         
-        $('.create-promocode-percent__input-first').val(discountToTheClient);
-        $('input[name="discount-to-the-client"]').val(discountToTheClient);
+        $('.js_percent_first_output').val(discountToTheClient);
+        $('.js_percent_first_input').val(discountToTheClient);
 
-        $('.create-promocode-percent__input-last').val(partnerRemuneration);
-        $('input[name="partner-remuneration"]').val(partnerRemuneration);
+        $('.js_percent_last_output').val(partnerRemuneration);
+        $('.js_percent_last_input').val(partnerRemuneration);
     });
 
     $('.promo-code-generation__btn-submit').on('click', function () { 
