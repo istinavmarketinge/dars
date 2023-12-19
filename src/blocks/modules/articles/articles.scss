@@ -55,7 +55,7 @@
             padding: 10px 13px;
         }
     }
-    &__item-6 {
+    &__item-4 {
         grid-area: last;
         padding: 25px 30px;
         .articles__info {
@@ -93,7 +93,7 @@
         padding: 10px 15px;
     }
     &__item:first-child .articles__info,
-    &__item:last-child .articles__info {
+    &__item:nth-child(6n+4) .articles__info {
         padding: 21px 30px;
         @media all and (max-width:1360px) {
             padding: 10px 15px;
