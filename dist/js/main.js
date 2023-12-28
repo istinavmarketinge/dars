@@ -2502,7 +2502,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
   function copyText(el) {
     var $temp = jquery__WEBPACK_IMPORTED_MODULE_0___default()("<input>");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").append($temp);
-    var text = el.closest('.account-statistics-item__utm').find("[data-copy-text-id=\"".concat(el.data('copyTextFrom'), "\"]")).text().trim();
+    var text = el.closest('.js_closest').find("[data-copy-text-id=\"".concat(el.data('copyTextFrom'), "\"]")).text().trim();
     $temp.val(text).select();
     document.execCommand("copy");
     $temp.remove();

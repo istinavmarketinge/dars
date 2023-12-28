@@ -17,7 +17,7 @@ $(document).ready(function () {
         let $temp = $("<input>");
         $("body").append($temp);
 
-        let text = el.closest('.account-statistics-item__utm').find(`[data-copy-text-id="${el.data('copyTextFrom')}"]`).text().trim();
+        let text = el.closest('.js_closest').find(`[data-copy-text-id="${el.data('copyTextFrom')}"]`).text().trim();
 
         $temp.val(text).select();
         document.execCommand("copy");
