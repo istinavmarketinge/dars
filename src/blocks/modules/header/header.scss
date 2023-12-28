@@ -226,26 +226,70 @@
         line-height: normal;
         position: relative;
         padding-left: 0;
+        margin: 0;
         @media all and (max-width:1700px) {
             grid-gap: 20px;
         }
         li {
             list-style: none;
             white-space: nowrap;
+            &.has-child {
+                position: relative;
+                > a {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    gap: 2px;
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 4px;
+                        height: 2px;
+                        background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSIyIiB2aWV3Qm94PSIwIDAgNCAyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMi4xOTY0IDAuNTQ4NjI0QzIuMDgzNjYgMC40NTA5OTYgMS45MTYzNCAwLjQ1MDk5NiAxLjgwMzYgMC41NDg2MjRMMC44NzYyMjEgMS4zNTE3NkMwLjY2NjI1IDEuNTMzNiAwLjc5NDg1MSAxLjg3ODU0IDEuMDcyNjIgMS44Nzg1NEwyLjkyNzM4IDEuODc4NTRDMy4yMDUxNSAxLjg3ODU0IDMuMzMzNzUgMS41MzM2IDMuMTIzNzggMS4zNTE3NkwyLjE5NjQgMC41NDg2MjRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K") 50% 50% / cover no-repeat;
+
+                    }
+                }
+            }
         }
         li a {
             text-decoration: none;
             color: #000;
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         &::before {
             content: "";
             position: absolute;
-            top: -3px;
+            top: calc(50% -  13px);
             left: -27px;
             width: 9px;
             height: 25px;
             background: url("../img/menu-line.svg") 0 0/contain no-repeat;
         }
+    }
+    &__menu-submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        max-width: 300px;
+        padding: 0;
+        padding: 10px 0;
+        border-radius: 6px;
+        border: 2px solid #000;
+        background: #FFF;
+        z-index: 5;
+        display: none;
+        a {
+            display: block;
+            padding: 10px 25px;
+            &:hover {
+                background: rgba(240, 130, 15, 0.20);
+            }
+        }
+    }
+    &__menu-list li.has-child:hover &__menu-submenu {
+        display: block;
     }
     &__menu-link-sale {
         padding-left: 20px;
@@ -255,7 +299,7 @@
             width: 17px;
             height: 17px;
             position: absolute;
-            top: 0;
+            top: calc(50% - 9px);
             left: 0;
             background: url("../img/sale-orange.svg") 0 0/contain no-repeat;
         }
