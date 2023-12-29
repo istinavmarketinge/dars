@@ -53,6 +53,9 @@
             transition: height .3s ease;
             width: 100%;
             max-width: 750px;
+            p {
+                margin: 0;
+            }
         }
        
     }
