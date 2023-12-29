@@ -16004,4 +16004,106 @@ input:checked + .dars-control__btn-name::before {
   cursor: pointer;
   font-size: 15px;
 }
+
+.discount-info {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  z-index: 20;
+}
+@media (max-width: 900px) {
+  .discount-info {
+    top: auto;
+    bottom: 69px;
+    right: 6rem;
+  }
+}
+.discount-info__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: 50%/auto #F79402 no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .discount-info__btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+.discount-info__btn--fire {
+  background-image: url(/img/fire.svg);
+  outline: 6px solid #F5E6CE;
+}
+@media (max-width: 900px) {
+  .discount-info__btn--fire {
+    background-size: 19px 22px;
+    outline-width: 3px;
+  }
+}
+.discount-info__btn--cross {
+  background-image: url(/img/cross.svg);
+}
+@media (max-width: 900px) {
+  .discount-info__btn--cross {
+    background-size: 12px;
+  }
+}
+
+.modal-discount-info {
+  position: fixed;
+  z-index: 20;
+  right: 8rem;
+  top: 4rem;
+}
+@media (max-width: 900px) {
+  .modal-discount-info {
+    top: auto;
+    bottom: 7rem;
+    right: auto;
+    left: 50%;
+    max-width: 90%;
+    width: 100%;
+    transform: translateX(-50%);
+  }
+}
+.modal-discount-info__wrap {
+  max-width: 431px;
+  width: 100%;
+  border: 3px solid #F0820F;
+  background: #FFF;
+  padding: 16px 10px;
+  color: #353535;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .modal-discount-info__wrap {
+    margin-left: auto;
+  }
+}
+.modal-discount-info--hidden {
+  display: none;
+}
+.modal-discount-info__body {
+  margin-top: 20px;
+}
+.modal-discount-info__promocode {
+  font-weight: 700;
+}
+.modal-discount-info__discount {
+  font-weight: 700;
+  color: #F0820F;
+}
+.modal-discount-info__link {
+  color: #F0820F;
+  text-decoration: underline;
+}
+.modal-discount-info__footer {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=maps/main.css.map */

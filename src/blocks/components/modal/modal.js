@@ -42,6 +42,18 @@ const Modal = class Modal {
             })
             
         })
+
+        if (document.querySelector('.js-discount-info-btn')) {
+            document.querySelectorAll('.js-discount-info-btn').forEach(closer => {
+                closer.addEventListener('click', (event) => {
+                    event.currentTarget.classList.toggle('discount-info__btn--fire');
+                    event.currentTarget.classList.toggle('discount-info__btn--cross');
+                    document.querySelector('.js-modal-discount-info').classList.toggle('modal-discount-info--hidden');
+                })
+            })
+        }
+
+
     }
     /**
 	 * @description Добавляет обработчики событий клика для закрытия модальных окон

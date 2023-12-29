@@ -65,6 +65,15 @@ var Modal = /*#__PURE__*/function () {
           console.log('window.app.modalParams', window.app.modalParams);
         });
       });
+      if (document.querySelector('.js-discount-info-btn')) {
+        document.querySelectorAll('.js-discount-info-btn').forEach(function (closer) {
+          closer.addEventListener('click', function (event) {
+            event.currentTarget.classList.toggle('discount-info__btn--fire');
+            event.currentTarget.classList.toggle('discount-info__btn--cross');
+            document.querySelector('.js-modal-discount-info').classList.toggle('modal-discount-info--hidden');
+          });
+        });
+      }
     }
     /**
     * @description Добавляет обработчики событий клика для закрытия модальных окон
@@ -140,7 +149,7 @@ var Modal = /*#__PURE__*/function () {
                         <div class="modal-box__title">Заголовок</div>
                         <div class="modal-box__body">
                             
-                             <div class="popup-modal__message js_modal_thanks" style="display: none;">
+                              <div class="popup-modal__message js_modal_thanks" style="display: none;">
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 138 92" fill="none">
                                         <path
@@ -2153,7 +2162,7 @@ var Map = /*#__PURE__*/function () {
   // тут можно писать любой функционал поверх экземпляра карты, который хранится в объекте map
   // доступные методы для работы с картой: {@link https://yandex.ru/dev/jsapi30/doc/ru/ref/#class-ymap}
   })
-   */
+    */
   _createClass(Map, [{
     key: "create",
     value: function create() {
