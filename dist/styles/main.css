@@ -16037,7 +16037,7 @@ input:checked + .dars-control__btn-name::before {
   }
 }
 .discount-info__btn--fire {
-  background-image: url(/img/fire.svg);
+  background-image: url(./img/fire.svg);
   outline: 6px solid #F5E6CE;
 }
 @media (max-width: 900px) {
@@ -16047,7 +16047,7 @@ input:checked + .dars-control__btn-name::before {
   }
 }
 .discount-info__btn--cross {
-  background-image: url(/img/cross.svg);
+  background-image: url(./img/cross.svg);
 }
 @media (max-width: 900px) {
   .discount-info__btn--cross {
