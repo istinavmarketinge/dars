@@ -917,7 +917,6 @@ var OrderPage = /*#__PURE__*/function () {
         address += document.querySelector(".cart-page__choose-city option[value=\"".concat(document.querySelector('.cart-page__choose-city').value, "\"]")).innerHTML;
         address += ' ';
         address += document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML;
-        console.log(address);
         _this7.setMapPoint(_this7.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
       });
     }
@@ -925,7 +924,7 @@ var OrderPage = /*#__PURE__*/function () {
     key: "initOpenMap",
     value: function () {
       var _initOpenMap = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-        var map, coords;
+        var map, address, coords;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
@@ -933,11 +932,13 @@ var OrderPage = /*#__PURE__*/function () {
               return this.createOpenMap();
             case 2:
               map = _context.sent;
-              _context.next = 5;
-              return this.setMapPoint(this.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(document.querySelector('.cart-page__choose-address').value, "\"]")).innerHTML);
-            case 5:
+              address = document.querySelector(".cart-page__choose-city option[value=\"".concat(document.querySelector('.cart-page__choose-city').value, "\"]")).innerHTML + ', ' + document.querySelector(".cart-page__choose-address option[value=\"".concat(document.querySelector('.cart-page__choose-address').value, "\"]")).innerHTML;
+              console.log('asdasdasdasdasd', address);
+              _context.next = 7;
+              return this.setMapPoint(this.mapOpen, address);
+            case 7:
               coords = _context.sent;
-            case 6:
+            case 8:
             case "end":
               return _context.stop();
           }

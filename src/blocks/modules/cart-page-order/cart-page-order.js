@@ -193,13 +193,18 @@ const OrderPage = class OrderPage {
             address+=document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML;
 
 
-            console.log(address)
+            
             this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML)
+
+
+            
         })
     }
     async initOpenMap() {
         const map = await this.createOpenMap();
-        const coords = await this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${document.querySelector('.cart-page__choose-address').value}"]`).innerHTML)
+        const address = document.querySelector(`.cart-page__choose-city option[value="${document.querySelector('.cart-page__choose-city').value}"]`).innerHTML + ', ' + document.querySelector(`.cart-page__choose-address option[value="${document.querySelector('.cart-page__choose-address').value}"]`).innerHTML;
+        console.log('asdasdasdasdasd', address);
+        const coords = await this.setMapPoint(this.mapOpen, address);
     }
     async initChooseMap() {
         // let address = `${document.querySelector('#delivery-city .bx-ui-sls-fake').value}, ${document.querySelector('#delivery-address input.isShowed').value} `;
@@ -211,6 +216,7 @@ const OrderPage = class OrderPage {
     openOpenMap() {
         if (!document.querySelector('.cart-page__open-map-open')) return;
         document.querySelector('.cart-page__open-map-open').addEventListener('click', event => {
+            
             event.currentTarget.classList.toggle('isOpened');
             event.currentTarget.closest('.cart-page__order-map').querySelector('.cart-page__map-wrap').classList.toggle('isOpened');
             if (!this.mapOpen) {
