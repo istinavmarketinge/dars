@@ -913,11 +913,8 @@ var OrderPage = /*#__PURE__*/function () {
       if (!document.querySelector('.cart-page__choose-address')) return;
       document.querySelector('.cart-page__choose-address').addEventListener('change', function (event) {
         if (!_this7.mapOpen) return;
-        var address = '';
-        address += document.querySelector(".cart-page__choose-city option[value=\"".concat(document.querySelector('.cart-page__choose-city').value, "\"]")).innerHTML;
-        address += ' ';
-        address += document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML;
-        _this7.setMapPoint(_this7.mapOpen, document.querySelector(".cart-page__choose-address option[value=\"".concat(event.currentTarget.value, "\"]")).innerHTML);
+        var address = document.querySelector(".cart-page__choose-city option[value=\"".concat(document.querySelector('.cart-page__choose-city').value, "\"]")).innerHTML + ', ' + document.querySelector(".cart-page__choose-address option[value=\"".concat(document.querySelector('.cart-page__choose-address').value, "\"]")).innerHTML;
+        _this7.setMapPoint(_this7.mapOpen, address);
       });
     }
   }, {

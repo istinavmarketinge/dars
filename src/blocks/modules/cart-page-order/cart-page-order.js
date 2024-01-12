@@ -186,15 +186,11 @@ const OrderPage = class OrderPage {
         if (!document.querySelector('.cart-page__choose-address')) return;
         document.querySelector('.cart-page__choose-address').addEventListener('change', (event) => {
             if (!this.mapOpen) return;
-            let address = '';
-
-            address+=document.querySelector(`.cart-page__choose-city option[value="${document.querySelector('.cart-page__choose-city').value}"]`).innerHTML;
-            address+=' ';
-            address+=document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML;
+            let address = document.querySelector(`.cart-page__choose-city option[value="${document.querySelector('.cart-page__choose-city').value}"]`).innerHTML + ', ' + document.querySelector(`.cart-page__choose-address option[value="${document.querySelector('.cart-page__choose-address').value}"]`).innerHTML;
 
 
             
-            this.setMapPoint(this.mapOpen, document.querySelector(`.cart-page__choose-address option[value="${event.currentTarget.value}"]`).innerHTML)
+            this.setMapPoint(this.mapOpen, address)
 
 
             
