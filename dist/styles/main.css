@@ -3550,8 +3550,8 @@ a {
 .header-top__menu-list li.has-child > a:after {
   content: "";
   display: block;
-  width: 4px;
-  height: 2px;
+  width: 8px;
+  height: 4px;
   background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSIyIiB2aWV3Qm94PSIwIDAgNCAyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMi4xOTY0IDAuNTQ4NjI0QzIuMDgzNjYgMC40NTA5OTYgMS45MTYzNCAwLjQ1MDk5NiAxLjgwMzYgMC41NDg2MjRMMC44NzYyMjEgMS4zNTE3NkMwLjY2NjI1IDEuNTMzNiAwLjc5NDg1MSAxLjg3ODU0IDEuMDcyNjIgMS44Nzg1NEwyLjkyNzM4IDEuODc4NTRDMy4yMDUxNSAxLjg3ODU0IDMuMzMzNzUgMS41MzM2IDMuMTIzNzggMS4zNTE3NkwyLjE5NjQgMC41NDg2MjRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K") 50% 50%/cover no-repeat;
 }
 .header-top__menu-list li a {
