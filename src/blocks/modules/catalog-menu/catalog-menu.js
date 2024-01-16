@@ -54,6 +54,7 @@ const CatalogMenu = class CatalogMenu {
             menuItem.addEventListener("click", (event) => {
               // if (window.innerWidth <= 960) return;
               if (event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile")) {
+                event.currentTarget.classList.toggle('open');
                 event.target.closest(".catalog-menu__left-list li").querySelector(".catalog-menu__right-container--mobile").classList.toggle('open');
               }
             

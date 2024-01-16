@@ -137,6 +137,9 @@
     }
     &__button-all {
         display: none;
+        &.isOpened {
+            display: none !important;
+        }
         @media all and (max-width:560px) {
             display: block;
             background: #F1F1F1;

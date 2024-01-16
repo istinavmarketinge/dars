@@ -9,6 +9,13 @@ body.isScrollPrevented {
     overflow: hidden;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+}
+
 a {
     color: #0F7DF0;
     text-decoration: none;

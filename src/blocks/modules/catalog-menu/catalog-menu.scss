@@ -116,6 +116,13 @@
             padding: 8px 4px;
             position: relative;
         }
+        li {
+            @media all and (max-width: 960px) {
+                &:not(.open) a {
+                    pointer-events: none;
+                }
+            }
+        }
         & > li:hover,
         & > li.isActive {
             border-radius: 7px;

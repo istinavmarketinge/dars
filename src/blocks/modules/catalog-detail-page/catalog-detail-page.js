@@ -1,9 +1,17 @@
 import $ from 'jquery';
 import Swiper from 'swiper/bundle';
+import GLightbox from 'glightbox';
 
 const DetailCatalogSlider = class DetailCatalogSlider {
     constructor() {
         this.slider = null;
+        this.lightbox = null;
+    }
+    initLightbox() {
+      if (!document.querySelector('.catalog-detail-slider-main__link')) return;
+      this.lightbox = GLightbox({
+        selector: '.catalog-detail-slider-main__link'
+      });
     }
     initSlider() {
         if (!document.querySelector('.catalog-detail-slider-main, .catalog-detail-slider-nav, .catalog-detail-page-tabs-list')) return;
@@ -123,6 +131,7 @@ const DetailCatalogSlider = class DetailCatalogSlider {
 
     init() {
       this.initSlider();
+      this.initLightbox();
     }
 }
 
