@@ -22,6 +22,11 @@
     }
     &__into {
         display: flex;
+        padding-bottom: 80px;
+
+        @media (max-width: 960px) {
+            padding-bottom: 50px;
+        }
     }
 
     &__filter {
@@ -85,6 +90,10 @@
         align-items: center;
         margin-bottom: 7px;
         justify-content: space-between;
+
+        @media (max-width: 960px) {
+            margin-bottom: 25px;
+        }
     }
 
     &__sort-select {
