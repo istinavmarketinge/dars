@@ -11738,6 +11738,15 @@ dl.open .specifications-block__row {
 
 .contacts {
   margin-bottom: 80px;
+  /*&__geolocation:after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 8px;
+      height: 5px;
+      background: url("../img/arrow-bl.svg") 0 0/contain no-repeat;
+  }*/
 }
 @media all and (max-width: 700px) {
   .contacts {
@@ -11802,15 +11811,6 @@ dl.open .specifications-block__row {
   height: 18px;
   background: url("../img/geo-big.svg") 0 0/contain no-repeat;
 }
-.contacts__geolocation:after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  right: 0;
-  width: 8px;
-  height: 5px;
-  background: url("../img/arrow-bl.svg") 0 0/contain no-repeat;
-}
 .contacts__mail {
   display: flex;
   align-items: center;
@@ -11855,6 +11855,14 @@ dl.open .specifications-block__row {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.contacts__work-time {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+}
+.contacts__work-time .work-time__info span {
+  color: #D6D6D6;
 }
 .contacts__text {
   margin: 25px 0;

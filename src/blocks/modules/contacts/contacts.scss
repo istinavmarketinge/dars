@@ -53,7 +53,7 @@
         height: 18px;
         background: url("../img/geo-big.svg") 0 0/contain no-repeat;
     }
-    &__geolocation:after {
+    /*&__geolocation:after {
         content: "";
         position: absolute;
         top: 7px;
@@ -61,7 +61,7 @@
         width: 8px;
         height: 5px;
         background: url("../img/arrow-bl.svg") 0 0/contain no-repeat;
-    }
+    }*/
     &__mail {
         display: flex;
         align-items: center;
@@ -104,6 +104,15 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+    }
+    &__work-time {
+        display: flex;
+        align-items: center;
+        grid-gap: 8px;
+
+        .work-time__info span {
+            color: #D6D6D6;
+        }
     }
     &__text {
         margin: 25px 0;
