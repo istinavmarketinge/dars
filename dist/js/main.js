@@ -1910,18 +1910,28 @@ var ElementsList = /*#__PURE__*/function () {
     value: function addHoverHandler() {
       if (!document.querySelector('.elements-item--with-buttons') || !document.querySelector('.elements-item__popover')) return;
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('mouseenter', '.elements-item--with-buttons', function (event) {
-        console.log(event);
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').show(100);
       });
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('mouseleave', '.elements-item--with-buttons', function (event) {
-        console.log(event);
         jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget).find('.elements-item__popover').hide(100);
+      });
+    }
+  }, {
+    key: "addModalCloseHandler",
+    value: function addModalCloseHandler() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (event) {
+        var targetElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target);
+        var isClickedOutside = targetElement.closest('.js_closest').length === 0;
+        if (isClickedOutside) {
+          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js_click').removeClass('open').siblings('.js_find').hide();
+        }
       });
     }
   }, {
     key: "init",
     value: function init() {
       this.addClickHandler();
+      this.addModalCloseHandler();
       this.addHoverHandler();
     }
   }]);

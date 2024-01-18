@@ -93,6 +93,7 @@
 
         @media (max-width: 960px) {
             margin-bottom: 25px;
+            flex-wrap: wrap;
         }
     }
 
@@ -208,6 +209,14 @@
         justify-content: flex-end;
         gap: 24px;
         width: 80%;
+
+        @media (max-width: 960px) {
+            order: 3;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 15px;
+        }
     }
 
     &__sort-filter-title {

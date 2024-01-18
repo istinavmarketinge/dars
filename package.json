@@ -79,6 +79,7 @@
         "@glidejs/glide": "^3.6.0",
         "air-datepicker": "^3.4.0",
         "dynamic-countdown": "^1.4.2",
+        "fancybox": "^3.0.1",
         "glightbox": "^3.2.0",
         "inputmask": "^5.0.9-beta.39",
         "jquery": "^3.7.0",

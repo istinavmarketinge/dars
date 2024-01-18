@@ -7551,6 +7551,7 @@ a {
 @media (max-width: 960px) {
   .section__sort-block {
     margin-bottom: 25px;
+    flex-wrap: wrap;
   }
 }
 .section__sort-select {
@@ -7661,6 +7662,15 @@ a {
   justify-content: flex-end;
   gap: 24px;
   width: 80%;
+}
+@media (max-width: 960px) {
+  .section__sort-filter {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 15px;
+  }
 }
 .section__sort-filter-title {
   color: #959595;

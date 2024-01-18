@@ -12,16 +12,27 @@ const ElementsList = class ElementsList {
     addHoverHandler() {
       if (!document.querySelector('.elements-item--with-buttons') || !document.querySelector('.elements-item__popover')) return;
       $(document).on('mouseenter', '.elements-item--with-buttons', function(event) {
-        console.log(event);
         $(event.currentTarget).find('.elements-item__popover').show(100);
       })
       $(document).on('mouseleave', '.elements-item--with-buttons', function(event) {
-        console.log(event);
         $(event.currentTarget).find('.elements-item__popover').hide(100);
       })
     }
+
+    addModalCloseHandler() {
+      $(document).on('click', function(event) {
+        var targetElement = $(event.target);
+        
+        var isClickedOutside = targetElement.closest('.js_closest').length === 0;
+        
+        if (isClickedOutside) {
+          $('.js_click').removeClass('open').siblings('.js_find').hide();
+        }
+      });
+    }
     init() {
         this.addClickHandler();
+        this.addModalCloseHandler();
         this.addHoverHandler();
     }
 }
