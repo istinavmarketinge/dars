@@ -4001,7 +4001,7 @@ body.isScrollPrevented {
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 110;
   background: #fff;
 }
 
@@ -12229,22 +12229,43 @@ textarea {
 
 .affiliate-program {
   display: flex;
+  flex-wrap: wrap;
 }
 .affiliate-program__left {
-  width: 35%;
+  max-width: 444px;
+  flex: 1 1;
+  border-right: 1px solid #F2F2F2;
   padding-right: 47px;
-  border-radius: 1px solid #F2F2F2;
   display: flex;
   flex-direction: column;
   grid-gap: 40px;
 }
+@media (max-width: 1360px) {
+  .affiliate-program__left {
+    padding-right: 0;
+    border-right: none;
+  }
+}
 .affiliate-program__right {
-  width: 62%;
+  flex: 1;
   padding-left: 47px;
   display: none;
 }
+@media (max-width: 1360px) {
+  .affiliate-program__right {
+    padding-left: 0;
+    flex-basis: 100%;
+  }
+}
 .affiliate-program__right.open {
   display: block;
+}
+@media (max-width: 960px) {
+  .affiliate-program__right.open {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
 }
 .affiliate-program__title {
   margin: 0;
@@ -12264,6 +12285,11 @@ textarea {
   font-weight: 400;
   line-height: 130%;
 }
+@media (max-width: 960px) {
+  .affiliate-program__text img {
+    display: none;
+  }
+}
 .affiliate-program__text-application span {
   color: #F0820F;
   cursor: pointer;
@@ -12282,6 +12308,11 @@ textarea {
   line-height: 130%;
   text-align: center;
   cursor: pointer;
+}
+@media (max-width: 960px) {
+  .affiliate-program__button {
+    max-width: 335px;
+  }
 }
 .affiliate-program__hide-details {
   padding: 10px;
@@ -12303,6 +12334,12 @@ textarea {
   width: 3px;
   height: 6px;
   background: url("../img/arrow-blue.svg") 0 0/contain no-repeat;
+}
+@media (max-width: 960px) {
+  .affiliate-program__hide-details {
+    order: 2;
+    margin: 4px 0 0;
+  }
 }
 .affiliate-program__text-abot-program {
   color: #8C8C8C;
@@ -12886,6 +12923,11 @@ textarea {
 .personal-account {
   min-height: 875px;
   padding-bottom: 90px;
+}
+@media (max-width: 960px) {
+  .personal-account {
+    min-height: auto;
+  }
 }
 .personal-account__wrap {
   display: grid;

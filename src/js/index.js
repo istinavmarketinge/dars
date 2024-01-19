@@ -27,6 +27,7 @@ import Mask from "%modules%/inputmask/inputmask";
 import UpButton from "%modules%/up-button/up-button";
 import Map from "%modules%/map/map";
 import SaleBlock from "%modules%/sale/sale";
+import PersonalAccountLayout from "%modules%/personal-account-layout/personal-account-layout";
 
 
 
@@ -59,6 +60,7 @@ window.app.personalAccountCreatePromocode = new PersonalAccountCreatePromocode()
 window.app.catalogFilter = new CatalogFilter();
 window.app.orderPage = new OrderPage();
 window.app.upButton = new UpButton();
+window.app.personalAccountLayout = new PersonalAccountLayout();
 
 window.app.personalAccountStatistics = new PersonalAccountStatistics();
 window.app.orders = new Orders();
@@ -92,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.app.catalogFilter.init();
     window.app.orderPage.init();
     window.app.upButton.init();
-
+    window.app.personalAccountLayout.init();
+    
     window.app.personalAccountStatistics.init();
     window.app.orders.init();
     window.app.mask.init();

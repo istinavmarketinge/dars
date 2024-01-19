@@ -24,7 +24,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
         <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
         
-            <link rel="stylesheet" href="styles/main.css?16:57">
+            <link rel="stylesheet" href="styles/main.css?13:12">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1424,29 +1424,54 @@
                     <div class="personal-account">
     <div class="personal-account__wrap">
         <div class="personal-account-sidebar">
-
-            <div class="personal-account__profile">
-                <span class="personal-account__title">Мой профиль</span>
-                <div class="personal-account__name">Илон Маск</div>
-                <a href="mailto:#" class="personal-account__mail">ilon.mask@gmail.com</a>
-                <a href="tel:#" class="personal-account__phone">+7 (962) 278-35-56</a>
-                <a href="#" class="personal-account__exit">Выйти</a>
+            <button class="personal-account-sidebar__btn-menu js-personal-account-sidebar-menu"></button>
+            <div class="personal-account-sidebar__wrap js-personal-account-sidebar-wrap">
+                <div class="personal-account-sidebar-user-info">
+                    <div class="personal-account-sidebar-user-info__title">Мой профиль</div>
+                    <div class="personal-account-sidebar-user-info__name">Илон Маск</div>
+                    <div class="personal-account-sidebar-user-info__contact-data">
+                        <span>ilon.mask@gmail.com</span>
+                        <span>+7 (962) 278-35-56</span>
+                    </div>
+                    <a href="#" class="personal-account-sidebar-user-info__out-profile">Выйти</a>
+                </div>
+                <div class="personal-account-sidebar-menu">
+                    <ul class="personal-account-sidebar-menu__group">
+                        <li class="personal-account-sidebar-menu__item ">
+                            <a href="personal-account.html">Личный кабинет</a>
+                        </li>
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="favourites-products.html">Избранное</a>
+                        </li>
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="orders.html">Мои заказы</a>
+                        </li>
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="#">Смена пароля</a>
+                        </li>
+                    </ul>
+                    <ul class="personal-account-sidebar-menu__group">
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="#">Партнерская программа</a>
+                        </li>
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="personal-account-create-promocode.html">Создать промокод</a>
+                        </li>
+                        <li class="personal-account-sidebar-menu__item">
+                            <a href="personal-account-statistics.html">Статистика</a>
+                        </li>
+                    </ul>
+                    <ul class="personal-account-sidebar-menu__group">
+                        <li class="personal-account-sidebar-menu__item ">
+                            <a href="personal-account-subscription.html">Настройки подписки</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="personal-account__tabs">
-                <a href="#" class="personal-account__tabs-item">Личный кабинет</a>
-                <a href="#" class="personal-account__tabs-item">Избранное</a>
-                <a href="#" class="personal-account__tabs-item">Мои заказы</a>
-                <a href="#" class="personal-account__tabs-item">Смена пароля</a>
-                <a href="#" class="personal-account__tabs-item --bottom-tabs">Партнерская программа</a>
-                <a href="#" class="personal-account__tabs-item ">Настройки подписки</a>
-            </div>
-             
         </div>
 
-
         <div class="personal-account-main">
-            <div class="affiliate-program"> 
+                       <div class="affiliate-program"> 
                 <div class="affiliate-program__left">
                     <h2 class="affiliate-program__title">Партнерская программа</h2>
                     <div class="affiliate-program__text">
@@ -1475,9 +1500,11 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
+
                     <div class="thanks-you">
     <div class="thanks-you__in">
         <div class="thanks-you__close"></div>

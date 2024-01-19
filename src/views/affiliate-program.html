@@ -51,7 +51,11 @@
 
             <section>
                 <div class="container">
-                    @@include("../blocks/modules/affiliate-program/affiliate-program.html")
+                    @@include("../blocks/modules/personal-account-layout/personal-account-layout.html", {
+                        "main": "@@include('../affiliate-program/affiliate-program.html')",
+                        "active_page": "affiliate-program"
+                    })
+
                     @@include("../blocks/modules/thanks-you/thanks-you.html")
                 </div>
             </section>

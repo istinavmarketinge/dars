@@ -2,6 +2,10 @@
     min-height: 875px;
     padding-bottom: 90px;
 
+    @media (max-width: 960px) {
+        min-height: auto;
+    }
+
     &__wrap {
         display: grid;
         grid-template-columns: 267px 1fr;
