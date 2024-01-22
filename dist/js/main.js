@@ -1739,6 +1739,7 @@ var Compare = /*#__PURE__*/function () {
         }
       });
       document.querySelectorAll('.compare__page-top .js_element_item').forEach(function (js_element_item) {
+        console.log(maxHeight);
         js_element_item.style.height = "".concat(maxHeight, "px");
       });
     }
@@ -1822,13 +1823,16 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "init",
     value: function init() {
+      var _this3 = this;
       this.initScrollbar();
       this.calculateTdHeights();
-      this.calculateItemHeight();
       this.linePositionSetter();
       this.checkUniqueParams();
       this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'));
       this.desctopCompareMoveProduct();
+      setTimeout(function () {
+        _this3.calculateItemHeight();
+      }, 500);
     }
   }]);
   return Compare;

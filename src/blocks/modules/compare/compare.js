@@ -50,6 +50,7 @@ const Compare = class Compare {
             }
         });
         document.querySelectorAll('.compare__page-top .js_element_item').forEach(js_element_item => {
+            console.log(maxHeight);
             js_element_item.style.height = `${maxHeight}px`;
         });
     }
@@ -125,11 +126,13 @@ const Compare = class Compare {
     init() {
         this.initScrollbar();
         this.calculateTdHeights();
-        this.calculateItemHeight();
         this.linePositionSetter();
         this.checkUniqueParams();
         this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'))
         this.desctopCompareMoveProduct();
+        setTimeout(() => {
+            this.calculateItemHeight();
+        }, 500)
     }
 }
 
