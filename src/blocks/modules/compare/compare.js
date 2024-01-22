@@ -39,6 +39,20 @@ const Compare = class Compare {
 
 
     }
+    calculateItemHeight() {
+        if (!document.querySelector('.compare__page-top .js_element_item')) return;
+
+        let maxHeight = 0;
+
+        document.querySelectorAll('.compare__page-top .js_element_item').forEach(js_element_item => {
+            if (js_element_item.clientHeight > maxHeight) {
+                maxHeight = js_element_item.clientHeight
+            }
+        });
+        document.querySelectorAll('.compare__page-top .js_element_item').forEach(js_element_item => {
+            js_element_item.style.height = `${maxHeight}px`;
+        });
+    }
     changeCompareItem() {
         if (!document.querySelector('.compare__page-right .compare__page-item')) return;
         let pinned = $('.compare__page-right .compare__page-item.isPinned').clone();
@@ -111,6 +125,7 @@ const Compare = class Compare {
     init() {
         this.initScrollbar();
         this.calculateTdHeights();
+        this.calculateItemHeight();
         this.linePositionSetter();
         this.checkUniqueParams();
         this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'))

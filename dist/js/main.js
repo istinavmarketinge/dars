@@ -1729,6 +1729,20 @@ var Compare = /*#__PURE__*/function () {
       });
     }
   }, {
+    key: "calculateItemHeight",
+    value: function calculateItemHeight() {
+      if (!document.querySelector('.compare__page-top .js_element_item')) return;
+      var maxHeight = 0;
+      document.querySelectorAll('.compare__page-top .js_element_item').forEach(function (js_element_item) {
+        if (js_element_item.clientHeight > maxHeight) {
+          maxHeight = js_element_item.clientHeight;
+        }
+      });
+      document.querySelectorAll('.compare__page-top .js_element_item').forEach(function (js_element_item) {
+        js_element_item.style.height = "".concat(maxHeight, "px");
+      });
+    }
+  }, {
     key: "changeCompareItem",
     value: function changeCompareItem() {
       if (!document.querySelector('.compare__page-right .compare__page-item')) return;
@@ -1810,6 +1824,7 @@ var Compare = /*#__PURE__*/function () {
     value: function init() {
       this.initScrollbar();
       this.calculateTdHeights();
+      this.calculateItemHeight();
       this.linePositionSetter();
       this.checkUniqueParams();
       this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'));
