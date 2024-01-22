@@ -16,6 +16,9 @@
         @media (width <= 960px) {
             width: calc(50% - 5px);
         }
+        @media (width <= 680px) {
+            width: 100%;
+        }
         .elements-item {
             width: 100%;
         }

@@ -9844,11 +9844,6 @@ form.smartfilter .row {
     z-index: 11;
   }
 }
-@media (width <= 960px) {
-  .compare__page-item {
-    height: 100%;
-  }
-}
 .compare__page-item::before {
   content: "";
   border-radius: 6px;
@@ -13330,6 +13325,11 @@ textarea {
 @media (width <= 960px) {
   .compare-alone__item {
     width: calc(50% - 5px);
+  }
+}
+@media (width <= 680px) {
+  .compare-alone__item {
+    width: 100%;
   }
 }
 .compare-alone__item .elements-item {
