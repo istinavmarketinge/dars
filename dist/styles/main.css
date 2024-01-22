@@ -13335,6 +13335,9 @@ textarea {
 }
 @media (width <= 680px) {
   .compare-alone__item {
+    width: calc(50% - 5px);
+  }
+  .compare-alone__item.fillWidth {
     width: 100%;
   }
 }

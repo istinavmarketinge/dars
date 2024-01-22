@@ -17,11 +17,15 @@
             width: calc(50% - 5px);
         }
         @media (width <= 680px) {
-            width: 100%;
+            width: calc(50% - 5px);
+            &.fillWidth {
+                width: 100%;
+            }
         }
         .elements-item {
             width: 100%;
         }
+        
     }
     &__item-add {
         height: 100%;
