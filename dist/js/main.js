@@ -2492,8 +2492,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     }
     return text;
   }
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dars-control__btn--random').on('click', function () {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="promo-code-name"]').val(generateRandomString(10));
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-promo-code-random').on('click', function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-promo-code-random-input').val(generateRandomString(10));
   });
 });
 
@@ -2533,14 +2533,16 @@ var PersonalAccountLayout = /*#__PURE__*/function () {
   }, {
     key: "addModalCloseHandler",
     value: function addModalCloseHandler() {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (event) {
-        var targetElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target);
-        var isClickedOutside = targetElement.closest('.js-personal-account-sidebar-wrap, .js-personal-account-sidebar-menu').length === 0;
-        if (isClickedOutside) {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-personal-account-sidebar-menu').removeClass('open');
-          jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-personal-account-sidebar-wrap').slideUp();
-        }
-      });
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width() < 960) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', function (event) {
+          var targetElement = jquery__WEBPACK_IMPORTED_MODULE_0___default()(event.target);
+          var isClickedOutside = targetElement.closest('.js-personal-account-sidebar-wrap, .js-personal-account-sidebar-menu').length === 0;
+          if (isClickedOutside) {
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-personal-account-sidebar-menu').removeClass('open');
+            jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-personal-account-sidebar-wrap').slideUp();
+          }
+        });
+      }
     }
   }, {
     key: "init",

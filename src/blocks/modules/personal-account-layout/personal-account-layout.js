@@ -10,16 +10,18 @@ const PersonalAccountLayout = class PersonalAccountLayout {
     }
 
     addModalCloseHandler() {
-        $(document).on('click', function (event) {
-            var targetElement = $(event.target);
-
-            var isClickedOutside = targetElement.closest('.js-personal-account-sidebar-wrap, .js-personal-account-sidebar-menu').length === 0;
-
-            if (isClickedOutside) {
-                $('.js-personal-account-sidebar-menu').removeClass('open');
-                $('.js-personal-account-sidebar-wrap').slideUp();
-            }
-        });
+        if ($(window).width() < 960) {
+            $(document).on('click', function (event) {
+                var targetElement = $(event.target);
+    
+                var isClickedOutside = targetElement.closest('.js-personal-account-sidebar-wrap, .js-personal-account-sidebar-menu').length === 0;
+    
+                if (isClickedOutside) {
+                    $('.js-personal-account-sidebar-menu').removeClass('open');
+                    $('.js-personal-account-sidebar-wrap').slideUp();
+                }
+            });
+        }
     }
     init() {
         this.addClickHandler();

@@ -207,7 +207,7 @@ $(document).ready(function () {
         return text;
     }
 
-    $('.dars-control__btn--random').on('click', function() {
-        $('input[name="promo-code-name"]').val(generateRandomString(10));
+    $('.js-promo-code-random').on('click', function() {
+        $('.js-promo-code-random-input').val(generateRandomString(10));
     });
 });
