@@ -4424,13 +4424,13 @@ a {
 .header-top__menu-list li.has-child {
   position: relative;
 }
-.header-top__menu-list li.has-child > a {
+.header-top__menu-list li.has-child > .header-top__menu-link {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   gap: 2px;
 }
-.header-top__menu-list li.has-child > a:after {
+.header-top__menu-list li.has-child > .header-top__menu-link:after {
   content: "";
   display: block;
   width: 8px;
@@ -6410,13 +6410,13 @@ a {
 .footer__menu-list li.has-child {
   position: relative;
 }
-.footer__menu-list li.has-child > a {
+.footer__menu-list li.has-child > .hasArrow {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   gap: 2px;
 }
-.footer__menu-list li.has-child > a:after {
+.footer__menu-list li.has-child > .hasArrow:after {
   content: "";
   display: block;
   width: 8px;
@@ -9843,11 +9843,6 @@ form.smartfilter .row {
     left: 0;
     order: -10;
     z-index: 11;
-  }
-}
-@media (width <= 960px) {
-  .compare__page-item {
-    height: 100%;
   }
 }
 .compare__page-item::before {
@@ -13336,6 +13331,11 @@ textarea {
 @media (width <= 960px) {
   .compare-alone__item {
     width: calc(50% - 5px);
+  }
+}
+@media (width <= 680px) {
+  .compare-alone__item {
+    width: 100%;
   }
 }
 .compare-alone__item .elements-item {

@@ -235,7 +235,7 @@
             white-space: nowrap;
             &.has-child {
                 position: relative;
-                > a {
+                > .header-top__menu-link {
                     display: flex;
                     align-items: center;
                     flex-wrap: nowrap;

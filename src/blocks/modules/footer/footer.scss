@@ -151,7 +151,7 @@
         list-style: none;
         &.has-child {
             position: relative;
-            > a {
+            > .hasArrow {
                 display: flex;
                 align-items: center;
                 flex-wrap: nowrap;

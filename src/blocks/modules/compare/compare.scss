@@ -205,9 +205,9 @@
                 z-index: 11;
             }
         }
-        @media (width <= 960px) {
-            height: 100%;
-        }
+        // @media (width <= 960px) {
+        //     height: 100%;
+        // }
         &::before {
             content: "";
             border-radius: 6px;

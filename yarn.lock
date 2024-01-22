@@ -269,7 +269,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.20.15", "@babel/parser@^7.22.5", "@babel/parser@^7.9.4":
+"@babel/parser@^7.22.5", "@babel/parser@^7.9.4":
   version "7.22.5"
   resolved "https://registry.npmjs.org/@babel/parser/-/parser-7.22.5.tgz"
   integrity sha512-DFZMC9LJUG9PLOclRC32G63UXwzqS2koQC8dkx+PLdmt1xSePYpbT/NbsrJy8Q/muXz7o/h/d4A7Fuyixm559Q==
@@ -1476,10 +1476,8 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@jsdoc/salty@^0.2.1", "@jsdoc/salty@^0.2.4":
-  version "0.2.7"
-  resolved "https://registry.npmjs.org/@jsdoc/salty/-/salty-0.2.7.tgz"
-  integrity sha512-mh8LbS9d4Jq84KLw8pzho7XC2q2/IJGiJss3xwRoLD1A+EE16SjN4PfaG4jRCzKegTFLlN0Zd8SdUPE6XdoPFg==
+"@jsdoc/salty@^0.2.4":
+  version "0.2.6"
   dependencies:
     lodash "^4.17.21"
 
@@ -2391,16 +2389,14 @@ bem-naming@1.0.1:
 
 bem-tools-core@bem-tools/bem-tools-core:
   version "0.0.3"
-  resolved "git+ssh://git@github.com/bem-tools/bem-tools-core.git"
-  integrity sha512-MdmlsVWz1KbAvx1MvAZetwhQmNOEYcAmODi/UVrg2GXFgruNgPV8Z+6E17IlW8+uQetxnwot6ImGXom5nyRtFA==
+  resolved "git+ssh://git@github.com/bem-tools/bem-tools-core.git#9a5c91b198a7ce1f2a6b6e64c505aefead27fc8f"
   dependencies:
     coa "^1.0.1"
     global-modules "^0.2.0"
 
 bem-tools-create@bem-tools/bem-tools-create:
   version "2.3.0"
-  resolved "git+ssh://git@github.com/bem-tools/bem-tools-create.git"
-  integrity sha512-Q00xJAtgCGFtpmgbvOTLZ8mFZW2UzNwT17CAy2BnYrcROfqacX0zUfIjK/pCS0QQjHplFFlGMu0ZATimaZa0lw==
+  resolved "git+ssh://git@github.com/bem-tools/bem-tools-create.git#bee9b839b6c89b956464be0cf8057d40f332f832"
   dependencies:
     "@bem/cell" "^0.2.5"
     "@bem/entity-name" "^1.3.2"
@@ -3022,9 +3018,7 @@ class-utils@^0.3.5:
     static-extend "^0.1.1"
 
 clean-css@~5.3.2:
-  version "5.3.3"
-  resolved "https://registry.npmjs.org/clean-css/-/clean-css-5.3.3.tgz"
-  integrity sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==
+  version "5.3.2"
   dependencies:
     source-map "~0.6.0"
 
@@ -3304,12 +3298,7 @@ commander@^2.8.1:
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commander@^9.0.0:
-  version "9.5.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz"
-  integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
-
-commander@^9.3.0:
+commander@^9.0.0, commander@^9.3.0:
   version "9.5.0"
   resolved "https://registry.npmjs.org/commander/-/commander-9.5.0.tgz"
   integrity sha512-KRs7WVDKg86PWiuAqhDrAQnTXZKraVcCc6vFdL14qrZ/DcWwuRo7VoiYXalXO7S5GKpqYiVEwCbgFDfxNHKJBQ==
@@ -5005,11 +4994,6 @@ file-type@^8.1.0:
   resolved "https://registry.npmjs.org/file-type/-/file-type-8.1.0.tgz"
   integrity sha512-qyQ0pzAy78gVoJsmYeNgl8uH8yKhr1lVhW7JbzJmnlRi0I4R2eEDEJZVKG8agpDnLpacwNbDhLNG/LMdxHD2YQ==
 
-file-uri-to-path@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz"
-  integrity sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==
-
 filename-regex@^2.0.0:
   version "2.0.1"
   resolved "https://registry.npmjs.org/filename-regex/-/filename-regex-2.0.1.tgz"
@@ -6630,9 +6614,7 @@ ink-docstrap@^1.3.2:
     sanitize-html "^1.13.0"
 
 inputmask@^5.0.9-beta.39:
-  version "5.0.9-beta.45"
-  resolved "https://registry.npmjs.org/inputmask/-/inputmask-5.0.9-beta.45.tgz"
-  integrity sha512-Nh6RHifykvEfPvnpCiwEER8LcDTAWvWKWUnVsRjqOyutGwAdjFuucCDI3YAm8tTVmhsmAydqEs+ORwllkN7Pfw==
+  version "5.0.9-beta.39"
 
 internal-slot@^1.0.5:
   version "1.0.5"
@@ -7379,7 +7361,7 @@ jsbn@~0.1.0:
   resolved "https://registry.npmjs.org/jsbn/-/jsbn-0.1.1.tgz"
   integrity sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==
 
-jsdoc@^3.6.3:
+jsdoc@^3.6.3, "jsdoc@>=3.x <=4.x":
   version "3.6.11"
   resolved "https://registry.npmjs.org/jsdoc/-/jsdoc-3.6.11.tgz"
   integrity sha512-8UCU0TYeIYD9KeLzEcAu2q8N/mx9O3phAGl32nmHlE0LpaJL71mMkP4d+QE5zWfNt50qheHtOZ0qoxVrsX5TUg==
@@ -7398,27 +7380,6 @@ jsdoc@^3.6.3:
     requizzle "^0.2.3"
     strip-json-comments "^3.1.0"
     taffydb "2.6.2"
-    underscore "~1.13.2"
-
-"jsdoc@>=3.x <=4.x":
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/jsdoc/-/jsdoc-4.0.2.tgz"
-  integrity sha512-e8cIg2z62InH7azBBi3EsSEqrKx+nUtAS5bBcYTSpZFA+vhNPyhv8PTFZ0WsjOPDj04/dOLlm08EDcQJDqaGQg==
-  dependencies:
-    "@babel/parser" "^7.20.15"
-    "@jsdoc/salty" "^0.2.1"
-    "@types/markdown-it" "^12.2.3"
-    bluebird "^3.7.2"
-    catharsis "^0.9.0"
-    escape-string-regexp "^2.0.0"
-    js2xmlparser "^4.0.2"
-    klaw "^3.0.0"
-    markdown-it "^12.3.2"
-    markdown-it-anchor "^8.4.1"
-    marked "^4.0.10"
-    mkdirp "^1.0.4"
-    requizzle "^0.2.3"
-    strip-json-comments "^3.1.0"
     underscore "~1.13.2"
 
 jsesc@^2.5.1:
@@ -8948,9 +8909,7 @@ os-tmpdir@^1.0.0:
   integrity sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==
 
 overlayscrollbars@^2.3.2:
-  version "2.4.5"
-  resolved "https://registry.npmjs.org/overlayscrollbars/-/overlayscrollbars-2.4.5.tgz"
-  integrity sha512-4OLCPuZPVdd1HnDLYS4o+kAsOCZwVz6dDA212m8ki/u3isltKyWGVjIv2aqpVHkDRf/P2K98m9Su8pdhihtAIQ==
+  version "2.3.2"
 
 ow@^0.17.0:
   version "0.17.0"
