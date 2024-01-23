@@ -86,7 +86,7 @@
         grid-template-columns: 108px 43% auto 13.5% auto 13.5%;
         @media (width <= 960px) {
             grid-gap: 15px;
-            grid-template-columns: 26% 0.5fr 1.5fr;
+            grid-template-columns: 62px 1fr 1fr;
             grid-template-rows: 1fr 49px;
             position: relative;
         }
