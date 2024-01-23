@@ -354,10 +354,6 @@
         align-items: center;
         gap: 10px;
 
-        @media (width <= 960px) {
-            line-height: 0.5;
-        }
-
         &::after {
             content: "";
             display: block;

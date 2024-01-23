@@ -9263,7 +9263,7 @@ form.smartfilter .row {
     bottom: 0;
     overflow: auto;
     background: #fff;
-    z-index: 15;
+    z-index: 115;
     width: 100%;
   }
   .rootsubcatstree {
@@ -13689,11 +13689,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-@media (width <= 960px) {
-  .dars-select__btn {
-    line-height: 0.5;
-  }
 }
 .dars-select__btn::after {
   content: "";
