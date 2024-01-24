@@ -33,4 +33,24 @@
     &__item:active .bottom-menu__image svg path {
         stroke: #F0820F;
     }
+
+    &__image {
+        position: relative;
+    }
+
+    &__item-icon-counter {
+        position: absolute;
+        right: -9px;
+        top: -3px;
+        padding: 0 4px;
+        background: #F0820F;
+        color: #FFF;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        border-radius: 3px;
+        box-shadow: 0px 0px 0px 2px #FFF;
+    }
 }
