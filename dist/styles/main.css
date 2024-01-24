@@ -12917,8 +12917,10 @@ textarea {
 .cart-page__remove:hover {
   opacity: 1;
 }
-.cart-page__prices {
-  text-align: right;
+@media all and (min-width: 961px) {
+  .cart-page__prices {
+    text-align: right;
+  }
 }
 .cart-page__total-price {
   color: #000;
@@ -15626,6 +15628,11 @@ input:checked + .dars-control__btn-name::before {
 @media (width <= 960px) {
   .cart-page__promocode-input {
     flex-direction: column;
+  }
+}
+@media (width <= 560px) {
+  .cart-page__promocode-input {
+    flex-direction: row;
   }
 }
 .cart-page__promocode-input .input {
