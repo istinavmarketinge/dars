@@ -609,12 +609,13 @@
     position: fixed;
     top: 3rem;
     right: 3rem;
-    z-index: 20;
+    z-index: 112;
 
     @media(max-width: 900px){
+        z-index: 105;
         top: auto;
         bottom: 69px;
-        right: 6rem;
+        right: 96px;
     }
 
     &__btn {
@@ -656,7 +657,7 @@
 
 .modal-discount-info {
     position: fixed;
-    z-index: 20;
+    z-index: 112;
     right: 8rem;
     top: 4rem;
 

@@ -17208,13 +17208,14 @@ input:checked + .dars-control__btn-name::before {
   position: fixed;
   top: 3rem;
   right: 3rem;
-  z-index: 20;
+  z-index: 112;
 }
 @media (max-width: 900px) {
   .discount-info {
+    z-index: 105;
     top: auto;
     bottom: 69px;
-    right: 6rem;
+    right: 96px;
   }
 }
 .discount-info__btn {
@@ -17256,7 +17257,7 @@ input:checked + .dars-control__btn-name::before {
 
 .modal-discount-info {
   position: fixed;
-  z-index: 20;
+  z-index: 112;
   right: 8rem;
   top: 4rem;
 }
