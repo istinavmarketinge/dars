@@ -177,6 +177,9 @@
         @media (width <= 960px) {
             flex-direction: column;
         }
+        @media (width <= 560px) {
+            flex-direction: row;
+        }
         .input {
             flex: 1 1 auto;
             position: relative;

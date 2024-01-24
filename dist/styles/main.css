@@ -15610,6 +15610,11 @@ input:checked + .dars-control__btn-name::before {
     flex-direction: column;
   }
 }
+@media (width <= 560px) {
+  .cart-page__promocode-input {
+    flex-direction: row;
+  }
+}
 .cart-page__promocode-input .input {
   flex: 1 1 auto;
   position: relative;
