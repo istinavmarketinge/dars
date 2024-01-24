@@ -12899,8 +12899,10 @@ textarea {
 .cart-page__remove:hover {
   opacity: 1;
 }
-.cart-page__prices {
-  text-align: right;
+@media all and (min-width: 961px) {
+  .cart-page__prices {
+    text-align: right;
+  }
 }
 .cart-page__total-price {
   color: #000;

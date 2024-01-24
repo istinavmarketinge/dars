@@ -268,7 +268,9 @@
         }
     }
     &__prices {
-        text-align: right;
+        @media all and (min-width: 961px) {
+            text-align: right;
+        }
     }
     &__total-price {
         color: #000;
