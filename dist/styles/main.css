@@ -4477,6 +4477,18 @@ a {
 .header-top__menu-submenu a:hover {
   background: rgba(240, 130, 15, 0.2);
 }
+.header-top__menu-submenu-popup {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header-top__menu-submenu-popup a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .header-top__menu-list li.has-child:hover .header-top__menu-submenu {
   display: block;
 }
@@ -4783,6 +4795,20 @@ a {
 }
 .header-bottom .right-icons__item--filled .right-icons__image img {
   filter: invert(1);
+}
+
+.menu-popup {
+  border-radius: 6px;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.custom-header-top-menu .gslide-inline {
+  background: none;
+}
+
+.custom-glightbox-open {
+  overflow: auto;
 }
 
 .top-menu {

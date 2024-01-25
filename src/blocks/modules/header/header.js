@@ -1,3 +1,4 @@
+import GLightbox from 'glightbox';
 /**
  * @class Header
  * @description Класс для работы с шапкой сайта
@@ -90,6 +91,29 @@ const Header = class Header {
 	 * 
 	 * window.app.header.init();
 	 */
+
+	initLightbox() {
+		if (!document.querySelector('.js-header-top-menu-link')) return;
+		this.lightbox = GLightbox({
+		  selector: '.js-header-top-menu-link'
+		});
+	}
+	/**
+	 * @description Функция кастомизации GLIghtBox
+	 * @example
+	 * // Вызов функций необходим для кастомизации
+	 * 
+	 * window.app.header.customGLIghtBox();
+	 */
+	customGLIghtBox() {
+		document.querySelector('.js-header-top-menu-link').addEventListener('click',() => {
+			document.querySelector('.goverlay').style.background = 'none';
+			document.querySelector('.glightbox-container').classList.add('custom-header-top-menu');
+			document.querySelectorAll('.glightbox-open').forEach(element => {
+				element.classList.remove('glightbox-open')
+			});;
+		});
+	}
     init() {
 		
 		this.openMenuHandler();
@@ -97,6 +121,8 @@ const Header = class Header {
 		window.addEventListener('resize', () => {
 			this.setCatalogBounds();
 		})
+		this.initLightbox();
+		this.customGLIghtBox();
     }
 }
 
