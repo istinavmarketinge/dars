@@ -4429,6 +4429,7 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   gap: 2px;
+  cursor: pointer;
 }
 .header-top__menu-list li.has-child > .header-top__menu-link:after {
   content: "";
@@ -6418,6 +6419,7 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   gap: 2px;
+  cursor: pointer;
 }
 .footer__menu-list li.has-child > .hasArrow:after {
   content: "";
