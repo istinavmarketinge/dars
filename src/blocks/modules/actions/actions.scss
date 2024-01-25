@@ -1,8 +1,13 @@
 .actions {
     &__into {
         display:flex;
+        padding-bottom: 80px;
+
         @media (max-width:1200px) {
             flex-wrap: wrap;
+        }
+        @media (max-width:960px) {
+            padding-bottom: 50px;
         }
     }
 

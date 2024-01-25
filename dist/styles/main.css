@@ -8308,10 +8308,16 @@ a {
 
 .actions__into {
   display: flex;
+  padding-bottom: 80px;
 }
 @media (max-width: 1200px) {
   .actions__into {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 960px) {
+  .actions__into {
+    padding-bottom: 50px;
   }
 }
 .actions__title {
