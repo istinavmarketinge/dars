@@ -4438,7 +4438,8 @@ a {
   height: 4px;
   background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSIyIiB2aWV3Qm94PSIwIDAgNCAyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMi4xOTY0IDAuNTQ4NjI0QzIuMDgzNjYgMC40NTA5OTYgMS45MTYzNCAwLjQ1MDk5NiAxLjgwMzYgMC41NDg2MjRMMC44NzYyMjEgMS4zNTE3NkMwLjY2NjI1IDEuNTMzNiAwLjc5NDg1MSAxLjg3ODU0IDEuMDcyNjIgMS44Nzg1NEwyLjkyNzM4IDEuODc4NTRDMy4yMDUxNSAxLjg3ODU0IDMuMzMzNzUgMS41MzM2IDMuMTIzNzggMS4zNTE3NkwyLjE5NjQgMC41NDg2MjRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K") 50% 50%/cover no-repeat;
 }
-.header-top__menu-list li a {
+.header-top__menu-list li a,
+.header-top__menu-list li span.header-top__menu-link {
   text-decoration: none;
   color: #000;
   display: block;
@@ -6118,6 +6119,7 @@ a {
   justify-content: space-between;
   background: url("../img/form-bg.png") 0 0/cover no-repeat;
   padding: 26px 70px 29px;
+  gap: 30px;
 }
 @media all and (max-width: 1100px) {
   .subscription__in {
@@ -6133,13 +6135,14 @@ a {
 .subscription__left {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   grid-gap: 20px;
   font-size: 26.848px;
   font-style: italic;
   font-weight: 600;
   line-height: 130%;
   letter-spacing: 0.805px;
-  width: 60%;
+  flex: 1;
 }
 @media all and (max-width: 1100px) {
   .subscription__left {
@@ -6153,40 +6156,49 @@ a {
     flex-direction: column;
   }
 }
+.subscription__main-text {
+  flex: 1;
+}
 @media all and (max-width: 1100px) {
-  .subscription__left div:first-child {
+  .subscription__main-text {
     width: 100%;
     text-align: center;
   }
 }
 @media all and (max-width: 700px) {
-  .subscription__left div:first-child {
+  .subscription__main-text {
     font-size: 35px;
   }
 }
 @media all and (max-width: 400px) {
-  .subscription__left div:first-child {
+  .subscription__main-text {
     font-size: 30px;
   }
 }
-.subscription__left div:last-child {
+.subscription__tile-text {
   box-sizing: border-box;
+  width: max-content;
+  border-radius: 9px;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  transform: rotate(359deg);
+  padding: 3px 8px 5px 15px;
 }
 @media all and (max-width: 1100px) {
-  .subscription__left div:last-child {
+  .subscription__tile-text {
     width: 70%;
     text-align: center;
   }
 }
 @media all and (max-width: 700px) {
-  .subscription__left div:last-child {
+  .subscription__tile-text {
     font-size: 20px;
     width: 100%;
   }
 }
 @media all and (max-width: 400px) {
-  .subscription__left div:last-child {
+  .subscription__tile-text {
     font-size: 15px;
+    line-height: normal;
   }
 }
 .subscription__right {
@@ -6201,6 +6213,11 @@ a {
   display: flex;
   align-items: center;
   grid-gap: 18px;
+}
+@media all and (min-width: 1101px) and (max-width: 1500px) {
+  .subscription__right form {
+    flex-direction: column;
+  }
 }
 @media all and (max-width: 1100px) {
   .subscription__right form {
@@ -6221,6 +6238,11 @@ a {
   width: 100%;
   padding: 15px 0 15px 19px;
   box-sizing: border-box;
+}
+@media all and (min-width: 1101px) and (max-width: 1500px) {
+  .subscription__right form input {
+    max-width: none;
+  }
 }
 @media all and (max-width: 1100px) {
   .subscription__right form input {
@@ -6245,6 +6267,11 @@ a {
   cursor: pointer;
   box-sizing: border-box;
 }
+@media all and (min-width: 1101px) and (max-width: 1500px) {
+  .subscription__right form button {
+    max-width: none;
+  }
+}
 @media all and (max-width: 1100px) {
   .subscription__right form button {
     max-width: 50%;
@@ -6254,12 +6281,6 @@ a {
   .subscription__right form button {
     max-width: 100%;
   }
-}
-.subscription__left div:last-child {
-  border-radius: 9px;
-  border: 3px solid rgba(0, 0, 0, 0.7);
-  transform: rotate(359deg);
-  padding: 3px 8px 5px 15px;
 }
 
 .footer__in {
@@ -6447,6 +6468,11 @@ a {
   gap: 2px;
   cursor: pointer;
 }
+@media (min-width: 901px) {
+  .footer__menu-list li.has-child > .hasArrow {
+    pointer-events: none;
+  }
+}
 .footer__menu-list li.has-child > .hasArrow:after {
   content: "";
   display: block;
@@ -6482,6 +6508,11 @@ a {
   background: #FFF;
   z-index: 5;
   display: none;
+}
+@media (max-width: 900px) {
+  .footer__menu-submenu {
+    display: none !important;
+  }
 }
 .footer__menu-submenu a {
   display: block;
@@ -17271,7 +17302,7 @@ input:checked + .dars-control__btn-name::before {
 
 .discount-info {
   position: fixed;
-  top: 3rem;
+  top: 14rem;
   right: 3rem;
   z-index: 112;
 }

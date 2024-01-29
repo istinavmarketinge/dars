@@ -6,6 +6,7 @@
         justify-content: space-between;
         background: url("../img/form-bg.png") 0 0/cover no-repeat;
         padding: 26px 70px 29px;
+        gap: 30px;
         @media all and (max-width:1100px) {
             flex-direction: column;
             grid-gap: 40px;
@@ -17,13 +18,14 @@
     &__left {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         grid-gap: 20px;
         font-size: 26.848px;
         font-style: italic;
         font-weight: 600;
         line-height: 130%;
         letter-spacing: 0.805px;
-        width: 60%;
+        flex: 1;
         @media all and (max-width:1100px) {
             width: 100%;
             flex-wrap: wrap;
@@ -32,31 +34,38 @@
         @media all and (max-width:700px) {
             flex-direction: column;
         }
-        div:first-child {
-            @media all and (max-width:1100px) {
-                width: 100%;
-                text-align: center;
-            }
-            @media all and (max-width:700px) {
-                font-size: 35px;
-            }
-            @media all and (max-width:400px) {
-                font-size: 30px;
-            }
+    }
+    &__main-text {
+        flex: 1;
+        @media all and (max-width:1100px) {
+            width: 100%;
+            text-align: center;
         }
-        div:last-child {
-            box-sizing: border-box;
-            @media all and (max-width:1100px) {
-                width: 70%;
-                text-align: center;
-            }
-            @media all and (max-width:700px) {
-                font-size: 20px;
-                width: 100%;
-            }
-            @media all and (max-width:400px) {
-                font-size: 15px;
-            }
+        @media all and (max-width:700px) {
+            font-size: 35px;
+        }
+        @media all and (max-width:400px) {
+            font-size: 30px;
+        }
+    }
+    &__tile-text{
+        box-sizing: border-box;
+        width: max-content;
+        border-radius: 9px;
+        border: 3px solid rgba(0, 0, 0, 0.7);
+        transform: rotate(359deg);
+        padding: 3px 8px 5px 15px;
+        @media all and (max-width:1100px) {
+            width: 70%;
+            text-align: center;
+        }
+        @media all and (max-width:700px) {
+            font-size: 20px;
+            width: 100%;
+        }
+        @media all and (max-width:400px) {
+            font-size: 15px;
+            line-height: normal;
         }
     }
     &__right {
@@ -69,6 +78,9 @@
         display: flex;
         align-items: center;
         grid-gap: 18px;
+        @media all and (min-width:1101px) and (max-width: 1500px) {
+            flex-direction: column;
+        }
         @media all and (max-width:1100px) {
             justify-content: space-between;
         }
@@ -84,6 +96,9 @@
             width: 100%;
             padding: 15px 0 15px 19px;
             box-sizing: border-box;
+            @media all and (min-width:1101px) and (max-width: 1500px) {
+                max-width: none;
+            }
             @media all and (max-width:1100px) {
                 max-width: 50%;
             }
@@ -103,6 +118,9 @@
             color: #fff;
             cursor: pointer;
             box-sizing: border-box;
+            @media all and (min-width:1101px) and (max-width: 1500px) {
+                max-width: none;
+            }
             @media all and (max-width:1100px) {
                 max-width: 50%;
             }
@@ -110,11 +128,5 @@
                 max-width: 100%;
             }
         }
-    }
-    &__left div:last-child {
-        border-radius: 9px;
-        border: 3px solid rgba(0, 0, 0, 0.7);
-        transform: rotate(359deg);
-        padding: 3px 8px 5px 15px;
     }
 }

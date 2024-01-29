@@ -1,5 +1,6 @@
 
 import Header from "%modules%/header/header";
+import Footer from "%modules%/footer/footer";
 import PopularCategories from "%modules%/popular-categories/popular-categories";
 import PopularBrands from "%modules%/brands/brands";
 import BannerProduct from "%modules%/banners/banners";
@@ -38,6 +39,7 @@ import PersonalAccountLayout from "%modules%/personal-account-layout/personal-ac
 window.app = {};
 
 window.app.header = new Header();
+window.app.footer = new Footer();
 window.app.popularCategories = new PopularCategories();
 window.app.popularBrands = new PopularBrands();
 window.app.bannerProduct = new BannerProduct();
@@ -72,6 +74,7 @@ window.app.sale = new SaleBlock();
 
 document.addEventListener('DOMContentLoaded', () => {
     window.app.header.init();
+    window.app.footer.init();
     window.app.popularCategories.init();
     window.app.popularBrands.init();
     window.app.bannerProduct.init();

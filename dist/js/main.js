@@ -1960,6 +1960,82 @@ var ElementsList = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/blocks/modules/footer/footer.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/modules/footer/footer.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! glightbox */ "./node_modules/glightbox/dist/js/glightbox.min.js");
+/* harmony import */ var glightbox__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(glightbox__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
+/**
+ * @class Header
+ * @description Класс для работы с шапкой сайта
+ */
+var Footer = /*#__PURE__*/function () {
+  function Footer() {
+    _classCallCheck(this, Footer);
+  }
+  _createClass(Footer, [{
+    key: "initLightbox",
+    value:
+    /**
+     * @description Запускает функции при загрузке страницы
+     * @example
+     * // Вызов функций необходимых для работы при загрузке страницы
+     * 
+     * window.app.header.init();
+     */
+
+    function initLightbox() {
+      if (!document.querySelector('.js-footer-menu-link')) return;
+      this.lightbox = glightbox__WEBPACK_IMPORTED_MODULE_0___default()({
+        selector: '.js-footer-menu-link'
+      });
+    }
+    /**
+     * @description Функция кастомизации GLIghtBox
+     * @example
+     * // Вызов функций необходим для кастомизации
+     * 
+     * window.app.header.customGLIghtBox();
+     */
+  }, {
+    key: "customGLIghtBox",
+    value: function customGLIghtBox() {
+      document.querySelector('.js-footer-menu-link').addEventListener('click', function () {
+        document.querySelector('.goverlay').style.background = 'none';
+        document.querySelector('.glightbox-container').classList.add('custom-header-top-menu');
+        document.querySelectorAll('.glightbox-open').forEach(function (element) {
+          element.classList.remove('glightbox-open');
+        });
+        ;
+      });
+    }
+  }, {
+    key: "init",
+    value: function init() {
+      this.initLightbox();
+      this.customGLIghtBox();
+    }
+  }]);
+  return Footer;
+}();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./src/blocks/modules/header/header.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/header/header.js ***!
@@ -3038,34 +3114,36 @@ var UpButton = /*#__PURE__*/function () {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/header/header */ "./src/blocks/modules/header/header.js");
-/* harmony import */ var _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/popular-categories/popular-categories */ "./src/blocks/modules/popular-categories/popular-categories.js");
-/* harmony import */ var _modules_brands_brands__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/brands/brands */ "./src/blocks/modules/brands/brands.js");
-/* harmony import */ var _modules_banners_banners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/banners/banners */ "./src/blocks/modules/banners/banners.js");
-/* harmony import */ var _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/banners/banner-big */ "./src/blocks/modules/banners/banner-big.js");
-/* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
-/* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
-/* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
-/* harmony import */ var _modules_action_action__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/action/action */ "./src/blocks/modules/action/action.js");
-/* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
-/* harmony import */ var _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/elements_list/elements_list */ "./src/blocks/modules/elements_list/elements_list.js");
-/* harmony import */ var _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/catalog-detail-page/catalog-detail-page */ "./src/blocks/modules/catalog-detail-page/catalog-detail-page.js");
-/* harmony import */ var _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/compare/compare */ "./src/blocks/modules/compare/compare.js");
-/* harmony import */ var _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/brands-detail-top/brands-detail-top */ "./src/blocks/modules/brands-detail-top/brands-detail-top.js");
-/* harmony import */ var _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/brands-top/brands-top */ "./src/blocks/modules/brands-top/brands-top.js");
-/* harmony import */ var _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/affiliate-program/affiliate-program */ "./src/blocks/modules/affiliate-program/affiliate-program.js");
-/* harmony import */ var _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %components%/modal/modal */ "./src/blocks/components/modal/modal.js");
-/* harmony import */ var _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %modules%/cart-page/cart-page */ "./src/blocks/modules/cart-page/cart-page.js");
-/* harmony import */ var _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/personal-account/personal-account */ "./src/blocks/modules/personal-account/personal-account.js");
-/* harmony import */ var _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/personal-account-create-promocode/personal-account-create-promocode */ "./src/blocks/modules/personal-account-create-promocode/personal-account-create-promocode.js");
-/* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
-/* harmony import */ var _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/personal-account-statistics/personal-account-statistics */ "./src/blocks/modules/personal-account-statistics/personal-account-statistics.js");
-/* harmony import */ var _modules_orders_orders__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/orders/orders */ "./src/blocks/modules/orders/orders.js");
-/* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
-/* harmony import */ var _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/inputmask/inputmask */ "./src/blocks/modules/inputmask/inputmask.js");
-/* harmony import */ var _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/up-button/up-button */ "./src/blocks/modules/up-button/up-button.js");
-/* harmony import */ var _modules_map_map__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! %modules%/map/map */ "./src/blocks/modules/map/map.js");
-/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! %modules%/sale/sale */ "./src/blocks/modules/sale/sale.js");
-/* harmony import */ var _modules_personal_account_layout_personal_account_layout__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! %modules%/personal-account-layout/personal-account-layout */ "./src/blocks/modules/personal-account-layout/personal-account-layout.js");
+/* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/footer/footer */ "./src/blocks/modules/footer/footer.js");
+/* harmony import */ var _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/popular-categories/popular-categories */ "./src/blocks/modules/popular-categories/popular-categories.js");
+/* harmony import */ var _modules_brands_brands__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/brands/brands */ "./src/blocks/modules/brands/brands.js");
+/* harmony import */ var _modules_banners_banners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %modules%/banners/banners */ "./src/blocks/modules/banners/banners.js");
+/* harmony import */ var _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! %modules%/banners/banner-big */ "./src/blocks/modules/banners/banner-big.js");
+/* harmony import */ var _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! %modules%/tabs/tabs */ "./src/blocks/modules/tabs/tabs.js");
+/* harmony import */ var _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! %modules%/catalog-menu/catalog-menu */ "./src/blocks/modules/catalog-menu/catalog-menu.js");
+/* harmony import */ var _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! %modules%/countdown/countdown */ "./src/blocks/modules/countdown/countdown.js");
+/* harmony import */ var _modules_action_action__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! %modules%/action/action */ "./src/blocks/modules/action/action.js");
+/* harmony import */ var _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! %modules%/catalog-sections/catalog-sections */ "./src/blocks/modules/catalog-sections/catalog-sections.js");
+/* harmony import */ var _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! %modules%/elements_list/elements_list */ "./src/blocks/modules/elements_list/elements_list.js");
+/* harmony import */ var _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! %modules%/catalog-detail-page/catalog-detail-page */ "./src/blocks/modules/catalog-detail-page/catalog-detail-page.js");
+/* harmony import */ var _modules_compare_compare__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! %modules%/compare/compare */ "./src/blocks/modules/compare/compare.js");
+/* harmony import */ var _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! %modules%/brands-detail-top/brands-detail-top */ "./src/blocks/modules/brands-detail-top/brands-detail-top.js");
+/* harmony import */ var _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! %modules%/brands-top/brands-top */ "./src/blocks/modules/brands-top/brands-top.js");
+/* harmony import */ var _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! %modules%/affiliate-program/affiliate-program */ "./src/blocks/modules/affiliate-program/affiliate-program.js");
+/* harmony import */ var _components_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! %components%/modal/modal */ "./src/blocks/components/modal/modal.js");
+/* harmony import */ var _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! %modules%/cart-page/cart-page */ "./src/blocks/modules/cart-page/cart-page.js");
+/* harmony import */ var _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! %modules%/personal-account/personal-account */ "./src/blocks/modules/personal-account/personal-account.js");
+/* harmony import */ var _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! %modules%/personal-account-create-promocode/personal-account-create-promocode */ "./src/blocks/modules/personal-account-create-promocode/personal-account-create-promocode.js");
+/* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
+/* harmony import */ var _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! %modules%/personal-account-statistics/personal-account-statistics */ "./src/blocks/modules/personal-account-statistics/personal-account-statistics.js");
+/* harmony import */ var _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! %modules%/orders/orders */ "./src/blocks/modules/orders/orders.js");
+/* harmony import */ var _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! %modules%/cart-page-order/cart-page-order */ "./src/blocks/modules/cart-page-order/cart-page-order.js");
+/* harmony import */ var _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! %modules%/inputmask/inputmask */ "./src/blocks/modules/inputmask/inputmask.js");
+/* harmony import */ var _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! %modules%/up-button/up-button */ "./src/blocks/modules/up-button/up-button.js");
+/* harmony import */ var _modules_map_map__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! %modules%/map/map */ "./src/blocks/modules/map/map.js");
+/* harmony import */ var _modules_sale_sale__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! %modules%/sale/sale */ "./src/blocks/modules/sale/sale.js");
+/* harmony import */ var _modules_personal_account_layout_personal_account_layout__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! %modules%/personal-account-layout/personal-account-layout */ "./src/blocks/modules/personal-account-layout/personal-account-layout.js");
+
 
 
 
@@ -3097,36 +3175,38 @@ __webpack_require__.r(__webpack_exports__);
 
 window.app = {};
 window.app.header = new _modules_header_header__WEBPACK_IMPORTED_MODULE_0__["default"]();
-window.app.popularCategories = new _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_1__["default"]();
-window.app.popularBrands = new _modules_brands_brands__WEBPACK_IMPORTED_MODULE_2__["default"]();
-window.app.bannerProduct = new _modules_banners_banners__WEBPACK_IMPORTED_MODULE_3__["default"]();
-window.app.banner = new _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_4__["default"]();
-window.app.tabs = new _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_5__["default"]();
-window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_6__["default"]();
-window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_7__["default"]();
-window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_8__["default"]();
-window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_9__["default"]();
-window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_10__["default"]();
-window.app.catalogDetailPage = new _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_11__["default"]();
-window.app.compare = new _modules_compare_compare__WEBPACK_IMPORTED_MODULE_12__["default"]();
-window.app.brandsDetaiTop = new _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_13__["default"]();
-window.app.brandsTop = new _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_14__["default"]();
-window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_15__["default"]();
-window.app.modal = new _components_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"]();
-window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_17__["default"]();
-window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_18__["default"]();
-window.app.personalAccountCreatePromocode = new _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_19__["default"]();
-window.app.catalogFilter = new _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_20__["default"]();
-window.app.orderPage = new _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_23__["default"]();
-window.app.upButton = new _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_25__["default"]();
-window.app.personalAccountLayout = new _modules_personal_account_layout_personal_account_layout__WEBPACK_IMPORTED_MODULE_28__["default"]();
-window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_21__["default"]();
-window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_22__["default"]();
-window.app.mask = new _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_24__["default"]();
-window.app.map = new _modules_map_map__WEBPACK_IMPORTED_MODULE_26__["default"]();
-window.app.sale = new _modules_sale_sale__WEBPACK_IMPORTED_MODULE_27__["default"]();
+window.app.footer = new _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__["default"]();
+window.app.popularCategories = new _modules_popular_categories_popular_categories__WEBPACK_IMPORTED_MODULE_2__["default"]();
+window.app.popularBrands = new _modules_brands_brands__WEBPACK_IMPORTED_MODULE_3__["default"]();
+window.app.bannerProduct = new _modules_banners_banners__WEBPACK_IMPORTED_MODULE_4__["default"]();
+window.app.banner = new _modules_banners_banner_big__WEBPACK_IMPORTED_MODULE_5__["default"]();
+window.app.tabs = new _modules_tabs_tabs__WEBPACK_IMPORTED_MODULE_6__["default"]();
+window.app.catalogMenu = new _modules_catalog_menu_catalog_menu__WEBPACK_IMPORTED_MODULE_7__["default"]();
+window.app.counter = new _modules_countdown_countdown__WEBPACK_IMPORTED_MODULE_8__["default"]();
+window.app.action = new _modules_action_action__WEBPACK_IMPORTED_MODULE_9__["default"]();
+window.app.catalogSections = new _modules_catalog_sections_catalog_sections__WEBPACK_IMPORTED_MODULE_10__["default"]();
+window.app.elementsList = new _modules_elements_list_elements_list__WEBPACK_IMPORTED_MODULE_11__["default"]();
+window.app.catalogDetailPage = new _modules_catalog_detail_page_catalog_detail_page__WEBPACK_IMPORTED_MODULE_12__["default"]();
+window.app.compare = new _modules_compare_compare__WEBPACK_IMPORTED_MODULE_13__["default"]();
+window.app.brandsDetaiTop = new _modules_brands_detail_top_brands_detail_top__WEBPACK_IMPORTED_MODULE_14__["default"]();
+window.app.brandsTop = new _modules_brands_top_brands_top__WEBPACK_IMPORTED_MODULE_15__["default"]();
+window.app.affiliateProgram = new _modules_affiliate_program_affiliate_program__WEBPACK_IMPORTED_MODULE_16__["default"]();
+window.app.modal = new _components_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"]();
+window.app.cartPage = new _modules_cart_page_cart_page__WEBPACK_IMPORTED_MODULE_18__["default"]();
+window.app.personalAccount = new _modules_personal_account_personal_account__WEBPACK_IMPORTED_MODULE_19__["default"]();
+window.app.personalAccountCreatePromocode = new _modules_personal_account_create_promocode_personal_account_create_promocode__WEBPACK_IMPORTED_MODULE_20__["default"]();
+window.app.catalogFilter = new _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_21__["default"]();
+window.app.orderPage = new _modules_cart_page_order_cart_page_order__WEBPACK_IMPORTED_MODULE_24__["default"]();
+window.app.upButton = new _modules_up_button_up_button__WEBPACK_IMPORTED_MODULE_26__["default"]();
+window.app.personalAccountLayout = new _modules_personal_account_layout_personal_account_layout__WEBPACK_IMPORTED_MODULE_29__["default"]();
+window.app.personalAccountStatistics = new _modules_personal_account_statistics_personal_account_statistics__WEBPACK_IMPORTED_MODULE_22__["default"]();
+window.app.orders = new _modules_orders_orders__WEBPACK_IMPORTED_MODULE_23__["default"]();
+window.app.mask = new _modules_inputmask_inputmask__WEBPACK_IMPORTED_MODULE_25__["default"]();
+window.app.map = new _modules_map_map__WEBPACK_IMPORTED_MODULE_27__["default"]();
+window.app.sale = new _modules_sale_sale__WEBPACK_IMPORTED_MODULE_28__["default"]();
 document.addEventListener('DOMContentLoaded', function () {
   window.app.header.init();
+  window.app.footer.init();
   window.app.popularCategories.init();
   window.app.popularBrands.init();
   window.app.bannerProduct.init();
