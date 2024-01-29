@@ -259,7 +259,7 @@
             padding-top: 15px;
             padding-bottom: 15px;
         }
-        li:hover a::after {
+        li:hover .header-top__menu-link::after {
             transform: rotate(180deg);
         }
         &::before {
