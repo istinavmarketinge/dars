@@ -755,24 +755,46 @@ var OrderPage = /*#__PURE__*/function () {
     key: "toggleRelatedElements",
     value: function toggleRelatedElements() {
       var _this3 = this;
-      if (!document.querySelector('[data-field]')) return;
-      document.querySelectorAll('[data-field]').forEach(function (field) {
-        if (!field.dataset.styleDisplay) {
-          field.dataset.styleDisplay = window.getComputedStyle(field).display;
-        }
-        console.log('field.dataset.styleDisplay', field.dataset.styleDisplay);
-        var fields = [];
-        field.dataset.field.replace(/\s/g, '').split(',').forEach(function (tag) {
-          fields.push(_this3.selectedRadio.includes(tag));
+      if (document.querySelector('[data-field]')) {
+        document.querySelectorAll('[data-field]').forEach(function (field) {
+          if (!field.dataset.styleDisplay) {
+            field.dataset.styleDisplay = window.getComputedStyle(field).display;
+          }
+          console.log('field.dataset.styleDisplay', field.dataset.styleDisplay);
+          var fields = [];
+          field.dataset.field.replace(/\s/g, '').split(',').forEach(function (tag) {
+            fields.push(_this3.selectedRadio.includes(tag));
+          });
+          if (fields.includes(false)) {
+            field.style.display = 'none';
+            field.classList.remove('isShowed');
+          } else {
+            field.style.display = field.dataset.styleDisplay;
+            field.classList.add('isShowed');
+          }
         });
-        if (fields.includes(false)) {
-          field.style.display = 'none';
-          field.classList.remove('isShowed');
-        } else {
-          field.style.display = field.dataset.styleDisplay;
-          field.classList.add('isShowed');
-        }
-      });
+      }
+      ;
+      if (document.querySelector('[data-field-or]')) {
+        document.querySelectorAll('[data-field-or]').forEach(function (field) {
+          if (!field.dataset.styleDisplay) {
+            field.dataset.styleDisplay = window.getComputedStyle(field).display;
+          }
+          console.log('field.dataset.styleDisplay', field.dataset.styleDisplay);
+          var fields = [];
+          field.dataset.fieldOr.replace(/\s/g, '').split(',').forEach(function (tag) {
+            fields.push(_this3.selectedRadio.includes(tag));
+          });
+          if (fields.includes(true)) {
+            field.style.display = field.dataset.styleDisplay;
+            field.classList.add('isShowed');
+          } else {
+            field.style.display = 'none';
+            field.classList.remove('isShowed');
+          }
+        });
+      }
+      ;
     }
   }, {
     key: "createOpenMap",
