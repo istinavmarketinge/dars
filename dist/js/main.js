@@ -149,7 +149,7 @@ var Modal = /*#__PURE__*/function () {
                         <div class="modal-box__title">Заголовок</div>
                         <div class="modal-box__body">
                             
-                              <div class="popup-modal__message js_modal_thanks" style="display: none;">
+                             <div class="popup-modal__message js_modal_thanks" style="display: none;">
                                 <div class="icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 138 92" fill="none">
                                         <path
@@ -1718,12 +1718,12 @@ var Compare = /*#__PURE__*/function () {
   _createClass(Compare, [{
     key: "initScrollbar",
     value: function initScrollbar() {
-      if (!document.querySelector('.compare__page-right')) return;
-      this.scrollbar = (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_1__.OverlayScrollbars)(document.querySelector('.compare__page-right'), {}, {
+      if (!document.querySelector(".compare__page-right")) return;
+      this.scrollbar = (0,overlayscrollbars__WEBPACK_IMPORTED_MODULE_1__.OverlayScrollbars)(document.querySelector(".compare__page-right"), {}, {
         initialized: function initialized(osInstance) {
           var _osInstance$elements = osInstance.elements(),
             viewport = _osInstance$elements.viewport;
-          document.querySelector('.compare__page-items').addEventListener('wheel', function (event) {
+          document.querySelector(".compare__page-items").addEventListener("wheel", function (event) {
             event.preventDefault();
             viewport.scrollLeft += event.deltaY;
             console.log(event);
@@ -1734,8 +1734,8 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "calculateTdHeights",
     value: function calculateTdHeights() {
-      if (!document.querySelector('[data-compare-item-key]')) return;
-      var itemIds = Array.from(document.querySelectorAll('.compare__page-left .compare__page-bottom-item-td')).map(function (rowItem) {
+      if (!document.querySelector("[data-compare-item-key]")) return;
+      var itemIds = Array.from(document.querySelectorAll(".compare__page-left .compare__page-bottom-item-td")).map(function (rowItem) {
         return rowItem.dataset.compareItemKey;
       });
       itemIds.forEach(function (id) {
@@ -1753,14 +1753,14 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "calculateItemHeight",
     value: function calculateItemHeight() {
-      if (!document.querySelector('.compare__page-top .js_element_item')) return;
+      if (!document.querySelector(".compare__page-top .js_element_item")) return;
       var maxHeight = 0;
-      document.querySelectorAll('.compare__page-top .js_element_item').forEach(function (js_element_item) {
+      document.querySelectorAll(".compare__page-top .js_element_item").forEach(function (js_element_item) {
         if (js_element_item.clientHeight > maxHeight) {
           maxHeight = js_element_item.clientHeight;
         }
       });
-      document.querySelectorAll('.compare__page-top .js_element_item').forEach(function (js_element_item) {
+      document.querySelectorAll(".compare__page-top .js_element_item").forEach(function (js_element_item) {
         console.log(maxHeight);
         js_element_item.style.height = "".concat(maxHeight, "px");
       });
@@ -1768,9 +1768,9 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "changeCompareItem",
     value: function changeCompareItem() {
-      if (!document.querySelector('.compare__page-right .compare__page-item')) return;
-      var pinned = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__page-right .compare__page-item.isPinned').clone();
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__page-left').html(pinned);
+      if (!document.querySelector(".compare__page-right .compare__page-item")) return;
+      var pinned = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".compare__page-right .compare__page-item.isPinned").clone();
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".compare__page-left").html(pinned);
       // $('.compare__page-right').on('click', '.compare__page-conpare-with-it', function() {
       //     $('.compare__page-left .compare__page-item').removeClass('isPinned').appendTo('.compare__page-right .compare__page-items')
       //     $(this).closest('.compare__page-item').addClass('isPinned').appendTo('.compare__page-left');
@@ -1779,7 +1779,7 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "checkUniqueParams",
     value: function checkUniqueParams() {
-      var itemIds = Array.from(document.querySelectorAll('.compare__page-item.isPinned .compare__page-bottom-item-td')).map(function (rowItem) {
+      var itemIds = Array.from(document.querySelectorAll(".compare__page-item.isPinned .compare__page-bottom-item-td")).map(function (rowItem) {
         return {
           id: rowItem.dataset.compareItemKey,
           items: Array.from(document.querySelectorAll(".compare__page-right [data-compare-item-key=\"".concat(rowItem.dataset.compareItemKey, "\"] span")))
@@ -1787,11 +1787,11 @@ var Compare = /*#__PURE__*/function () {
       });
       itemIds.forEach(function (item) {
         document.querySelector(".compare__page-item.isPinned [data-compare-item-key=\"".concat(item.id, "\"] span")).innerHTML = document.querySelector(".compare__page-item.isPinned [data-compare-item-key=\"".concat(item.id, "\"]")).dataset.defaultOptions;
-        var etalon = document.querySelector(".compare__page-item.isPinned [data-compare-item-key=\"".concat(item.id, "\"] span")).innerHTML.replace(/\s/g, '').split(',');
+        var etalon = document.querySelector(".compare__page-item.isPinned [data-compare-item-key=\"".concat(item.id, "\"] span")).innerHTML.replace(/\s/g, "").split(",");
         item.items.map(function (cell) {
-          var valuesArr = cell.closest('.compare__page-bottom-item-td').dataset.defaultOptions.replace(/\s/g, '').split(',');
-          var resultHtml = '';
-          var coma = valuesArr.length > 1 ? ', ' : '';
+          var valuesArr = cell.closest(".compare__page-bottom-item-td").dataset.defaultOptions.replace(/\s/g, "").split(",");
+          var resultHtml = "";
+          var coma = valuesArr.length > 1 ? ", " : "";
           valuesArr.forEach(function (opt) {
             resultHtml += !etalon.includes(opt) ? "<u>".concat(opt, "</u>").concat(coma) : "".concat(opt).concat(coma);
           });
@@ -1805,11 +1805,11 @@ var Compare = /*#__PURE__*/function () {
   }, {
     key: "linePositionSetter",
     value: function linePositionSetter() {
-      document.querySelectorAll('[data-compare-item-key]').forEach(function (item) {
-        item.addEventListener('mouseenter', function (event) {
-          document.querySelector('.compare__page-right-line').style.display = 'block';
-          document.querySelector('.compare__page-right-line').style.top = "".concat(event.target.getBoundingClientRect().top - event.target.closest('.compare__page').getBoundingClientRect().top, "px");
-          document.querySelector('.compare__page-right-line').style.height = "".concat(event.target.clientHeight + 20, "px");
+      document.querySelectorAll("[data-compare-item-key]").forEach(function (item) {
+        item.addEventListener("mouseenter", function (event) {
+          document.querySelector(".compare__page-right-line").style.display = "block";
+          document.querySelector(".compare__page-right-line").style.top = "".concat(event.target.getBoundingClientRect().top - event.target.closest(".compare__page").getBoundingClientRect().top, "px");
+          document.querySelector(".compare__page-right-line").style.height = "".concat(event.target.clientHeight + 20, "px");
         });
       });
     }
@@ -1817,11 +1817,13 @@ var Compare = /*#__PURE__*/function () {
     key: "mobileCompareMoveProduct",
     value: function mobileCompareMoveProduct() {
       var _this = this;
-      if (!document.querySelector('.compare__page-right .compare__page-item .compare__page-conpare-with-it')) return;
-      document.querySelectorAll('.compare__page-right .compare__page-item .compare__page-conpare-with-it').forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          document.querySelector('.compare__page-right .compare__page-item.isPinned').classList.remove('isPinned');
-          event.currentTarget.closest('.compare__page-item').classList.add('isPinned');
+      if (!document.querySelector(".compare__page-right .compare__page-item .compare__page-conpare-with-it")) return;
+      document.querySelectorAll(".compare__page-right .compare__page-item .compare__page__button--compare").forEach(function (button) {
+        console.log(button);
+        button.addEventListener("click", function (event) {
+          document.querySelector(".compare__page-right .compare__page-item.isPinned").classList.remove("isPinned");
+          console.log("active item", document.querySelector(".compare__page-right .compare__page-item.isPinned"));
+          event.currentTarget.closest(".compare__page-item").classList.add("isPinned");
           _this.checkUniqueParams();
         });
       });
@@ -1833,11 +1835,11 @@ var Compare = /*#__PURE__*/function () {
     key: "desctopCompareMoveProduct",
     value: function desctopCompareMoveProduct() {
       var _this2 = this;
-      if (!document.querySelector('.compare__page-item .compare__page__button--compare')) return;
-      document.querySelectorAll('.compare__page-item .compare__page__button--compare').forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          document.querySelector('.compare__page-item.isPinned').classList.remove('isPinned');
-          event.currentTarget.closest('.compare__page-item').classList.add('isPinned');
+      if (!document.querySelector(".compare__page-item .compare__page__button--compare")) return;
+      document.querySelectorAll(".compare__page-item .compare__page__button--compare").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          document.querySelector(".compare__page-item.isPinned").classList.remove("isPinned");
+          event.currentTarget.closest(".compare__page-item").classList.add("isPinned");
           _this2.checkUniqueParams();
         });
       });
@@ -1850,7 +1852,7 @@ var Compare = /*#__PURE__*/function () {
       this.calculateTdHeights();
       this.linePositionSetter();
       this.checkUniqueParams();
-      this.mobileCompareMoveProduct(document.querySelector('.compare__page-item.isPinned'));
+      this.mobileCompareMoveProduct(document.querySelector(".compare__page-item.isPinned"));
       this.desctopCompareMoveProduct();
       setTimeout(function () {
         _this3.calculateItemHeight();
@@ -2333,7 +2335,7 @@ var Map = /*#__PURE__*/function () {
   // тут можно писать любой функционал поверх экземпляра карты, который хранится в объекте map
   // доступные методы для работы с картой: {@link https://yandex.ru/dev/jsapi30/doc/ru/ref/#class-ymap}
   })
-    */
+   */
   _createClass(Map, [{
     key: "create",
     value: function create() {
