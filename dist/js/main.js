@@ -1817,7 +1817,7 @@ var Compare = /*#__PURE__*/function () {
     key: "mobileCompareMoveProduct",
     value: function mobileCompareMoveProduct() {
       var _this = this;
-      if (!document.querySelector(".compare__page-right .compare__page-item .compare__page-conpare-with-it")) return;
+      if (!document.querySelector(".compare__page-right .compare__page-item .compare__page__button--compare")) return;
       document.querySelectorAll(".compare__page-right .compare__page-item .compare__page__button--compare").forEach(function (button) {
         console.log(button);
         button.addEventListener("click", function (event) {

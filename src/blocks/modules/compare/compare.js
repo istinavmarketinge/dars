@@ -142,7 +142,7 @@ const Compare = class Compare {
   mobileCompareMoveProduct() {
     if (
       !document.querySelector(
-        ".compare__page-right .compare__page-item .compare__page-conpare-with-it",
+        ".compare__page-right .compare__page-item .compare__page__button--compare",
       )
     )
       return;
